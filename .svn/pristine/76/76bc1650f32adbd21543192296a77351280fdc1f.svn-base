@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /*body{min-width: 1000px}*/
+        .content{
+            /*width: 80%;*/
+            /*height: 800px;*/
+            min-width: 800px;
+            background: #21221D;
+            margin: auto;
+        }
+        /*<style type="text/css">*/
+        /*.box {
+            width: 100px;
+            height: 100px;
+            background-color: yellowgreen;
+        }*/
+
+
+        /* 针对手机 */
+        @media screen and (max-width: 768px)  {
+
+        }
+        /* 针对PAD   屏幕大小在 768px --- 1024px  */
+        @media screen and (min-width: 768px) and ( max-width: 1024px){
+           /* .box {
+                background-color: blue;
+            }*/
+        }
+
+
+
+        .photo{
+            margin: 10px;
+        }
+        h2{
+            color: grey;
+            margin-left: 10px;
+        }
+        .hBlue{
+            width: 100px;
+            height: 4px;
+            margin-left: 10px;
+            background: #05664B;
+        }
+        .wapper{
+            margin: 30px;
+            float: left;
+        }
+        .geshu{
+            margin: 8px;
+            width: 120px;
+            height: 30px;
+            background: #00B4C5;
+
+            text-align: center;
+           line-height: 30px;
+        }
+        th,td{
+            border: solid 1px white;
+            height: 40px;
+            text-align: center;
+        }
+        .clearfix:after,
+        .clearfix:before{
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <!-- <img src="img2/1.jpg" alt="" class="photo"/> -->
+    <img src="cid:tuimg" alt="图片" class="photo"/>
+    <h2>今日安全统计</h2>
+    <div class="hBlue"></div>
+    <div class="clearfix">
+        <div class="wapper">
+            <h3 style="color: #f0f3f9">异常网络连接</h3>
+            <div style="color: #f0f3f9;" class="geshu">0次</div>
+        </div>
+        <div class="wapper">
+            <h3 style="color: #f0f3f9">异常网络连接</h3>
+            <div style="color: #f0f3f9;" class="geshu">0次</div>
+        </div>
+        <div class="wapper">
+            <h3 style="color: #f0f3f9">异常网络连接</h3>
+            <div style="color: #f0f3f9;" class="geshu">0次</div>
+        </div>
+        <div class="wapper">
+            <h3 style="color: #f0f3f9">异常网络连接</h3>
+            <div style="color: #f0f3f9;" class="geshu">0次</div>
+        </div>
+        <div class="wapper">
+            <h3 style="color: #f0f3f9">异常网络连接</h3>
+            <div style="color: #f0f3f9;" class="geshu">0次</div>
+        </div>
+        <div class="wapper">
+            <h3 style="color: #f0f3f9">异常网络连接</h3>
+            <div style="color: #f0f3f9;" class="geshu">0次</div>
+        </div>
+
+    </div>
+    <div style="width: 800px;margin: auto">
+        <table style="color: white;border: solid 1px white;margin: auto; border-collapse: collapse;width: 100%">
+            <thead style="width: 100%" >
+            <tr >
+                <th style="width: 50%;">时间类型</th>
+                <th style="width: 50%">影响资产</th>
+            </tr>
+
+            </thead>
+            <tbody>
+            <tr >
+                <td>肌肉行为</td>
+                <td>1000000</td>
+            </tr>
+            <tr>
+                <td>肌肉行为</td>
+                <td>1000000</td>
+            </tr>
+            <tr >
+                <td>肌肉行为</td>
+                <td>1000000</td>
+            </tr>
+            <tr>
+                <td>肌肉行为</td>
+                <td>1000000</td>
+            </tr>
+            <tr >
+                <td>肌肉行为</td>
+                <td>1000000</td>
+            </tr>
+            <tr>
+                <td>肌肉行为</td>
+                <td>1000000</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+</div>
+
+</body>
+</html>

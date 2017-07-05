@@ -1,0 +1,609 @@
+<div class="main-content">
+    <div id="addUser" class="popLayer">
+        <div class="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>添加用户</li>
+            </ul>
+            <!-- .breadcrumb -->
+            <span class="floatRig closePop">关闭</span>
+        </div>
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-xs-win">
+                    <!-- PAGE CONTENT BEGINS -->
+                    <form style="position:relative;margin-top:20px;" id="addUser_form" class="form-horizontal" role="form">
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right"> 用户名： </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="name" placeholder="用户名"  pattern="^\S{1,18}$"  title="请输入1-18位字符" class="col-xs-10 col-sm-5" required/>
+                            </div>
+                        </div>
+                                                    
+                        <div class="space-4"></div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right"> 密码：</label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="password" pattern="^\S{6,18}$"  title="请输入6-18位密码" class="col-xs-10 col-sm-5" required/>
+                            </div>
+                        </div>
+
+                        
+                        <div class="space-4"></div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right"> 邮箱：</label>
+
+                            <div class="col-sm-9">
+                                <input type="email" name="email" class="col-xs-10 col-sm-5" pattern="^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+" required/>
+                            </div>
+                        </div>
+
+
+                    <div class="space-4"></div>
+
+                        <div class="form-group">
+
+                            <label class="col-sm-3 control-label no-padding-right"> 用户组： </label>
+
+                           <div class="col-sm-9" style="line-height:30px;" id="ischeck">
+                                <volist name="group_data" id="group_data_vo" >
+                                      <!-- <option value="{$group_data_vo['id']}">{$group_data_vo['title']}</option> -->
+                                      <input type="checkbox" name="usergroup[]" value="{$group_data_vo['id']}" style="margin-right:5px;">{$group_data_vo['title']}
+                                </volist>
+                           </div>
+                           
+                        </div>
+                        
+                        <div class="space-4"></div>
+
+                        <!-- <input type="hidden" name="id" value="{$template_data['id']}" /> -->
+                        <div class="clearfix form-actions">
+                            <div>
+                                <button class="btn btn-info" type="submit">
+                                    <i class="icon-ok bigger-110"></i>
+                                    提交
+                                </button>
+
+                                &nbsp; &nbsp; &nbsp;
+                                <button class="btn" type="reset">
+                                    <i class="icon-undo bigger-110"></i>
+                                    取消
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+    </div>
+    
+    <div id="ajaxAlert"  class="popLayer" style="top:100px;left:50%;width: 20%;margin-left:-10%;">
+        <div class="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>
+                    提示
+                </li>
+            </ul>
+            <!-- .breadcrumb -->
+            <span class="floatRig closePop"></span>
+        </div>
+            <div class="tipText">
+        
+            </div>
+    </div>
+
+    <div id="editeUser" class="popLayer">
+        <div class="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>编辑用户</li>
+            </ul>
+            <!-- .breadcrumb -->
+            <span class="floatRig closePop">关闭</span>
+        </div>
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-xs-win">
+                    <!-- PAGE CONTENT BEGINS -->
+                    <form style="position:relative;margin-top:20px;" id="user_edite_form" class="form-horizontal" role="form">
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right"> 用户名： </label>
+
+                            <div class="col-sm-9">
+
+                                <input type="text" name="name" id="edite_user" placeholder="用户名" pattern="^\S{1,18}$"  title="请输入小于1-18位字符" class="col-xs-10 col-sm-5"
+                                       required/>
+
+                            </div>
+                        </div>
+
+
+                        <div class="space-4"></div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right"> 邮箱： </label>
+
+                            <div class="col-sm-9">
+
+                                <input type="email" name="email" id="edite_email" class="col-xs-10 col-sm-5" pattern="^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+" required/>
+
+                            </div>
+                        </div>
+
+                        <!-- <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right"> 状态</label>
+                        
+                            <div class="col-sm-9">
+                                <select name="user_status" id="user_status" class="col-xs-10 col-sm-5">
+                                    <option value="1">启用</option>
+                                    <option value="0">禁用</option>
+                                </select>
+                        
+                            </div>
+                        </div> -->
+                        
+                        
+                        <div class="space-4"></div>
+
+                        <div class="form-group">
+
+                            <label class="col-sm-3 control-label no-padding-right"> 用户组： </label>
+
+                           <div class="col-sm-9" style="line-height:30px;" id="userGroup_sel">
+                               <volist name="group_data" id="group_data_vo" >
+                                      <input type="checkbox"  name="usergroup[]" value="{$group_data_vo['id']}" style="margin-right:5px;">{$group_data_vo['title']}
+                                </volist>
+                           </div>
+                           
+                        </div>
+
+                        <div class="space-4"></div>
+                        <input type="hidden" id='id' name="id"  />
+                        <div class="clearfix form-actions">
+                            <div>
+                                <button class="btn btn-info user_edite" type="submit">
+                                    <i class="icon-ok bigger-110"></i>
+                                    提交
+                                </button>
+
+                                <button class="btn" type="reset">
+                                    <i class="icon-undo bigger-110"></i>
+                                    取消
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+    </div>
+    <div id="delUser" class="popLayer" style="top:100px;left:50%;width: 40%;margin-left:-20%;">
+        <div class="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>
+                    删除用户
+                </li>
+            </ul>
+            <!-- .breadcrumb -->
+            <span class="floatRig closePop">关闭</span>
+        </div>
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-xs-win">
+                    <!-- PAGE CONTENT BEGINS -->
+                    <form style="position:relative;top:20px;" id="user_delete_form" class="form-horizontal" role="form">
+
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label no-padding-right"> 确定要删除此用户？ </label>
+                        </div>
+
+                        <input type="hidden" id="id"  />
+                        <div class="clearfix form-actions">
+                            <div>
+                                <button class="allusers btn btn-danger" >
+                                    <i class="icon-remove  bigger-110 "></i>
+                                    删除
+                                </button>
+
+                                &nbsp; &nbsp; &nbsp;
+                                <button class="btn" type="reset">
+                                    <i class="icon-undo bigger-110"></i>
+                                    取消
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+    </div>
+    <div id="fade" class="black_overlay"></div>
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try {
+                ace.settings.check('breadcrumbs', 'fixed')
+            } catch (e) {
+            }
+        </script>
+
+        <ul class="breadcrumb">
+            <li>
+                权限管理
+            </li>
+            <li class="active">用户管理</li>
+        </ul>
+        <!-- .breadcrumb -->
+        <!-- #nav-search -->
+    </div>
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="col-xs-12">
+            
+            
+             <div class="formArea marT10" >
+                    <form method="get"  action="">
+                    <label class="floatLeft">注册时间：</label>
+                    <div class="input-group w300 floatLeft" style="width:281px; text-indent:0px;">
+			                    <span class="input-group-addon">
+                                    <i class="icon-calendar bigger-110"></i>
+			                     </span><input class="form-control date-range-picker" type="text" name="date-range-picker" data-date-format="YYYY-MM-DD"
+                                     id="id-date-range-picker-1"/>
+                          </div>
+                    <label class="floatLeft">用户组：</label>
+                    <select name="usergroup" class="usergroup floatLeft">
+                            <option value="">请选择</option>
+                            <volist name="group_data" id="group_data_vo" >
+                                  <option value="{$group_data_vo['id']}">{$group_data_vo['title']}</option>
+                            </volist>
+                         </select>
+                    <label class="floatLeft"> 用户名：</label>   
+                    <input type="text" name="username" class="floatLeft">
+                    <button class="aptSearchBtn "><i class="fa fa-search"></i>查询</button>
+                    </form>
+                    
+                   
+
+                </div>
+                
+  
+                
+                <div class="aptTable span10 marT10  tableShow" style="display: none">
+                <div class="aptListBtnGroup" >
+                <!--<a href="#"><i class="icon-upload-alt blue"></i>导出</a>-->
+                <a href="#" class="" id="userAdd"><i class="icon-plus-sign bigger-120 green"></i>添加</a>
+                <a href="#" class="" id="userDel"><i class="icon-remove  bigger-120 red "></i>删除</a>
+                </div>
+				<table data-toggle="table" data-striped="true"  data-show-columns="true">
+                    <thead>
+                            <tr>
+                                <th><input name='checkbox' type="checkbox"></th>
+                            <th>用户名</th>
+                            <th>用户组</th>
+                            <th>邮箱</th>
+                            <th>注册时间</th>
+                            <th>最后在线时间</th>
+                            <!-- <th>状态</th> -->
+                            <th>操作</th>
+                            </tr>
+                    </thead>
+                    <tbody>
+
+                       <volist name="user_data" id="user_data_vo">
+                            <tr>
+                                <td><input type="checkbox" name="checkbox"  value="{$user_data_vo['id']}"></td>
+                                <td>{$user_data_vo['user_login']}</td>
+                                <td>
+                                <select style="height: 20px; font-size: 12px;padding: 0px;" >
+                                    <volist name="user_data_vo['title']" id="title_vo" >
+                                          <option>{$title_vo['title']}</option>
+                                    </volist>
+                                 </select>
+                                 </td>
+                                <td>{$user_data_vo['user_email']}</td>
+                                <td>{$user_data_vo['create_time']|date='Y-m-d H:i:s',###}</td>
+                                <td><if condition="$user_data_vo['last_login_time'] eq 0" >
+                                --
+                                <else />
+                                {$user_data_vo['last_login_time']|date='Y-m-d H:i:s',###}
+                                </if></td>
+                                <!-- <td data="{$user_data_vo['user_status']}">{$user_data_vo['user_status']==1?'启用':'禁用'}</td> -->
+                                <td>
+                                        <a class="green editeUser" href="javascript:;" title="编辑">
+                                            <i class="icon-pencil bigger-130"></i>
+                                        </a>
+
+                                        <a class="red deleteuser"  href="javascript:;" title="删除">
+
+                                        <!--<a class="red delgroup"  href="#" title="删除">-->
+
+                                            <i class="icon-trash bigger-130"></i>
+                                        </a>
+                                        <input type="hidden" value="{$user_data_vo['id']}">
+                                    
+                                </td>
+                            </tr>
+                        </volist>
+                    </tbody>
+                </table>
+                    <div class="page" >
+                        <div class="pull-left" style="margin-top: 20px">
+                            <span class="pagination-info" >显示 1 到 1 条，共 1 条</span>
+                        </div>
+                        <nav aria-label="Page navigation " style="float: right">
+                            <ul class="pagination">
+                                <li>
+                                    <a href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li>
+                                    <a href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="clearBoth"></div>
+                    </div>
+
+
+
+			</div>
+                
+                
+            </div>   
+            
+            
+            
+               
+
+
+                
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<script>
+    $('.usergroup').attr('value',getParam("usergroup"));
+    $('.username').attr('value',getParam("username"));
+    $('.date-range-picker').attr('value',URLdecode(getParam("date-range-picker")));
+
+    function URLdecode(sStr){
+       return sStr.replace(/\+/g,' ').replace(/\%2F/g,'\/').replace(/\%20/g,''); 
+    }
+
+    function getParam(paramName)
+    {
+        paramValue = "";
+        isFound = false;
+        if (this.location.search.indexOf("?") == 0 && this.location.search.indexOf("=")>1)
+        {
+            arrSource = this.location.search.substring(1,this.location.search.length).split("&");
+            i = 0;
+            while (i < arrSource.length && !isFound)
+            {
+                if (arrSource[i].indexOf("=") > 0)
+                {
+                    if (arrSource[i].split("=")[0].toLowerCase()==paramName.toLowerCase())
+                    {
+                        paramValue = arrSource[i].split("=")[1];
+                        isFound = true;
+                    }
+                }
+                i++;
+            }
+        }
+        return paramValue;
+    }
+
+	$(document).on("click","#userAdd",function(){	
+        $("#addUser").show();
+        $("#fade").show();
+        return false
+    });
+
+       $('#addUser_form').submit(function(e){
+        e.stopPropagation();
+        e.preventDefault();
+        var data = $('#addUser_form').serialize();
+        var checkVal= $('#ischeck input').serialize();
+        if (checkVal =='') {
+                 layer.msg("请选择用户组");
+                return false
+        }else{
+
+            $.ajax({
+                 type: "POST",
+                 url: "__URL__/user_add",
+                 data: data,
+                 dataType: "json",
+                success:function(data){
+                    if(data.status=='success'){
+                        $("#addUser").hide();
+                        $("#fade").hide();
+                        $('#addUser_form')[0].reset();
+                        layer.msg(data.msg);
+                        window.location.reload();
+                    }else if(data.status=='1'){
+                        layer.msg(data.msg);
+                    }else{
+                        layer.msg(data.msg);
+                    }
+                }
+             });
+          }
+        
+    })
+
+    $(".closePop").css("cursor", "pointer").click(function () {
+        $("#addUser").hide();
+        $("#delUser").hide();
+        $("#editeUser").hide();
+        $("#fade").hide();
+        $(":checked").attr('checked',false);
+    });
+
+
+	$(document).on("click","#userDel",function(){
+        var ids= $("input:checkbox[name='checkbox']:checked").map(function() {
+            return $(this).val();
+        }).get().join(',');
+        if(ids==''||ids=='on'){
+            $(':checked').attr('checked',false);
+            layer.msg('请选择要删除的数据');
+        }else{
+            if(ids.indexOf("on,") >= 0){
+               ids = ids.replace(/on,/g,'');
+            }
+            $("#delUser").show();
+            $("#fade").show();
+        }
+        return false
+    });
+
+	$(document).on("click",".deleteuser",function(){
+        $(":checked").attr('checked',false);
+        $(this).parent().parent().children().first().children().first().attr('checked','checked');
+            $("#delUser").show();
+            $("#fade").show();
+            return false;
+    });
+    $('#user_delete_form').submit(function(e){
+        e.stopPropagation();
+        e.preventDefault();
+        var id = $("input:checkbox[name='checkbox']:checked").map(function() {
+            return $(this).val();
+        }).get().join(',');
+        $.ajax({
+            url:'__URL__/user_delete',
+            type:'POST',
+            dataType:'json',
+            data:{'id':id},
+            success:function(data){
+                if(data.status=='success'){
+                    $("#delUser").hide();
+                    $("#fade").hide();
+                    $('#user_delete_form')[0].reset();
+                    layer.msg(data.msg);
+                    window.location.reload();
+                    $(":checked").attr('checked',false);
+                }else{
+                    $("#delUser").hide();
+                    $("#fade").hide();
+                    $(":checked").attr('checked',false);
+                    layer.msg(data.msg);
+                }
+            }
+        });
+    });
+    $('#table tbody tr').each(
+        function(){
+        var aa = $(this).children('td:eq(1)').html();
+         if (aa =='admin') {
+            $(this).children('td:eq(0)').children('input').remove();
+            $(this).children('td:eq(7)').children('a').remove();
+         };
+
+        });
+		
+		$(document).on("click",".editeUser",function(){
+        var row = $(this).parents('tr');
+        var user_status = $(this).parents('td').prev('td').attr('data');
+        $("#edite_user").val(row.children('td:eq(1)').html());
+        $("#edite_email").val(row.children('td:eq(3)').html());
+        $("#user_status").val(user_status);
+        var id = $(this).next().next().val();
+        var group_id = [];
+        $.ajax({
+            type: "POST",
+            url: "__URL__/get_usergroup",
+            data: {'id':id},
+            dataType: "json",
+            success: function(data){
+                for (var i = 0; i < data.length; i++) {
+                    group_id.push(data[i]['group_id']);
+                }
+                $('#userGroup_sel input').each(function(){
+                    id = $(this).val();
+                    for(var i=0;i<group_id.length;i++){
+                    if (id==group_id[i]) {
+                        $(this).attr('checked','checked');
+                    }
+                    }
+                });
+                $("#editeUser").show();
+                $("#fade").show();
+            }
+        });
+        $('#id').val(id);
+        return false
+    });
+    $('#user_edite_form').submit(function(e){
+        e.stopPropagation();
+        e.preventDefault();
+        var editeUser_data = $('#user_edite_form').serialize();
+        var checkVal = $('#userGroup_sel input').serialize();
+        if (checkVal =='') {
+             layer.msg("请选择用户组");
+             return false
+        }else{
+        $.ajax({
+            url:'__URL__/do_user_edite',
+            type:'POST',
+            dataType:'json',
+            data:editeUser_data,
+            success:function(data){
+                if(data.status=='success'){
+                    $("#editeUser").hide();
+                    $("#fade").hide();
+                    $('#user_edite_form')[0].reset();
+                    layer.msg("编辑成功");
+                    window.location.reload();
+                }else if(data.status=='1'){
+                    layer.msg(data.msg);
+                }else{
+                    layer.msg(data.msg);
+                }
+            }
+        });
+    }
+    });
+    jQuery(function ($) {
+        $('input[name=date-range-picker]').daterangepicker({
+                    startDate: moment().subtract(1, 'days'),
+                    endDate: moment(),
+                    locale : {
+                        applyLabel: '提交',
+                        cancelLabel: '取消',
+                        fromLabel: '开始时间',
+                        toLabel: '结束时间',
+                        weekLabel: 'W',
+                        customRangeLabel: 'Custom Range',
+                        daysOfWeek: ['日', '一', '二', '三', '四', '五','六'],
+                        monthNames: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+                        firstDay: moment.localeData()._week.dow
+                    },
+                    language: 'cn',}
+        ).prev().on(ace.click_event, function () {
+                    $(this).next().focus();
+                });
+
+    })
+</script>

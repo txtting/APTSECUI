@@ -1,0 +1,319 @@
+<div class="main-content">
+
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try {
+                ace.settings.check('breadcrumbs', 'fixed')
+            } catch (e) {
+            }
+        </script>
+
+        <ul class="breadcrumb">
+            <li>
+                Waf管理
+            </li>
+            <li class="active">网络状态</li>
+        </ul>
+        <!-- .breadcrumb -->
+
+
+    </div>
+    <div class="tabbable marL10">
+        <ul class="nav nav-tabs" id="myTab">
+            <li class="active">
+                <a data-toggle="tab" href="#home">
+                    网络带宽
+                </a>
+            </li>
+
+            <li>
+                <a data-toggle="" href="__URL__/webstate2">
+                    访问监控
+                </a>
+            </li>
+
+            <li>
+                <a data-toggle="" href="__URL__/webstate3">
+                    客户端信息
+                </a>
+            </li>
+            <li>
+                <a data-toggle="" href="__URL__/webstate4">
+                    攻击监控
+                </a>
+            </li>
+
+        </ul>
+
+        <div class="tab-content">
+            <div id="home" class="tab-pane in active">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-xs-12">
+
+                            <div class="formArea marT10">
+                                <form name="searchform">
+
+                                    <div class=" floatLeft marL10">
+                                        <div class=" floatLeft marL10">
+                                            <label class="w70">选择时间：</label><input type="text" name="unitname" class="w200 unitname">
+                                        </div>
+
+
+                                    </div>
+
+
+
+                                    <button onclick="checkaction(0)" class="btn btn-sm btn-primary marL10"><i class="fa fa-search"></i>查询</button>
+
+                                </form>
+                            </div>
+
+
+                            <div class="table-responsive" style="">
+                                <div id="container" style="min-width:400px;height:250px"></div>
+                                <div id="container_his" style="min-width:400px;height:250px"></div>
+                                <div style="position: absolute; right:10px;top:300px; z-index: 1000;">
+                                    <select style="height:24px; font-size:12px;" id="chartc">
+                                        <option value="h">小时</option>
+                                        <option value="d">日</option>
+                                        <option value="w">周</option>
+                                        <option value="m">月</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="clear: both"></div>
+        </div>
+    </div>
+</div><!-- /.main-content -->
+
+<script type="text/javascript">
+    $('.negroup').attr('value',getParam("negroup"));
+    $('.ip').attr('value',getParam("ip"));
+    $('.source').attr('value',getParam("source"));
+    $('.date-range-picker').attr('value',URLdecode(getParam("date-range-picker")));
+
+    function URLdecode(sStr){
+        return sStr.replace(/\+/g,' ').replace(/\%2F/g,'\/').replace(/\%20/g,'');
+    }
+
+    function getParam(paramName)
+    {
+        paramValue = "";
+        isFound = false;
+        if (this.location.search.indexOf("?") == 0 && this.location.search.indexOf("=")>1)
+        {
+            arrSource = this.location.search.substring(1,this.location.search.length).split("&");
+            i = 0;
+            while (i < arrSource.length && !isFound)
+            {
+                if (arrSource[i].indexOf("=") > 0)
+                {
+                    if (arrSource[i].split("=")[0].toLowerCase()==paramName.toLowerCase())
+                    {
+                        paramValue = arrSource[i].split("=")[1];
+                        isFound = true;
+                    }
+                }
+                i++;
+            }
+        }
+        return paramValue;
+    }
+
+
+</script>
+<script type="text/javascript">
+    $(function () {
+        $(document).ready(function () {
+            Highcharts.setOptions({
+                global: {
+                    useUTC: false
+                }
+            });
+            $('#container').highcharts({
+                chart: {
+                    type: 'line',
+                    animation: Highcharts.svg, // don't animate in old IE
+                    marginRight: 10,
+                    events: {
+                        load: function () {
+                            // set up the updating of the chart each second
+                            var series = this.series[0];
+                            setInterval(function () {
+                                var x = (new Date()).getTime(), // current time
+                                        y = Math.round(Math.random()*(60-1)+1)
+                                series.addPoint([x, y], true, true);
+                            }, 1000);
+                        }
+                    }
+                },
+                title: {
+                    text: '带宽使用'
+                },
+                xAxis: {
+                    type: 'datetime',
+                    tickPixelInterval: 150
+                },
+                yAxis: {
+                    title: {
+                        text: 'Value'
+                    },
+                    labels: {
+                        formatter: function () {
+                            return this.value + 'kb/秒';
+                        }
+                    },
+                    min:0,
+                    max:100,
+                    plotLines: [{
+                        value: 0,
+                        width: 1,
+                        color: '#808080'
+                    }]
+                },
+                tooltip: {
+                    formatter: function () {
+                        return '<b>' + this.series.name + '</b><br/>' +
+                                Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) + '<br/>' +
+                                Highcharts.numberFormat(this.y, 2);
+                    }
+                },
+                legend: {
+                    enabled: true
+                },
+                plotOptions: {
+                    line: {
+                        lineWidth: 1,
+                        states: {
+                            hover: {
+                                lineWidth: 1
+                            }
+                        },
+                        marker: {
+                            enabled: false
+                        },
+                    }
+                },
+                exporting: {
+                    enabled: false
+                },
+                series: [{
+                    name: 'cpu0',
+                    data: (function () {
+                        // generate an array of random data
+                        var data = [],
+                                time = (new Date()).getTime(),
+                                i;
+                        for (i = -19; i <= 0; i += 1) {
+                            data.push({
+                                x: time + i * 1000,
+                                y: Math.round(Math.random()*(30-1)+1)
+                            });
+                        }
+                        return data;
+                    }())
+                }]
+            });
+        });
+    });
+    $(function () {
+        Highcharts.setOptions({
+            timezoneOffset: -8
+        });
+        $('#container_his').highcharts({
+            chart: {
+                zoomType: 'x'
+            },
+            title: {
+                text: '带宽历史状态'
+            },
+            subtitle: {
+            },
+            xAxis: {
+                type: 'datetime',
+                dateTimeLabelFormats: {
+                    millisecond: '%H:%M:%S.%L',
+                    second: '%H:%M:%S',
+                    minute: '%H:%M',
+                    hour: '%H:%M',
+                    day: '%m-%d',
+                    week: '%m-%d',
+                    month: '%Y-%m',
+                    year: '%Y'
+                }
+            },
+            tooltip: {
+                dateTimeLabelFormats: {
+                    millisecond: '%H:%M:%S.%L',
+                    second: '%H:%M:%S',
+                    minute: '%H:%M',
+                    hour: '%H:%M',
+                    day: '%Y-%m-%d',
+                    week: '%m-%d',
+                    month: '%Y-%m',
+                    year: '%Y'
+                }
+            },
+            yAxis: {
+                title: {
+                    text: 'value'
+                },
+                labels: {
+                    formatter: function () {
+                        return this.value + 'kb/秒';
+                    }
+                },
+            },
+            legend: {
+                enabled: false
+            },
+            plotOptions: {
+
+            },
+            series: [{
+                type: 'line',
+                name: '',
+                data: [
+                    [Date.UTC(2016,12,14,10,0),30],
+                    [Date.UTC(2016,12,14,10,5),35],
+                    [Date.UTC(2016,12,14,10,10),60],
+                    [Date.UTC(2016,12,14,10,15),55],
+                    [Date.UTC(2016,12,14,10,20),40],
+                    [Date.UTC(2016,12,14,10,25),30],
+                    [Date.UTC(2016,12,14,10,30),45],
+                    [Date.UTC(2016,12,14,10,35),50],
+                    [Date.UTC(2016,12,14,10,40),60],
+                    [Date.UTC(2016,12,14,10,45),70],
+                    [Date.UTC(2016,12,14,10,50),50],
+                    [Date.UTC(2016,12,14,10,55),40],
+                ]
+            }]
+        });
+    });
+
+    jQuery(function ($) {
+        $('input[name=date-range-picker]').daterangepicker({
+                    locale : {
+                        applyLabel: '提交',
+                        cancelLabel: '取消',
+                        fromLabel: '开始时间',
+                        toLabel: '结束时间',
+                        weekLabel: 'W',
+                        customRangeLabel: 'Custom Range',
+                        daysOfWeek: ['日', '一', '二', '三', '四', '五','六'],
+                        monthNames: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+                        firstDay: moment.localeData()._week.dow
+                    },
+                    language: 'cn',}
+        ).prev().on(ace.click_event, function () {
+                    $(this).next().focus();
+                });
+
+    })
+</script>

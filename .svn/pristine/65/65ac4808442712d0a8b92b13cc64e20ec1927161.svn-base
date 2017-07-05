@@ -1,0 +1,1930 @@
+<div class="main-content">
+    <div class="breadcrumbs" id="breadcrumbs">
+                <script type="text/javascript">
+                    try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+                </script>
+
+                <ul class="breadcrumb">
+                    <li>
+                        基础信息
+                    </li>
+                    <li class="active">添加基础信息</li>
+                </ul><!-- .breadcrumb -->
+    </div>
+   <div class="col-sm-12">
+      <div class="row">
+                <div class="col-xs-12">
+
+        <div class="col-sm-12">
+            <p class="state"><a href="#"
+                                class="online">在线</a><span>最后在线时间：2015/10/10 10:10:10</span><span>运行时长：<b>100</b>H</span>
+                                <a href="__URL__/nemonitor" class="historyM"><i class=" icon-facetime-video white marL10 marR10"></i>查看历史监控</a>
+            </p>
+
+            <div class="netDetailArea">
+
+                <h1><span><b>序列号：</b>20150000001</span><span><b>ip：</b>192.168.0.1</span><span><b>网元类型：</b>分流器</span><span><b>网元组：</b>A组</span><span><b>网元名称：</b>eee</span><span><b>主机名：</b>aa</span><span><b>内存：</b>4G</span>
+                    <span><b>硬盘：</b>500G</span><span
+                        class="time">注册时间：2015-09-09 10:10:10</span></h1>
+
+                <h2>
+                    
+                    <span>
+                    	<a class="versionDet0">
+                        	<b>OS版本<i class="icon-caret-down blue"></i></b>
+                            <div class="versionDet" style="display:none;">(Update 9)
+                                      Solaris 9 9/05 HW s9s_u9wos_06b SPARC
+                                        Copyright 2006 Sun Microsystems, Inc. All Rights Reserved.
+                                                     Use is subject to license terms.
+                                                          Assembled 25 September 2006
+                                        118558-34
+                                        9,REV=2006.09.25.16.39
+                            </div>
+                         </a>
+                    </span>
+                    
+                    <span>
+                    	<a class="versionDet0">
+                        	<b>bootroom版本<i class="icon-caret-down blue"></i></b>
+                            <div class="versionDet" style="display:none;">(Update 9)
+                                      Solaris 9 9/05 HW s9s_u9wos_06b SPARC
+                                        Copyright 2006 Sun Microsystems, Inc. All Rights Reserved.
+                                                     Use is subject to license terms.
+                                                          Assembled 25 September 2006
+                                        118558-34
+                                        9,REV=2006.09.25.16.39
+                            </div>
+                        </a>
+                     </span>
+                     <span>
+                     	<a class="versionDet0">
+                        	<b>特征库版本<i class="icon-caret-down blue"></i></b>
+                        
+                        <div class="versionDet" style="display:none;">(Update 9)
+                                      Solaris 9 9/05 HW s9s_u9wos_06b SPARC
+                                        Copyright 2006 Sun Microsystems, Inc. All Rights Reserved.
+                                                     Use is subject to license terms.
+                                                          Assembled 25 September 2006
+                                        118558-34
+                                        9,REV=2006.09.25.16.39
+                            </div>
+                         </a>
+                     </span>
+                     <span>
+                     	<a class="versionDet0"><b>rootfs版本<i class="icon-caret-down blue"></i></b>
+                       
+                        <div class="versionDet" style="display:none;">(Update 9)
+                                      Solaris 9 9/05 HW s9s_u9wos_06b SPARC
+                                        Copyright 2006 Sun Microsystems, Inc. All Rights Reserved.
+                                                     Use is subject to license terms.
+                                                          Assembled 25 September 2006
+                                        118558-34
+                                        9,REV=2006.09.25.16.39
+                            </div>
+                             </a>
+                     </span>
+                     <span>
+                     	<a class="versionDet0">
+                        	<b>备注<i class="icon-caret-down blue"></i></b>
+                        
+                        <div class="versionDet" style="display:none;">(Update 9)
+                                      备注备注。。
+                            </div>
+                            </a>
+                     </span>
+                </h2>
+                
+                
+                
+                <div id="checkTab">
+                            <label style="margin: 10px"><input type="checkbox" autocomplete="off" checked>CPU使用率</label>
+                            <label style="margin: 10px"><input type="checkbox" autocomplete="off" >硬盘使用率</label>
+                            <label style="margin: 10px"><input type="checkbox" autocomplete="off" >非zol核CPU使用率</label>
+                            <label style="margin: 10px"><input type="checkbox" autocomplete="off" >CPU温度</label>
+                            <label style="margin: 10px"><input type="checkbox" autocomplete="off" >丢包数</label>
+                            <label style="margin: 10px"><input type="checkbox" autocomplete="off" >会话数</label>
+                            <label style="margin: 10px"><input type="checkbox" autocomplete="off" >错误报数</label>
+                            <label style="margin: 10px"><input type="checkbox" autocomplete="off" >管理口上行流量</label>
+                            <label style="margin: 10px"><input type="checkbox" autocomplete="off" >管理口下行流量</label>
+                            <label style="margin: 10px"><input type="checkbox" autocomplete="off" >管理口上行报文数</label>
+                            <label style="margin: 10px"><input type="checkbox" autocomplete="off" >管理口下行报文数</label>
+                            <label style="margin: 10px"><input type="checkbox" autocomplete="off" >业务口上行流量</label>
+                            <label style="margin: 10px"><input type="checkbox" autocomplete="off" >业务口下行流量</label>
+                            <label style="margin: 10px"><input type="checkbox" autocomplete="off" >业务口上行报文数</label>
+                            <label style="margin: 10px"><input type="checkbox" autocomplete="off" >业务口下行报文数</label>
+                </div>
+                
+                
+                <div>
+                            <div class="chartContainer" id="containerA" style=" width:100%;height: 300px; display: block"></div>
+                            <div class="chartContainer" id="containerB" style=" width: 100%; height:300px;"></div>
+                            <div class="chartContainer" id="containerC" style="width:100%;height: 300px"></div>
+                            <div class="chartContainer" id="containerD" style="width:100%;height: 300px"></div>
+                            <div class="chartContainer" id="containerE" style="width:100%;height:300px"></div>
+                            <div class="chartContainer" id="containerF" style=" width:100%; height:300px;"></div>
+                            <div class="chartContainer" id="containerG" style="width:100%;height:300px"></div>
+                            <div class="chartContainer" id="containerH" style="width:100%;height: 300px"></div>
+                            <div class="chartContainer" id="containerI" style="width:100%;height: 300px"></div>
+                            <div class="chartContainer" id="containerJ" style="width:100%;height: 300px"></div>
+                            <div class="chartContainer" id="containerK" style="width:100%;height: 300px"></div>
+                            <div class="chartContainer" id="containerL" style="width:100%;height: 300px"></div>
+                            <div class="chartContainer" id="containerM" style="width:100%;height: 300px"></div>
+                            <div class="chartContainer" id="containerN" style="width:100%;height: 300px"></div>
+                            <div class="chartContainer" id="containerO" style="width:100%;height: 300px"></div>
+                            
+                            <div style="clear:both;"></div>
+                        </div>
+                
+                
+                
+                <div style="width:100%; margin-top:10px;">
+                
+                <!--
+										<div class="tabbable">
+											<ul class="nav nav-tabs" id="myTab">
+												<li class="active"><a data-toggle="tab" href="#home">CPU使用率</a></li>
+												<li><a data-toggle="tab" href="#profile">硬盘使用率</a></li>
+												<li><a data-toggle="tab" href="#dropdown">非zol核CPU使用率</a></li>
+                                                <li><a data-toggle="tab" href="#temper">CPU温度</a></li>
+                                                <li><a data-toggle="tab" href="#lostNum">丢包数</a></li>
+                                                <li><a data-toggle="tab" href="#callNum">会话数</a></li>
+                                                <li><a data-toggle="tab" href="#errorNum">错误报数</a></li>
+                                                <li><a data-toggle="tab" href="#adminNum">管理口流量与报文</a></li>
+                                                <li><a data-toggle="tab" href="#busiNum">业务口流量与报文</a></li>
+											</ul>
+                                            
+                                           
+
+											<div class="tab-content">
+                                                
+												<div id="home" class="tab-pane in active">
+													<div style="width:100%; height:300px; ">
+                                                    <div id="containerA" style="width: 100%;height:300px;"></div>
+                                                    </div>
+												</div>
+
+												<div id="profile" class="tab-pane">
+													<div style="width:100%; height:300px; ">
+                                                    <div id="containerB" style=" height:300px;" class="chartContainer0"></div>
+                                                    </div>  
+												</div>
+
+												<div id="dropdown" class="tab-pane">
+													<div style="width:100%; height:300px; ">
+                                                    <div id="containerC" style="width: 100%; height:300px;" class="chartContainer0"></div>
+                                                    </div>
+												</div>
+                                                
+                                                <div id="temper" class="tab-pane">
+													<div style="width:100%; height:300px; ">
+                                                    <div id="containerD" style="width: 100%; height:300px;" class="chartContainer0"></div>
+                                                    </div>
+												</div>
+                                                
+                                                <div id="lostNum" class="tab-pane">
+													<div style="width:100%; height:300px; ">
+                                                    <div id="containerE" style="width: 100%; height:300px;" class="chartContainer0"></div>
+                                                    </div>
+												</div>
+                                                
+                                                <div id="callNum" class="tab-pane">
+													<div style="width:100%; height:300px; ">
+                                                    <div id="containerF" style="width: 100%; height:300px;" class="chartContainer0"></div>
+                                                    </div>
+												</div>
+                                                
+                                                <div id="errorNum" class="tab-pane">
+													<div style="width:100%; height:300px; ">
+                                                    <div id="containerG" style="width: 100%; height:300px;" class="chartContainer0"></div>
+                                                    </div>
+												</div>
+                                                
+                                                <div id="adminNum" class="tab-pane">
+													<div style="width:25%; height:200px; float:left;">
+                                                    <div id="containerH" style="width: 100%; height:200px; float:left;" class="chartContainer2"></div>
+                                                    </div>
+                                                    
+                                                    <div style="width:24%; height:200px; float:left; margin-left:1%;">
+                                                    <div id="containerI" style="width: 100%; height:200px" class="chartContainer2"></div>
+                                                    </div>
+                                                    
+                                                    <div style="width:24%; height:200px; float:left; margin-left:1%;">
+                                                    <div id="containerJ" style="width: 100%; height:200px" class="chartContainer2"></div>
+                                                    </div>
+                                                    
+                                                    <div style="width:24%; height:200px; float:left; margin-left:1%;">
+                                                    <div id="containerK" style="width: 100%; height:200px" class="chartContainer2"></div>
+                                                    </div>
+                                                    <div class="clearBoth"></div>
+												</div>
+                                                
+                                                <div id="busiNum" class="tab-pane">
+                                                    <DIV style="width:100%;">
+													<div style="width:25%; height:200px; float:left;">
+                                                    <div id="containerL" style="width: 100%; height:200PX; float:left;" class="chartContainer2"></div>
+                                                    </div>
+                                                    
+                                                    <div style="width:24%; height:200px; float:left; margin-left:0%;">
+                                                    <div id="containerM" style="width: 100%; height:200PX; float:left;" class="chartContainer2"></div>
+                                                    </div>
+                                                    
+                                                    <div style="width:23% height:200px; float:left; margin-left:0%;">
+                                                    <div id="containerN" style="width: 100%;height:200PX; float:left;" class="chartContainer2"></div>
+                                                    </div>
+                                                    
+                                                    <div style="width:23% height:200px; float:left; margin-left:0%;">
+                                                    <div id="containerO" style="width: 100%;height:200PX; float:left;" class="chartContainer2"></div>
+                                                    </div>
+                                                    <div class="clearBoth"></div>
+                                                    </DIV>
+												</div>
+                                                
+                                                
+
+												
+											</div>
+										</div> -->
+
+					
+
+
+
+
+
+                </div>
+
+
+<!--
+                <div class="netInfo">
+                    <div class="info02">
+                        <p><span>会话数：</span><b>10000</b></p>
+
+                        <p><span>丢包数：</span><b>900</b></p>
+
+                        <p><span>错误报数：</span><b>10000</b></p>
+                    </div>
+                </div>
+
+                <div class="netInfo02">
+                    <ul>
+                        <li>
+                            <div id="container-speed" style="width: 200px;height:130px;"></div>
+                            CPU使用率
+                        </li>
+                        <li>
+                            <div id="container-rpm" style="width: 200px;height:130px; "></div>
+                            硬盘使用率
+                        </li>
+                        <li>
+                            <div id="container-zol" style="width: 200px;height:130px;"></div>
+                            非ZOL核的CPU使用率
+                        </li>
+                        <li>
+                            <div id="centered" style="height: 130px">
+                                <div id="goal-thermometer"></div>
+                            </div>
+                            CPU温度
+                        </li>
+                    </ul>
+                </div>
+                <div class="netInfo03">
+                    <ul>
+                        <li class="bor0"><p class="fontSize">886,00</p>
+
+                            <p>管理口上行流量（MB）</p>
+                            <i class="icon-arrow-up green bigger-120"></i>
+                            </li>
+                        <li class="bor0"><p class="fontSize">98,200</p>
+
+                            <p>管理口下行流量（MB）</p>
+                            <i class="icon-arrow-down red bigger-120"></i>
+                            </li>
+                        <li class="bor0"><p class="fontSize">886,200</p>
+
+                            <p>管理口上行报文数</p>
+                            <i class="icon-arrow-up green bigger-120"></i>
+                            </li>
+                        <li class="borB0"><p class="fontSize">886,200</p>
+
+                            <p>管理口下行报文数</p>
+                            <i class="icon-arrow-down red bigger-120"></i>
+                            </li>
+                        <li class="borR0"><p class="fontSize">886,200</p>
+
+                            <p>业务口上行流量（MB）</p>
+                            <i class="icon-arrow-up green bigger-120"></i>
+                            </li>
+                        <li class="borR0"><p class="fontSize">886,200</p>
+
+                            <p>业务口下行流量（MB）</p>
+                            <i class="icon-arrow-down red bigger-120"></i>
+                            </li>
+                        <li class="borR0"><p class="fontSize">886,200</p>
+
+                            <p>业务口上行报文数</p>
+                            <i class="icon-arrow-up green bigger-120"></i>
+                            </li>
+                        <li><p class="fontSize">886,200</p>
+
+                            <p>业务口下行报文数</p>
+                            <i class="icon-arrow-down red bigger-120"></i>
+                            </li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+
+-->
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div>
+    </div> 
+
+
+<script type="text/javascript">
+
+/*
+    $(function () {
+
+        var gaugeOptions = {
+
+            chart: {
+                type: 'solidgauge'
+            },
+
+            title: null,
+
+            pane: {
+                center: ['50%', '85%'],
+                size: '140%',
+                startAngle: -90,
+                endAngle: 90,
+                background: {
+                    backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || '#EEE',
+                    innerRadius: '60%',
+                    outerRadius: '100%',
+                    shape: 'arc'
+                }
+            },
+
+            tooltip: {
+                enabled: false
+            },
+
+            // the value axis
+            yAxis: {
+                stops: [
+                    [0.1, '#55BF3B'], // green
+                    [0.5, '#DDDF0D'], // yellow
+                    [0.9, '#DF5353'] // red
+                ],
+                lineWidth: 0,
+                minorTickInterval: null,
+                tickPixelInterval: 400,
+                tickWidth: 0,
+                title: {
+                    y: -70
+                },
+                labels: {
+                    y: 16
+                }
+            },
+
+            plotOptions: {
+                solidgauge: {
+                    dataLabels: {
+                        y: 5,
+                        borderWidth: 0,
+                        useHTML: true
+                    }
+                }
+            }
+        };
+
+        // The speed gauge
+        $('#container-speed').highcharts(Highcharts.merge(gaugeOptions, {
+            yAxis: {
+                min: 0,
+                max: 100,
+                title: {}
+            },
+
+            credits: {
+                enabled: false
+            },
+
+            series: [{
+                name: 'Speed',
+                data: [80],
+                dataLabels: {
+                    format: '<div style="text-align:center"><span style="font-size:20px;color:' +
+                    ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}<b style="font-size: 12px; color: #999; font-weight: normal">%</b></span><br/>'
+                },
+                tooltip: {
+                    valueSuffix: ' km/h'
+                }
+            }]
+
+        }));
+
+        // The RPM gauge
+        $('#container-rpm').highcharts(Highcharts.merge(gaugeOptions, {
+            yAxis: {
+                min: 0,
+                max: 100,
+                title: {}
+            },
+
+            series: [{
+                data: [1],
+                dataLabels: {
+                    format: '<div style="text-align:center"><span style="font-size:20px;color:' +
+                    ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}<b style="font-size: 12px; color: #999; font-weight: normal">%</b></span><br/>'
+                },
+                tooltip: {
+                    valueSuffix: ' revolutions/min'
+                }
+            }]
+
+        }));
+
+
+        $('#container-zol').highcharts(Highcharts.merge(gaugeOptions, {
+            yAxis: {
+                min: 0,
+                max: 100,
+                title: {}
+            },
+
+            series: [{
+                data: [1],
+                dataLabels: {
+                    format: '<div style="text-align:center"><span style="font-size:20px;color:' +
+                    ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}<b style="font-size: 12px; color: #999; font-weight: normal">%</b></span><br/>'
+                },
+                tooltip: {
+                    valueSuffix: ' revolutions/min'
+                }
+            }]
+
+        }));
+
+        // Bring life to the dials
+        setInterval(function () {
+            // Speed
+            var chart = $('#container-speed').highcharts(),
+                    point,
+                    newVal,
+                    inc;
+
+            if (chart) {
+                point = chart.series[0].points[0];
+                inc = Math.round((Math.random() - 0.5) * 100);
+                newVal = point.y + inc;
+
+                if (newVal < 0 || newVal > 100) {
+                    newVal = point.y - inc;
+                }
+
+                point.update(newVal);
+            }
+            // Speed
+            chart = $('#container-rpm').highcharts(),
+                    point,
+                    newVal,
+                    inc;
+
+            if (chart) {
+                point = chart.series[0].points[0];
+                inc = Math.round((Math.random() - 0.5) * 100);
+                newVal = point.y + inc;
+
+                if (newVal < 0 || newVal > 100) {
+                    newVal = point.y - inc;
+                }
+
+                point.update(newVal);
+            }
+
+
+            // RPM
+            chart = $('#container-zol').highcharts(),
+                    point,
+                    newVal,
+                    inc;
+
+            if (chart) {
+                point = chart.series[0].points[0];
+                inc = Math.round((Math.random() - 0.5) * 100);
+                newVal = point.y + inc;
+
+                if (newVal < 0 || newVal > 100) {
+                    newVal = point.y - inc;
+                }
+
+                point.update(newVal);
+            }
+        }, 2000);
+
+
+    });
+	
+	*/
+	
+	$(function () {                                                                     
+    $(document).ready(function() {                                                  
+        Highcharts.setOptions({                                                     
+            global: {                                                               
+                useUTC: false                                                       
+            }                                                                       
+        });                                                                         
+                                                                                    
+        var chart;                                                                  
+        $('#containerA').highcharts({                                                
+            chart: {                                                                
+                type: 'spline',  
+				backgroundColor: 'rgba(0,0,0,0)',                                                    
+                animation: Highcharts.svg, // don't animate in old IE               
+                marginRight: 10,                                                    
+                events: {                                                           
+                    load: function() {                                              
+                                                                                    
+                        // set up the updating of the chart each second             
+                        var series = this.series[0];                                
+                        setInterval(function() {                                    
+                            var x = (new Date()).getTime(), // current time         
+                                y = Math.random();                                  
+                            series.addPoint([x, y], true, true);                    
+                        }, 3000);                                                   
+                    }                                                               
+                }                                                                   
+            },                                                                      
+            title: {                                                                
+                text: '网元CPU使用率'                                            
+            },                                                                      
+            xAxis: {                                                                
+                type: 'datetime',                                                   
+                tickPixelInterval: 150                                              
+            },                                                                      
+            yAxis: {                                                                
+                title: {                                                            
+                    text: 'CPU使用率'                                                   
+                }, 
+				max:1, 
+				min:0,                                                                   
+                plotLines: [{                                                       
+                    value: 0,                                                       
+                    width: 1,                                                       
+                    color: '#808080'                                                
+                }]                                                                  
+            },                                                                      
+            tooltip: {                                                              
+                formatter: function() {                                             
+                        return '<b>'+ this.series.name +'</b><br/>'+                
+                        Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) +'<br/>'+
+                        Highcharts.numberFormat(this.y, 2);                         
+                }                                                                   
+            },                                                                      
+            legend: {                                                               
+                enabled: false                                                      
+            },                                                                      
+            exporting: {                                                            
+                enabled: false                                                      
+            },                                                                      
+            series: [{                                                              
+                name: 'CPU使用率',                                                
+                data: (function() {                                                 
+                    // generate an array of random data                             
+                    var data = [],                                                  
+                        time = (new Date()).getTime(),                              
+                        i;                                                          
+                                                                                    
+                    for (i = -19; i <= 0; i++) {                                    
+                        data.push({                                                 
+                            x: time + i * 1000,                                     
+                            y: Math.random()                                        
+                        });                                                         
+                    }                                                               
+                    return data;                                                    
+                })()                                                                
+            }]                                                                      
+        });                                                                         
+    });                                                                             
+                                                                                    
+});            
+
+
+
+$(function () {      
+
+
+                                                               
+    $(document).ready(function() {                                                  
+        Highcharts.setOptions({                                                     
+            global: {                                                               
+                useUTC: false                                                       
+            }                                                                       
+        });                                                                         
+                                                                                    
+        var chart;                                                                  
+        $('#containerB').highcharts({                                                
+            chart: {                                                                
+                type: 'spline',  
+				 backgroundColor: 'rgba(0,0,0,0)',                                                   
+                animation: Highcharts.svg, // don't animate in old IE               
+                marginRight: 10,                                                    
+                events: {                                                           
+                    load: function() {                                              
+                                                                                    
+                        // set up the updating of the chart each second             
+                        var series = this.series[0];                                
+                        setInterval(function() {                                    
+                            var x = (new Date()).getTime(), // current time         
+                                y = Math.random();                                  
+                            series.addPoint([x, y], true, true);                    
+                        },3000);                                                   
+                    }                                                               
+                }                                                                   
+            },                                                                      
+            title: {                                                                
+                text: '网元硬盘使用率'                                            
+            },                                                                      
+            xAxis: {                                                                
+                type: 'datetime',                                                   
+                tickPixelInterval: 150                                              
+            },                                                                      
+            yAxis: {                                                                
+                title: {                                                            
+                    text: 'CPU使用率'                                                   
+                },  
+				max:1, 
+				min:0,                                                               
+                plotLines: [{                                                       
+                    value: 0,                                                       
+                    width: 1,                                                       
+                    color: '#808080'                                                
+                }]                                                                  
+            },                                                                      
+            tooltip: {                                                              
+                formatter: function() {                                             
+                        return '<b>'+ this.series.name +'</b><br/>'+                
+                        Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) +'<br/>'+
+                        Highcharts.numberFormat(this.y, 2);                         
+                }                                                                   
+            },                                                                      
+            legend: {                                                               
+                enabled: false                                                      
+            },                                                                      
+            exporting: {                                                            
+                enabled: false                                                      
+            },                                                                      
+            series: [{                                                              
+                name: 'CPU使用率',                                                
+                data: (function() {                                                 
+                    // generate an array of random data                             
+                    var data = [],                                                  
+                        time = (new Date()).getTime(),                              
+                        i;                                                          
+                                                                                    
+                    for (i = -19; i <= 0; i++) {                                    
+                        data.push({                                                 
+                            x: time + i * 1000,                                     
+                            y: Math.random()                                        
+                        });                                                         
+                    }                                                               
+                    return data;                                                    
+                })()                                                                
+            }]                                                                      
+        });                                                                         
+    });                                                                             
+                                                                                    
+});     
+
+
+
+$(function () {      
+
+
+                                                               
+    $(document).ready(function() {                                                  
+        Highcharts.setOptions({                                                     
+            global: {                                                               
+                useUTC: false                                                       
+            }                                                                       
+        });                                                                         
+                                                                                    
+        var chart;                                                                  
+        $('#containerC').highcharts({                                                
+            chart: {                                                                
+                type: 'spline',  
+				 backgroundColor: 'rgba(0,0,0,0)',                                                   
+                animation: Highcharts.svg, // don't animate in old IE               
+                marginRight: 10,                                                    
+                events: {                                                           
+                    load: function() {                                              
+                                                                                    
+                        // set up the updating of the chart each second             
+                        var series = this.series[0];                                
+                        setInterval(function() {                                    
+                            var x = (new Date()).getTime(), // current time         
+                                y = Math.random();                                  
+                            series.addPoint([x, y], true, true);                    
+                        },3000);                                                   
+                    }                                                               
+                }                                                                   
+            },                                                                      
+            title: {                                                                
+                text: ' 非ZOL核的CPU使用率 '                                            
+            },                                                                      
+            xAxis: {                                                                
+                type: 'datetime',                                                   
+                tickPixelInterval: 150                                              
+            },                                                                      
+            yAxis: {                                                                
+                title: {                                                            
+                    text: ' 非ZOL核的CPU使用率 '                                                   
+                },  
+				max:1, 
+				min:0,                                                               
+                plotLines: [{                                                       
+                    value: 0,                                                       
+                    width: 1,                                                       
+                    color: '#808080'                                                
+                }]                                                                  
+            },                                                                      
+            tooltip: {                                                              
+                formatter: function() {                                             
+                        return '<b>'+ this.series.name +'</b><br/>'+                
+                        Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) +'<br/>'+
+                        Highcharts.numberFormat(this.y, 2);                         
+                }                                                                   
+            },                                                                      
+            legend: {                                                               
+                enabled: false                                                      
+            },                                                                      
+            exporting: {                                                            
+                enabled: false                                                      
+            },                                                                      
+            series: [{                                                              
+                name: ' 非ZOL核的CPU使用率 ',                                                
+                data: (function() {                                                 
+                    // generate an array of random data                             
+                    var data = [],                                                  
+                        time = (new Date()).getTime(),                              
+                        i;                                                          
+                                                                                    
+                    for (i = -19; i <= 0; i++) {                                    
+                        data.push({                                                 
+                            x: time + i * 1000,                                     
+                            y: Math.random()                                        
+                        });                                                         
+                    }                                                               
+                    return data;                                                    
+                })()                                                                
+            }]                                                                      
+        });                                                                         
+    });                                                                             
+                                                                                    
+});     
+
+
+
+
+$(function () {      
+
+
+                                                               
+    $(document).ready(function() {                                                  
+        Highcharts.setOptions({                                                     
+            global: {                                                               
+                useUTC: false                                                       
+            }                                                                       
+        });                                                                         
+                                                                                    
+        var chart;                                                                  
+        $('#containerD').highcharts({                                                
+            chart: {                                                                
+                type: 'spline',  
+				 backgroundColor: 'rgba(0,0,0,0)',                                                  
+                animation: Highcharts.svg, // don't animate in old IE               
+                marginRight: 10,                                                    
+                events: {                                                           
+                    load: function() {                                              
+                                                                                    
+                        // set up the updating of the chart each second             
+                        var series = this.series[0];                                
+                        setInterval(function() {                                    
+                            var x = (new Date()).getTime(), // current time         
+                                y = Math.random();                                  
+                            series.addPoint([x, y], true, true);                    
+                        },3000);                                                   
+                    }                                                               
+                }                                                                   
+            },                                                                      
+            title: {                                                                
+                text: 'CPU温度  '                                            
+            },                                                                      
+            xAxis: {                                                                
+                type: 'datetime',                                                
+                tickPixelInterval: 150                                              
+            },                                                                      
+            yAxis: {                                                                
+                title: {                                                            
+                    text: ' CPU温度 '                                                   
+                },  
+                                                              
+                plotLines: [{                                                       
+                    value: 0,                                                       
+                    width: 1,                                                       
+                    color: '#808080'                                                
+                }]                                                                  
+            },                                                                      
+            tooltip: {                                                              
+                formatter: function() {                                             
+                        return '<b>'+ this.series.name +'</b><br/>'+                
+                        Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) +'<br/>'+
+                        Highcharts.numberFormat(this.y, 2);                         
+                }                                                                   
+            },                                                                      
+            legend: {                                                             
+                enabled: false                                                      
+            },                                                                      
+            exporting: {                                                            
+                enabled: false                                                      
+            },                                                                   
+            series: [{ 
+			lineColor:'#f47300',                                                              
+                name: 'CPU温度  ', 
+				marker:{fillColor:'red' //设置所有数据点的颜色值
+				       },                                             
+                data: (function() {                                               
+                    // generate an array of random data                             
+                    var data = [],                                                  
+                        time = (new Date()).getTime(),                              
+                        i;                                                          
+                                                                                    
+                    for (i = -19; i <= 0; i++) {                                    
+                        data.push({                                                 
+                            x: time + i * 1000,                                     
+                            y:Math.round( Math.random(100-0)+100)                                        
+                        });                                                         
+                    }                                                               
+                    return data;                                                    
+                })()                                                                
+            }]                                                                      
+        });                                                                         
+    });                                                                             
+                                                                                    
+});     
+
+
+
+
+
+$(function () {                                                               
+    $(document).ready(function() {                                                  
+        Highcharts.setOptions({                                                     
+            global: {                                                               
+                useUTC: false                                                       
+            }                                                                       
+        });                                                                         
+                                                                                    
+        var chart;                                                                  
+        $('#containerE').highcharts({                                                
+            chart: {                                                                
+                type: 'spline',  
+				 backgroundColor: 'rgba(0,0,0,0)',                                                  
+                animation: Highcharts.svg, // don't animate in old IE               
+                marginRight: 10,                                                    
+                events: {                                                           
+                    load: function() {                                              
+                                                                                    
+                        // set up the updating of the chart each second             
+                        var series = this.series[0];                                
+                        setInterval(function() {                                    
+                            var x = (new Date()).getTime(), // current time         
+                                y = Math.random();                                  
+                            series.addPoint([x, y], true, true);                    
+                        },3000);                                                   
+                    }                                                               
+                }                                                                   
+            },                                                                      
+            title: {                                                                
+                text: '丢包数 '                                            
+            },                                                                      
+            xAxis: {                                                                
+                type: 'datetime',                                                
+                tickPixelInterval: 150                                              
+            },                                                                      
+            yAxis: {                                                                
+                title: {                                                            
+                    text: '丢包数 '                                                   
+                },  
+                                                              
+                plotLines: [{                                                       
+                    value: 0,                                                       
+                    width: 1,                                                       
+                    color: '#808080'                                                
+                }]                                                                  
+            },                                                                      
+            tooltip: {                                                              
+                formatter: function() {                                             
+                        return '<b>'+ this.series.name +'</b><br/>'+                
+                        Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) +'<br/>'+
+                        Highcharts.numberFormat(this.y, 2);                         
+                }                                                                   
+            },                                                                      
+            legend: {                                                             
+                enabled: false                                                      
+            },                                                                      
+            exporting: {                                                            
+                enabled: false                                                      
+            },                                                                   
+            series: [{ 
+			lineColor:'#f47300',                                                              
+                name: '丢包数', 
+				marker:{fillColor:'red' //设置所有数据点的颜色值
+				       },                                             
+                data: (function() {                                               
+                    // generate an array of random data                             
+                    var data = [],                                                  
+                        time = (new Date()).getTime(),                              
+                        i;                                                          
+                                                                                    
+                    for (i = -19; i <= 0; i++) {                                    
+                        data.push({                                                 
+                            x: time + i * 1000,                                     
+                            y:Math.round( Math.random(100-0)+100)                                        
+                        });                                                         
+                    }                                                               
+                    return data;                                                    
+                })()                                                                
+            }]                                                                      
+        });                                                                         
+    });                                                                             
+                                                                                    
+});     
+
+
+
+$(function () {                                                               
+    $(document).ready(function() {                                                  
+        Highcharts.setOptions({                                                     
+            global: {                                                               
+                useUTC: false                                                       
+            }                                                                       
+        });                                                                         
+                                                                                    
+        var chart;                                                                  
+        $('#containerF').highcharts({                                                
+            chart: {                                                                
+                type: 'spline',  
+				 backgroundColor: 'rgba(0,0,0,0)',                                                  
+                animation: Highcharts.svg, // don't animate in old IE               
+                marginRight: 10,                                                    
+                events: {                                                           
+                    load: function() {                                              
+                                                                                    
+                        // set up the updating of the chart each second             
+                        var series = this.series[0];                                
+                        setInterval(function() {                                    
+                            var x = (new Date()).getTime(), // current time         
+                                y = Math.random();                                  
+                            series.addPoint([x, y], true, true);                    
+                        },3000);                                                   
+                    }                                                               
+                }                                                                   
+            },                                                                      
+            title: {                                                                
+                text: '会话数'                                            
+            },                                                                      
+            xAxis: {                                                                
+                type: 'datetime',                                                
+                tickPixelInterval: 150                                              
+            },                                                                      
+            yAxis: {                                                                
+                title: {                                                            
+                    text: '会话数'                                                   
+                },  
+                                                              
+                plotLines: [{                                                       
+                    value: 0,                                                       
+                    width: 1,                                                       
+                    color: '#808080'                                                
+                }]                                                                  
+            },                                                                      
+            tooltip: {                                                              
+                formatter: function() {                                             
+                        return '<b>'+ this.series.name +'</b><br/>'+                
+                        Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) +'<br/>'+
+                        Highcharts.numberFormat(this.y, 2);                         
+                }                                                                   
+            },                                                                      
+            legend: {                                                             
+                enabled: false                                                      
+            },                                                                      
+            exporting: {                                                            
+                enabled: false                                                      
+            },                                                                   
+            series: [{ 
+			lineColor:'#f47300',                                                              
+                name: '会话数', 
+				marker:{fillColor:'red' //设置所有数据点的颜色值
+				       },                                             
+                data: (function() {                                               
+                    // generate an array of random data                             
+                    var data = [],                                                  
+                        time = (new Date()).getTime(),                              
+                        i;                                                          
+                                                                                    
+                    for (i = -19; i <= 0; i++) {                                    
+                        data.push({                                                 
+                            x: time + i * 1000,                                     
+                            y:Math.round( Math.random(100-0)+100)                                        
+                        });                                                         
+                    }                                                               
+                    return data;                                                    
+                })()                                                                
+            }]                                                                      
+        });                                                                         
+    });                                                                             
+                                                                                    
+});     
+
+
+
+$(function () {                                                               
+    $(document).ready(function() {                                                  
+        Highcharts.setOptions({                                                     
+            global: {                                                               
+                useUTC: false                                                       
+            }                                                                       
+        });                                                                         
+                                                                                    
+        var chart;                                                                  
+        $('#containerG').highcharts({                                                
+            chart: {                                                                
+                type: 'spline',  
+				 backgroundColor: 'rgba(0,0,0,0)',                                                  
+                animation: Highcharts.svg, // don't animate in old IE               
+                marginRight: 10,                                                    
+                events: {                                                           
+                    load: function() {                                              
+                                                                                    
+                        // set up the updating of the chart each second             
+                        var series = this.series[0];                                
+                        setInterval(function() {                                    
+                            var x = (new Date()).getTime(), // current time         
+                                y = Math.random();                                  
+                            series.addPoint([x, y], true, true);                    
+                        },3000);                                                   
+                    }                                                               
+                }                                                                   
+            },                                                                      
+            title: {                                                                
+                text: '错误报数'                                            
+            },                                                                      
+            xAxis: {                                                                
+                type: 'datetime',                                                
+                tickPixelInterval: 150                                              
+            },                                                                      
+            yAxis: {                                                                
+                title: {                                                            
+                    text: '错误报数'                                                   
+                },  
+                                                              
+                plotLines: [{                                                       
+                    value: 0,                                                       
+                    width: 1,                                                       
+                    color: '#808080'                                                
+                }]                                                                  
+            },                                                                      
+            tooltip: {                                                              
+                formatter: function() {                                             
+                        return '<b>'+ this.series.name +'</b><br/>'+                
+                        Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) +'<br/>'+
+                        Highcharts.numberFormat(this.y, 2);                         
+                }                                                                   
+            },                                                                      
+            legend: {                                                             
+                enabled: false                                                      
+            },                                                                      
+            exporting: {                                                            
+                enabled: false                                                      
+            },                                                                   
+            series: [{ 
+			lineColor:'#f47300',                                                              
+                name: '错误报数  ', 
+				marker:{fillColor:'red' //设置所有数据点的颜色值
+				       },                                             
+                data: (function() {                                               
+                    // generate an array of random data                             
+                    var data = [],                                                  
+                        time = (new Date()).getTime(),                              
+                        i;                                                          
+                                                                                    
+                    for (i = -19; i <= 0; i++) {                                    
+                        data.push({                                                 
+                            x: time + i * 1000,                                     
+                            y:Math.round( Math.random(100-0)+100)                                        
+                        });                                                         
+                    }                                                               
+                    return data;                                                    
+                })()                                                                
+            }]                                                                      
+        });                                                                         
+    });                                                                             
+                                                                                    
+});     
+
+
+
+
+
+$(function () {                                                               
+    $(document).ready(function() {                                                  
+        Highcharts.setOptions({                                                     
+            global: {                                                               
+                useUTC: false                                                       
+            }                                                                       
+        });                                                                         
+                                                                                    
+        var chart;                                                                  
+        $('#containerH').highcharts({                                                
+            chart: {                                                                
+                type: 'spline',  
+				 backgroundColor: 'rgba(0,0,0,0)',                                                  
+                animation: Highcharts.svg, // don't animate in old IE               
+                marginRight: 10,                                                    
+                events: {                                                           
+                    load: function() {                                              
+                                                                                    
+                        // set up the updating of the chart each second             
+                        var series = this.series[0];                                
+                        setInterval(function() {                                    
+                            var x = (new Date()).getTime(), // current time         
+                                y = Math.random();                                  
+                            series.addPoint([x, y], true, true);                    
+                        },3000);                                                   
+                    }                                                               
+                }                                                                   
+            },                                                                      
+            title: {                                                                
+                text: '管理口上行流量'                                            
+            },                                                                      
+            xAxis: {                                                                
+                type: 'datetime',                                                
+                tickPixelInterval: 150                                              
+            },                                                                      
+            yAxis: {                                                                
+                title: {                                                            
+                    text: '管理口上行流量'                                                   
+                },  
+                                                              
+                plotLines: [{                                                       
+                    value: 0,                                                       
+                    width: 1,                                                       
+                    color: '#808080'                                                
+                }]                                                                  
+            },                                                                      
+            tooltip: {                                                              
+                formatter: function() {                                             
+                        return '<b>'+ this.series.name +'</b><br/>'+                
+                        Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) +'<br/>'+
+                        Highcharts.numberFormat(this.y, 2);                         
+                }                                                                   
+            },                                                                      
+            legend: {                                                             
+                enabled: false                                                      
+            },                                                                      
+            exporting: {                                                            
+                enabled: false                                                      
+            },                                                                   
+            series: [{ 
+			lineColor:'#f47300',                                                              
+                name: '管理口上行流量', 
+				marker:{fillColor:'red' //设置所有数据点的颜色值
+				       },                                             
+                data: (function() {                                               
+                    // generate an array of random data                             
+                    var data = [],                                                  
+                        time = (new Date()).getTime(),                              
+                        i;                                                          
+                                                                                    
+                    for (i = -19; i <= 0; i++) {                                    
+                        data.push({                                                 
+                            x: time + i * 1000,                                     
+                            y:Math.round( Math.random(100-0)+100)                                        
+                        });                                                         
+                    }                                                               
+                    return data;                                                    
+                })()                                                                
+            }]                                                                      
+        });                                                                         
+    });                                                                             
+                                                                                    
+});     
+
+
+$(function () {                                                               
+    $(document).ready(function() {                                                  
+        Highcharts.setOptions({                                                     
+            global: {                                                               
+                useUTC: false                                                       
+            }                                                                       
+        });                                                                         
+                                                                                    
+        var chart;                                                                  
+        $('#containerI').highcharts({                                                
+            chart: {                                                                
+                type: 'spline',  
+				 backgroundColor: 'rgba(0,0,0,0)',                                                  
+                animation: Highcharts.svg, // don't animate in old IE               
+                marginRight: 10,                                                    
+                events: {                                                           
+                    load: function() {                                              
+                                                                                    
+                        // set up the updating of the chart each second             
+                        var series = this.series[0];                                
+                        setInterval(function() {                                    
+                            var x = (new Date()).getTime(), // current time         
+                                y = Math.random();                                  
+                            series.addPoint([x, y], true, true);                    
+                        },3000);                                                   
+                    }                                                               
+                }                                                                   
+            },                                                                      
+            title: {                                                                
+                text: '管理口下行流量'                                            
+            },                                                                      
+            xAxis: {                                                                
+                type: 'datetime',                                                
+                tickPixelInterval: 150                                              
+            },                                                                      
+            yAxis: {                                                                
+                title: {                                                            
+                    text: '管理口下行流量'                                                   
+                },  
+                                                              
+                plotLines: [{                                                       
+                    value: 0,                                                       
+                    width: 1,                                                       
+                    color: '#808080'                                                
+                }]                                                                  
+            },                                                                      
+            tooltip: {                                                              
+                formatter: function() {                                             
+                        return '<b>'+ this.series.name +'</b><br/>'+                
+                        Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) +'<br/>'+
+                        Highcharts.numberFormat(this.y, 2);                         
+                }                                                                   
+            },                                                                      
+            legend: {                                                             
+                enabled: false                                                      
+            },                                                                      
+            exporting: {                                                            
+                enabled: false                                                      
+            },                                                                   
+            series: [{ 
+			lineColor:'#f47300',                                                              
+                name: '管理口下行流量', 
+				marker:{fillColor:'red' //设置所有数据点的颜色值
+				       },                                             
+                data: (function() {                                               
+                    // generate an array of random data                             
+                    var data = [],                                                  
+                        time = (new Date()).getTime(),                              
+                        i;                                                          
+                                                                                    
+                    for (i = -19; i <= 0; i++) {                                    
+                        data.push({                                                 
+                            x: time + i * 1000,                                     
+                            y:Math.round( Math.random(100-0)+100)                                        
+                        });                                                         
+                    }                                                               
+                    return data;                                                    
+                })()                                                                
+            }]                                                                      
+        });                                                                         
+    });                                                                             
+                                                                                    
+});  
+
+
+$(function () {                                                               
+    $(document).ready(function() {                                                  
+        Highcharts.setOptions({                                                     
+            global: {                                                               
+                useUTC: false                                                       
+            }                                                                       
+        });                                                                         
+                                                                                    
+        var chart;                                                                  
+        $('#containerJ').highcharts({                                                
+            chart: {                                                                
+                type: 'spline',  
+				 backgroundColor: 'rgba(0,0,0,0)',                                                  
+                animation: Highcharts.svg, // don't animate in old IE               
+                marginRight: 10,                                                    
+                events: {                                                           
+                    load: function() {                                              
+                                                                                    
+                        // set up the updating of the chart each second             
+                        var series = this.series[0];                                
+                        setInterval(function() {                                    
+                            var x = (new Date()).getTime(), // current time         
+                                y = Math.random();                                  
+                            series.addPoint([x, y], true, true);                    
+                        },3000);                                                   
+                    }                                                               
+                }                                                                   
+            },                                                                      
+            title: {                                                                
+                text: '管理口上行报文数'                                            
+            },                                                                      
+            xAxis: {                                                                
+                type: 'datetime',                                                
+                tickPixelInterval: 150                                              
+            },                                                                      
+            yAxis: {                                                                
+                title: {                                                            
+                    text: '管理口上行报文数'                                                   
+                },  
+                                                              
+                plotLines: [{                                                       
+                    value: 0,                                                       
+                    width: 1,                                                       
+                    color: '#808080'                                                
+                }]                                                                  
+            },                                                                      
+            tooltip: {                                                              
+                formatter: function() {                                             
+                        return '<b>'+ this.series.name +'</b><br/>'+                
+                        Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) +'<br/>'+
+                        Highcharts.numberFormat(this.y, 2);                         
+                }                                                                   
+            },                                                                      
+            legend: {                                                             
+                enabled: false                                                      
+            },                                                                      
+            exporting: {                                                            
+                enabled: false                                                      
+            },                                                                   
+            series: [{ 
+			lineColor:'#f47300',                                                              
+                name: '管理口上行报文数', 
+				marker:{fillColor:'red' //设置所有数据点的颜色值
+				       },                                             
+                data: (function() {                                               
+                    // generate an array of random data                             
+                    var data = [],                                                  
+                        time = (new Date()).getTime(),                              
+                        i;                                                          
+                                                                                    
+                    for (i = -19; i <= 0; i++) {                                    
+                        data.push({                                                 
+                            x: time + i * 1000,                                     
+                            y:Math.round( Math.random(100-0)+100)                                        
+                        });                                                         
+                    }                                                               
+                    return data;                                                    
+                })()                                                                
+            }]                                                                      
+        });                                                                         
+    });                                                                             
+                                                                                    
+});  
+
+   
+   
+$(function () {                                                               
+    $(document).ready(function() {                                                  
+        Highcharts.setOptions({                                                     
+            global: {                                                               
+                useUTC: false                                                       
+            }                                                                       
+        });                                                                         
+                                                                                    
+        var chart;                                                                  
+        $('#containerK').highcharts({                                                
+            chart: {                                                                
+                type: 'spline',  
+				 backgroundColor: 'rgba(0,0,0,0)',                                                  
+                animation: Highcharts.svg, // don't animate in old IE               
+                marginRight: 10,                                                    
+                events: {                                                           
+                    load: function() {                                              
+                                                                                    
+                        // set up the updating of the chart each second             
+                        var series = this.series[0];                                
+                        setInterval(function() {                                    
+                            var x = (new Date()).getTime(), // current time         
+                                y = Math.random();                                  
+                            series.addPoint([x, y], true, true);                    
+                        },3000);                                                   
+                    }                                                               
+                }                                                                   
+            },                                                                      
+            title: {                                                                
+                text: '管理口下行报文数'                                            
+            },                                                                      
+            xAxis: {                                                                
+                type: 'datetime',                                                
+                tickPixelInterval: 150                                              
+            },                                                                      
+            yAxis: {                                                                
+                title: {                                                            
+                    text: '管理口下行报文数'                                                   
+                },  
+                                                              
+                plotLines: [{                                                       
+                    value: 0,                                                       
+                    width: 1,                                                       
+                    color: '#808080'                                                
+                }]                                                                  
+            },                                                                      
+            tooltip: {                                                              
+                formatter: function() {                                             
+                        return '<b>'+ this.series.name +'</b><br/>'+                
+                        Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) +'<br/>'+
+                        Highcharts.numberFormat(this.y, 2);                         
+                }                                                                   
+            },                                                                      
+            legend: {                                                             
+                enabled: false                                                      
+            },                                                                      
+            exporting: {                                                            
+                enabled: false                                                      
+            },                                                                   
+            series: [{ 
+			lineColor:'#f47300',                                                              
+                name: '管理口下行报文数', 
+				marker:{fillColor:'red' //设置所有数据点的颜色值
+				       },                                             
+                data: (function() {                                               
+                    // generate an array of random data                             
+                    var data = [],                                                  
+                        time = (new Date()).getTime(),                              
+                        i;                                                          
+                                                                                    
+                    for (i = -19; i <= 0; i++) {                                    
+                        data.push({                                                 
+                            x: time + i * 1000,                                     
+                            y:Math.round( Math.random(100-0)+100)                                        
+                        });                                                         
+                    }                                                               
+                    return data;                                                    
+                })()                                                                
+            }]                                                                      
+        });                                                                         
+    });                                                                             
+                                                                                    
+});    
+                                                                            				
+
+
+$(function () {                                                               
+    $(document).ready(function() {                                                  
+        Highcharts.setOptions({                                                     
+            global: {                                                               
+                useUTC: false                                                       
+            }                                                                       
+        });                                                                         
+                                                                                    
+        var chart;                                                                  
+        $('#containerL').highcharts({                                                
+            chart: {                                                                
+                type: 'spline',  
+				 backgroundColor: 'rgba(0,0,0,0)',                                                  
+                animation: Highcharts.svg, // don't animate in old IE               
+                marginRight: 10,                                                    
+                events: {                                                           
+                    load: function() {                                              
+                                                                                    
+                        // set up the updating of the chart each second             
+                        var series = this.series[0];                                
+                        setInterval(function() {                                    
+                            var x = (new Date()).getTime(), // current time         
+                                y = Math.random();                                  
+                            series.addPoint([x, y], true, true);                    
+                        },3000);                                                   
+                    }                                                               
+                }                                                                   
+            },                                                                      
+            title: {                                                                
+                text: '业务口上行流量'                                            
+            },                                                                      
+            xAxis: {                                                                
+                type: 'datetime',                                                
+                tickPixelInterval: 150                                              
+            },                                                                      
+            yAxis: {                                                                
+                title: {                                                            
+                    text: '业务口上行流量'                                                   
+                },  
+                                                              
+                plotLines: [{                                                       
+                    value: 0,                                                       
+                    width: 1,                                                       
+                    color: '#808080'                                                
+                }]                                                                  
+            },                                                                      
+            tooltip: {                                                              
+                formatter: function() {                                             
+                        return '<b>'+ this.series.name +'</b><br/>'+                
+                        Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) +'<br/>'+
+                        Highcharts.numberFormat(this.y, 2);                         
+                }                                                                   
+            },                                                                      
+            legend: {                                                             
+                enabled: false                                                      
+            },                                                                      
+            exporting: {                                                            
+                enabled: false                                                      
+            },                                                                   
+            series: [{ 
+			lineColor:'#f47300',                                                              
+                name: '业务口上行流量', 
+				marker:{fillColor:'red' //设置所有数据点的颜色值
+				       },                                             
+                data: (function() {                                               
+                    // generate an array of random data                             
+                    var data = [],                                                  
+                        time = (new Date()).getTime(),                              
+                        i;                                                          
+                                                                                    
+                    for (i = -19; i <= 0; i++) {                                    
+                        data.push({                                                 
+                            x: time + i * 1000,                                     
+                            y:Math.round( Math.random(100-0)+100)                                        
+                        });                                                         
+                    }                                                               
+                    return data;                                                    
+                })()                                                                
+            }]                                                                      
+        });                                                                         
+    });                                                                             
+                                                                                    
+});     
+
+
+$(function () {                                                               
+    $(document).ready(function() {                                                  
+        Highcharts.setOptions({                                                     
+            global: {                                                               
+                useUTC: false                                                       
+            }                                                                       
+        });                                                                         
+                                                                                    
+        var chart;                                                                  
+        $('#containerM').highcharts({                                                
+            chart: {                                                                
+                type: 'spline',  
+				 backgroundColor: 'rgba(0,0,0,0)',                                                  
+                animation: Highcharts.svg, // don't animate in old IE               
+                marginRight: 10,                                                    
+                events: {                                                           
+                    load: function() {                                              
+                                                                                    
+                        // set up the updating of the chart each second             
+                        var series = this.series[0];                                
+                        setInterval(function() {                                    
+                            var x = (new Date()).getTime(), // current time         
+                                y = Math.random();                                  
+                            series.addPoint([x, y], true, true);                    
+                        },3000);                                                   
+                    }                                                               
+                }                                                                   
+            },                                                                      
+            title: {                                                                
+                text: '业务口下行流量'                                            
+            },                                                                      
+            xAxis: {                                                                
+                type: 'datetime',                                                
+                tickPixelInterval: 150                                              
+            },                                                                      
+            yAxis: {                                                                
+                title: {                                                            
+                    text: '业务口下行流量'                                                   
+                },  
+                                                              
+                plotLines: [{                                                       
+                    value: 0,                                                       
+                    width: 1,                                                       
+                    color: '#808080'                                                
+                }]                                                                  
+            },                                                                      
+            tooltip: {                                                              
+                formatter: function() {                                             
+                        return '<b>'+ this.series.name +'</b><br/>'+                
+                        Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) +'<br/>'+
+                        Highcharts.numberFormat(this.y, 2);                         
+                }                                                                   
+            },                                                                      
+            legend: {                                                             
+                enabled: false                                                      
+            },                                                                      
+            exporting: {                                                            
+                enabled: false                                                      
+            },                                                                   
+            series: [{ 
+			lineColor:'#f47300',                                                              
+                name: '业务口下行流量', 
+				marker:{fillColor:'red' //设置所有数据点的颜色值
+				       },                                             
+                data: (function() {                                               
+                    // generate an array of random data                             
+                    var data = [],                                                  
+                        time = (new Date()).getTime(),                              
+                        i;                                                          
+                                                                                    
+                    for (i = -19; i <= 0; i++) {                                    
+                        data.push({                                                 
+                            x: time + i * 1000,                                     
+                            y:Math.round( Math.random(100-0)+100)                                        
+                        });                                                         
+                    }                                                               
+                    return data;                                                    
+                })()                                                                
+            }]                                                                      
+        });                                                                         
+    });                                                                             
+                                                                                    
+});  
+
+
+$(function () {                                                               
+    $(document).ready(function() {                                                  
+        Highcharts.setOptions({                                                     
+            global: {                                                               
+                useUTC: false                                                       
+            }                                                                       
+        });                                                                         
+                                                                                    
+        var chart;                                                                  
+        $('#containerN').highcharts({                                                
+            chart: {                                                                
+                type: 'spline',  
+				 backgroundColor: 'rgba(0,0,0,0)',                                                  
+                animation: Highcharts.svg, // don't animate in old IE               
+                marginRight: 10,                                                    
+                events: {                                                           
+                    load: function() {                                              
+                                                                                    
+                        // set up the updating of the chart each second             
+                        var series = this.series[0];                                
+                        setInterval(function() {                                    
+                            var x = (new Date()).getTime(), // current time         
+                                y = Math.random();                                  
+                            series.addPoint([x, y], true, true);                    
+                        },3000);                                                   
+                    }                                                               
+                }                                                                   
+            },                                                                      
+            title: {                                                                
+                text: '业务口上行报文数'                                            
+            },                                                                      
+            xAxis: {                                                                
+                type: 'datetime',                                                
+                tickPixelInterval: 150                                              
+            },                                                                      
+            yAxis: {                                                                
+                title: {                                                            
+                    text: '业务口上行报文数'                                                   
+                },  
+                                                              
+                plotLines: [{                                                       
+                    value: 0,                                                       
+                    width: 1,                                                       
+                    color: '#808080'                                                
+                }]                                                                  
+            },                                                                      
+            tooltip: {                                                              
+                formatter: function() {                                             
+                        return '<b>'+ this.series.name +'</b><br/>'+                
+                        Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) +'<br/>'+
+                        Highcharts.numberFormat(this.y, 2);                         
+                }                                                                   
+            },                                                                      
+            legend: {                                                             
+                enabled: false                                                      
+            },                                                                      
+            exporting: {                                                            
+                enabled: false                                                      
+            },                                                                   
+            series: [{ 
+			lineColor:'#f47300',                                                              
+                name: '业务口上行报文数', 
+				marker:{fillColor:'red' //设置所有数据点的颜色值
+				       },                                             
+                data: (function() {                                               
+                    // generate an array of random data                             
+                    var data = [],                                                  
+                        time = (new Date()).getTime(),                              
+                        i;                                                          
+                                                                                    
+                    for (i = -19; i <= 0; i++) {                                    
+                        data.push({                                                 
+                            x: time + i * 1000,                                     
+                            y:Math.round( Math.random(100-0)+100)                                        
+                        });                                                         
+                    }                                                               
+                    return data;                                                    
+                })()                                                                
+            }]                                                                      
+        });                                                                         
+    });                                                                             
+                                                                                    
+});  
+
+   
+   
+$(function () {                                                               
+    $(document).ready(function() {                                                  
+        Highcharts.setOptions({                                                     
+            global: {                                                               
+                useUTC: false                                                       
+            }                                                                       
+        });                                                                         
+                                                                                    
+        var chart;                                                                  
+        $('#containerO').highcharts({                                                
+            chart: {                                                                
+                type: 'spline',  
+				 backgroundColor: 'rgba(0,0,0,0)',                                                  
+                animation: Highcharts.svg, // don't animate in old IE               
+                marginRight: 10,                                                    
+                events: {                                                           
+                    load: function() {                                              
+                                                                                    
+                        // set up the updating of the chart each second             
+                        var series = this.series[0];                                
+                        setInterval(function() {                                    
+                            var x = (new Date()).getTime(), // current time         
+                                y = Math.random();                                  
+                            series.addPoint([x, y], true, true);                    
+                        },3000);                                                   
+                    }                                                               
+                }                                                                   
+            },                                                                      
+            title: {                                                                
+                text: '业务口下行报文数'                                            
+            },                                                                      
+            xAxis: {                                                                
+                type: 'datetime',                                                
+                tickPixelInterval: 150                                              
+            },                                                                      
+            yAxis: {                                                                
+                title: {                                                            
+                    text: '业务口下行报文数'                                                   
+                },  
+                                                              
+                plotLines: [{                                                       
+                    value: 0,                                                       
+                    width: 1,                                                       
+                    color: '#808080'                                                
+                }]                                                                  
+            },                                                                      
+            tooltip: {                                                              
+                formatter: function() {                                             
+                        return '<b>'+ this.series.name +'</b><br/>'+                
+                        Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) +'<br/>'+
+                        Highcharts.numberFormat(this.y, 2);                         
+                }                                                                   
+            },                                                                      
+            legend: {                                                             
+                enabled: false                                                      
+            },                                                                      
+            exporting: {                                                            
+                enabled: false                                                      
+            },                                                                   
+            series: [{ 
+			lineColor:'#f47300',                                                              
+                name: '业务口下行报文数', 
+				marker:{fillColor:'rgba(0,0,0,0)' //设置所有数据点的颜色值
+				       },                                             
+                data: (function() {                                               
+                    // generate an array of random data                             
+                    var data = [],                                                  
+                        time = (new Date()).getTime(),                              
+                        i;                                                          
+                                                                                    
+                    for (i = -19; i <= 0; i++) {                                    
+                        data.push({                                                 
+                            x: time + i * 1000,                                     
+                            y:Math.round( Math.random(100-0)+100)                                        
+                        });                                                         
+                    }                                                               
+                    return data;                                                    
+                })()                                                                
+            }]                                                                      
+        });                                                                         
+    });                                                                             
+                                                                                    
+});   
+
+
+</script>
+<script type="text/javascript">
+    var currentAmount = 32;
+</script>
+
+<script>
+    jQuery(function ($) {
+
+        $(' #id-input-file-2').ace_file_input({
+            no_file: '未选择文件 ...',
+            btn_choose: '浏览',
+            btn_change: 'Change',
+            droppable: false,
+            onchange: null,
+            thumbnail: false //| true | large
+            //whitelist:'gif|png|jpg|jpeg'
+            //blacklist:'exe|php'
+            //onchange:''
+            //
+        });
+
+    });
+	
+	/*
+	    $("#versionDet").click(function () {
+        $(".versionDet").toggle();
+        return false
+    });
+	
+	$("#versionDet2").click(function () {
+        $(".versionDet2").toggle();
+        return false
+    });
+	$("#versionDet3").click(function () {
+        $(".versionDet3").toggle();
+        return false
+    });
+	$("#versionDet4").click(function () {
+        $(".versionDet4").toggle();
+        return false
+    });
+	$("#versionDet5").click(function () {
+        $(".versionDet5").toggle();
+        return false
+    });
+	*/
+	
+    $(".closePop").css("cursor", "pointer").click(function () {
+        $("#addNet").hide();
+        $("#importNet").hide();
+        $("#delNet").hide();
+        $("#editeNet").hide();
+        $("#NetDetail").hide();
+		$("#agreeNet").hide();
+        $("#fade").hide();
+    });
+	
+	
+	
+	$(".versionDet0").mouseover(function(){  
+            var index=$(".versionDet0").index(this);  
+   
+                $(".versionDet").eq(index).show()  
+   
+        }) 
+	$(".versionDet0").mouseout(function(){  
+            var index=$(".versionDet0").index(this);  
+   
+                $(".versionDet").eq(index).hide()  
+   
+        }) 
+		
+		/*
+		
+		 $(".chartContainer0").width($("#containerA").width());
+		 $(".chartContainer2").width($("#containerB").width()/4);
+		 */
+		 
+		 
+		 
+		 $(".chartContainer").width($(".chartContainer").width());
+    /*  $("#selMonitoringContent").bind("change", function () {
+     var index = this.options[this.options.selectedIndex].value;
+     $("#home .chartContainer").eq(index).show().siblings().hide();
+     });*/
+
+ var _input = $("#checkTab label input");  
+    _input.click(function(){  
+        var _check = $(this).attr("checked") ;  
+        var index = $("#checkTab label input").index(this);  
+        if(_check=="checked"){  
+            $(".chartContainer").eq(index).show();  
+        }  
+        else{  
+            $(".chartContainer").eq(index).hide();  
+        }  
+    })
+	
+	
+	
+	
+</script>

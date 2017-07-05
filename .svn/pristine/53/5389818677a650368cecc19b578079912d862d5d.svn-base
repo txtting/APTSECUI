@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>APT安全威胁感知系统</title>
+
+		<meta name="description" content="overview &amp; stats" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta http-equiv="cache-control" content="max-age=0" />
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="expires" content="0" />
+		<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+		<meta http-equiv="pragma" content="no-cache" />
+
+		 <!-- basic styles -->
+
+         <link rel="stylesheet" href="__PUBLIC__/css/assets/css/bootstrap.min.css"  />
+         <!--<link rel="stylesheet" href="__PUBLIC__/css/assets/css/bootstrap.css"  />-->
+         <link rel="stylesheet" href="__PUBLIC__/css/assets/css/font-awesome.min.css" />
+        <!--[if IE 7]>
+          <link rel="stylesheet" href="__PUBLIC__/css/assets/css/font-awesome-ie7.min.css" />
+        <![endif]-->
+
+        <!-- page specific plugin styles -->
+        <link rel="stylesheet" href="__PUBLIC__/css/assets/css/jquery-ui-1.10.3.custom.min.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/assets/css/chosen.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/assets/css/datepicker.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/assets/css/bootstrap-timepicker.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/bootstrap-duallistbox.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/prettify.css" />
+
+       <!-- <link rel="stylesheet" href="__PUBLIC__/css/assets/css/daterangepicker.css" /> -->
+        <link rel="stylesheet" href="__PUBLIC__/css/assets/css/colorpicker.css" />
+
+        <!-- fonts -->
+
+        <link rel="stylesheet" href="__PUBLIC__/css/assets/css/ace-fonts.css" />
+
+        <!-- ace styles -->
+
+        <link rel="stylesheet" href="__PUBLIC__/css/assets/css/ace.min.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/assets/css/ace-rtl.min.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/assets/css/ace-skins.min.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/assets/css/jquery.ipaddress.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/daterangepicker-bs3.css" />
+		<link rel="stylesheet" href="__PUBLIC__/css/assets/css/datetimepicker/datetimepicker.min.css" />
+        
+      
+                                         
+        
+        
+        <!--[if lte IE 8]>
+          <link rel="stylesheet" href="__PUBLIC__/css/assets/css/ace-ie.min.css" />
+        <![endif]-->
+
+        <!-- inline styles related to this page -->
+        
+        
+		<link href="__PUBLIC__/css/assets/style/common.css" rel="stylesheet">
+        <link href="__PUBLIC__/css/assets/style/file.css" rel="stylesheet">
+        
+
+       <!-- <link type="text/css" rel="stylesheet" href="__PUBLIC__/css/assets/css/tree/font-awesome.min.css">-->
+        <link type="text/css" rel="stylesheet" href="__PUBLIC__/css/assets/css/goal-thermometer/goal-thermometer.css"> 
+        <link rel="stylesheet" href="__PUBLIC__/css/assets/css/ztreecss/zTreeStyle/zTreeStyle.css" type="text/css">
+          <link rel="stylesheet" href="__PUBLIC__/css/uploadfile.css" >
+          
+          
+          <link href="__PUBLIC__/css/assets/js/bootstrap-table/bootstrap-table.css" rel="stylesheet">
+
+
+          <link href="__PUBLIC__/css/assets/style/main.css" rel="stylesheet">
+		<link href="__PUBLIC__/css/assets/style/newTable.css" rel="stylesheet">
+		<!--safereportset.html-->
+		<!-- <link href="__PUBLIC__/css/assets/style/safereportset.css" rel="stylesheet"> -->
+
+          
+		<script>
+		var GV = {
+		DIMAUB: "__PUBLIC__/",
+		JS_ROOT: "css/assets/",
+		TOKEN: ""
+		};
+		</script>
+
+		<script src="__PUBLIC__/css/assets/js/tree/jquery.js"></script>
+        <script src="__PUBLIC__/css/assets/js/tree/wind.js"></script>
+        <script src="__PUBLIC__/css/assets/js/ace-extra.min.js"></script>
+
+        <!--<script src="__PUBLIC__/css/assets/js/highcharts/highcharts.js"></script>-->
+    <script src="__PUBLIC__/css/assets/js/highcharts/highstock.js"></script>
+    <script src="__PUBLIC__/css/assets/js/highcharts/highcharts-more.js"></script>
+    <script src="__PUBLIC__/css/assets/js/highcharts/solid-gauge.js"></script>
+    <script src="__PUBLIC__/css/assets/js/highcharts/highcharts-3d.js"></script>
+    <script src="__PUBLIC__/css/assets/js/highcharts/no-data-to-display.js"></script>
+    <!-- <script src="__PUBLIC__/Highcharts-5.0.6/code/modules/exporting.js"></script>  -->
+    <script src="__PUBLIC__/js/jquery.uploadfile.min.js"></script>
+	<script src="__PUBLIC__/css/assets/js/bootstrap-table/bootstrap-table.js"></script>
+	<script src="__PUBLIC__/css/assets/js/uncompressed/jquery.gritter.js"></script> 
+    <script src="__PUBLIC__/css/assets/js/bootstrap-table/bootstrap-table-export.js"></script>
+    <script src="__PUBLIC__/css/assets/js/bootstrap-table/bootstrap-table-filter.js"></script>
+    
+     <!--Public\css\assets\js\uncompressed\jquery.gritter.js-->
+
+
+
+
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+        <!--[if lt IE 9]>
+        <script src="__PUBLIC__/css/assets/js/html5shiv.js"></script>
+        <script src="__PUBLIC__/css/assets/js/respond.min.js"></script>
+        <![endif]-->
+
+	</head>
+
+	<body class="skin-1" style="min-width:1010px;">
+		<div class="navbar "  id="navbar">
+			<script type="text/javascript">
+				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+				$(document).ready(function(){
+					$('.tableShow').show();
+				})
+			</script>
+
+			<div class="navbar-container" id="navbar-container"  style="min-width:1010px;">
+
+               <span class="aptLogo"> APT安全威胁感知系统</span>
+                <!--<img src="__PUBLIC__/css/assets/images/logo.png" class="floatLeft">-->
+			<div  class="Toptitle">
+            	<h3 class="floatLeft"></h3>
+                <span class="floatRig">
+                   
+                    <label><input type="text" class="allSearch" placeholder="搜索..."><a href="#" title="全站搜索"><i class="icon-search"></i></a></label>
+                    
+                    <a href="__APP__/Vir/index" title="安全总揽"><i class="icon-home font16"></i></a>
+                    <a href="#" title="告警"><i class="icon-bell-alt font14"></i></a>
+                    <a href="#" data-toggle="dropdown" title="系统"><i class="icon-user font14"></i><i class="icon-caret-down font12"></i></a>
+                    <ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close topSetting" style="padding:0px;">
+								<li>
+										<a href="#">{$Think.session.username}</a>
+									
+								</li>
+
+								<li>
+									<a href="__APP__/User/user_password_edite">
+										修改密码
+									</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li>
+									<a  href="{:U('Login/logout')}" class="noborder">
+										退出
+									</a>
+								</li>
+							</ul>
+                </span>
+           </div>
+                
+
+			</div><!-- /.container -->
+		</div>
+
+		<div class="main-container" id="main-container" style="min-width:1010px;">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="main-container-inner" style="min-width:1010px;">
+				<a class="menu-toggler" id="menu-toggler" href="#">
+					<span class="menu-text"></span>
+				</a>
+
+				<div class="sidebar menu-min" id="sidebar">
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+					</script>
+					<ul class="nav nav-list">
+                        <!-- <li <if condition="$controller eq 'Vir'">class="active open"</if>>
+                        	<if condition = "authcheck('Home/Vir/index,','1','')">
+							<a href="#" class="dropdown-toggle">
+								<i class=" icon-dashboard " style="font-size:13px;"></i>
+								<span class="menu-text"> 安全总揽 </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li <eq name="action" value="index">class="active"</eq>>
+									{:authcheck('Home/Vir/index','
+									<a href="__APP__/Vir/index">
+										<i class="icon-double-angle-right"></i>
+                                        安全总揽
+									</a>
+									','')}
+								</li>
+							</ul>
+						</if>
+						</li>-->
+						<li <if condition="$controller eq 'Vir'">class="active open"</if>>
+						<if condition = "authcheck('Home/Vir/index,','1','')">
+							<a href="__APP__/Vir/index">
+								<i class=" icon-dashboard " style="font-size:13px;"></i>
+								<span class="menu-text"> 安全总揽 </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<!--<ul class="submenu">
+								<li <eq name="action" value="index">class="active"</eq>>
+								{:authcheck('Home/Vir/index','
+								<a href="__APP__/Vir/index">
+									<i class="icon-double-angle-right"></i>
+									安全总揽
+								</a>
+								','')}
+								</li>
+							</ul>-->
+						</if>
+
+						</li>
+						<li <if condition="$controller eq 'Urgent'">class="active open"</if>>
+						<if condition = "authcheck('Home/Vir/index,','1','')">
+							<a href="__APP__/Urgent/index">
+								<i class=" icon-dashboard " style="font-size:13px;"></i>
+								<span class="menu-text"> 紧急事件 </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<!--<ul class="submenu">
+								<li <eq name="action" value="index">class="active"</eq>>
+								{:authcheck('Home/Vir/index','
+								<a href="__APP__/Vir/index">
+									<i class="icon-double-angle-right"></i>
+									安全总揽
+								</a>
+								','')}
+								</li>
+							</ul>-->
+						</if>
+						</li>
+
+
+                        <!-- <li <if condition="$controller eq 'Urgent'">class="active open"</if>>
+                        	<if condition = "authcheck('Home/Urgent/index,','1','')">
+							<a href="#" class="dropdown-toggle">
+								<i class=" icon-bolt "></i>
+								<span class="menu-text"> 紧急事件 </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li <eq name="action" value="index">class="active"</eq>>
+									{:authcheck('Home/Urgent/index','
+									<a href="__APP__/Urgent/index">
+										<i class="icon-double-angle-right"></i>
+                                        紧急事件
+									</a>
+									','')}
+								</li>
+							</ul>
+						</if>
+						</li>-->
+                        
+               
+                        <li <if condition="$controller eq 'Safe'">class="active open"</if>>
+                        	<if condition = "authcheck('Home/Safe/index,Home/Safe/file,Home/Safe/bruteforce,Home/Safe/malicioust,Home/Safe/scanevent','1','')">
+							<a href="__APP__/Safe/index" >
+								<i class=" icon-medkit" style="font-size:14px;"></i>
+								<span class="menu-text"> 安全事件 </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+                           
+
+							<ul class="submenu">
+								<li  <eq name="action" value="index">class="active"</eq>>
+									{:authcheck('Home/Safe/index','
+									<a href="__APP__/Safe/index">
+										<i class="icon-double-angle-right"></i>
+									    http流量检测
+									</a>
+									','')}
+								</li>
+                                <li  <eq name="action" value="file">class="active"</eq>>
+									{:authcheck('Home/Safe/file','
+									<a href="__APP__/Safe/file">
+										<i class="icon-double-angle-right"></i>
+									    文件威胁检测
+									</a>
+									','')}
+								</li>
+                                <li  <eq name="action" value="bruteforce">class="active"</eq>>
+									{:authcheck('Home/Safe/bruteforce','
+									<a href="__APP__/Safe/bruteforce">
+										<i class="icon-double-angle-right"></i>
+									    恶意流量检测
+									</a>
+									','')}
+								</li>
+                                <li  <eq name="action" value="malicioust">class="active"</eq>>
+									{:authcheck('Home/Safe/malicioust','
+									<a href="__APP__/Safe/malicioust">
+										<i class="icon-double-angle-right"></i>
+									    暴力破解
+									</a>
+									','')}
+								</li>
+                                <li  <eq name="action" value="scanevent">class="active"</eq>>
+									{:authcheck('Home/Safe/scanevent','
+									<a href="__APP__/Safe/scanevent">
+										<i class="icon-double-angle-right"></i>
+									    扫描事件
+									</a>
+									','')}
+								</li>
+                                
+                                
+							</ul>
+						</if>
+						</li>
+                        <li <if condition="$controller eq 'User'">class="active open"</if>>
+                        	<if condition = "authcheck('Home/User/user,Home/User/usergroup','1','')">
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-user" style="font-size:16px;"></i>
+								<span class="menu-text"> 权限管理 </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li <eq name="action" value="user">class="active"</eq>>
+									{:authcheck('Home/User/user','
+									<a href="__APP__/User/user">
+										<i class="icon-double-angle-right"></i>
+										用户管理
+									</a>
+									','')}
+								</li>
+								
+                                <li <eq name="action" value="usergroup">class="active"</eq>>
+									{:authcheck('Home/User/usergroup','
+									<a href="__APP__/User/usergroup">
+										<i class="icon-double-angle-right"></i>
+										用户组管理
+									</a>
+									','')}
+								</li>
+								
+								
+							</ul>
+						</if>
+						</li>
+                       
+						<li <if condition="$controller eq 'Log'">class="active open"</if>>
+							<if condition = "authcheck('Home/Log/index','1','')"> 
+							<a href="#" class="dropdown-toggle">
+								<i class=" icon-calendar " style="font-size:14px;"></i>
+								<span class="menu-text"> 日志管理 </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li  <eq name="action" value="index">class="active"</eq>>
+									<a href="{:U('Log/index')}" >
+										<i class="icon-double-angle-right"></i>
+										日志管理
+									</a>
+								</li>
+							</ul>
+						</if> 
+						</li>
+                        <li <if condition="$controller eq 'Setting'">class="active open"</if>>
+                        	<if condition = "authcheck('Home/Setting/index,Home/Setting/ugevent,Home/Setting/safereportset,','1','')">
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-cog" style="font-size:14px;"></i>
+								<span class="menu-text"> 设置 </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li <eq name="action" value="index">class="active"</eq>>
+									{:authcheck('Home/Setting/index','
+									<a href="__APP__/Setting/index">
+										<i class="icon-double-angle-right"></i>
+										安全报表推送
+									</a>
+									','')}
+								</li>
+                                <li <eq name="action" value="ugevent">class="active"</eq>>
+									{:authcheck('Home/Setting/ugevent','
+									<a href="__APP__/Setting/ugevent">
+										<i class="icon-double-angle-right"></i>
+										紧急事件推送
+									</a>
+									','')}
+								</li>
+                                <li <eq name="action" value="safereportset">class="active"</eq>>
+									{:authcheck('Home/Setting/safereportset','
+									<a href="__APP__/Setting/safereportset">
+										<i class="icon-double-angle-right"></i>
+										安全报表模板设置
+									</a>
+									','')}
+								</li>
+							</ul>
+						</if>
+						</li>
+                         <li <if condition="$controller eq 'Alarm'">class="active open"</if>>
+                        	<if condition = "authcheck('Home/Alarm/index','1','')">
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-bell-alt" style="font-size:13px;"></i>
+								<span class="menu-text"> 告警检索 </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li <eq name="action" value="index">class="active"</eq>>
+									{:authcheck('Home/Alarm/index','
+									<a href="__APP__/Alarm/index">
+										<i class="icon-double-angle-right"></i>
+										告警检索
+									</a>
+									','')}
+								</li>
+								
+								
+								
+							</ul>
+						</if>
+						</li>
+                         <li <if condition="$controller eq 'Track'">class="active open"</if>> 
+                        <if condition = "authcheck('Home/Track/index','1','')"> 
+                                <a href="#" class="dropdown-toggle">  
+                                <i class=" icon-pushpin" style=""></i> 
+                                <span class="menu-text">追踪溯源 </span>  
+                                   
+                                <b class="arrow icon-angle-down"></b>  
+                                </a> 
+                                <ul class="submenu"> 
+	                                <li  <eq name="action" value="index">class="active"</eq>>
+		                                {:authcheck('Home/Track/index','  
+		                                <a href="__APP__/Track/index">  
+		                                <i class="icon-double-angle-right"></i>  
+		                                追踪溯源  
+		                                </a>
+		                                ','')}  
+	                                </li>
+                                
+                                </ul>
+                            </if>
+                        
+                        </li> 
+                         <li <if condition="$controller eq 'Monitor'">class="active open"</if>> 
+                        <if condition = "authcheck('Home/Monitor/index','1','')"> 
+                                <a href="#" class="dropdown-toggle">  
+                                <i class=" icon-facetime-video" style="font-size:13px;"></i> 
+                                <span class="menu-text">应用监控 </span>  
+                                   
+                                <b class="arrow icon-angle-down"></b>  
+                                </a> 
+                                <ul class="submenu"> 
+	                                <li  <eq name="action" value="index">class="active"</eq>>
+		                                {:authcheck('Home/Monitor/index','  
+		                                <a href="__APP__/Monitor/index">  
+		                                <i class="icon-double-angle-right"></i>  
+		                                应用监控  
+		                                </a>
+		                                ','')}  
+	                                </li>
+                                
+                                </ul>
+                            </if>
+                        
+                        </li> 
+                        
+
+
+
+
+
+                         
+                        
+                       <!-- <li <if condition="$controller eq 'User'">class="active open"</if>>
+                        	<if condition = "authcheck('Home/User/user,Home/User/usergroup','1','')">
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-user" style="font-size:16px;"></i>
+								<span class="menu-text"> 日志管理 </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li <eq name="action" value="user">class="active"</eq>>
+									{:authcheck('Home/User/user','
+									<a href="__APP__/User/user">
+										<i class="icon-double-angle-right"></i>
+										操作日志管理
+									</a>
+									','')}
+								</li>
+								
+							</ul>
+						</if>
+						</li>
+                        -->
+                        
+                       
+                        <li <if condition="$controller eq 'Analysis'">class="active open"</if>>
+                        	<if condition = "authcheck('Home/Analysis/index','1','')">
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-bar-chart" style="font-size:13px;"></i>
+								<span class="menu-text"> 访问分析 </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li <eq name="action" value="index">class="active"</eq>>
+									{:authcheck('Home/Analysis/index','
+									<a href="__APP__/Analysis/index">
+										<i class="icon-double-angle-right"></i>
+										访问分析
+									</a>
+									','')}
+								</li>
+								
+								
+								
+							</ul>
+						</if>
+						</li>
+                        
+                        
+						<!--<li <if condition="$controller eq 'System'">class="active open"</if>>
+							<if condition = "authcheck('Home/System/setting','1','')"> 
+							<a href="#" class="dropdown-toggle">
+								<i class=" icon-cog " style="font-size:14px;"></i>
+								<span class="menu-text"> 系统管理 </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li  <eq name="action" value="setting">class="active"</eq>>
+									<a href="{:U('System/setting')}">
+										<i class="icon-double-angle-right"></i>
+										系统设置
+									</a>
+								</li>
+							</ul>
+						</if> 
+						</li>
+                        -->
+					</ul>
+                    <div class="sidebar-collapse" id="sidebar-collapse">
+						<i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
+					</div>
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+						var locaHref=window.location.href;
+						var reg=/Main\/main/
+
+						if(reg.test(locaHref)==true){
+							$("#sidebar").addClass('menu-min')
+							$("#sidebar-collapse").remove()
+
+						}else{  
+							$("#sidebar").removeClass('menu-min')
+						}
+						/*$(document).ready(function(){
+							var check_status = function(){
+						        $.post("__APP__/System/check_status",'',function(data){
+							        if(data.status=='out_time') {
+							            window.location.reload();
+							        }
+						        });
+						    }
+						    setInterval(check_status,3000);
+						});	*/ 
+					</script>
+
+					
+				</div>
+

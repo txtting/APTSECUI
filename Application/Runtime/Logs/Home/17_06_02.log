@@ -1,0 +1,2681 @@
+[ 2017-06-02T17:21:15+08:00 ] 10.102.21.10 /APTSecUI/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-02T17:21:15+08:00 ] 10.102.21.10 /APTSecUI/index.php/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-02T17:21:16+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Login/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-02T17:21:30+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Login/indexOK
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `users` WHERE `user_login` = 'admin' AND `user_pass` = '0b4e7a0e5fe84ad35fb5f95b9ceeac79' LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395290',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0170s ]
+
+[ 2017-06-02T17:21:30+08:00 ] 10.102.21.10 /APTSecUI/index.php/Vir/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395290',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0160s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-06-02T17:21:31+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/indexdata
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395291',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0150s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 29 行.
+NOTIC: [8] Undefined index: Elements E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 34 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:21:37+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395297',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0070s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:21:42+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395302',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0150s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:21:48+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395308',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0140s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:21:53+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395313',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0160s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:21:58+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395318',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0190s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:22:03+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395323',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0150s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:22:12+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395331',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0150s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:22:12+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395332',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:22:17+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395337',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0140s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:22:17+08:00 ] 10.102.21.10 /APTSecUI/index.php/Vir/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-02T17:22:18+08:00 ] 10.102.21.10 /APTSecUI/index.php/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-06-02T17:22:18+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Login/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-06-02T17:22:21+08:00 ] 10.102.21.10 /APTSecUI/Public/css/assets/fonts/glyphicons-halflings-regular.eot?
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Public
+
+[ 2017-06-02T17:22:22+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0070s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395342',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:22:27+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395347',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0120s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:22:32+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Login/indexOK
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `users` WHERE `user_login` = 'admin' AND `user_pass` = '0b4e7a0e5fe84ad35fb5f95b9ceeac79' LIMIT 1   [ RunTime:0.0250s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395352',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0030s ]
+
+[ 2017-06-02T17:22:32+08:00 ] 10.102.21.10 /APTSecUI/index.php/Vir/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395352',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-02T17:22:32+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395352',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:22:34+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/indexdata
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0060s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395353',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0070s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 29 行.
+NOTIC: [8] Undefined index: Elements E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 34 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:22:37+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395357',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:22:40+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395359',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:22:42+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395362',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:22:44+08:00 ] 10.102.21.10 /APTSecUI/index.php/Urgent/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395364',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: template_data E:\www\APTSecUI\Application\Runtime\Cache\Home\a60ee9c7096f89070432ddfbd855104b.php 第 604 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-02T17:22:45+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395364',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:22:45+08:00 ] 10.102.21.10 /APTSecUI/Public/css/assets/fonts/glyphicons-halflings-regular.eot?
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Public
+
+[ 2017-06-02T17:22:45+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Urgent/indextu?da1=05%2F04%2F2017+-+06%2F02%2F2017
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395365',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-06-02T17:22:46+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Urgent/indexbiao?da1=05%2F04%2F2017+-+06%2F02%2F2017&da2=&keyword=&pagenum=1&order=desc&sort=Time&_=1496395398731
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395365',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\UrgentController.class.php 第 46 行.
+NOTIC: [8] Undefined index: Totality E:\www\APTSecUI\Application\Home\Controller\UrgentController.class.php 第 60 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-02T17:22:47+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0100s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395367',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:22:51+08:00 ] 10.102.21.10 /APTSecUI/index.php/Safe/file
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395371',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-02T17:22:52+08:00 ] 10.102.21.10 /APTSecUI/Public/css/assets/fonts/glyphicons-halflings-regular.eot?
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Public
+
+[ 2017-06-02T17:22:52+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Safe/filebiao?da1=05%2F04%2F2017+-+06%2F02%2F2017&da2=&keyword=&pagenum=1&order=desc&sort=time&_=1496395405355
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395372',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.1940s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `vds_type` [ RunTime:0.0070s ]
+SQL: SELECT `title`,`color` FROM `vds_type` WHERE `name` = 'backdoor'  [ RunTime:0.0200s ]
+SQL: SELECT `title`,`color` FROM `vds_type` WHERE `name` = 'trojan'  [ RunTime:0.0010s ]
+SQL: SELECT `title`,`color` FROM `vds_type` WHERE `name` = 'spyware'  [ RunTime:0.0010s ]
+SQL: SELECT `title`,`color` FROM `vds_type` WHERE `name` = 'malware'  [ RunTime:0.0000s ]
+SQL: SELECT `title`,`color` FROM `vds_type` WHERE `name` = 'virus'  [ RunTime:0.0010s ]
+SQL: SELECT `title`,`color` FROM `vds_type` WHERE `name` = 'worm'  [ RunTime:0.0000s ]
+SQL: SELECT `title`,`color` FROM `vds_type` WHERE `name` = 'hacktool'  [ RunTime:0.0010s ]
+SQL: SELECT `title`,`color` FROM `vds_type` WHERE `name` = 'exploit'  [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `vds_type` WHERE `name` = 'trojan' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `title` FROM `vds_type` WHERE `name` = 'trojan' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `vds_type` WHERE `name` = 'trojan' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `vds_type` WHERE `name` = 'trojan' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `vds_type` WHERE `name` = 'trojan' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `vds_type` WHERE `name` = 'trojan' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `vds_type` WHERE `name` = 'trojan' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `vds_type` WHERE `name` = 'trojan' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `vds_type` WHERE `name` = 'trojan' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 462 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-02T17:22:52+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Safe/filetu?da1=05%2F04%2F2017+-+06%2F02%2F2017
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395372',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Missing argument 3 for Home\Controller\SafeController::filedata1(), called in E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php on line 108 and defined E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 272 行.
+NOTIC: [8] Undefined variable: n E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 279 行.
+NOTIC: [8] Undefined variable: n E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 290 行.
+SQL: SHOW COLUMNS FROM `vds_type` [ RunTime:0.0040s ]
+SQL: SELECT `title`,`color` FROM `vds_type` WHERE `name` = 'backdoor'  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: n E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 290 行.
+SQL: SELECT `title`,`color` FROM `vds_type` WHERE `name` = 'trojan'  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: n E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 290 行.
+NOTIC: [8] Undefined variable: n E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 290 行.
+NOTIC: [8] Undefined variable: n E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 290 行.
+SQL: SELECT `title`,`color` FROM `vds_type` WHERE `name` = 'virus'  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: n E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 290 行.
+NOTIC: [8] Undefined variable: n E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 290 行.
+NOTIC: [8] Undefined variable: n E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 290 行.
+SQL: SELECT `name`,`title`,`color` FROM `vds_type`  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 67 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 67 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 67 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 67 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 67 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 67 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 67 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 67 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+NOTIC: [8] Undefined index: y E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 69 行.
+SQL: SELECT `name`,`title`,`color` FROM `vds_type`  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-06-02T17:22:52+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395372',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0080s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:22:56+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Safe/filebiao?da1=05%2F04%2F2017+-+06%2F02%2F2017&da2=&types=&keyword=&pagenum=2&order=desc&sort=time&_=1496395409362
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395376',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `vds_type` [ RunTime:0.0040s ]
+SQL: SELECT `title`,`color` FROM `vds_type` WHERE `name` = 'backdoor'  [ RunTime:0.0000s ]
+SQL: SELECT `title`,`color` FROM `vds_type` WHERE `name` = 'trojan'  [ RunTime:0.0000s ]
+SQL: SELECT `title`,`color` FROM `vds_type` WHERE `name` = 'spyware'  [ RunTime:0.0000s ]
+SQL: SELECT `title`,`color` FROM `vds_type` WHERE `name` = 'malware'  [ RunTime:0.0000s ]
+SQL: SELECT `title`,`color` FROM `vds_type` WHERE `name` = 'virus'  [ RunTime:0.0000s ]
+SQL: SELECT `title`,`color` FROM `vds_type` WHERE `name` = 'worm'  [ RunTime:0.0000s ]
+SQL: SELECT `title`,`color` FROM `vds_type` WHERE `name` = 'hacktool'  [ RunTime:0.0010s ]
+SQL: SELECT `title`,`color` FROM `vds_type` WHERE `name` = 'exploit'  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 446 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-02T17:22:57+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0080s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395377',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:23:02+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395382',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:23:07+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395387',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:23:12+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395392',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:23:17+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395397',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:23:22+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395402',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:23:25+08:00 ] 10.102.21.10 /APTSecUI/index.php/Safe/bruteforce
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395405',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-02T17:23:26+08:00 ] 10.102.21.10 /APTSecUI/Public/css/assets/fonts/glyphicons-halflings-regular.eot?
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Public
+
+[ 2017-06-02T17:23:26+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Safe/brutu?da1=05%2F04%2F2017+-+06%2F02%2F2017
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395406',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Missing argument 3 for Home\Controller\SafeController::brudata1(), called in E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php on line 126 and defined E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 318 行.
+NOTIC: [8] Undefined variable: n E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 325 行.
+NOTIC: [8] Undefined variable: n E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 336 行.
+NOTIC: [8] Undefined variable: n E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 336 行.
+NOTIC: [8] Undefined variable: n E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 336 行.
+NOTIC: [8] Undefined variable: n E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 336 行.
+SQL: SHOW COLUMNS FROM `ids_type` [ RunTime:0.0050s ]
+SQL: SELECT `title`,`color` FROM `ids_type` WHERE `name` = 'web_attack'  [ RunTime:0.0200s ]
+NOTIC: [8] Undefined variable: n E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 336 行.
+SQL: SELECT `title`,`color` FROM `ids_type` WHERE `name` = 'application_attack'  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: n E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 336 行.
+NOTIC: [8] Undefined variable: n E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 336 行.
+SQL: SELECT `title`,`color` FROM `ids_type` WHERE `name` = 'malware'  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: n E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 336 行.
+SQL: SELECT `title`,`color` FROM `ids_type` WHERE `name` = 'misc_attack'  [ RunTime:0.0000s ]
+SQL: SELECT `name`,`title`,`color` FROM `ids_type`  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-02T17:23:26+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Safe/brubiao?da1=05%2F04%2F2017+-+06%2F02%2F2017&da2=&keyword=&pagenum=1&order=desc&sort=time&_=1496395439891
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395406',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `ids_type` [ RunTime:0.0040s ]
+SQL: SELECT `title`,`color` FROM `ids_type` WHERE `name` = 'privilege_gain'  [ RunTime:0.0000s ]
+SQL: SELECT `title`,`color` FROM `ids_type` WHERE `name` = 'ddos'  [ RunTime:0.0010s ]
+SQL: SELECT `title`,`color` FROM `ids_type` WHERE `name` = 'information_leak'  [ RunTime:0.0000s ]
+SQL: SELECT `title`,`color` FROM `ids_type` WHERE `name` = 'web_attack'  [ RunTime:0.0010s ]
+SQL: SELECT `title`,`color` FROM `ids_type` WHERE `name` = 'application_attack'  [ RunTime:0.0000s ]
+SQL: SELECT `title`,`color` FROM `ids_type` WHERE `name` = 'candc'  [ RunTime:0.0000s ]
+SQL: SELECT `title`,`color` FROM `ids_type` WHERE `name` = 'malware'  [ RunTime:0.0000s ]
+SQL: SELECT `title`,`color` FROM `ids_type` WHERE `name` = 'misc_attack'  [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ids_type` WHERE `name` = 'misc_attack' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ids_type` WHERE `name` = 'misc_attack' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `ids_type` WHERE `name` = 'misc_attack' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ids_type` WHERE `name` = 'misc_attack' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `ids_type` WHERE `name` = 'misc_attack' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ids_type` WHERE `name` = 'application_attack' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `ids_type` WHERE `name` = 'misc_attack' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ids_type` WHERE `name` = 'misc_attack' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `ids_type` WHERE `name` = 'application_attack' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `ids_type` WHERE `name` = 'application_attack' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 487 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-02T17:23:27+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395407',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:23:32+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0060s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395412',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:23:37+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0100s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395417',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:23:41+08:00 ] 10.102.21.10 /APTSecUI/index.php/Safe/malicioust
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395421',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0160s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-02T17:23:42+08:00 ] 10.102.21.10 /APTSecUI/Public/css/assets/fonts/glyphicons-halflings-regular.eot?
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Public
+
+[ 2017-06-02T17:23:42+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395422',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0190s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:23:47+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0060s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395427',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0170s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:23:52+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395432',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0180s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:23:57+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0060s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395437',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0160s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:24:02+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395442',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0200s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:24:07+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395447',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0270s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:24:12+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395452',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0180s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:24:17+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395457',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0340s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:24:17+08:00 ] 10.102.21.10 /APTSecUI/index.php/Safe/malicioust?date1=05%2F03%2F2017+-+06%2F02%2F2017
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395457',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0190s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-02T17:24:18+08:00 ] 10.102.21.10 /APTSecUI/Public/css/assets/fonts/glyphicons-halflings-regular.eot?
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Public
+
+[ 2017-06-02T17:24:18+08:00 ] 10.102.21.10 /APTSecUI/index.php/Safe/malicioust?date1=05%2F03%2F2017+-+06%2F02%2F2017
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395458',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-02T17:24:19+08:00 ] 10.102.21.10 /APTSecUI/Public/css/assets/fonts/glyphicons-halflings-regular.eot?
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Public
+
+[ 2017-06-02T17:24:20+08:00 ] 10.102.21.10 /APTSecUI/index.php/Vir/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0060s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395460',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0050s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-02T17:24:21+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/indexdata
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395460',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 29 行.
+NOTIC: [8] Undefined index: Elements E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 34 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:24:22+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395462',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:24:26+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395466',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:24:27+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0030s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395467',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0090s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:24:32+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395471',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:24:32+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395472',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:24:37+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395476',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:24:37+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395477',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:24:42+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395481',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:24:42+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395482',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:24:47+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395486',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0050s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:24:47+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395487',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0230s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:24:52+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395491',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:24:52+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395492',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:24:57+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0060s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395496',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:24:57+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395497',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:25:02+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395501',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:25:02+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395502',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0170s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:25:04+08:00 ] 10.102.21.10 /APTSecUI/index.php/Urgent/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395504',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0200s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: template_data E:\www\APTSecUI\Application\Runtime\Cache\Home\a60ee9c7096f89070432ddfbd855104b.php 第 604 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-02T17:25:05+08:00 ] 10.102.21.10 /APTSecUI/Public/css/assets/fonts/glyphicons-halflings-regular.eot?
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Public
+
+[ 2017-06-02T17:25:05+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Urgent/indextu?da1=05%2F04%2F2017+-+06%2F02%2F2017
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395505',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0160s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-02T17:25:06+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Urgent/indexbiao?da1=05%2F04%2F2017+-+06%2F02%2F2017&da2=&keyword=&pagenum=1&order=desc&sort=Time&_=1496395538778
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0030s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395505',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0970s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\UrgentController.class.php 第 46 行.
+NOTIC: [8] Undefined index: Totality E:\www\APTSecUI\Application\Home\Controller\UrgentController.class.php 第 60 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-02T17:25:07+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395507',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.1960s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:25:11+08:00 ] 10.102.21.10 /APTSecUI/index.php/Vir/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395511',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0170s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-02T17:25:12+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395512',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0190s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:25:12+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/indexdata
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395512',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0200s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 29 行.
+NOTIC: [8] Undefined index: Elements E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 34 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:25:17+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395517',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0210s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:25:18+08:00 ] 10.102.21.10 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496395517',`last_login_ip`='10.102.21.10' WHERE `id` = 1 [ RunTime:0.0090s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:49:07+08:00 ] 127.0.0.1 /APTSecUI/index.php/Vir/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496396947',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0300s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-02T17:49:09+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/indexdata
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496396948',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0190s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 29 行.
+NOTIC: [8] Undefined index: Elements E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 34 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:49:15+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0060s ]
+SQL: UPDATE `users` SET `last_login_time`='1496396954',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0150s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:49:20+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496396959',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0170s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:49:25+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496396964',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0160s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:49:30+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496396969',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0160s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:49:35+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0070s ]
+SQL: UPDATE `users` SET `last_login_time`='1496396974',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0140s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:49:40+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496396979',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0740s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:49:45+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496396984',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0810s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:49:50+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496396989',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:49:55+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496396994',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0140s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:50:00+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496396999',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0050s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:50:05+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397004',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:50:10+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397009',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0140s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:50:15+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0030s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397014',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0250s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:50:20+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397019',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:50:25+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397024',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:50:30+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0030s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397029',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0080s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:50:35+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397034',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0080s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:50:40+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397039',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.1870s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:50:45+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397044',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:50:50+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397049',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:50:55+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397054',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:51:00+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397059',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:51:05+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397064',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:51:10+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397069',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:51:15+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397074',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:51:20+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397079',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0130s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:51:25+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397084',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0180s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:51:30+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0030s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397089',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0250s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:51:35+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397094',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0200s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:51:40+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397099',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0220s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:51:45+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397104',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0190s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:51:50+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397109',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0230s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:51:55+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397114',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0260s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:52:00+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397119',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0170s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:52:05+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397124',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0110s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:52:10+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397129',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0180s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:52:15+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397134',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0050s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:52:20+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0030s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397139',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0090s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:52:25+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397144',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0160s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:52:30+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397149',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0170s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:52:35+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397154',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0120s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:52:40+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397159',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0130s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:52:45+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397164',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0050s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:52:50+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397169',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0180s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:52:55+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397174',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0110s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:53:00+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397179',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0150s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:53:05+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397184',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0300s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:53:10+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0030s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397189',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0190s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:53:15+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397194',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0130s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:53:20+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0030s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397199',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0150s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:53:25+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397204',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0050s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:53:30+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0030s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397209',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0150s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:53:35+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397214',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0130s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:53:40+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397219',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0200s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:53:45+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397224',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0730s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:53:50+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397229',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0110s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:53:55+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0060s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397234',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:54:00+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397239',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:54:05+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397244',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:54:10+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0030s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397249',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:54:15+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397254',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:54:20+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397259',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:54:25+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Vir/getlinetu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0030s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397264',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\APTSecUI\Application\Home\Controller\VirController.class.php 第 115 行.
+
+[ 2017-06-02T17:54:28+08:00 ] 127.0.0.1 /APTSecUI/index.php/Safe/offLine
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496397268',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `offline` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `offline` LIMIT 1   [ RunTime:0.0230s ]
+SQL: SELECT * FROM `offline` ORDER BY times desc LIMIT 0,10   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+

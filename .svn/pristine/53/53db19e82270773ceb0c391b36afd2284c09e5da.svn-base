@@ -1,0 +1,241 @@
+<div class="main-content">
+
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try {
+                ace.settings.check('breadcrumbs', 'fixed')
+            } catch (e) {
+            }
+        </script>
+
+        <ul class="breadcrumb">
+            <li>
+                系统管理
+            </li>
+            <li class="active">系统操作日志</li>
+        </ul>
+        <!-- .breadcrumb -->
+
+
+    </div>
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="col-xs-12">
+            
+            <div class="formArea marT10" >
+
+                <form  name="searchform">
+                    <label class="floatLeft">时间：</label> 
+                    <div class="input-group floatLeft " style="width:281px; text-indent:0px;">
+                                 <span class="input-group-addon">
+                                     <i class="icon-calendar bigger-110"></i>
+                                 </span>
+                                <input class="form-control date-range-picker" type="text" name="date-range-picker" data-date-format="YYYY-MM-DD"
+                                       id="id-date-range-picker-1"/>
+                            </div>
+                   <label class="floatLeft"> 客户端IP：</label> 
+                    <input  type="text" name="webip" id="webip" class="floatLeft" />
+                    <input  type="text" hidden=""  name="pp" id="yema" value="1" />
+                    <input  type="text" hidden="" id="ye" value="{$ye}" />
+                    <label class="floatLeft">用户名：</label>  <input  type="text" name="username" class="floatLeft"  id="username"/>
+                    
+                     <button onclick="checkaction(0)" class="aptSearchBtn "><i class="fa fa-search"></i>查询</button>
+
+                    
+                    </form>
+
+                </div>
+                
+                <div class="aptTable span10 marT10 tableShow" style="display: none"  >
+                <div class="aptListBtnGroup"><a href="javascript:checkaction(1)" ><i class="icon-upload-alt blue"></i>导出</a></div>
+				<table data-toggle="table"  id="sample-table-1"   data-striped="true" data-pagination="true" data-search="true"  data-show-columns="true">
+                    <thead>
+                            <tr>
+                             <th style="text-align: center;">客户端IP</th>
+                            <th style="text-align: center;">用户名称</th>
+                            <th style="text-align: center;">操作内容</th>
+                            <th style="text-align: center;">时间</th>
+                            </tr>
+                    </thead>
+                    <tbody>
+                            <volist name="log_data" id="log_data_vo">
+                                <tr>
+                                    <td style="text-align: center">{$log_data_vo['ip']}</td>
+                                    <td style="text-align: center">{$log_data_vo['user_login']}</td>
+                                    <td style="text-align: center" title="{$log_data_vo['message']}">{$log_data_vo['message']|subtext=50}</td>
+                                    <td style="text-align: center">{$log_data_vo['time']|date='Y-m-d H:i:s',###}</td>
+                                </tr>
+                            </volist>
+                        </tbody>
+                </table>
+                    <li class="pageServer" id="page"><a id="next" href="javascript:checkaction(2)">上一批</a>
+                        <a id="down2" href="javascript:checkaction(2)">下一批</a></li>
+			</div>
+                
+                
+            </div>  
+            
+            
+           
+                <!-- /.table-responsive -->
+            </div>
+            <!-- /span -->
+        </div>
+        <!-- /row -->
+        
+    </div>
+</div><!-- /.main-content -->
+
+<script type="text/javascript">
+
+    //$('#level').attr('value',getParam("level"));
+    $('#webip').attr('value',getParam("webip"));
+    $('#username').attr('value',getParam("username"));
+    $('.date-range-picker').attr('value',URLdecode(getParam("date-range-picker")));
+    //$('#yema').attr('value',getParam("pp"));
+    
+    function checkaction(v){
+        //var pp=$('#yema').val();
+        //var ye=$('#ye').val();
+        //alert(ye);
+        if(v==1){
+            document.searchform.method="post"; 
+            document.searchform.action="__URL__/export_log";
+        }else if(v==0){
+            document.searchform.method="get";  
+            document.searchform.action="__URL__/index"; 
+        }/*else if(v==2){
+            if(pp>1){
+                pp =  pp*1-1;
+            }else{
+                pp =  1; 
+            }
+            $('#yema').val(pp);
+            document.searchform.method="get";  
+            document.searchform.action="__URL__/index"; 
+        }else if(v==3){
+            if(pp<ye){
+                pp = pp*1+1;
+            }else{
+                pp = ye; 
+            }
+            $('#yema').val(pp);
+            document.searchform.method="get";  
+            document.searchform.action="__URL__/index"; 
+        } */ 
+        searchform.submit(); 
+    } 
+     /*var export_condition = {};
+
+    function package_file(filepath)
+    {
+        $.post("__URL__/actionPackage", {filepath : filepath}, function(data){
+            // $("#export_show").hide();
+            if (data.status === true) {
+
+                layer.confirm('导出完毕，是否下载？', {
+                    btn: ['确定', '取消'] //按钮
+                }, function () {
+                    layer.closeAll();
+                    window.location.href = "__PUBLIC__/Upload/" + data.filename;
+                }, function () {
+                });
+            } else {
+                layer.confirm('导出失败', {
+                    btn: ['确定'] //按钮
+                }, function () {
+                    layer.closeAll();
+                });
+            }
+        })
+    }
+
+    function result_export()
+    {
+        
+        $.post("__URL__/export_logset",export_condition , function(data){
+            alert(export_condition);
+            if(data.status === 1) {
+                // $("#export_show").hide();
+                layer.confirm('没有数据', {
+                    btn: ['确定'] //按钮
+                }, function () {
+                    layer.closeAll();
+                });
+            } else if (data.status === 2) {
+                package_file(data.filename)
+            } else if (data.status === 3) {
+                export_condition.count = data.count;
+                export_condition.filename = data.filename;
+                result_export();
+            }
+        });
+    }
+    $("#export").click(function(){
+        export_condition.ip = $('#webip').val();
+        export_condition.username = $("#username").val();
+        export_condition.time = $("#id-date-range-picker-1").val();
+        export_condition.count = 0;
+        export_condition.filename = "";
+        result_export();
+    });*/
+
+    function URLdecode(sStr){
+       return sStr.replace(/\+/g,' ').replace(/\%2F/g,'\/').replace(/\%20/g,' ').replace(/\%3A/g,':'); 
+    }
+
+    function getParam(paramName)
+    {
+        paramValue = "";
+        isFound = false;
+        if (this.location.search.indexOf("?") == 0 && this.location.search.indexOf("=")>1)
+        {
+            arrSource = this.location.search.substring(1,this.location.search.length).split("&");
+            i = 0;
+            while (i < arrSource.length && !isFound)
+            {
+                if (arrSource[i].indexOf("=") > 0)
+                {
+                    if (arrSource[i].split("=")[0].toLowerCase()==paramName.toLowerCase())
+                    {
+                        paramValue = arrSource[i].split("=")[1];
+                        isFound = true;
+                    }
+                }
+                i++;
+            }
+        }
+        return paramValue;
+    }
+
+    
+
+</script>
+<script type="text/javascript">
+
+    jQuery(function ($) {
+        $('input[name=date-range-picker]').daterangepicker({
+                    locale : {
+                        applyLabel: '提交',
+                        cancelLabel: '取消',
+                        fromLabel: '开始时间',
+                        toLabel: '结束时间',
+                        weekLabel: 'W',
+                        customRangeLabel: 'Custom Range',
+                        daysOfWeek: ['日', '一', '二', '三', '四', '五','六'],
+                        monthNames: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+                        firstDay: moment.localeData()._week.dow
+                    },
+                    language: 'cn',
+                    timePicker:true,
+                    timePickerIncrement:1,
+                    timePicker12Hour:false,
+                    format: 'MM/DD/YYYY HH:mm'
+                }
+        ).prev().on(ace.click_event, function () {
+                    $(this).next().focus();
+                });
+
+    })
+</script>
+

@@ -1,0 +1,560 @@
+<div class="main-content">
+    <!--添加弹出框-->
+    <div id="addUser" class="popLayer">
+        <div class="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>添加用户</li>
+            </ul>
+            <!-- .breadcrumb -->
+            <span class="floatRig closePop">关闭</span>
+        </div>
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-xs-win">
+                    <!-- PAGE CONTENT BEGINS -->
+                    <form style="position:relative;margin-top:20px;" id="addUser_form" class="form-horizontal" role="form">
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right"> 姓名： </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="name" placeholder="姓名"  pattern="^\S{1,18}$"  title="请输入1-18位字符" class="col-xs-10 col-sm-5" required/>
+                            </div>
+                        </div>
+
+                        <div class="space-4"></div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right"> 手机：</label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="phone" pattern="^[1][358][0-9]{9}$"  title="请输入正确手机号" class="col-xs-10 col-sm-5" required/>
+                            </div>
+                        </div>
+
+
+                        <div class="space-4"></div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right"> Email：</label>
+
+                            <div class="col-sm-9">
+                                <input type="email" name="email" class="col-xs-10 col-sm-5" pattern="^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+" required/>
+                            </div>
+                        </div>
+
+                        <div class="space-4"></div>
+
+                        <div class="clearfix form-actions">
+                            <div>
+                                <button class="btn btn-info" type="submit">
+                                    <i class="icon-ok bigger-110"></i>
+                                    提交
+                                </button>
+
+                                &nbsp; &nbsp; &nbsp;
+                                <button class="btn" type="reset">
+                                    <i class="icon-undo bigger-110"></i>
+                                    重置
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+    </div>
+
+    <!--编辑文本框-->
+    <div id="editeUser" class="popLayer">
+        <div class="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>编辑联系人</li>
+            </ul>
+            <!-- .breadcrumb -->
+            <span class="floatRig closePop">关闭</span>
+        </div>
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-xs-win">
+                    <!-- PAGE CONTENT BEGINS -->
+                    <form style="position:relative;margin-top:20px;" id="user_edite_form" class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right"> 姓名： </label>
+                            <div class="col-sm-9">
+                                <input type="text" name="name" id="edite_user" placeholder="姓名" pattern="^\S{1,18}$"  title="请输入小于1-18位字符" class="col-xs-10 col-sm-5"
+                                       required/>
+                            </div>
+                        </div>
+                        <div class="space-4"></div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right"> 手机：</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="phone" id="edite_phone" placeholder="手机号" pattern="^[1][358][0-9]{9}$"  title="请输入正确手机号" class="col-xs-10 col-sm-5" required/>
+                            </div>
+                        </div>
+                        <div class="space-4"></div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right"> Email： </label>
+                            <div class="col-sm-9">
+                                <input type="email" name="email" id="edite_email" class="col-xs-10 col-sm-5" pattern="^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+" required/>
+                                <input type="text" name="id" id="edite_id" class="col-xs-10 col-sm-5" hidden="" />
+                            </div>
+                        </div>
+                        <div class="space-4"></div>
+
+                        <div class="clearfix form-actions">
+                            <div>
+                                <button class="btn btn-info user_edite" type="submit">
+                                    <i class="icon-ok bigger-110"></i>
+                                    提交
+                                </button>
+
+                                <button class="btn" type="reset">
+                                    <i class="icon-undo bigger-110"></i>
+                                    重置
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+    </div>
+    <!-- 删除用户-->
+    <div id="delUser" class="popLayer" style="top:100px;left:50%;width: 40%;margin-left:-20%;">
+        <div class="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>
+                    删除用户
+                </li>
+            </ul>
+            <!-- .breadcrumb -->
+            <span class="floatRig closePop">关闭</span>
+        </div>
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-xs-win">
+                    <!-- PAGE CONTENT BEGINS -->
+                    <form style="position:relative;top:20px;" id="user_delete_form" class="form-horizontal" role="form">
+
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label no-padding-right"> 确定要删除此用户？ </label>
+                        </div>
+
+                        <input type="hidden" id="id" value="" />
+                        <div class="clearfix form-actions">
+                            <div>
+                                <button class="allusers btn btn-danger" >
+                                    <i class="icon-remove  bigger-110 "></i>
+                                    删除
+                                </button>
+
+                                &nbsp; &nbsp; &nbsp;
+                                <button class="btn" type="reset">
+                                    <i class="icon-undo bigger-110"></i>
+                                    取消
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+    </div>
+    <!-- 遮罩-->
+    <div id="fade" class="black_overlay"></div>
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try {
+                ace.settings.check('breadcrumbs', 'fixed')
+            } catch (e) {
+            }
+        </script>
+
+        <ul class="breadcrumb">
+            <li>
+                设置
+            </li>
+            <li class="active">紧急事件推送</li>
+        </ul>
+        <!-- .breadcrumb -->
+        <!-- #nav-search -->
+    </div>
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="col-xs-12">
+
+                <div class="aptTable span10 marT10  tableShow" style="display: none">
+                    <div class="aptListBtnGroup" >
+                        <!--<a href="#"><i class="icon-upload-alt blue"></i>导出</a>-->
+                        <a href="#" class="" id="userAdd"><i class="icon-plus-sign bigger-120 green"></i>添加</a>
+                        <a href="#" class="" id="userDel"><i class="icon-remove  bigger-120 red "></i>批量删除</a>
+                    </div>
+                    <table id="reportTable">
+                    </table>
+                    <!-- <table data-toggle="table" data-striped="true" data-pagination="true" data-search="true"
+                           data-show-columns="true">
+                        <thead>
+                        <tr>
+                            <th><input name='checkbox' type="checkbox" ></th>
+                            <th>联系人姓名</th>
+                            <th>手机</th>
+                            <th>Email</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <volist name="data" id='vo'>
+                            <tr>
+                                <td><input type="checkbox" name="checkbox"  value="{$vo['id']}"></td>
+                                <td>{$vo['name']}</td>
+                                <td>{$vo['phone']}</td>
+                                <td>{$vo['email']}</td>
+                                <td>
+                                    <a class="green editeUser" href="javascript:;" title="编辑">
+                                        <i class="icon-pencil bigger-130"></i>
+                                    </a>
+                                    <a class="red deleteuser"  href="javascript:;" title="删除">
+                                        <i class="icon-trash bigger-130"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        </volist>
+                        </tbody>
+                    </table>
+                        <li class="pageServer" id="page">
+                            {$show}
+                        </li> -->
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<script>
+    $(document).on("click","#userAdd",function(){
+        $("#addUser").show();
+        $("#fade").show();
+        return false
+    });
+
+    $('#addUser_form').submit(function(e){
+        e.stopPropagation();
+        e.preventDefault();
+        var data = $('#addUser_form').serialize();
+        //alert(data);
+        $.ajax({
+            type: "POST",
+            url: "__URL__/ugevent_add",
+            data: data,
+            dataType: "json",
+            success:function(data){
+                if(data.status=='success'){
+                    $("#addUser").hide();
+                    $("#fade").hide();
+                    layer.msg(data.msg);
+                    window.location.reload();
+                }else{
+                    layer.msg(data.msg);
+                }
+            }
+        });
+
+    })
+
+    $(".closePop").css("cursor", "pointer").click(function () {
+        $("#addUser").hide();
+        $("#delUser").hide();
+        $("#editeUser").hide();
+        $("#fade").hide();
+        $(":checked").attr('checked',false);
+    });
+
+    /* $('#userDel').click(function(event){
+     event.preventDefault();
+     var val=$('#reportTable tbody input:checkbox[type="checkbox"]:checked').map(function(){
+     return $(this).val();
+     }).get();
+     if(val.length<1){
+     layer.alert("请选择用户");
+     return;
+     }
+     var arrSelect=$('#reportTable').bootstrapTable('getSelections');
+     $.each(arrSelect,function(index,value){
+     console.log(value.id)
+     })
+     })*/
+    $(document).on("click","#userDel",function(){
+        var val=$('#reportTable tbody input:checkbox[type="checkbox"]:checked').map(function(){
+            return $(this).val();
+        }).get();
+        if(val.length<1){
+            layer.alert("请选择用户");
+            return;
+        }
+        var ids=[];
+        var arrSelect=$('#reportTable').bootstrapTable('getSelections');
+        $.each(arrSelect,function(index,value){
+//            console.log(value.id)
+            ids.push(value.id)
+        })
+        ids=ids.join(',');
+        $('#id').val(ids);
+        /* var ids= $("input:checkbox[name='checkbox']:checked").map(function() {
+         return $(this).val();
+         }).get().join(',');*/
+        //alert(ids);
+        /* if(ids==''||ids=='on'){
+         $(':checked').attr('checked',false);
+         layer.msg('请选择要删除的数据');
+         }else{
+         if(ids.indexOf("on,") >= 0){
+         ids = ids.replace(/on,/g,'');
+         }
+         $("#delUser").show();
+         $("#fade").show();
+         }
+         return false*/
+        $("#delUser").show();
+        $("#fade").show();
+    });
+
+    $(document).on("click",".deleteuser",function(){
+        $(":checked").attr('checked',false);
+        $(this).parent().parent().children().first().children().first().attr('checked','checked');
+        $("#delUser").show();
+        $("#fade").show();
+        return false;
+    });
+    $('#user_delete_form').submit(function(e){
+        e.stopPropagation();
+        e.preventDefault();
+
+        var id=$('#id').val();
+
+        $.ajax({
+            url:'__URL__/ugevent_del',
+            type:'POST',
+            dataType:'json',
+            data:{'id':id},
+            success:function(data){
+                if(data.status=='success'){
+                    $("#delUser").hide();
+                    $("#fade").hide();
+                    $('#user_delete_form')[0].reset();
+                    layer.msg(data.msg);
+                    window.location.reload();
+                    $(":checked").attr('checked',false);
+                }else{
+                    $("#delUser").hide();
+                    $("#fade").hide();
+                    $(":checked").attr('checked',false);
+                    layer.msg(data.msg);
+                }
+            }
+        });
+    });
+    $(document).on("click",".editeUser",function(){
+        var row = $(this).parents('tr');
+        $("#edite_id").val(row.children('td:eq(0)').children().val());
+        $("#edite_user").val(row.children('td:eq(1)').html());
+        $("#edite_phone").val(row.children('td:eq(2)').html());
+        $("#edite_email").val(row.children('td:eq(3)').html());
+        $("#editeUser").show();
+        $("#fade").show();
+        return false
+    });
+    $('#user_edite_form').submit(function(e){
+        e.stopPropagation();
+        e.preventDefault();
+        var data = $('#user_edite_form').serialize();
+        $.ajax({
+            type: "POST",
+            url: "__URL__/ugevent_edite",
+            data: data,
+            dataType: "json",
+            success:function(data){
+                if(data.status=='success'){
+                    $("#editeUser").hide();
+                    $("#fade").hide();
+                    layer.msg(data.msg);
+                    window.location.reload();
+                }else{
+                    layer.msg(data.msg);
+                }
+            }
+        });
+
+    })
+    jQuery(function ($) {
+        $('input[name=date-range-picker]').daterangepicker({
+                    startDate: moment().subtract(1, 'days'),
+                    endDate: moment(),
+                    locale : {
+                        applyLabel: '提交',
+                        cancelLabel: '取消',
+                        fromLabel: '开始时间',
+                        toLabel: '结束时间',
+                        weekLabel: 'W',
+                        customRangeLabel: 'Custom Range',
+                        daysOfWeek: ['日', '一', '二', '三', '四', '五','六'],
+                        monthNames: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+                        firstDay: moment.localeData()._week.dow
+                    },
+                    language: 'cn',}
+        ).prev().on(ace.click_event, function () {
+                    $(this).next().focus();
+                });
+
+    })
+
+    $(document).ready(function(){
+        function operateFormatter(value, row, index) {
+            return [
+                '<a class="green editeUser" href="javascript:;" data="'+value+'" title="编辑"><i class="icon-pencil bigger-130"></i></a> ' +
+                '<a class="red deleteuser"  href="javascript:;" data="'+value+'" title="删除"><i class="icon-trash bigger-130"></i></a>'
+            ].join('');
+        }
+        var rowId = new Array();
+
+        $('#reportTable').bootstrapTable({
+            method: 'get',
+            url: '__URL__/ugeventOK',
+            //search:true,
+            cache: false,
+            //height: 400,
+            striped: true,
+            sidePagination:"server",
+            pagination: true,
+            pageSize: 10,
+            pageNumber: 1,
+            pageList: [10],
+            sortName : 'time',
+            sortOrder : 'desc',
+            showColumns: true,
+            formatLoadingMessage: function () {
+                return "请稍等，正在加载中...";
+            },
+            formatNoMatches: function () {  //没有匹配的结果
+                return '无符合条件的记录';
+            },
+            queryParams: function (params) {
+                var pars = {
+                    //keyword:$('#keyword').val(),
+                    pagenum:params.offset/params.limit+1,
+                    order:params.order,
+                    sort:params.sort
+                };
+                return pars;
+            },
+            /*onCheckAll:function(rows){
+             var arrSelect=$('#reportTable').bootstrapTable('getSelections');
+             $.each(arrSelect,function(index,value){
+             console.log(value.id)
+             })
+             },*/
+            columns: [{
+                checkbox:true,
+            },{
+                field: "name",
+                title: "联系人姓名",
+                align: "center",
+                valign: "middle",
+                sortable: true
+            },{
+                field: "phone",
+                title: "手机号码",
+                align: "center",
+                valign: "middle",
+                sortable: false
+            },{
+                field: "email",
+                title: "Email地址",
+                align: "center",
+                valign: "middle",
+                sortable: false
+            },{
+                field: "time",
+                title: "添加时间",
+                align: "center",
+                valign: "middle",
+                sortable: true
+            },{
+                field: "place_set",
+                title: "操作",
+                align: "center",
+                valign: "middle",
+                sortable: "true",
+                switchable: false,
+                formatter: operateFormatter
+            }],
+            data: [{
+                "Time": "00-E0-4C-3B-7D-2F",
+                "UgcType": "百卓2",
+                "ServerIp": "11111",
+                "Description": "2017-01-01 10:10:10",
+            }],
+            onLoadSuccess:function(data){
+                console.log("ok");
+            },
+            responseHandler:function(res) {
+                var tem = {"total":0,"rows":[]};
+                if(res.status){
+                    tem.total = res.totalNum;
+                    tem.rows = eval(res.data);
+                }else{
+                    $('#reportTable').bootstrapTable('removeAll');
+                }
+                return tem;
+            },
+            onLoadError:function(status,res){
+                $('#reportTable').bootstrapTable('removeAll');
+                console.log(status,res);
+            }
+        });
+
+        $(window).resize(function () {
+            $('#reportTable').bootstrapTable('resetView');
+        });
+        /* $("#kSearch2").click(function(){
+         $('#id-date-range-picker-1').val('');
+         var da2 = $('#id-date-range-picker-2').val();
+         var keyword = $('#keyword').val();
+         $('#reportTable').bootstrapTable('refresh');
+         });
+         $(".urgent_type").click(function(){
+         var da2 = $('#id-date-range-picker-2').val();
+         var keyword = $('#keyword').val();
+         var urgent_type = $('.urgent_type').attr('data');
+         $('#reportTable').bootstrapTable('refresh');
+         });
+         $("#kSearch1").click(function(){
+         $('#id-date-range-picker-2').val('');
+         $('#keyword').val('');
+         var da1 = $('#id-date-range-picker-1').val();
+         $.ajax({
+         url: '__URL__/indextu',
+         type: 'GET',
+         async: false,
+         dataType: 'json',
+         data: {'da1':da1},
+         success:function(data){
+         chart1();
+         chart2();
+         }
+         })
+         $('#reportTable').bootstrapTable('refresh');
+         });*/
+    });
+</script>

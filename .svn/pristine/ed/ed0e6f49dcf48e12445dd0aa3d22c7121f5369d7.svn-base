@@ -1,0 +1,445 @@
+<?php
+namespace Home\Controller;
+class SafeController extends CommonController {
+    public function index(){
+        layout('Layout/layout');
+        $this->display();
+    }
+    public function file(){
+        layout('Layout/layout');
+        $this->display();
+    }
+    public function bruteforce(){
+        layout('Layout/layout');
+        $this->display();
+    }
+    public function gettypename($table,$type){
+        $where=[];
+        $where['name'] = $type;
+        return  M($table) -> where($where)-> getField('title');
+    }
+    public function typename($table){
+        $arr = M($table) -> getField('name,title');
+        return $arr;
+    }
+    public function zhulisttime($start,$end,$n){
+        $listtime = [];
+        for($i=$n;$i>=0;$i--){
+            $listtime[$n-$i][] = date('m-d',$end - $i*24*3600);
+            //$listtime[$n-$i][] = $end - $i*24*3600;
+        }
+        return $listtime;
+    } 
+    public function initdata0($table,$start,$end,$n){
+        $field = $this -> typename($table);
+        $arr = [];
+        $i = 0;
+        $listtime = $this -> zhulisttime($start,$end,$n);
+        foreach ($field as $k => $v) {
+            foreach ($listtime as $k1 => $v1) {
+                $arr[$i]['name'] = $v;
+                $arr[$i]['data'][$k1][0] = $v2[0];
+                $arr[$i]['data'][$k1][1] = 0;
+            }
+            $i++;
+        }
+        return $arr;
+    }
+    public function initdata1($data,$table,$start,$end,$n){
+        $arr = [];
+        $i = 0;
+        foreach ($data['data']['classify'] as $k => $v) {
+            $time = date('m-d',$v['time']);
+            $field = $this -> typename($table);
+            $listtime = $this -> zhulisttime($start,$end,$n);
+            foreach ($field as $k1 => $v1) {
+                if($i>=count($field)){
+                    $i = 0;
+                }
+                foreach ($listtime as $k2 => $v2) {
+                    $arr[$i]['name'] = $v1;
+                    $arr[$i]['data'][$k2][0] = $v2[0];
+                    if($v2[0]==$time){
+                        $arr[$i]['data'][$k2][1] += $v[$k1];
+                    }else{
+                        $arr[$i]['data'][$k2][1] += 0;
+                    }
+                }
+                $i++;
+
+            }
+        }
+        return $arr;
+    }
+	
+    public function indextu(){
+        if(I('get.da1')) {
+            $start = $this->time_data(I('get.da1'))['ts'];
+            $end   = $this->time_data(I('get.da1'))['td'];
+            $this ->save_time($start,$end,'ts','td');
+            $this ->save_time($start,$end,'zts','ztd');
+        }
+        $data=[];
+        $data['data1'] = $this -> indexdata1($start,$end);
+        $data['data4'] = $this -> indexdata1($start,$end,4);
+        if(floor(($end-$start)/(10*24*3600)) > 0){
+            $start = $end - 9*24*3600;
+        }else{
+            $start = $start;
+        }
+        $data['data2'] = $this -> indexdata2($start,$end);
+        echo json_encode($data);
+    }
+    public function filetu(){
+        if(I('get.da1')) {
+            $start = $this->time_data(I('get.da1'))['ts'];
+            $end   = $this->time_data(I('get.da1'))['td'];
+            $this -> save_time($start,$end,'ts','td');
+            $this -> save_time($start,$end,'zts','ztd');
+        }
+        $data=[];
+        $data['data1'] = $this -> filedata1($start,$end);
+        $data['data4'] = $this -> filedata1($start,$end,4);
+        if(floor(($end-$start)/(10*24*3600)) > 0){
+            $start = $end - 9*24*3600;
+        }else{
+            $start = $start;
+        }
+        $data['data2'] = $this -> filedata2($start,$end);
+        echo json_encode($data);
+    }
+    public function brutu(){
+        if(I('get.da1')) {
+            $start = $this->time_data(I('get.da1'))['ts'];
+            $end   = $this->time_data(I('get.da1'))['td'];
+            $this ->save_time($start,$end,'ts','td');
+            $this ->save_time($start,$end,'zts','ztd');
+        }
+        $data=[];
+        $data['data1'] = $this -> brudata1($start,$end);
+        $data['data4'] = $this -> brudata1($start,$end,4);
+        if(floor(($end-$start)/(10*24*3600)) > 0){
+            $start = $end - 9*24*3600;
+        }else{
+            $start = $start;
+        }
+        $data['data2'] = $this -> brudata2($start,$end);
+        echo json_encode($data);
+    }
+    public function indexbiao(){
+        $sort  = I('get.sort');
+        $order = I('get.order');
+        $type  = I('get.types');
+        $page  = I('get.pagenum');
+        $data  = [];
+        if(I('get.da2')){
+            $start = $this->time_data(I('get.da2'))['ts'];
+            $end   = $this->time_data(I('get.da2'))['td'];
+            $data['data4'] = $this -> indexdata1($start,$end,4);
+        }else{
+            $start = $this->time_data(I('get.da1'))['ts'];
+            $end   = $this->time_data(I('get.da1'))['td'];
+        }
+        $data['data3'] = $this -> indexdata3($start,$end,$type,$page,$sort,$order);
+        echo json_encode($data);
+    }
+    public function filebiao(){
+        $sort  = I('get.sort');
+        $order = I('get.order');
+        $type  = I('get.types');
+        $page  = I('get.pagenum');
+        $data  = [];
+        if(I('get.da2')){
+            $start = $this->time_data(I('get.da2'))['ts'];
+            $end   = $this->time_data(I('get.da2'))['td'];
+            $data['data4'] = $this -> filedata1($start,$end,4);
+        }else{
+            $start = $this->time_data(I('get.da1'))['ts'];
+            $end   = $this->time_data(I('get.da1'))['td'];
+        }
+        $data['data3'] = $this -> filedata3($start,$end,$type,$page,$sort,$order);
+        echo json_encode($data);
+    }
+    public function brubiao(){
+        $sort  = I('get.sort');
+        $order = I('get.order');
+        $type  = I('get.types');
+        $page  = I('get.pagenum');
+        $data  = [];
+        if(I('get.da2')){
+            $start = $this->time_data(I('get.da2'))['ts'];
+            $end   = $this->time_data(I('get.da2'))['td'];
+            $data['data4'] = $this -> brudata1($start,$end,4);
+        }else{
+            $start = $this->time_data(I('get.da1'))['ts'];
+            $end   = $this->time_data(I('get.da1'))['td'];
+        }
+        $data['data3'] = $this -> brudata3($start,$end,$type,$page,$sort,$order);
+        echo json_encode($data);
+    }
+    public function indexzhutu(){
+        if(I('get.sign')){
+            $sign = I('get.sign');
+            $times =  $this -> zhututime($sign);
+            $start =  $times['start'];
+            $end   =  $times['end'];
+            $data  = [];
+            $data['data2']  =  $this -> indexdata2($start,$end);
+            echo json_encode($data);
+        }
+    }
+    public function filezhutu(){
+        if(I('get.sign')){
+            $sign  =  I('get.sign');
+            $times =  $this -> zhututime($sign);
+            $start =  $times['start'];
+            $end   =  $times['end'];
+            $data  = [];
+            $data['data2']  =  $this -> filedata2($start,$end);
+            echo json_encode($data);
+        }
+    }
+    public function bruzhutu(){
+        if(I('get.sign')){
+            $sign = I('get.sign');
+            $times =  $this -> zhututime($sign);
+            $start =  $times['start'];
+            $end   =  $times['end'];
+            $data  = [];
+            $data['data2']  =  $this -> brudata2($start,$end);
+            echo json_encode($data);
+        }
+    }
+    public function indexdata1($start,$end,$n){
+        $url = 'http://10.88.1.102:8070/byzoro.apt.com/httpflow/trend/day?start='.$start.'&end='.$end;
+        $data = request($url,false);
+        $data = json_decode($data,true);
+        dump($data);die;
+        if($data['msg'] == 'success'){
+            $str = [];
+            $i = 0;
+            if($n==4){
+                $str[0]['class'] = 'types sel';
+                $str[0]['data'] = '';
+                $str[0]['name'] = '全部'; 
+                $str[0]['num'] = (int)$data['data']['counts'];
+            }
+            foreach ($data['data']['elements'][0] as $k => $v) {
+                if($n==4){
+                    $i++;
+                    $str[$i]['class'] = 'types';
+                    $str[$i]['data'] = $k;
+                    $str[$i]['name'] = $this->gettypename('waf_type',$k); 
+                    $str[$i]['num'] = (int)$v;
+                }else{
+                    if($v!=0){
+                        $str[$i][0] = $this->gettypename('waf_type',$k);
+                        $str[$i][1] = (int)$v;  
+                        $i++; 
+                    } 
+                }    
+            }
+        }
+        return $str;
+    }
+    public function filedata1($start,$end,$n){
+        $url = 'http://10.88.1.102:8070/byzoro.apt.com/fileThreat/trend/day?start='.$start.'&end='.$end;
+        $data = request($url,false);
+        $data = json_decode($data,true);
+        if($data['msg'] == 'success'){
+            $str = [];
+            $i = 0;
+            if($n==4){
+                $str[0]['class'] = 'types sel';
+                $str[0]['data'] = '';
+                $str[0]['name'] = '全部'; 
+                $str[0]['num'] = (int)$data['data']['counts'];
+            }
+            foreach ($data['data']['elements'][0] as $k => $v) {
+                if($n==4){
+                    $i++;
+                    $str[$i]['class'] = 'types';
+                    $str[$i]['data'] = $k;
+                    $str[$i]['name'] = $this->gettypename('vds_type',$k); 
+                    $str[$i]['num'] = (int)$v;
+                }else{
+                    if($v!=0){
+                        $str[$i][0] = $this->gettypename('vds_type',$k);
+                        $str[$i][1] = (int)$v;  
+                        $i++; 
+                    } 
+                }    
+            }
+        }
+        return $str;
+    }
+    public function brudata1($start,$end,$n){
+        $url = 'http://10.88.1.102:8070/byzoro.apt.com/malFlow/trend/day?start='.$start.'&end='.$end;
+        $data = request($url,false);
+        $data = json_decode($data,true);
+        if($data['msg'] == 'success'){
+            $str = [];
+            $i = 0;
+            if($n==4){
+                $str[0]['class'] = 'types sel';
+                $str[0]['data'] = '';
+                $str[0]['name'] = '全部'; 
+                $str[0]['num'] = (int)$data['data']['counts'];
+            }
+            foreach ($data['data']['elements'][0] as $k => $v) {
+                if($n==4){
+                    $i++;
+                    $str[$i]['class'] = 'types';
+                    $str[$i]['data'] = $k;
+                    $str[$i]['name'] = $this->gettypename('ids_type',$k); 
+                    $str[$i]['num'] = (int)$v;
+                }else{
+                    if($v!=0){
+                        $str[$i][0] = $this->gettypename('ids_type',$k);
+                        $str[$i][1] = (int)$v;  
+                        $i++; 
+                    } 
+                }    
+            }
+        }
+        return $str;
+    }
+    public function indexdata2($start,$end){
+        $url = 'http://10.88.1.102:8070/byzoro.apt.com/httpflow/trend/day?start='.$start.'&end='.$end;
+        $data = request($url,false);
+        $data = json_decode($data,true);
+        $n = ($end - $start)/24/3600;
+        if($data['msg']=='success'){
+            if($data['data']['counts']==0){
+                $arr = $this -> initdata0('waf_type',$start,$end,$n);
+            }else{
+                $arr = $this -> initdata1($data,'waf_type',$start,$end,$n);
+            }
+            return $arr;
+        }
+    }
+    public function filedata2($start,$end){
+        $url = 'http://10.88.1.102:8070/byzoro.apt.com/fileThreat/classify/day?start='.$start.'&end='.$end;
+        $data = request($url,false);
+        $data = json_decode($data,true);
+        $n = ($end - $start)/24/3600;
+        if($data['msg']=='success'){
+            if($data['data']['counts']==0){
+                $arr = $this -> initdata0('vds_type',$start,$end,$n);
+            }else{
+                $arr = $this -> initdata1($data,'vds_type',$start,$end,$n);
+            }
+            return $arr;
+        }
+    }
+    public function brudata2($start,$end){
+        $url = 'http://10.88.1.102:8070/byzoro.apt.com/malFlow/classify/day?start='.$start.'&end='.$end;
+        $data = request($url,false);
+        $data = json_decode($data,true);
+        $n = ($end - $start)/24/3600;
+        if($data['msg']=='success'){
+            if($data['data']['counts']==0){
+                $arr = $this -> initdata0('ids_type',$start,$end,$n);
+            }else{
+                $arr = $this -> initdata1($data,'ids_type',$start,$end,$n);
+            }
+            return $arr;
+        }
+    }
+    public function indexdata3($start,$end,$type=0,$page=1,$sort='time',$order='ASC'){
+        $url = 'http://10.88.1.102:8070/byzoro.apt.com/httpflow/list?start='.$start.'&end='.$end.'&page='.$page.'&sort='.$sort.'&order='.$order.'&count=10&type='.$type;
+        $data = request($url,false);
+        $data = json_decode($data,true);
+        foreach ($data['data']['elements'] as $key => &$value) {
+            if($value['time']){
+                $value['time'] =date("Y-m-d H:i:s",$value['time']);
+            }
+            if($value['severity']){
+                $value['severity'] = $this -> gettypename('waf_type',$value['severity']);
+            }
+        }
+        $data = SafeFilter($data);
+        $arr=[];
+        if($data['data']['elements']){
+            $arr['status']=ture;
+        }else{
+            $arr['status']=false;
+        }
+        $arr['totalNum']=$data['data']['total'];
+        $arr['data']=$data['data']['elements'];
+        return $arr;
+    }
+    public function filedata3($start,$end,$type='',$page=1,$sort='time',$order='ASC'){
+        $url = 'http://10.88.1.102:8070/byzoro.apt.com/fileThreats/list/day?start='.$start.'&end='.$end.'&page='.$page.'&sort='.$sort.'&order='.$order.'&count=10&type='.$type;
+        $data = request($url,false);
+        $data = json_decode($data,true);
+        $arr=[];
+        foreach ($data['data']['elements'] as $key => &$value) {
+            if($value['time']){
+               $value['time'] =date("Y-m-d H:i:s",$value['time']);
+            }
+            if($value['localVType']){
+                $value['localVType'] = $this -> gettypename('vds_type',$value['localVType']);
+            }
+        }
+        $data = SafeFilter($data);
+        if($data['data']['elements']){
+            $arr['status']=ture;
+        }else{
+            $arr['status']=false;
+        }
+        $arr['totalNum']=(int)$data['data']['total'];
+        $arr['data']=$data['data']['elements'];
+        return $arr;
+    }
+    public function brudata3($start,$end,$type='',$page=1,$sort='time',$order='ASC'){
+        $url = 'http://10.88.1.102:8070/byzoro.apt.com/malFlow/list/day?start='.$start.'&end='.$end.'&page='.$page.'&sort='.$sort.'&order='.$order.'&count=10&type='.$type;
+        $data = request($url,false);
+        $data = json_decode($data,true);
+        foreach ($data['data']['elements'] as $key => &$value) {
+            if($value['time']){
+               $value['time'] =date("Y-m-d H:i:s",$value['time']);
+            }
+            if($value['severity']){
+               $value['severity'] = $this -> getlevel($value['severity']);
+            }
+            if($value['attackType']){
+                $value['attackType'] = $this -> gettypename('ids_type',$value['attackType']);
+            }
+        }
+        $arr=[];
+        if($data['data']['elements']){
+            $arr['status']=ture;
+        }else{
+            $arr['status']=false;
+        }
+        $arr['totalNum']=$data['data']['total'];
+        $arr['data']=$data['data']['elements'];
+        return $arr;
+    }
+
+    public function getlevel($value){
+        $sev = '';
+        switch ((int)$value) {
+            case 1:
+                $sev = '严重';
+                break;
+            case 2:
+                $sev = '中等';
+                break;
+            case 3:
+                $sev = '低';
+                break;
+        }
+        return $sev;
+    }
+	public function malicioust(){
+        layout('Layout/layout');
+        $this->display();
+    }
+	public function scanevent(){
+        layout('Layout/layout');
+        $this->display();
+    }
+
+}

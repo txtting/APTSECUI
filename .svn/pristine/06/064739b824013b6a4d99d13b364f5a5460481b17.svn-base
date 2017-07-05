@@ -1,0 +1,211 @@
+<div class="main-content">
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try {
+                ace.settings.check('breadcrumbs', 'fixed')
+            } catch (e) {
+            }
+        </script>
+
+        <ul class="breadcrumb">
+            <li>
+                设置
+            </li>
+            <li class="active">安全报表模板设置</li>
+        </ul>
+    </div>
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="aptTable span10 marT10" style="background:#252723;padding:0px;">
+                    <ul class="navBar">
+                    	<li style="padding-right: 0px;"><a href="javascript:;">产品服务</a></li>
+                    	<li><a href="javascript:;">备案专区</a></li>
+                    	<li><a href="javascript:;">管理控制台</a></li>
+                    	<li><a href="javascript:;">用户中心</a></li>
+                    	<li><a href="javascript:;">管理中心</a></li>
+                        <li><a href="javascript:;">首页</a></li> 
+                    </ul>
+                    <div class="wrapper">
+                    	<div class="process">
+	                    	<div class="box">	
+	                    		<img src="__PUBLIC__/css/assets/images/score/1.jpg">
+	                    	</div>
+	                    	<div class="score">
+	                    		<div class="todayScore">
+	                    			今日安全得分
+	                    		</div>
+	                    		<div class="number">
+	                    			69分
+	                    		</div>
+	                    	</div>
+                    	</div>
+                    	<div class="block">
+                    		<div class="express">
+                    			得分是通过今日一天安全数据，如：紧急事件，漏洞，弱点，攻击，信息泄露
+                    			威胁等因素综合计算得出，代表了今天的安全指数
+                    		</div>
+                    	</div>
+                    	<div class="count">
+                    		<div class="todayCount">
+                    			今日安全统计
+                    		</div>
+                    		<div class="underline"></div>
+                    	</div>
+                    	<div class="content">
+                    		<div class="chose">
+                    			<div class="chooseBtn"><a href="javascript:;" style="color:#EFF0EB; text-decoration: none;">选择</a></div>
+                    		</div>
+                    		<div class="line">
+                    			<span>异常网络连接</span>
+                    			<span>DDos攻击</span>
+                    			<span>未授权下载</span>
+                    			<span>非法登录</span>
+                    			<span>页面被篡改</span>
+                    			<span>攻击次数</span>
+                    		</div>
+                    		<div class="section">
+                    			<a href="javascript:;">
+                    				<span class="stock">
+	                    				<span class="num">0</span><span>次</span>
+	                    			</span>
+                    			</a>
+                    			<a href="javascript:;">
+                    				<span class="stock">
+	                    				<span class="num">0</span><span>次</span>
+	                    			</span>
+                    			</a>
+                    			<a href="javascript:;">
+                    				<span class="stock">
+	                    				<span class="num">0</span><span>次</span>
+	                    			</span>
+                    			</a>
+                    			<a href="javascript:;">
+                    				<span class="stock">
+	                    				<span class="num">0</span><span>次</span>
+	                    			</span>
+                    			</a>
+                    			<a href="javascript:;">
+                    				<span class="stock">
+	                    				<span class="num">0</span><span>次</span>
+	                    			</span>
+                    			</a>
+                    			<a href="javascript:;">
+                    				<span class="stock">
+	                    				<span class="num">75</span><span>次</span>
+	                    			</span>
+                    			</a>
+                    		</div>
+                    		<div class="line" style="padding-top: 20px;">
+                    			<span>发现后门</span>
+                    			<span>暴力破解成功</span>
+                    			<span>肉鸡行动</span>
+                    			<span>发现漏洞</span>
+                    			<span>发现弱口令</span>
+                    			<span>新发现资产</span>
+                    		</div>
+                    		<div class="section">
+                    			<a href="javascript:;">
+                    				<span class="stock">
+	                    				<span class="num">0</span><span>次</span>
+	                    			</span>
+                    			</a>
+                    			<a href="javascript:;">
+                    				<span class="stock">
+	                    				<span class="num">0</span><span>次</span>
+	                    			</span>
+                    			</a>
+                    			<a href="javascript:;">
+                    				<span class="stock">
+	                    				<span class="num">1</span><span>次</span>
+	                    			</span>
+                    			</a>
+                    			<a href="javascript:;">
+                    				<span class="stock">
+	                    				<span class="num">5</span><span>次</span>
+	                    			</span>
+                    			</a>
+                    			<a href="javascript:;">
+                    				<span class="stock">
+	                    				<span class="num">0</span><span>次</span>
+	                    			</span>
+                    			</a>
+                    			<a href="javascript:;">
+                    				<span class="stock">
+	                    				<span class="num">2</span><span>次</span>
+	                    			</span>
+                    			</a>
+                    		</div>
+                    	</div>
+                    	<div class="count">
+                    		<div class="todayCount">
+                    			重点关注
+                    		</div>
+                    		<div class="underline smallGreen"></div>
+                    	</div>
+                    	<div class="event">
+                    		<table>
+			                    <tr>
+			                    	<td>
+			                    		<span class="eventType">事件类型：</span><span class="eventSeries">肉鸡行动</span>
+			                    	</td>
+			                    	<td>
+			                    		<span class="eventType">受影响资产：</span><span class="eventSeries">(ECS)12345678</span>
+			                    	</td>
+			                    </tr>
+			                    <tr>
+			                    	<td>
+			                    		<span class="eventType">事件类型：</span><span class="eventSeries">肉鸡行动</span>
+			                    	</td>
+			                    	<td>
+			                    		<span class="eventType">受影响资产：</span><span class="eventSeries">(ECS)12345678</span>
+			                    	</td>
+			                    </tr>
+			                    <tr>
+			                    	<td>
+			                    		<span class="eventType">事件类型：</span><span class="eventSeries">肉鸡行动</span>
+			                    	</td>
+			                    	<td>
+			                    		<span class="eventType">受影响资产：</span><span class="eventSeries">(ECS)12345678</span>
+			                    	</td>
+			                    </tr>
+			                    <tr>
+			                    	<td>
+			                    		<span class="eventType">事件类型：</span><span class="eventSeries">肉鸡行动</span>
+			                    	</td>
+			                    	<td>
+			                    		<span class="eventType">受影响资产：</span><span class="eventSeries">(ECS)12345678</span>
+			                    	</td>
+			                    </tr>
+                			</table>
+                    	</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".section .stock").toggle(function(){
+		    $(this).css("background-color","#007151");},
+		    function(){
+		    $(this).css("background-color","#00AEBA");}
+		);
+		$(".chooseBtn").click(function () {
+			var $btns = $(".section .stock .num");		
+//			$btns.each(function () {
+//				if($(this).css("background-color","#007151")){
+//					console.log($(this).html());
+//				}
+//			})
+			for(var i=0; i<$btns.length; i++){
+//				if($btns[i].css("background-color") == "#007151"){
+//					console.log($btns[i].html());
+//				}
+				console.log($btns[0].className);
+			}
+		})
+		
+	});
+</script>

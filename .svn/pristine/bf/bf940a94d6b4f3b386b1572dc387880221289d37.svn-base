@@ -1,0 +1,240 @@
+<div class="main-content">
+
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try {
+                ace.settings.check('breadcrumbs', 'fixed')
+            } catch (e) {
+            }
+        </script>
+
+        <ul class="breadcrumb">
+            <li>
+                安全事件
+            </li>
+            <li>
+                <a href="__URL__/offLine">离线调度检测</a>
+            </li>
+            <li class="active">离线详情</li>
+        </ul>
+        <!-- .breadcrumb -->
+
+
+    </div>
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="formArea marT10">
+                    <p class="atpTypeList" style="margin-left: 0px"> 选择：
+                        <!--<a href="javascript:;" class="types sel" data="">全部</a>-->
+                        <a href="javascript:;" class="types sel">离线</a>
+                        <a href="javascript:;" class="types">去重</a>
+                        <a href="javascript:;" class="types">合并</a>
+                        
+                        <!--<a href="#maodian" class="types sel" data="">分析(4)</a>-->
+                    </p>
+
+                </div>
+
+                <div class="aptTable span10 marT10 tableShow">
+                    <table id="detailTable" class="table table-striped table-bordered table-hover">
+                    </table>
+                </div>
+            </div>
+        <!-- /span -->
+        </div>
+    </div>
+    <!-- /row -->
+</div><!-- /.main-content -->
+
+<script type="text/javascript">
+    //    类型选择时样式的改变
+    $(document).on('click',".atpTypeList a",function(){
+        $(this).addClass('sel');
+        $(this).siblings('a').removeClass('sel');
+    });
+    //当左侧菜单栏显示或隐藏时图表重绘
+    $('.icon-double-angle-left').click(function(){
+        if($('.col-xs-12').css("width")!=$('.main-content').css("min-width")){
+//            console.log("hello");
+            if($('#sidebar-collapse i').attr('class')=='icon-double-angle-left'){
+                setTimeout(function(){
+                    $('#container').highcharts().reflow();
+                },1)
+            }else{
+                setTimeout(function(){
+//                    $('#container').css("width",$('#container').css("width"));
+                    $('#container').highcharts().reflow();
+                },1)
+            }
+        }
+    });
+</script>
+<script type="text/javascript">
+var detail_data = {$detail_data};
+function detailsFormatter(index, row) {
+    //console.log(row);
+    var html = [],rows;
+    if(detail_data=='waf'){
+        rows = {'描述消息 ':' '+row.msg,'请求唯一标识 ':' '+row.unique_id,'匹配规则文件 ':' '+row.ruleFile,'匹配攻击规则所在文件中位置 ' : ' '+row.ruleLine,'规则ID ':' '+row.ruleId,'规则版本 ':' '+row.ruleVersion,'waf版本 ':' '+row.version,'标记归类 ':' '+row.tags}
+    }else if(detail_data=='vds'){
+        rows = {'url ':' '+row.url,'文件路径 ':' '+row.filePath,'子文件 ':' '+row.subFile,'病毒信息 ' : ' '+row.localThreatName,'解释说明 ':' 暂定'}
+    }else{
+        rows = {'攻击类型 ':' '+row.byzoroType,'说明 ':' '+row.details,'攻击方式 ':' '+row.attackType,'威胁等级 ':' '+row.severity}
+    }
+    $.each(rows, function (key, value) {
+        html.push('<p style="display:inline-block;width: 50%;height: 30px;">' + key + ':' + value + '</p>');
+    });
+    return html.join('');
+}
+$(document).ready(function(){
+    function operateFormatter(value, row, index) {
+        return [
+            "<a href='javascript:;' class='editIcon marR5 editTable ignore' title='已忽略' ><i class='icon-eye-close'></i></a>" +
+            "<a href='javascript:;' class='delIcon delTable sign' title='标记'><i class='icon-pushpin' ></i></a>"
+        ].join('');
+    }
+    function subFormatter(value, row, index){
+        var str = '<span title="'+value+'" style="width: 100%; height:100%;display: inline-block;padding:0 8px;">';//要展示的字符串
+        if(value.length>6){
+            str += value.substring(0,6)+"...";
+        }else{
+            str += value;
+        }
+        str +='</span>';
+        return str;
+    }
+    function resetCell(index, row, value, field) {
+        return {
+            css: {
+                "padding": "0px",
+                "margin": "0px",
+//                "vertical-align":"middle",
+                "line-height":'34px'
+            }
+        };
+    }
+
+    function detailFormatter(){
+        if(detail_data=='waf'){
+            var columns =[ 
+            {field: "time",title: "攻击时间",align: "center",width: '180',sortable: true},
+            {field: "client",title: "客户端IP",align: "center"},
+            {field: "hostName",title: "主机域名",align: "center"},
+            {field: "attack",title: "危害类型",align: "center",formatter: subFormatter,cellStyle:resetCell},
+            {field: "severity",title: "攻击级别",align: "center"},
+            {field: "maturity",title: "规则成熟度",align: "center"},
+            {field: "accuracy",title: "精度级别",align: "center",formatter: subFormatter,cellStyle:resetCell},
+            {field: "uri",title: "URI",align: "center",formatter: subFormatter,cellStyle:resetCell},
+            {field: "ruleData",title: "匹配参数",align: "center",formatter: subFormatter,cellStyle:resetCell},
+            {field: "id",title: "操作",align: "center",formatter: operateFormatter}];
+        }else if(detail_data=='vds'){
+            columns = [
+            {field: "time",title: "攻击时间",align: "center",width: '180',sortable: true},
+            {field: "srcIp",title: "源ip",align: "center"},
+            {field: "srcPort",title: "源端口",align: "center"},
+            {field: "destIp",title: "目的ip",align: "center"},
+            {field: "destPort",title: "目的端口",align: "center"},
+            {field: "localVType",title: "病毒类型",align: "center"},
+            {field: "localVName",title: "病毒名称",align: "center",formatter: subFormatter,cellStyle:resetCell},
+            {field: "localPlatfrom",title: "攻击平台",align: "center"},
+            {field: "localExtent",title: "危害程度",align: "center"},
+            {field: "path",title: "存储路径",align: "center",formatter: subFormatter,cellStyle:resetCell},
+            {field: "localEngineIP",title: "引擎ip",align: "center"},
+            {field: "id",title: "操作",align: "center",formatter: operateFormatter}]
+        }else{
+            columns = [
+            {field: "time",title: "攻击时间",align: "center",width: '180',sortable: true},
+            {field: "srcIp",title: "源IP",align: "center"},
+            {field: "srcPort",title: "源端口",align: "center"},
+            {field: "destIp",title: "目的IP",align: "center"},
+            {field: "destPort",title: "目的端口",align: "center"},
+            {field: "protocol",title: "协议类型",align: "center"},
+            {field: "byzoroType",title: "攻击大类型",align: "center"},
+            {field: "severity", title: "威胁等级", align: "center"},
+            {field: "id",title: "操作",align: "center",formatter: operateFormatter}]
+        } 
+        return columns;
+    }
+    
+    $('#detailTable').bootstrapTable({
+            method: 'get',
+            url: '__URL__/offLine_detailsOK',
+            cache: false,
+            //height: 510,
+            striped: true,
+            sidePagination:"server",
+            pagination: true,
+            pageSize: 10,
+            pageNumber: 1,
+            pageList: [10],
+            sortName : 'time',
+            sortOrder : 'desc',
+            showColumns: true,
+            detailView:true,
+            detailFormatter:"detailsFormatter",
+            rowStyle: function (row, index) {
+                var classes = [ 'success', 'warning', 'danger'];
+                if(row.severity=="EMERGENCY" || row.severity=="ALERT" || row.severity=="CRITICAL"||row.severity=="严重"||row.localExtent=="High"){
+                    return {
+                        classes: classes[2]
+                    }
+                }else if(row.severity=="ERROR" || row.severity=="WARNING"||row.severity=="中等"||row.localExtent=="Medium"){
+                    return {
+                        classes: classes[1]
+                    }
+                }else if(row.severity=="NOTICE" || row.severity=="INFO" || row.severity=="DEBUG"||row.severity=="低"||row.localExtent=="Low"){
+                    return {
+                        classes: classes[0]
+                    }
+                }
+                return {};
+            },
+            formatLoadingMessage: function () {
+                return "请稍等，正在加载中...";
+            },
+            formatNoMatches: function () {  //没有匹配的结果
+                return '无符合条件的记录';
+            },
+            queryParams: function (params) {
+                var pars = {
+                    status:$('.sel').html(),
+                    pagenum:params.offset/params.limit+1,
+                    limit:params.limit,
+                    order:params.order,
+                    sort:params.sort
+                };
+                return pars;
+            },
+            columns:detailFormatter(),
+            data: [],
+            onLoadSuccess:function(data){
+                //console.log(data);
+            },
+            responseHandler:function(res) {
+                var tem = {"total":0,"rows":[]};
+                if(res.status){
+                    tem.total = res.totalNum;
+                    tem.rows = eval(res.data);
+                }else{
+                    $('#reportTable').bootstrapTable('removeAll');
+                }
+                return tem;
+            },
+            onLoadError:function(status,res){
+                $('#reportTable').bootstrapTable('removeAll');
+                console.log(status,res);
+            },
+        });
+
+        $(window).resize(function () {
+            $('#reportTable').bootstrapTable('resetView');
+        });
+        $("#kSearch").click(function(){
+            var status = $('.sel').html();
+            $('#reportTable').bootstrapTable('refreshOptions',{pageNumber:1});
+            $('#reportTable').bootstrapTable('refresh');
+        });
+    });
+</script>
+

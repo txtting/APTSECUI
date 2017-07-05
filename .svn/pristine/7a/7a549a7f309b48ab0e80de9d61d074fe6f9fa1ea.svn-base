@@ -1,0 +1,74 @@
+<?php
+namespace Home\Controller;
+class UrgentController extends CommonController {
+    public function index(){
+        layout('Layout/layout');
+        $this->display();
+    }
+    public function indextubiao(){
+        if(I('get.da1')) {
+            session('da1',I('get.da1'));
+            $start = A('Safe')->time_data(I('get.da1'))['ts'];
+            $end   = A('Safe')->time_data(I('get.da1'))['td'];
+        }else{
+            $end   = time();
+            $start = $end - 30*24*3600;
+        }
+        $data=[];
+        //$data['data1'] = $this -> indexdata1($start,$end);
+        //$data['data2'] = $this -> indexdata2($start,$end);
+        $data['data3'] = $this -> indexdata3($start,$end);
+        //$data['data4'] = $this -> indexdata4($start,$end);
+        $this->ajaxReturn(['data',$data]);
+    }
+    public function indexbiao(){
+        if(I('get.da2')) {
+            session('da2',I('get.da2'));
+            $start = A('Safe')->time_data(I('get.da2'))['ts'];
+            $end   = A('Safe')->time_data(I('get.da2'))['td'];
+        }else{
+        	$end   = time();
+            $start    = $end - 30*24*3600;
+        }
+        $type = is_null(I('get.urgent_type'))? '':I('get.urgent_type');
+        $page = is_null(I('get.page'))? 1:I('get.page');
+        $data=[];
+        $data['data3'] = $this -> indexdata3($start,$end,$type,$page);
+        //$data['data4'] = $this -> indexdata4($start,$end);
+        //$this->ajaxReturn(['data',$data]);
+    }
+    public function indexzhutu(){
+        $ts1 = session('ts1');
+        $td1 = session('td1');
+        if(I('get.sign')=='1') {
+            /*$td = $td1 - 10*24*3600;
+            $ts = $td  - 10*24*3600;
+            if($td>$ts1&&$ts>$ts1){
+                session('ts',$ts);
+                session('td',$td);
+            }elseif($td>$ts1&&$ts<=$ts1){
+                session('td',$td);
+                session('ts',$ts1);
+            }elseif($td<=$ts1){
+                session('td',$td1);
+                session('ts',$ts1);
+            }
+            $td = session('td1');
+            $ts = session('ts1');*/
+        }elseif(I('get.sign')=='2'){
+            /*$td = $td1 + 10*24*3600;
+            $ts = $td  + 10*24*3600;*/
+        }
+    }
+    public function indexdata3($start,$end,$type='',$page=1){
+        $url = 'http://10.80.6.2:8070/byzoro.apt.com/urgencies/list/day?start='.$start.'&end='.$end.'&page='.$page.'&count=2&type='.$type;
+        $data = request($url,false);
+        $data = json_decode($data,true);
+        foreach ($data['data']['Elements'] as $key => &$value) {
+            if($value['Time']){
+                $value['Time'] = date('Y-m-d H:i:s',$value['Time']);
+            }
+        }
+        return $data['data']['Elements'];
+    }
+}

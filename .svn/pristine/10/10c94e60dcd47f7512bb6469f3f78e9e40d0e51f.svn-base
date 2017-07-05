@@ -1,0 +1,531 @@
+<div class="main-content">
+
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try {
+                ace.settings.check('breadcrumbs', 'fixed')
+            } catch (e) {
+            }
+        </script>
+
+        <ul class="breadcrumb">
+            <li>
+                安全总揽
+            </li>
+           
+        </ul>
+        <!-- .breadcrumb -->
+        <!-- #nav-search -->
+    </div>
+    <div class="tabbable">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-xs-12">
+                        <div class="chartBox" style="position: relative">
+                        <div class="aptBox aptBoxW3 aptBoxH250 eventTable flaotLeft boxShadow" >
+                        <h2>最新紧急事件<a href="__APP__/Urgent/index">更多...</a></h2>
+                        <table cellpadding="0" cellspacing="0">
+                        <tr><th>事件名称</th><th>时间</th></tr>
+                        <tbody id="data1">
+                        </tbody>
+                        </table>
+                        </div>
+                        <div class="aptBox aptBoxW7 aptBoxH250 marL10 flaotLeft boxShadow"  >
+                        <div id="container" style=" width:98%;height:98%;"></div>
+                        </div>
+                        <div style="width:100%;white-space:nowrap;">
+                        <div class="aptBox aptBoxW3 aptBoxH250 eventTable marT10 flaotLeft boxShadow" style="border:0px solid red">
+                        <h2>资产探测<a href="__APP__/Vir/assets_detail">更多...</a></h2>
+                        <table cellpadding="0" cellspacing="0">
+                        <tr><th>IP</th><th>时间</th></tr>
+                          <tbody id="data2">
+                              
+                          </tbody>
+                        <!-- <tr><td><span class="AssetsRed" title="高危"></span>192.168.168.168</td><td>2017-03-01 10:10:10</td></tr>
+                        <tr><td><span class="AssetsOrg" title="中危"></span>192.168.168.168</td><td>2017-03-01 10:10:10</td></tr>
+                        <tr><td><span class="AssetsRed"></span>192.168.168.168</td><td>2017-03-01 10:10:10</td></tr>
+                        <tr><td><span class="AssetsRed"></span>192.168.168.168</td><td>2017-03-01 10:10:10</td></tr> -->
+                        </table>
+                        </div>
+                        <div class="aptBox aptBoxW7 aptBoxH250 marL10 marT10 flaotLeft boxShadow"  style="border:0px solid red; min-width:780px;padding-top:0px;">
+                               <div class="circleBoxLeft" style="border-radius:8px 0px 0px 8px">
+                               <ul>
+                               <li><a href="#">紧急事件<span></span></a></li>
+                               <li><a href="#">攻击事件<span></span></a></li>
+                               <li><a href="#">攻击者数量</a><span></span></li>
+                               </ul>
+                               </div>
+                               <div  class="circleBoxRig">
+                               <div class="circleTit">
+                               <a href="#" onclick="jump(1)" class="left" title="上一周期"><i class="icon-caret-left"></i></a>
+                               <div id="data4">
+                                 
+                               </div>
+                               <a href="#" onclick="jump(2)" class="rig" title="下一周期"><i class="icon-caret-right"></i></a>
+                               <div style="clear:both;"></div>
+                               </div>
+
+                               <div class="circleCon">
+                               <ul id="data5">
+                               <li ><a href="__APP__/Urgent/index"><span class="org" data-rel="tooltip"  title="中危数量30个"></span></a></li>
+                               <li ><a href="__APP__/Urgent/index"><span class="org" data-rel="tooltip"   title="高危数量30个"></span></a></li>
+                               <li ><a href="__APP__/Urgent/index"><span class="org" data-rel="tooltip"   title="中危数量30个"></span></a></li>
+                               <li ><a href="__APP__/Urgent/index"><span class="red" data-rel="tooltip"  title="高危数量30个"></span></a></li>
+                               <li ><a href="__APP__/Urgent/index"><span class="org" data-rel="tooltip"  title="中危数量30个"></span></a></li>
+                               <li ><a href="__APP__/Urgent/index"><span class="org" data-rel="tooltip"  title="高危数量30个"></span></a></li>
+                               <li><a href="__APP__/Urgent/index"><span class="org" data-rel="tooltip"  title="中危数量30个"></span></a></li>
+                               <li ><a href="__APP__/Urgent/index"><span class="org" data-rel="tooltip"  title="高危数量30个"></span></a></li>
+                               <li ><a href="__APP__/Urgent/index"><span class="org" data-rel="tooltip"  title="中危数量30个"></span></a></li>
+                               <li><a href="__APP__/Urgent/index"><span class="org" data-rel="tooltip"  title="高危数量30个"></span></a></li>
+                               <div style="clear:both;"></div>
+                               </ul>
+                               <ul id="data6">
+                               <li><a href="__APP__/safe/index"><span class="org" data-rel="tooltip"   title="中危数量30个"></span></a></li>
+                               <li><a href="__APP__/safe/index"><span class="red" data-rel="tooltip"   title="高危数量30个"></span></a></li>
+                               <li><a href="__APP__/safe/index"><span class="org" data-rel="tooltip"   title="中危数量30个"></span></a></li>
+                               <li><a href="__APP__/safe/index"><span class="org" data-rel="tooltip"   title="高危数量30个"></span></a></li>
+                               <li><a href="__APP__/safe/index"><span class="org" data-rel="tooltip"   title="中危数量30个"></span></a></li>
+                               <li><a href="__APP__/safe/index"><span class="org" data-rel="tooltip"   title="高危数量30个"></span></a></li>
+                               <li><a href="__APP__/safe/index"><span class="org" data-rel="tooltip"   title="中危数量30个"></span></a></li>
+                               <li><a href="__APP__/safe/index"><span class="org" data-rel="tooltip"  title="高危数量30个"></span></a></li>
+                               <li><a href="__APP__/safe/index"><span class="org" data-rel="tooltip"  title="中危数量30个"></span></a></li>
+                               <li><a href="__APP__/safe/index"><span class="org" data-rel="tooltip"  title="高危数量30个"></span></a></li>
+                               <div style="clear:both;"></div>
+                               </ul>
+                               <ul id="data7">
+                               <li><a href="__APP__/safe/index"><span class="org" data-rel="tooltip" title="中危数量30个"></span></a></li>
+                               <li><a href="__APP__/safe/index"><span class="org" data-rel="tooltip" title="高危数量30个"></span></a></li>
+                               <li><a href="__APP__/safe/index"><span class="org" data-rel="tooltip" title="中危数量30个"></span></a></li>
+                               <li><a href="__APP__/safe/index"><span class="org" data-rel="tooltip" title="高危数量30个"></span></a></li>
+                               <li><a href="__APP__/safe/index"><span class="org" data-rel="tooltip" title="中危数量30个"></span></a></li>
+                               <li><a href="__APP__/safe/index"><span class="org" data-rel="tooltip" title="高危数量30个"></span></a></li>
+                               <li><a href="__APP__/safe/index"><span class="org" data-rel="tooltip" title="中危数量30个"></span></a></li>
+                               <li><a href="__APP__/safe/index"><span class="org" data-rel="tooltip" title="高危数量30个"></span></a></li>
+                               <li><a href="__APP__/safe/index"><span class="org" data-rel="tooltip" title="中危数量30个"></span></a></li>
+                               <li><a href="__APP__/safe/index"><span class="red" data-rel="tooltip" title="高危数量30个"></span></a></li>
+                               <div style="clear:both;"></div>
+                               </ul>
+                               </div>
+                               
+                               </div>
+                        
+                        </div>
+                        
+                        </div>
+
+                      <div class="marT10 aptBoxH3 marT10 floatLeft webFlowChart boxShadow" style="width:100%;border:0px solid green;background:#fff; position:relative;">
+                      <span class="tabDays">
+                      <!--<a href="#maodian" id="monthly1" onclick="monthly(1)" data='1' class="sel" style="border-right:1px solid #dedede;">天</a>-->
+                      <a href="#maodian" id="monthly3" onclick="monthly(30)" data='30' class="sel" style="border-right:1px solid #dedede;">月</a>
+                      <a href="#maodian" id="monthly9" onclick="monthly(90)" data='90' >季度</a></span><span class="more"><!-- <a href="#">查看更多...</a> --></span>
+                      <div id="containerLine" style=" width:98%;height:98%;margin:0 auto;"></div>
+
+                      </div>
+
+
+
+                 <div style="clear:both;" id="maodian"></div>
+
+
+
+            </div>
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+    </div>
+</div>
+
+<script>
+// 第一次点击
+    $(document).on('click','.box',function(){
+        $(this).attr('class','box2')
+//        $(this).html("收起")
+        $(this).children().attr('class','glyphicon glyphicon-minus')
+        $(this).parent().parent().after('<tr class="hid"><td colspan="6" ><div>服务器IP：127.0.0.2</div></td></tr>');
+    })
+    $(document).on('click','.box2',function(){
+        $(this).attr('class','box');
+        $(this).children().attr('class','glyphicon glyphicon-plus')
+//            alert(1)
+        $(this).parent().parent().next().empty();
+    })
+
+
+</script>
+<script>
+$(function () {
+    $('[data-rel=tooltip]').tooltip();
+    $('[data-rel=popover]').popover({html:true});
+    Highcharts.setOptions({
+        global:{
+            useUTC:false
+        }
+    })
+});
+    var chart1=function(data){
+        $('#container').highcharts({
+            chart: {
+                type: 'bar'
+            },
+            title: {
+                text: '最近7日攻击'
+            },
+            xAxis: {
+                categories: ['03-01', '03-02', '03-03', '03-04', '03-05', '03-06', '03-07'],
+                title: {
+                    text: null
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: '攻击数量(个)',
+                    align: 'high'
+                },
+                labels: {
+                    overflow: 'justify'
+                }
+            },
+            tooltip: {
+                valueSuffix: ' 百万'
+            },
+            plotOptions: {
+                bar: {
+                    dataLabels: {
+                        enabled: true
+                    }
+                }
+            },
+            legend: {
+
+                borderWidth: 0,
+                backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+                shadow: false,
+                enabled: false
+            },
+            credits: {
+                enabled: false
+            },
+            series: [{
+                name: '攻击数量：',
+                data: [107, 31, 635, 203, 2, 203, 2]
+            }]
+        });
+    }
+    var chart2=function(data){
+//        $('#containerLine').highcharts({
+            Highcharts.stockChart('containerLine',{
+            chart: {
+                events: {
+                    load: function () {
+                        // set up the updating of the chart each second
+                       /* var series = this.series[0];
+                        var series2 = this.series[1];
+                        setInterval(function () {
+                            //这里按需求做数据改动
+                            var x = (new Date()).getTime(), // current time
+                                    y = Math.random();
+                            series.addPoint([x, y], true, true);
+                            series2.addPoint([x, y], true, true);
+                        }, 1000);*/
+
+                        var series = this.series[0];
+                        var series2 = this.series[1];
+                        setInterval(function () {
+                            //var x =(new Date()).getTime(),
+                                //ts = (new Date()).getTime()-10000;
+                                //sign = $('.sel').attr('data');
+                            $.ajax({
+                                type:'post',
+                                url:'__URL__/getlinetu',
+                                async: false,
+                                //data:{'start':ts,'end':x},
+                                dataType:'json',
+                                success:function(data){
+                                    console.log(data.d2);
+                                    console.log(data.d3);
+                                    series.addPoint(data.d2, true, true);
+                                    series2.addPoint(data.d3, true, true);
+                                }
+                            })
+                        }, 5000);
+
+                    }
+                }
+            },
+            credits:{
+                enabled:false // 禁用版权信息
+            },
+            yAxis: {
+                opposite:false,
+                title: {
+                    text: '流量(KB)'
+                }
+            },
+                rangeSelector:false,
+            //这里按需求做数据改动
+           /* rangeSelector: {
+                buttons: [{
+                    type: 'day',
+                    count: 1,
+                    text: '天',
+                    click:function(){
+                        alert(1);
+                    }
+                }, {
+                    type: 'month',
+                    count: 1,
+                    text: '月'
+                }, {
+                    type: 'month',
+                    count: 3,
+                    text: '季度'
+                }],
+                inputEnabled: false,
+                selected: 0
+            },*/
+
+            navigator: {
+                enabled: false
+            },
+            title: {
+                text: '网络流量趋势'
+            },
+            exporting: {
+                enabled: false
+            },
+            series: [{
+                type: 'line',
+                name: '入口流量',
+                //这里按需求做数据改动
+                //data:data.date2
+                data: (function(data){
+                    //console.log(data.data2)
+                    return data.data2;
+                }(data))
+                /*data: (function () {
+                    // generate an array of random data
+                    var data = [],
+                            time = (new Date()).getTime();
+
+                    for (var i = -19; i <= 0; i ++) {
+                        data.push([
+                            time + i * 1000,
+                             Math.random()
+                        ]);
+                    }
+                    console.log(data);
+                    return data;
+                }())*/
+            },{
+                type: 'line',
+                name: '出口流量',
+                data: (function(data){
+                    return data.data3;
+                }(data))
+               /* data: (function () {
+                    // generate an array of random data
+                    var data = [],
+                            time = (new Date()).getTime(),
+                            i;
+                    for (i = -19; i <= 0; i += 1) {
+                        data.push([
+                           time + i * 1000,
+                            Math.random()
+                        ]);
+                    }
+                    return data;
+                }())*/
+            }],
+
+            xAxis: {
+                type: 'datetime',
+                dateTimeLabelFormats: {
+                    millisecond: '%H:%M:%S',
+                    second: '  %H:%M:%S',
+                    minute: '%H:%M',
+                    hour: '%H:%M',
+                    day: '%m-%d',
+                    week: '%m-%d',
+                    month: '%Y-%m',
+                    year: '%Y'
+                }
+            },
+            tooltip: {
+                valueSuffix: 'kB',
+                dateTimeLabelFormats: {
+                    millisecond: '%Y-%m-%d %H:%M:%S',
+                    second: '%Y-%m-%d %H:%M:%S',
+                    minute: '%Y-%m-%d %H:%M',
+                    hour: '%Y-%m-%d %H:%M',
+                    day: '%Y-%m-%d',
+                    week: '%m-%d',
+                    month: '%Y-%m',
+                    year: '%Y'
+                }
+            },
+            legend: {
+                align: 'right',
+                verticalAlign: 'top',
+                x: -10,
+                y: 0
+            },
+            colors:["#C23531","#61A0A8"]
+        });
+    };
+
+    //当左侧菜单栏显示或隐藏时图表重绘
+    $('.icon-double-angle-left').click(function(){
+        if($('.col-xs-12').css("width")!=$('.main-content').css("min-width")){
+            if($('#sidebar-collapse i').attr('class')=='icon-double-angle-left'){
+                setTimeout(function(){
+                    $('#containerLine').highcharts().reflow();
+                    $('#container').highcharts().reflow();
+                },1)
+            }else{
+                setTimeout(function(){
+                    $('#containerLine').highcharts().reflow();
+                    $('#container').highcharts().reflow();
+                },1)
+            }
+
+        }
+    });
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    var get_datas = function(){
+        $.ajax({
+            url: '__URL__/indexdata',
+            type: 'POST',
+            dataType: 'json',
+            async: false,
+            success:function(data){
+                $('#data1').html();
+                get_data1(data);
+                $('#data2').html();
+                get_data2(data);
+                $('#data4').html();
+                get_data4(data);
+                chart1(data);
+                chart2(data);
+            }
+        })
+    }
+    get_datas();
+    //setInterval(get_datas,5000);
+});
+function monthly(v){
+    if(v=='1'){
+        //alert(1)
+        $('#monthly1').attr('class','sel');
+        $('#monthly1').attr('stlye','');
+        $('#monthly1').siblings("a").attr('class','');
+        $('#monthly1').siblings("a").attr('stlye','border-right:1px solid #dedede;');
+    }else if(v=='30'){
+//        alert(30)
+        $('#monthly3').attr('class','sel');
+        $('#monthly3').attr('stlye','');
+        $('#monthly3').siblings('a').attr('class','');
+        $('#monthly3').siblings("a").attr('stlye','border-right:1px solid #dedede;');
+    }else{
+        //alert(90)
+        $('#monthly9').attr('class','sel');
+        $('#monthly9').attr('stlye','');
+        $('#monthly9').siblings("a").attr('class','');
+        $('#monthly9').siblings("a").attr('stlye','border-right:1px solid #dedede;');
+    }
+    $.ajax({
+        url: '__URL__/indexlinetu',
+        type: 'POST',
+        dataType: 'json',
+        async: false,
+        data: {'sign':v},
+        success:function(data){
+            chart2(data);
+
+        }
+    })/**/
+}
+function get_data1(data){
+    var str1 = '';
+    //console.log(data);
+    if (data.data1) {
+        $.each(data.data1, function(index, value){
+            str1 += '<tr><td>'+value.UgcType+'</td><td>'+value.Time+'</td></tr>';
+        });
+    }
+    $('#data1').html(str1) ;
+}
+function get_data2(data){
+    var str1 = '<tr><td><span class="AssetsRed" title="高危"></span>192.168.168.168</td><td>2017-03-01 10:10:10</td></tr><tr><td><span class="AssetsOrg" title="中危"></span>192.168.168.168</td><td>2017-03-01 10:10:10</td></tr><tr><td><span class="AssetsRed"></span>192.168.168.168</td><td>2017-03-01 10:10:10</td></tr><tr><td><span class="AssetsRed"></span>192.168.168.168</td><td>2017-03-01 10:10:10</td></tr><tr><td><span class="AssetsRed"></span>192.168.168.168</td><td>2017-03-01 10:10:10</td></tr>';
+    /*if (data.data2) {
+        $.each(data.data2, function(index, value){
+            str2 += '<tr><td><span class="'+value.class+'" title="'+value.title+'"></span>'+value.ip+'</td><td>'+value.Time+'</td></tr>';
+        });
+    }*/
+    $('#data2').html(str1);
+}
+function get_data4(data){
+    var str1 = '';
+    if (data.data4) {
+        str1 += '<span>'+data.data4[0]+'</span><span>'+data.data4[1]+'</span><span>'+data.data4[2]+'</span><span>'+data.data4[3]+'</span><span>'+data.data4[4]+'</span><span>'+data.data4[5]+'</span><span>'+data.data4[6]+'</span><span>'+data.data4[7]+'</span><span>'+data.data4[8]+'</span><span>'+data.data4[9]+'</span>';
+    }
+    $('#data4').html(str1) ;
+}
+//点图日期点击事件
+function jump(v){
+    $.ajax({
+        url: '__URL__/indexdiantu',
+        type: 'GET',
+        async: false,
+        dataType: 'json',
+        data: {'sign':v},
+        success:function(data){
+            $('#data4').html();
+            get_data4(data);
+            /*$('#data5').html();
+            get_data5(data);
+            $('#data6').html();
+            get_data6(data);
+            $('#data7').html();
+            get_data7(data);*/
+        }
+    })
+}
+function get_data5(data){
+    var str1 = '';
+    if (data.data5) {
+        $.each(data.data5, function(index, value){
+            str1 +='<li><a href="__APP__/Urgent/index"><span class="'+value.class+'" title="'+value.title+'个"></span></a></li>';
+        });
+    }
+    str1 += '<div style="clear:both;"></div>';
+    $('#data5').html(str1) ;
+}
+function get_data6(data){
+    var str1 = '';
+    if (data.data6) {
+        $.each(data.data6, function(index, value){
+            str1 +='<li><a href="__APP__/safe/index"><span class="'+value.class+'" title="'+value.title+'个"></span></a></li>';
+        }); 
+    }
+    str1 += '<div style="clear:both;"></div>';
+    $('#data6').html(str1) ;
+}
+function get_data7(data){
+    var str1 = '';
+    if (data.data7) {
+        $.each(data.data7, function(index, value){
+            str1 +='<li><a href="__APP__/safe/index"><span class="'+value.class+'" title="'+value.title+'个"></span></a></li>';
+        }); 
+    }
+    str1 += '<div style="clear:both;"></div>';
+    $('#data7').html(str1) ;
+}
+</script>

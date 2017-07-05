@@ -1,0 +1,283 @@
+<div class="main-content">
+
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try {
+                ace.settings.check('breadcrumbs', 'fixed')
+            } catch (e) {
+            }
+        </script>
+
+        <ul class="breadcrumb">
+            <li>
+                安全事件
+            </li>
+            <li>
+                离线调度检测
+            </li>
+            <li class="active">离线详情</li>
+        </ul>
+        <!-- .breadcrumb -->
+
+
+    </div>
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="col-xs-12">
+
+                <!--<div class="formArea marT10" >-->
+
+                    <!--<form  name="searchform">-->
+                        <!--<div class="formTextList">-->
+                            <!--<label class="floatLeft">时间：</label>-->
+                            <!--<div class="input-group floatLeft " style="width:281px; text-indent:0px;">-->
+                         <!--<span class="input-group-addon">-->
+                             <!--<i class="icon-calendar bigger-110"></i>-->
+                         <!--</span>-->
+                                <!--<input class="form-control date-range-picker" type="text" name="date-range-picker" data-date-format="YYYY-MM-DD"-->
+                                       <!--id="id-date-range-picker-1"/>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="formTextList">-->
+                            <!--<label class="floatLeft"> 客户端IP：</label>-->
+                            <!--<input  type="text" name="webip" id="webip" class="floatLeft" />-->
+                        <!--</div>-->
+                        <!--<div class="formTextList">-->
+                            <!--<label class="floatLeft">用户名：</label>-->
+                            <!--<input  type="text" name="username" class="floatLeft"  id="username"/>-->
+                        <!--</div>-->
+
+                        <!--<a id="kSearch" class="btn btn-primary">查询</a>-->
+
+                    <!--</form> &lt;!&ndash;&ndash;&gt;-->
+
+                <!--</div>-->
+
+                <div class="aptTable span10 marT10 tableShow" style="display: none"  >
+                    <div class="aptListBtnGroup"><a href="javascript:checkaction(1)" ><i class="icon-upload-alt blue"></i>导出</a></div>
+                    <table id="reportTable">
+                    </table>
+                    <!-- <table data-toggle="table"  id="sample-table-1"   data-striped="true" data-pagination="true" data-search="true"  data-show-columns="true">
+                                        <thead>
+                                                <tr>
+                                                 <th style="text-align: center;">客户端IP</th>
+                                                <th style="text-align: center;">用户名称</th>
+                                                <th style="text-align: center;">操作内容</th>
+                                                <th style="text-align: center;">时间</th>
+                                                </tr>
+                                        </thead>
+                                        <tbody>
+                                                <volist name="log_data" id="log_data_vo">
+                                                    <tr>
+                                                        <td style="text-align: center">{$log_data_vo['ip']}</td>
+                                                        <td style="text-align: center">{$log_data_vo['user_login']}</td>
+                                                        <td style="text-align: center" title="{$log_data_vo['message']}">{$log_data_vo['message']|subtext=50}</td>
+                                                        <td style="text-align: center">{$log_data_vo['time']|date='Y-m-d H:i:s',###}</td>
+                                                    </tr>
+                                                </volist>
+                                            </tbody>
+                                    </table> -->
+                    <!-- <li class="pageServer" id="page">
+                        {$show}
+                    </li> -->
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- /.table-responsive -->
+        </div>
+        <!-- /span -->
+    </div>
+    <!-- /row -->
+
+</div>
+</div><!-- /.main-content -->
+
+<script type="text/javascript">
+    $('#webip').attr('value',getParam("webip"));
+    $('#username').attr('value',getParam("username"));
+    $('.date-range-picker').attr('value',URLdecode(getParam("date-range-picker")));
+
+    function checkaction(v){
+        if(v==1){
+            document.searchform.method="post";
+            document.searchform.action="__URL__/export_log";
+        }
+        searchform.submit();
+    }
+    /*function checkaction(v){
+     var pp=$('#yema').val();
+     var ye=$('#ye').val();
+     alert(ye);
+     if(v==1){
+     document.searchform.method="post";
+     document.searchform.action="__URL__/export_log";
+     }else if(v==0){
+     document.searchform.method="get";
+     document.searchform.action="__URL__/index";
+     }else if(v==2){
+     if(pp>1){
+     pp =  pp*1-1;
+     }else{
+     pp =  1;
+     }
+     $('#yema').val(pp);
+     document.searchform.method="get";
+     document.searchform.action="__URL__/index";
+     }else if(v==3){
+     if(pp<ye){
+     pp = pp*1+1;
+     }else{
+     pp = ye;
+     }
+     $('#yema').val(pp);
+     document.searchform.method="get";
+     document.searchform.action="__URL__/index";
+     }
+     searchform.submit();
+     } */
+    function URLdecode(sStr){
+        return sStr.replace(/\+/g,' ').replace(/\%2F/g,'\/').replace(/\%20/g,' ').replace(/\%3A/g,':');
+    }
+
+    function getParam(paramName)
+    {
+        paramValue = "";
+        isFound = false;
+        if (this.location.search.indexOf("?") == 0 && this.location.search.indexOf("=")>1)
+        {
+            arrSource = this.location.search.substring(1,this.location.search.length).split("&");
+            i = 0;
+            while (i < arrSource.length && !isFound)
+            {
+                if (arrSource[i].indexOf("=") > 0)
+                {
+                    if (arrSource[i].split("=")[0].toLowerCase()==paramName.toLowerCase())
+                    {
+                        paramValue = arrSource[i].split("=")[1];
+                        isFound = true;
+                    }
+                }
+                i++;
+            }
+        }
+        return paramValue;
+    }
+
+
+
+</script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#reportTable').bootstrapTable({
+            method: 'get',
+//            url: '__URL__/indexOK',
+            cache: false,
+            //height: 510,
+            striped: true,
+//            sidePagination:"server",
+            pagination: true,
+            pageSize: 10,
+            pageNumber: 1,
+            pageList: [10],
+            sortName : 'time',
+            sortOrder : 'desc',
+            showColumns: true,
+            formatLoadingMessage: function () {
+                return "请稍等，正在加载中...";
+            },
+            formatNoMatches: function () {  //没有匹配的结果
+                return '无符合条件的记录';
+            },
+            queryParams: function (params) {
+                var pars = {
+                    webip:$('#webip').val(),
+                    username:$('#username').val(),
+                    time:$('.date-range-picker').val(),
+                    pagenum:params.offset/params.limit+1,
+                    order:params.order,
+                    sort:params.sort
+                };
+                return pars;
+            },
+            columns: [{
+                field: "name",
+                title: "名称",
+                align: "center",
+                valign: "middle",
+                sortable: false,
+            },
+                {
+                    field: "type",
+                    title: "类型",
+                    align: "center",
+                    valign: "middle",
+                    sortable: false
+                },{
+                    field: "status",
+                    title: "状态",
+                    align: "center",
+                    valign: "middle",
+                    sortable: false
+                },{
+                    field: "percent",
+                    title: "进度百分比",
+                    align: "center",
+                    valign: "middle",
+                    sortable: false
+                }
+                ,{
+                    field: "operateTime",
+                    title: "操作时间",
+                    align: "center",
+                    valign: "middle",
+                    sortable:true,
+                }],
+            data: [{
+                "name": "vds",
+                "type": "vds",
+                "status": "进行中",
+                "percent": "90%",
+                "operateTime": "2017-5-18   12:00：01 "
+            },{
+                "name": "vaf",
+                "type": "vaf",
+                "status": "已结束",
+                "percent": "100%",
+                "operateTime": "2017-5-12   1:300：01 "
+            }],
+            onLoadSuccess:function(data){
+                //console.log(data);
+            },
+            responseHandler:function(res) {
+                var tem = {"total":0,"rows":[]};
+                if(res.status){
+                    tem.total = res.totalNum;
+                    tem.rows = eval(res.data);
+                }else{
+                    //$('#reportTable').bootstrapTable('removeAll');
+                }
+                return tem;
+            },
+            onLoadError:function(status,res){
+                $('#reportTable').bootstrapTable('removeAll');
+                console.log(status,res);
+            },
+        });
+        $(window).resize(function () {
+            $('#reportTable').bootstrapTable('resetView');
+        });
+        $("#kSearch").click(function(){
+            var webip = $('#webip').val();
+            var username = $('#username').val();
+            var time = $('.date-range-picker').val();
+            $('#reportTable').bootstrapTable('refresh');
+        });
+
+    });
+</script>
+

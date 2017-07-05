@@ -1,0 +1,645 @@
+<div class="main-content">
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try {
+                ace.settings.check('breadcrumbs', 'fixed')
+            } catch (e) {
+                
+            }
+        </script>
+
+        <ul class="breadcrumb">
+            <li>
+                安全事件
+            </li>
+            <li class="active">http流量监测</li>
+        </ul>
+        <!-- .breadcrumb -->
+        <!-- #nav-search -->
+    </div>
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="col-xs-12" >
+                <div class="formArea marT10" >
+                    <div class="formTextList">
+                        <label class="floatLeft">时间：</label>
+                        <div class="input-group w300 floatLeft" style="width:281px; text-indent:0px;">
+                            <span class="input-group-addon">
+                                <i class="icon-calendar bigger-110"></i>
+                             </span><input class="form-control date-range-picker" type="text" name="da1" data-date-format="YYYY-MM-DD"  id="id-date-range-picker-1"/>
+                        </div>
+                    </div>
+                    <!--<div class="clearBoth"></div>-->
+                    <a id="kSearch1" class="btn btn-primary">查询</a>
+                </div>
+            
+                <div class="chartBox marT10" style="position: relative; ">
+                
+                
+                <div class="aptBox aptBoxW4 aptBoxH3" >
+                <div id="container" style=" width:98%;height:100%;"></div>
+                </div>
+                
+                <div class="aptBox aptBoxW6 aptBoxH3 marL10">
+                <div id="container2" style=" width:98%;height:100%;"></div>
+                </div>
+                    <!--30天http流量攻击趋势图的翻页-->
+                    <div class=" aptBoxW6 " style="position: absolute;right: 1px;bottom: 40px">
+                        <a href='#' onclick="jump(1)" style="position: absolute;top: 2px;left: 60px" title="查看上一周期" >
+                            <i class="icon-caret-left icon-2x"></i>
+                        </a>
+
+                        <a href='#' onclick="jump(2)"  style="position: absolute;top: 2px;right: 10px" title="查看下一周期">
+                            <i class="icon-caret-right icon-2x" ></i>
+                        </a>
+                    </div>
+                   <div class="clearBoth"></div>
+                </div>
+                
+                <div class="formArea marT10" id="type" >
+                    <div class="formTextList">
+                        <label class="floatLeft">时间：</label>
+                        <div class="input-group w300 floatLeft" style="width:281px; text-indent:0px;">
+                        <span class="input-group-addon">
+                            <i class="icon-calendar bigger-110"></i>
+                        </span>
+                            <input class="form-control date-range-picker" type="text" name="da2" data-date-format="YYYY-MM-DD" id="id-date-range-picker-2" />
+                        </div>
+                    </div>
+                    <div class="formTextList">
+                        <label class="floatLeft">关键字：</label>
+                        <input type="text" name="keyword" id="keyword" class="floatLeft">
+                    </div>
+                    <a  href="javascript:;" id="kSearch2" class="btn btn-primary">查询</a>
+                <p class="atpTypeList"> 类型：
+                   <!-- <a href="javascript:;" class="waf_type" data='0'>全部(<span>0</span>)</a>
+                    <a href="javascript:;" class="waf_type" data='1'>SQL注入(<span>0</span>)</a>
+                    <a href="javascript:;" class="waf_type" data='2'>XSS攻击(<span>0</span>)</a>
+                    <a href="javascript:;" class="waf_type" data='3'>xpath攻击(<span>0</span>)</a>
+                    <a href="javascript:;" class="waf_type" data='4'>安全配置错误(<span>0</span>)</a>
+                    <a href="javascript:;" class="waf_type" data='5'>敏感信息泄漏(<span>0</span>)</a>
+                    <a href="javascript:;" class="waf_type" data='6'>跨站请求伪造(<span>0</span>)</a>
+                    <a href="javascript:;" class="waf_type" data='7'>远程命令执行(<span>0</span>)</a>
+                    <a href="javascript:;" class="waf_type" data='8'>攻击协议(<span>0</span>)</a>
+                <a href="javascript:;" class="waf_type" data='9'>拒绝服务(<span>0</span>)</a>
+                    <a href="javascript:;" class="waf_type" data='越权访问'>越权访问(<span>0</span>)</a>
+                    <a href="javascript:;" class="waf_type" data='CSRF'>CSRF(<span>0</span>)</a>
+                    <a href="javascript:;" class="waf_type" data='其他'>其他(<span>0</span>)</a> -->
+                </p>
+                </div>
+                <div class="aptTable span10 marT10 tableShow">
+                    <div class="aptListBtnGroup"><h4>http流量攻击详情</h4></div>
+                    <table id="reportTable">
+                    </table>
+                </div>                
+            </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<script type="text/javascript">
+    $('#keyword').attr('value',getParam("keyword"));
+    $('#id-date-range-picker-1').attr('value',URLdecode(getParam("da1")));
+    $('#id-date-range-picker-2').attr('value',URLdecode(getParam("da2")));
+    function URLdecode(sStr){
+       return sStr.replace(/\+/g,' ').replace(/\%2F/g,'\/').replace(/\%20/g,''); 
+    }
+
+    function getParam(paramName)
+    {
+        paramValue = "";
+        isFound = false;
+        if (this.location.search.indexOf("?") == 0 && this.location.search.indexOf("=")>1)
+        {
+            arrSource = this.location.search.substring(1,this.location.search.length).split("&");
+            i = 0;
+            while (i < arrSource.length && !isFound)
+            {
+                if (arrSource[i].indexOf("=") > 0)
+                {
+                    if (arrSource[i].split("=")[0].toLowerCase()==paramName.toLowerCase())
+                    {
+                        paramValue = arrSource[i].split("=")[1];
+                        isFound = true;
+                    }
+                }
+                i++;
+            }
+        }
+        return paramValue;
+    }
+</script>
+<!--初始化全局日期-->
+<script>
+    //获取时间方法
+    Date.prototype.Format = function (fmt) {
+        var o = {
+            "M+": this.getMonth() + 1, //月份
+            "d+": this.getDate() //日
+        };
+        if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+        for (var k in o)
+            if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+        return fmt;
+    }
+    //获取当前日期
+    var endTime= new Date().Format("MM/dd/yyyy");//Format("输入你想要的时间格式:yyyy-MM-dd,yyyyMMdd")
+    //结束时间
+    var date = new Date();//获取当前时间
+    date.setDate(date.getDate()-29);//设置天数 30 天
+    var starTime = date.Format("MM/dd/yyyy"); //减完30天以后的时间
+    date1=$('input[name="da1"]').val(starTime+" - "+endTime)
+</script>
+<script>
+//    表格时间范围的限制name="da2"
+$('input[name="da2"]').on('change',function(){
+//    上面日期的分割
+    var date1=$('input[name="da1"]').val().split('-');
+//    格式化全局日期的起止时间
+    var timeS1=date1[0].split('/');
+    timeS1.unshift(timeS1[2]);timeS1.pop();timeS1= timeS1.join('/');
+    var timeT1=date1[1].split('/');
+    timeT1.unshift(timeT1[2]);
+    timeT1.pop();
+    timeT1= timeT1.join('/');
+//格式化表格日期的起止时间
+    var date2=$('input[name="da2"]').val().split('-');
+    var timeS2=date2[0].split('/');
+    timeS2.unshift(timeS2[2]);
+    timeS2.pop();
+    timeS2= timeS2.join('/');
+    var timeT2=date2[1].split('/');
+    timeT2.unshift(timeT2[2]);
+    timeT2.pop();
+    timeT2= timeT2.join('/');
+    var dateS1 = new Date(timeS1);
+    var dateS2 = new Date(timeS2);
+    var dateT1 = new Date(timeT1);
+    var dateT2 = new Date(timeT2);
+    if(!(dateS1-dateS2<=0&&dateT1-dateT2>=0)){
+        layer.alert('请选择正确时间')
+        date2=$('input[name="da2"]').val("")
+    }
+})
+    jQuery(function ($) {
+        $('.date-range-picker').daterangepicker({
+                    startDate: moment().subtract(29, 'days'),
+                    endDate: moment(),
+                    maxDate : moment(),
+                    locale : {
+                        applyLabel: '提交',
+                        cancelLabel: '取消',
+                        fromLabel: '开始时间',
+                        toLabel: '结束时间',
+                        weekLabel: 'W',
+                        customRangeLabel: 'Custom Range',
+                        daysOfWeek: ['日', '一', '二', '三', '四', '五','六'],
+                        monthNames: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+                        firstDay: moment.localeData()._week.dow
+                    },
+//                    startDate: moment().startOf('day'),
+//                    minValidDate: '315507600000000000000000', //最小可用时间，控制日期选择器的可选力度
+                    dateLimit : {
+                        day : 29
+                    },
+                    timePickerIncrement : 1440, //时间的增量，单位为分钟
+                    language: 'cn',}
+        ).prev().on(ace.click_event, function () {
+                    $(this).next().focus();
+                });
+    })
+
+$(document).ready(function(){
+    var da1=$('#id-date-range-picker-1').val();
+    $.ajax({
+        url: '__URL__/indextu',
+        type: 'GET',
+        async: false,
+        dataType: 'json',
+        data:{'da1':da1},
+        success:function(data){
+            $('#id-date-range-picker-2').val('');
+            chart1();
+            chart2();
+            gettypelist();
+        }
+    })                                         
+});
+function gettypelist(){
+    $('.atpTypeList').val('');
+    var str = '类型：';
+    str += '<a href="javascript:;" class="waf_type sel" data="0">全部(<span>0</span>)</a>';
+    str += '<a href="javascript:;" class="waf_type" data="1">SQL注入(<span>0</span>)</a>';
+    str += '<a href="javascript:;" class="waf_type" data="2">XSS攻击(<span>0</span>)</a>';
+    str += '<a href="javascript:;" class="waf_type" data="3">xpath攻击(<span>0</span>)</a>';
+    str += '<a href="javascript:;" class="waf_type" data="4">安全配置错误(<span>0</span>)</a>';
+    str += '<a href="javascript:;" class="waf_type" data="5">敏感信息泄漏(<span>0</span>)</a>';
+    str += '<a href="javascript:;" class="waf_type" data="6">跨站请求伪造(<span>0</span>)</a>';
+    str += '<a href="javascript:;" class="waf_type" data="7">远程命令执行(<span>0</span>)</a>';
+    str += '<a href="javascript:;" class="waf_type" data="8">攻击协议(<span>0</span>)</a>';
+    //console.log(data);
+    /*if (data.data4) {
+        $.each(data.data4, function(index, value){
+            str += '<a href="javascript:;" class="waf_type sel" data="0">全部(<span>0</span>)</a>';
+            str += '<a href="javascript:;" class="waf_type" data='1'>SQL注入(<span>0</span>)</a>';
+            str += '<a href="javascript:;" class="waf_type" data='2'>XSS攻击(<span>0</span>)</a>';
+            str += '<a href="javascript:;" class="waf_type" data='3'>xpath攻击(<span>0</span>)</a>';
+            str += '<a href="javascript:;" class="waf_type" data='4'>安全配置错误(<span>0</span>)</a>';
+            str += '<a href="javascript:;" class="waf_type" data='5'>敏感信息泄漏(<span>0</span>)</a>';
+            str += '<a href="javascript:;" class="waf_type" data='6'>跨站请求伪造(<span>0</span>)</a>';
+            str += '<a href="javascript:;" class="waf_type" data='7'>远程命令执行(<span>0</span>)</a>';
+            str += '<a href="javascript:;" class="waf_type" data='8'>攻击协议(<span>0</span>)</a>';
+        });
+    }*/
+    $('.atpTypeList').html(str) ;
+}
+function jump(v){
+    $.ajax({
+        url: '__URL__/indexzhutu',
+        type: 'GET',
+        async: false,
+        dataType: 'json',
+        data: {'sign':v},
+        success:function(data){
+            chart2();
+        }
+    })
+}
+</script>
+<script type="text/javascript">
+var chart1=function(data){
+     $('#container').highcharts({
+         colors: ['#c63012', '#ea7f0c', '#cbf621', '#7798BF', '#aaeeee', '#ff0066', '#eeaaee',
+             '#55BF3B', '#DF5353', '#7798BF', '#aaeeee'
+         ],
+         chart:{
+             backgroundColor: '#fefefe',
+             type: 'pie',
+             options3d: {
+                 enabled: true,
+                 alpha: 70,
+                 beta: 0
+             },
+         },
+         title: {
+             text: 'http流量攻击类型'
+         },
+         credits:{
+             enabled:false // 禁用版权信息
+         },
+         tooltip: {
+             pointFormat: '攻击占比: <b>{point.percentage:.1f}%</b><br>'+'{series.name}: <b>{point.y}</b>'
+         },
+         exporting: {
+             enabled: false
+         },
+         plotOptions: {
+             pie: {
+                 allowPointSelect: true,
+                 cursor: 'pointer',
+                 depth: 25,
+                 dataLabels: {
+                     enabled: true,
+                     //format: '{point.name}'
+                     format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                     style: {
+                         color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                     }
+                 },
+             }
+         },
+         series: [{
+             type: 'pie',
+             name: '攻击数',
+             data: [['SQL注入成功',30],['鸡肉行为',40],['蠕虫病毒',40],['木马回连',20],['DDoS',22],['非正常登陆',14],['其他',10]]
+
+         }]
+     });
+ }
+
+
+var chart2=function(data){
+    $('#container2').highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'http流量检测攻击趋势图',
+//                    x:-20,
+//                    y:28
+            /*y:28,
+             style:{
+             fontSize: '14px'}*/
+
+        },
+        credits:{
+            enabled:false // 禁用版权信息
+        },
+        xAxis: {
+            type: 'category',
+            labels: {
+                style: {
+                    fontSize: '14px',
+                    fontFamily: 'Verdana, sans-serif'
+                }
+            },
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: '数量(个)'
+            }
+        },
+        legend: {
+            enabled: false
+        },
+        tooltip: {
+            formatter: function () {
+                return '<b>' + this.x + '</b><br/>' +
+                        '告警类别: ' + this.series.name + '<br/>' +
+                        '个数: ' + this.y;
+            }
+        },
+        plotOptions: {
+            column: {
+                stacking: 'normal',
+                // dataLabels: {
+                //     enabled: true
+                // }
+            }
+        },
+        series: [{
+            name: 'SQL注入',
+            data: [
+                ['3-8',2],['3-9',3],['3-10',4],['3-11',1],['3-12',2],['3-13',2], ['3-14',5],['3-15',3],
+                ['3-16',2],
+                ['3-17',2]
+            ]
+        }, {
+            name: '非正常登陆',
+            data: [
+                ['3-8',2],['3-9',3],['3-10',4],['3-11',1],['3-12',2],['3-13',2], ['3-14',5],['3-15',3],
+                ['3-16',2],
+                ['3-17',2]
+            ]
+        }, {
+            name: '鸡肉行为',
+            data: [
+                ['3-8',2],['3-9',3],['3-10',4],['3-11',1],['3-12',2],['3-13',2], ['3-14',5],['3-15',3],
+                ['3-16',2],
+                ['3-17',2]
+            ]
+        }]
+    });
+}
+
+//当左侧菜单栏显示或隐藏时图表重绘
+$('.icon-double-angle-left').click(function(){
+    if($('.col-xs-12').css("width")!=$('.main-content').css("min-width")){
+        if($('#sidebar-collapse i').attr('class')=='icon-double-angle-left'){
+
+            setTimeout(function(){
+                $('#container2').highcharts().reflow();
+            },1)
+        }else{
+            setTimeout(function(){
+//                    $('#container2').css("width",$('#container2').css("width"))
+                $('#container2').highcharts().reflow();
+            },1)
+        }
+
+        $('#container2').highcharts().reflow();
+
+    }
+});
+
+$(document).ready(function(){
+
+    function operateFormatter(value, row, index) {
+            return [
+                "<a href='#' class='editIcon marR5 editTable ignore' title='已忽略'><i class='icon-eye-close'></i></a>" +
+                "<a href='javascript:;' class='delIcon delTable sign' title='标记'><i class='icon-pushpin'></i></a>"
+            ].join('');
+        }
+    $('#reportTable').bootstrapTable({
+            method: 'get',
+//            url: '__URL__/indexbiao',
+//             search:true,
+            cache: false,
+//            height: 400,
+            striped: true,
+//            sidePagination:"server",
+            pagination: true,
+            pageSize: 10,
+            pageNumber: 1,
+            pageList: [10],
+            sortName : 'time',
+            sortOrder : 'desc',
+            showColumns: true,
+            formatLoadingMessage: function () {
+                return "请稍等，正在加载中...";
+            },
+            formatNoMatches: function () {  //没有匹配的结果
+                return '无符合条件的记录';
+            },
+            queryParams: function (params) {
+                var pars = {
+                    da1:$('#id-date-range-picker-1').val(),
+                    da2:$('#id-date-range-picker-2').val(),
+                    waf_type:$('.sel').attr('data'),
+                    keyword:$('#keyword').val(),
+                    pagenum:params.offset/params.limit+1,
+                    order:params.order,
+                    sort:params.sort
+                };
+                return pars;
+            },
+            columns: [{
+                field: "time", 
+                title: "攻击时间", 
+                align: "center", 
+                valign: "middle", 
+                sortable: true
+            },{
+                field: "srcIP", 
+                title: "源IP", 
+                align: "center", 
+                valign: "middle", 
+                sortable: false
+            },{
+                field: "srcPort",
+                title: "被攻击URL地址", 
+                align: "center", 
+                valign: "middle", 
+                sortable: false
+            },{
+                field: "destIP", 
+                title: "请求方式", 
+                align: "center", 
+                valign: "middle", 
+                sortable: false
+            },{
+                field: "destPort",
+                title: "攻击类型",
+                align: "center",
+                valign: "middle",
+                sortable: false
+            },{
+                field: "matchedData", 
+                title: "攻击IP", 
+                align: "center", 
+                valign: "middle", 
+                sortable: false
+            },{
+                field: "severity", 
+                title: "攻击状态", 
+                align: "center", 
+                valign: "middle", 
+                sortable: false
+            },{
+                field: "tags",
+                title: "攻击类型",
+                align: "center",
+                valign: "middle",
+                sortable: false
+            },{
+                field: "attack", 
+                title: "攻击IP", 
+                align: "center", 
+                valign: "middle", 
+                sortable: false
+            },{
+                field: "message", 
+                title: "攻击状态", 
+                align: "center", 
+                valign: "middle", 
+                sortable: false
+            },{
+                field: "host",
+                title: "攻击类型",
+                align: "center",
+                valign: "middle",
+                sortable: false
+            },{
+                field: "url", 
+                title: "攻击IP", 
+                align: "center", 
+                valign: "middle", 
+                sortable: false
+            },{
+                field: "ruleFile", 
+                title: "攻击状态", 
+                align: "center", 
+                valign: "middle", 
+                sortable: false
+            },{
+                field: "ruleLine",
+                title: "攻击类型",
+                align: "center",
+                valign: "middle",
+                sortable: false
+            },{
+                field: "ruleId", 
+                title: "攻击IP", 
+                align: "center", 
+                valign: "middle", 
+                sortable: false
+            },{
+                field: "ruleMatchedArg", 
+                title: "攻击状态", 
+                align: "center", 
+                valign: "middle", 
+                sortable: false
+            },{
+                field: "ruleVersion",
+                title: "攻击类型",
+                align: "center",
+                valign: "middle",
+                sortable: false
+            },{
+                field: "version", 
+                title: "攻击IP", 
+                align: "center", 
+                valign: "middle", 
+                sortable: false
+            },{
+                field: "place_set",
+                title: "操作",
+                align: "center",
+                valign: "middle",
+                sortable: false,
+                switchable: false,
+                formatter: operateFormatter
+            }],
+            data: [],
+            onLoadSuccess:function(data){
+                   console.log("ok");
+                   //console.log(data);
+            },
+            responseHandler:function(data) {
+                var tem = {"total":0,"rows":[]};
+                var res = data.data3;
+                if(res.status){
+                    tem.total = res.totalNum;
+                    tem.rows = eval(res.data);
+                }else{
+                    $('#reportTable').bootstrapTable('removeAll');
+                }
+                return tem;
+            },
+            onLoadError:function(status,res){
+                $('#reportTable').bootstrapTable('removeAll');
+                console.log(status,res);
+            }
+        });
+        $(window).resize(function () {
+            $('#reportTable').bootstrapTable('resetView');
+        });
+        $("#kSearch2").click(function(){
+            //$('#id-date-range-picker-1').val('');
+            var da2 = $('#id-date-range-picker-2').val();
+            var keyword = $('#keyword').val();
+            $('#reportTable').bootstrapTable('refresh');
+        });
+        $(".waf_type").click(function(){
+            var da2 = $('#id-date-range-picker-2').val();
+            var keyword = $('#keyword').val();
+            var waf_type = $(this).attr('data');
+            $.ajax({
+                url: '__URL__/indextypelist',
+                type: 'GET',
+                async: false,
+                dataType: 'json',
+                data: {'waf_type':waf_type},
+                success:function(data){
+                    gettypelist();
+                }
+            })
+            $('#reportTable').bootstrapTable('refresh');
+        });
+        $("#kSearch1").click(function(){
+            $('#id-date-range-picker-2').val('');
+            $('#keyword').val('');
+            var da1 = $('#id-date-range-picker-1').val();
+            $.ajax({
+                url: '__URL__/indextu',
+                type: 'GET',
+                async: false,
+                dataType: 'json',
+                data: {'da1':da1},
+                success:function(data){
+                    chart1();
+                    chart2();
+                    gettypelist();
+                }
+            })
+            $('#reportTable').bootstrapTable('refresh');
+        });
+});
+//    类型选择时样式的改变
+$('.atpTypeList a').on('click',function(){
+    $(this).addClass('sel');
+    $(this).siblings('a').removeClass('sel');
+});
+</script>

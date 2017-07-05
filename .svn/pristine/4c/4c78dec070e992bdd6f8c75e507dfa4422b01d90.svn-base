@@ -1,0 +1,242 @@
+<?php
+namespace Home\Controller;
+class SafeController extends CommonController {
+    public function index(){
+        layout('Layout/layout');
+        $this->display();
+    }
+    public function indextu(){
+        if(I('get.da1')) {
+            $start = $this->time_data(I('get.da1'))['ts'];
+            $end   = $this->time_data(I('get.da1'))['td'];
+            $this ->save_time($start,$end,'ts','td');
+            $this ->save_time($start,$end,'zts','ztd');
+        }
+        $data=[];
+        //$data['data1'] = $this -> indexdata1($start,$end);
+        //$data['data2'] = $this -> indexdata2($start,$end);
+        //$data['data4'] = $this -> indexdata4($start,$end);
+    }
+    public function indexbiao(){
+        if(I('get.da2')){
+            $start = $this->time_data(I('get.da2'))['ts'];
+            $end   = $this->time_data(I('get.da2'))['td'];
+        }else{
+            $start = $this->time_data(I('get.da1'))['ts'];
+            $end   = $this->time_data(I('get.da1'))['td'];
+        }
+        $sort  = I('get.sort');
+        $order = I('get.order');
+        $type  = I('get.waf_type');
+        $page  = I('get.pagenum');
+        $data  = [];
+        //dump($type);
+        $data['data3'] = $this -> indexdata3($start,$end,$type,$page,$sort,$order);
+        //$data['data4'] = $this -> indexdata4($start,$end,$type);
+        echo json_encode($data);
+    }
+    public function indexzhutu(){
+        if(I('get.sign')){
+            $sign = I('get.sign');
+            $times =  $this -> zhututime($sign);
+            dump(date('Y-m-d',$times['start']));
+            dump(date('Y-m-d',$times['end']));
+        }
+    }
+    public function indexdata3($start,$end,$type=0,$page=1,$sort='time',$order='ASC'){
+        $url = 'http://10.88.1.102:8070/byzoro.apt.com/httpflow/list?start='.$start.'&end='.$end.'&page='.$page.'&sort='.$sort.'&order='.$order.'&count=10&type='.$type;
+        //dump($url);
+        $data = request($url,false);
+        $data = json_decode($data,true);
+        foreach ($data['data']['elements'] as $key => &$value) {
+            if($value['time']){
+                $value['time'] =date("Y-m-d H:i:s",$value['time']);
+            }
+            if($value['severity']){
+                $value['severity'] = $this -> gettypename('waf_type',$value['severity']);
+            }
+        }
+        $data = SafeFilter($data);
+        //dump($data);die;
+        $arr=[];
+        if($data['data']['elements']){
+            $arr['status']=ture;
+        }else{
+            $arr['status']=false;
+        }
+        $arr['totalNum']=$data['data']['total'];
+        $arr['data']=$data['data']['elements'];
+        return $arr;
+    }
+    public function gettypename($table,$type){
+        $where=[];
+        $where['name'] = $type;
+        return  M($table) -> where($where)-> getField('title');
+    }
+    /*public function indexdata4($start,$end,$severity=''){
+        $url = 'http://10.80.6.2:8070/byzoro.apt.com/urgencies/list/day?start='.$start.'&end='.$end.'&severity='.$severity;
+        $data = request($url,false);
+        $data = json_decode($data,true);
+        foreach ($data['data']['Elements'] as $key => &$value) {
+            if($value['Time']){
+               $value['Time'] =date("Y-m-d H:i:s",$value['Time']);
+            }
+        }
+        $arr=[];
+        if($data['data']['Elements']){
+            $arr['status']=ture;
+        }else{
+            $arr['status']=false;
+        }
+        $arr['totalNum']=$data['data']['Totality'];
+        //$arr['status']=$data['code'];
+        $arr['data']=$data['data']['Elements'];
+        return $arr;
+    }*/
+	public function file(){
+        layout('Layout/layout');
+        $this->display();
+    }
+    public function filetu(){
+        if(I('get.da1')) {
+            $start = $this->time_data(I('get.da1'))['ts'];
+            $end   = $this->time_data(I('get.da1'))['td'];
+            $this ->save_time($start,$end,'ts','td');
+            $this ->save_time($start,$end,'zts','ztd');
+        }
+        $data=[];
+    }
+    public function filebiao(){
+        if(I('get.da2')){
+            $start = $this->time_data(I('get.da2'))['ts'];
+            $end   = $this->time_data(I('get.da2'))['td'];
+        }else{
+            $start = $this->time_data(I('get.da1'))['ts'];
+            $end   = $this->time_data(I('get.da1'))['td'];
+        }
+        $sort  = I('get.sort');
+        $order = I('get.order');
+        $type  = I('get.file_type');
+        $page  = I('get.pagenum');
+        $data  = [];
+        $data['data3'] = $this -> filedata3($start,$end,$type,$page,$sort,$order);
+        //dump($data);die;
+        echo json_encode($data);
+    }
+    public function filezhutu(){
+        if(I('get.sign')){
+            $sign = I('get.sign');
+            $times =  $this -> zhututime($sign);
+            dump(date('Y-m-d',$times['start']));
+            dump(date('Y-m-d',$times['end']));
+        }
+    }
+    public function filedata3($start,$end,$type='',$page=1,$sort='time',$order='ASC'){
+        $url = 'http://10.88.1.102:8070/byzoro.apt.com/fileThreats/list/day?start='.$start.'&end='.$end.'&page='.$page.'&sort='.$sort.'&order='.$order.'&count=10&type='.$type;
+        $data = request($url,false);
+        $data = json_decode($data,true);
+        foreach ($data['data']['elements'] as $key => &$value) {
+            if($value['time']){
+               $value['time'] =date("Y-m-d H:i:s",$value['time']);
+            }
+            if($value['localVType']){
+                $value['localVType'] = $this -> gettypename('vds_type',$value['localVType']);
+            }
+        }
+        $data = SafeFilter($data);
+        $arr=[];
+        if($data['data']['elements']){
+            $arr['status']=ture;
+        }else{
+            $arr['status']=false;
+        }
+        $arr['totalNum']=$data['data']['total'];
+        $arr['data']=$data['data']['elements'];
+        return $arr;
+    }
+	public function bruteforce(){
+        layout('Layout/layout');
+        $this->display();
+    }
+    public function brutu(){
+        if(I('get.da1')) {
+            $start = $this->time_data(I('get.da1'))['ts'];
+            $end   = $this->time_data(I('get.da1'))['td'];
+            $this ->save_time($start,$end,'ts','td');
+            $this ->save_time($start,$end,'zts','ztd');
+        }
+        $data=[];
+    }
+    public function brubiao(){
+        if(I('get.da2')){
+            $start = $this->time_data(I('get.da2'))['ts'];
+            $end   = $this->time_data(I('get.da2'))['td'];
+        }else{
+            $start = $this->time_data(I('get.da1'))['ts'];
+            $end   = $this->time_data(I('get.da1'))['td'];
+        }
+        $sort  = I('get.sort');
+        $order = I('get.order');
+        $type  = I('get.bru_type');
+        $page  = I('get.pagenum');
+        $data  = [];
+        $data['data3'] = $this -> brudata3($start,$end,$type,$page,$sort,$order);
+        echo json_encode($data);
+    }
+    public function bruzhutu(){
+        if(I('get.sign')){
+            $sign = I('get.sign');
+            $times =  $this -> zhututime($sign);
+            dump(date('Y-m-d',$times['start']));
+            dump(date('Y-m-d',$times['end']));
+        }
+    }
+    public function brudata3($start,$end,$type='',$page=1,$sort='time',$order='ASC'){
+        $url = 'http://10.88.1.102:8070/byzoro.apt.com/malFlow/list/day?start='.$start.'&end='.$end.'&page='.$page.'&sort='.$sort.'&order='.$order.'&count=10&type='.$type;
+        $data = request($url,false);
+        $data = json_decode($data,true);
+        //dump($data);die;
+        foreach ($data['data']['elements'] as $key => &$value) {
+            if($value['time']){
+               $value['time'] =date("Y-m-d H:i:s",$value['time']);
+            }
+            if($value['severity']){
+               $value['severity'] = $this -> getlevel($value['severity']);
+            }
+        }
+        $arr=[];
+        if($data['data']['elements']){
+            $arr['status']=ture;
+        }else{
+            $arr['status']=false;
+        }
+        $arr['totalNum']=$data['data']['total'];
+        $arr['data']=$data['data']['elements'];
+        return $arr;
+    }
+
+    public function getlevel($value){
+        $sev = '';
+        switch ((int)$value) {
+            case 1:
+                $sev = '严重';
+                break;
+            case 2:
+                $sev = '中等';
+                break;
+            case 3:
+                $sev = '低';
+                break;
+        }
+        return $sev;
+    }
+	public function malicioust(){
+        layout('Layout/layout');
+        $this->display();
+    }
+	public function scanevent(){
+        layout('Layout/layout');
+        $this->display();
+    }
+
+}

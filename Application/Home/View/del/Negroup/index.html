@@ -1,0 +1,945 @@
+<div class="main-content">
+    <div id="addNet" class="popLayer">
+        <div class="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>添加设备</li>
+            </ul>
+            <!-- .breadcrumb -->
+            <span class="floatRig closePop">关闭</span>
+        </div>
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-xs-win">
+                    <!-- PAGE CONTENT BEGINS -->
+                    <form id="addNet_form" style="position:relative;margin-top:20px;"  class="form-horizontal" role="form">
+                    
+                        <div class="form-group">
+
+                            <label class="col-sm-3 control-label no-padding-right"> IP：</label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="equipment_ip" pattern="^[1-9]{1}\d{0,2}.\d{1,3}.\d{1,3}.\d{1,3}$" title="请输入正确格式的IP地址"  class="col-xs-10 col-sm-5" required/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+
+                            <label class="col-sm-3 control-label no-padding-right"> 设备名称：</label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="equipment_name" class="col-xs-10 col-sm-5" pattern="^\S{0,16}$"  title="请输入小于16位汉字或字符" required/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right">引擎类型：</label>
+                            <div class="col-sm-9">
+                            
+                                <select name="equipment_type" class="equipment_type">      
+                                    <option value=""></option>                  
+                                <?php foreach($equipment_type as $key => $val): ?>
+                                    <option value="<?= $val ?>"><?= $val ?></option>
+                                <?php endforeach; ?>
+                                  
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="space-4"></div>
+                        <!--
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right">设备组：</label>
+
+                            <div class="col-sm-9">
+                                <select name="netgroup">
+                                    <volist name='groups' id='groups_vo'>
+                                      <option value="{$groups_vo['id']}">{$groups_vo['name']}</option>
+                                    </volist>
+                                </select>
+                            </div>
+                        </div>
+                         -->
+                        <!-- <div class="form-group">
+
+                            <label class="col-sm-3 control-label no-padding-right">网元IP：</label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="ip" class="col-xs-10 col-sm-5"/>
+                            </div>
+                        </div> -->
+
+                       
+
+
+                        <!-- <input type="hidden" name="id" value="{$template_data['id']}" /> -->
+                        <div class="clearfix form-actions">
+                            <div>
+                                <button class="btn btn-info" type="submit">
+                                    <i class="icon-ok bigger-110"></i>
+                                    提交
+                                </button>
+
+                                &nbsp; &nbsp; &nbsp;
+                                <button class="btn" type="reset">
+                                    <i class="icon-undo bigger-110"></i>
+                                    取消
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+    </div>
+    <div id="editeNet" class="popLayer">
+        <div class="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>编辑设备</li>
+            </ul>
+            <!-- .breadcrumb -->
+            <span class="floatRig closePop">关闭</span>
+        </div>
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-xs-win">
+                    <!-- PAGE CONTENT BEGINS -->
+                    <form id="netedite_form" style="position:relative;top:20px;" class="form-horizontal" role="form"> 
+                    <input type="hidden" name="id" id="id">                       
+                        <div class="space-4"></div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right">设备名称：</label>
+                            <div class="col-sm-9">
+                                <input  type="text" name="equipment_name" class="col-xs-10 col-sm-5" pattern="^\S{0,16}$"  title="请输入小于16位汉字或字符" required/>
+                            </div>
+                        </div>                        
+                        <div class="space-4"></div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right">IP地址：</label>
+                            <div class="col-sm-9">
+                                <input  type="text" pattern="^[1-9]{1}\d{0,2}.\d{1,3}.\d{1,3}.\d{1,3}$" title="请输入正确格式的IP地址" required name="equipment_ip" class="col-xs-10 col-sm-5" />
+                            </div>
+                        </div>
+                        
+                        <div class="space-4"></div>
+                      
+                        
+                        
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right">引擎类型：</label>
+
+                            <div class="col-sm-9">
+                               <select name="equipment_type" class="equipment_type">      
+                                    <option value=""></option>                   
+                                <?php foreach($equipment_type as $key => $val): ?>
+                                    <option value="<?= $val ?>"><?= $val ?></option>
+                                <?php endforeach; ?>
+                                  
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="clearfix form-actions">
+                            <div>
+                                <button class="btn btn-info" type="submit">
+                                    <i class="icon-ok bigger-110"></i>
+                                    提交
+                                </button>
+
+                               <!--  &nbsp; &nbsp; &nbsp;
+                                <button class="btn" type="reset">
+                                    <i class="icon-undo bigger-110"></i>
+                                    取消
+                                </button> -->
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+    </div>
+    <div id="delNet"  class="popLayer" style="top:100px;left:50%;width: 40%;margin-left:-20%;">
+        <div class="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>
+                    删除设备
+                </li>
+            </ul>
+            <!-- .breadcrumb -->
+            <span class="floatRig closePop">关闭</span>
+        </div>
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-xs-win">
+                    <!-- PAGE CONTENT BEGINS -->
+                    <form style="position:relative;top:20px;" id="net_delete" class="form-horizontal" role="form">
+
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label no-padding-right"> 确定要删除选中的设备？ </label>
+                        </div>
+
+                        <!-- <input type="hidden" name="id" value="{$template_data['id']}" /> -->
+                        <div class="clearfix form-actions">
+                            <div>
+                                <button  class="net_delete btn btn-danger" type="submit">
+                                    <i class="icon-remove  bigger-110 "></i>
+                                    删除
+                                </button>
+<!--
+                                &nbsp; &nbsp; &nbsp;
+                                <button class="btn" type="reset">
+                                    <i class="icon-undo bigger-110"></i>
+                                    取消
+                                </button>-->
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+    </div>
+    <div id="ajaxAlert"  class="popLayerTip">
+        <div class="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>
+                    提示
+                </li>
+            </ul>
+            <!-- .breadcrumb -->
+            <span class="floatRig closePop"></span>
+        </div>
+            <div class="tipText"></div>
+    </div>
+    
+    <div id="agreeNet"  class="popLayer" style="top:100px;left:50%;width: 40%;margin-left:-20%;">
+        <div class="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>
+                    审核
+                </li>
+            </ul>
+            <!-- .breadcrumb -->
+            <span class="floatRig closePop">关闭</span>
+        </div>
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-xs-win">
+                    <!-- PAGE CONTENT BEGINS -->
+                    <form style="position:relative;top:20px;" id="net_agree" class="form-horizontal" role="form">
+
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label no-padding-right"> 确认该网元审核通过？
+                            </label>
+                        </div>
+
+                        <input type="hidden" name="id" id="id" value="" />
+                        <div class="clearfix form-actions">
+                            <div>
+                                <button  class="net_agree btn btn-danger" type="submit">
+                                    <i class="icon-remove  bigger-110 "></i>
+                                    确认
+                                </button>
+
+             <!--                   &nbsp; &nbsp; &nbsp;
+                                <button class="btn" type="reset" onclick='$("#agreeNet").hide();$("#fade").hide();return false;'>
+                                    <i class="icon-undo bigger-110"></i>
+                                    取消
+                                </button>-->
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+    </div>
+
+    <div id="agreeNet_one"  class="popLayer" style="top:100px;left:50%;width: 40%;margin-left:-20%;">
+        <div class="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>
+                    审核
+                </li>
+            </ul>
+            <!-- .breadcrumb -->
+            <span class="floatRig closePop">关闭</span>
+        </div>
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-xs-win">
+                    <!-- PAGE CONTENT BEGINS -->
+                    <form style="position:relative;top:20px;" id="net_agree_one" class="form-horizontal" role="form">
+
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label no-padding-right"> 确认该网元审核通过？
+                            </label>
+                        </div>
+
+                        <input type="hidden" name="id" id="id" value="" />
+                        <div class="clearfix form-actions">
+                            <div>
+                                <button  class="net_agree btn btn-danger" type="submit">
+                                    <i class="icon-remove  bigger-110 "></i>
+                                    确认
+                                </button>
+
+<!--                                &nbsp; &nbsp; &nbsp;
+                                <button class="btn" type="reset" onclick='$("#agreeNet_one").hide();$("#fade").hide();return false;'>
+                                    <i class="icon-undo bigger-110"></i>
+                                    取消
+                                </button>-->
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+    </div>
+
+    <div id="fade" class="black_overlay"></div>
+
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try {
+                ace.settings.check('breadcrumbs', 'fixed')
+            } catch (e) {
+            }
+        </script>
+
+        <ul class="breadcrumb">
+            <li>
+                设备管理
+            </li>
+            <li class="active">设备列表</li>
+        </ul>
+        <!-- .breadcrumb -->
+
+
+    </div>
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="formArea">
+                    <!--<a href="#" class="more">更多条件</a>-->
+                     <form method="get" id="" action="__URL__/index">
+                        <p><label class="w70">引擎类型：</label>                       
+                           <select name="equipment_type" class="equipment_type">
+                                <option value="">&nbsp;全部</option>                         
+                                <?php foreach($equipment_type as $key => $val): ?>
+                                    <option value="<?= $val ?>"><?= $val ?></option>
+                                <?php endforeach; ?>                                
+                            </select>                                    
+                            <label>设备名称：</label>
+                            <input type="text" name="equipment_name" class="w100 serial_number "/>                   
+                            <label>IP：</label>
+                            <input type="text" name="equipment_ip" class="w100 serial_number" pattern="^[1-9]{1}\d{0,2}.\d{1,3}.\d{1,3}.\d{1,3}$" title="请输入正确格式的IP地址" >
+                                                 
+                            <button class="btn btn-sm btn-primary marL10"><i class="fa fa-search"></i>查询</button>
+                        </p>
+                    <!--
+                    <div class="moreSelect" style="display:none"> 
+
+                        <p><label class="w70">主机名称：</label><input type="text" name="host"></p>
+                    </div>
+                    -->
+                        
+                    </form>
+                </div>
+                <div class="buttonGroup">
+                    <a href="#" class="btn btn-link" id="netAdd"><i class="icon-plus-sign bigger-120 green"></i>添加</a>|
+                    <a href="javascript:;" class="btn btn-link" id="netDel"><i class="icon-remove  bigger-120 red "></i>批量删除</a>
+                    <!--<a href="#" class="btn btn-link" id="netImport"><i class="icon-download-alt  bigger-100 blue "></i>批量导入</a>
+                    <a href="javascript:;" class="btn btn-link netAgree" id="netCheck"><i class=" icon-check  bigger-100 purple "></i>批量审核</a>
+                    -->
+                </div>
+
+                <div class="table-responsive">
+                    <table id="sample-table-1" class="table table-striped table-bordered table-hover" style="text-align:center;">
+                        <thead>
+                            <tr>
+                                <th style="text-align:center;"><input type="checkbox"></th>
+                                <th style="text-align:center;">设备名称</th>
+                                <th style="text-align:center;">IP</th>
+                                <th style="text-align:center;">引擎类型</th>
+                                <th style="text-align:center;">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <volist name="equipment" id="vo">
+                            <tr>
+                                <td><input type="checkbox" name="checkbox" value="{$vo['id']}"></td>
+                                <td>{$vo.equipment_name}</td>
+                                <td class="netName">{$vo.equipment_ip}</td>
+                                <td class="netType">{$vo.equipment_type}</td>
+
+                                <td>
+                                        <if condition = "authcheck('Home/Negroup/ne_info','1','')">
+                                            <a class="blue" href="__URL__/ne_info?id={$vo['id']}" title="设备状态">
+                                                <i class="icon-facetime-video  bigger-130"></i>
+                                            </a>
+                                        </if>
+
+                                        <a class="green editeNet" href="#" value="{$vo['id']}" title="编辑">
+                                            <i class="icon-pencil bigger-130"></i>
+                                        </a>
+                                        <input type="hidden"  value="{$vo['id']}">
+
+                                        <a class="red deletenet" href="#" value="{$vo['id']}" title="删除">
+                                            <i class="icon-trash bigger-130"></i>
+                                        </a>
+
+
+                                </td>
+                            </tr>
+                           </volist>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.table-responsive -->
+            </div>
+            <!-- /span -->
+        </div>
+        <!-- /row -->
+        <div class="dataTables_paginate paging_bootstrap">
+            <ul class="pagination">
+                {$show}
+            </ul>
+        </div>
+    </div>
+</div><!-- /.main-content -->
+<script type="text/javascript" src="__PUBLIC__/js/jquery.form.js"></script>
+<script type="text/javascript">
+    $('.type').attr('value',getParam("type"));
+    $('.negroup_id').attr('value',getParam("negroup_id"));
+    $('.serial_number').attr('value',getParam("serial_number"));
+    $('.name').attr('value',getParam("name"));
+    $('.status').attr('value',getParam("status"));
+    $('.ip').attr('value',getParam("ip"));
+
+    function URLdecode(sStr){
+       return sStr.replace(/\+/g,' ').replace(/\%2F/g,'\/'); 
+    }
+
+    function getParam(paramName)
+    {
+        paramValue = "";
+        isFound = false;
+        if (this.location.search.indexOf("?") == 0 && this.location.search.indexOf("=")>1)
+        {
+            arrSource = this.location.search.substring(1,this.location.search.length).split("&");
+            i = 0;
+            while (i < arrSource.length && !isFound)
+            {
+                if (arrSource[i].indexOf("=") > 0)
+                {
+                    if (arrSource[i].split("=")[0].toLowerCase()==paramName.toLowerCase())
+                    {
+                        paramValue = arrSource[i].split("=")[1];
+                        isFound = true;
+                    }
+                }
+                i++;
+            }
+        }
+        return paramValue;
+    }
+
+    $(".more").click(function () {
+        var div = $(".moreSelect");
+        if (div.css("display") === "none") {
+            div.show();
+            $('.more').html('收起')
+        } else {
+            div.hide();
+            $('.more').html('更多条件')
+        }
+        return false;
+    })
+
+    $(document).ready(function(){
+        $("#form_upload").ajaxForm({
+            success:function(data){
+                if (data.status === 'success') {
+                    layer.alert("导入成功");
+                    window.location.reload();
+                } else if (data.status === 'failed') {
+                    layer.alert(data.message);
+                }else{
+                    layer.alert(data.info);
+                }
+            }
+        });
+    })
+
+    
+
+    // $("#form_upload").submit(function(data){
+    //     console.log(data);return false;
+    //     $.ajax({
+    //         url:'__URL__/upload',
+    //         data:data,
+    //         dataType:'json',
+    //         type:'POST',
+    //         success:function(data){
+    //             if (data.status=='success') {
+    //                 $("#ajaxAlert .tipText").html("导入成功");   
+    //                 $("#ajaxAlert").show();
+    //                 window.location.reload();
+    //             };
+    //         }
+    //     });
+    //     return false;
+    // })
+
+
+
+</script>
+<script type="text/javascript">
+    $(".buttonGroup #netAdd").click(function () {
+        $("#addNet").show();
+        $("#fade").show();
+        return false
+    });
+    $(".closePop").css("cursor", "pointer").click(function () {
+        $("#addNet").hide();
+        $("#importNet").hide();
+        $("#delNet").hide();
+        $("#editeNet").hide();
+        $("#NetDetail").hide();
+        $("#agreeNet").hide();
+        $("#agreeNet_one").hide();
+        $("#fade").hide();
+        $(":checked").attr('checked',false);
+    });
+    $(".buttonGroup #netDel").click(function () {
+        var val= $("input:checkbox[name='checkbox']:checked").map(function() {
+            return $(this).val();
+        }).get();
+        if(val.length<1){
+            layer.alert("请选择数据");
+            return;
+        }
+        $("#delNet").show();
+        $("#fade").show();
+        return false
+    });
+    $(".buttonGroup #netCheck").click(function () {
+        var val= $("input:checkbox[name='checkbox']:checked").map(function() {
+            return $(this).val();
+        }).get();
+        if(val.length<1){
+            layer.alert("请选择数据");
+            return;
+        }
+        $("#agreeNet").show();
+        $("#fade").show();
+        return false
+    });
+
+    // $(".netAgree").click(function () {
+    //     $("#agreeNet").show();
+    //     $("#fade").show();
+    //     return false
+    // });
+
+    $(".editeNet").click(function () {
+        $("#editeNet").show();
+        $("#fade").show();
+        var row = $(this).parents('tr');
+        $("#netedite_form #id").val($(this).next().val());
+       // $("#netedite_form input[name='id']").val(row.children('td:eq(0)').html());
+        $("#netedite_form input[name='equipment_name']").val(row.children('td:eq(1)').html());
+        $("#netedite_form input[name='equipment_ip']").val(row.children('td:eq(2)').html());
+       // $("#netedite_form input[name='equipment_type']").val(row.children('td:eq(3)').html());
+       
+        var netType=$("select[name='equipment_type'] option");
+        for(var i=0;i<netType.length;i++){
+           if(netType[i].innerHTML==row.children('td:eq(3)').html()){
+               netType[i].setAttribute('selected','selected')
+           }
+        }
+
+       /* var innterHtml=row.children('td:eq(5)').html();
+        var sel_len=$("#netedite_form select[name='netgroup'] option");
+        for(var i=0;i<sel_len.length;i++){
+            if (sel_len[i].innerHTML==innterHtml){
+                sel_len[i].selected=true;
+                break;
+            }
+        }*/
+        return false
+    })
+
+    $(".NetDetail").click(function () {
+        $("#NetDetail").show();
+        $("#fade").show();
+        return false
+    })
+
+    $(".buttonGroup #netImport").click(function () {
+        $("#importNet").show();
+        $("#fade").show();
+        return false
+    });
+    $(".deletenet").click(function () {
+        $(":checked").attr('checked',false);
+        $(this).parent().parent().children().first().children().first().attr('checked','checked');
+        $("#delNet").show();
+        $("#fade").show();
+        return false;
+    });
+
+    $('.verify').click(function(){
+      var id = $(this).parents('tr').children('td:eq(0)').children().val();
+      $("#agreeNet_one #id").val(id);
+      $("#agreeNet_one").show();
+      $("#fade").show();
+     
+      return false;
+
+    });
+
+
+</script>
+
+
+
+<script type="text/javascript">
+    $(function () {
+
+        var gaugeOptions = {
+
+            chart: {
+                type: 'solidgauge'
+            },
+
+            title: null,
+
+            pane: {
+                center: ['50%', '85%'],
+                size: '140%',
+                startAngle: -90,
+                endAngle: 90,
+                background: {
+                    backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || '#EEE',
+                    innerRadius: '60%',
+                    outerRadius: '100%',
+                    shape: 'arc'
+                }
+            },
+
+            tooltip: {
+                enabled: false
+            },
+
+            // the value axis
+            yAxis: {
+                stops: [
+                    [0.1, '#55BF3B'], // green
+                    [0.5, '#DDDF0D'], // yellow
+                    [0.9, '#DF5353'] // red
+                ],
+                lineWidth: 0,
+                minorTickInterval: null,
+                tickPixelInterval: 400,
+                tickWidth: 0,
+                title: {
+                    y: -70
+                },
+                labels: {
+                    y: 16
+                }
+            },
+
+            plotOptions: {
+                solidgauge: {
+                    dataLabels: {
+                        y: 5,
+                        borderWidth: 0,
+                        useHTML: true
+                    }
+                }
+            }
+        };
+
+        // The speed gauge
+        $('#container-speed').highcharts(Highcharts.merge(gaugeOptions, {
+            yAxis: {
+                min: 0,
+                max: 100,
+                title: {}
+            },
+
+            credits: {
+                enabled: false
+            },
+
+            series: [{
+                name: 'Speed',
+                data: [80],
+                dataLabels: {
+                    format: '<div style="text-align:center"><span style="font-size:20px;color:' +
+                    ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}<b style="font-size: 12px; color: #999; font-weight: normal">%</b></span><br/>'
+                },
+                tooltip: {
+                    valueSuffix: ' km/h'
+                }
+            }]
+
+        }));
+
+        // The RPM gauge
+        $('#container-rpm').highcharts(Highcharts.merge(gaugeOptions, {
+            yAxis: {
+                min: 0,
+                max: 100,
+                title: {}
+            },
+
+            series: [{
+                data: [1],
+                dataLabels: {
+                    format: '<div style="text-align:center"><span style="font-size:20px;color:' +
+                    ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}<b style="font-size: 12px; color: #999; font-weight: normal">%</b></span><br/>'
+                },
+                tooltip: {
+                    valueSuffix: ' revolutions/min'
+                }
+            }]
+
+        }));
+
+
+        $('#container-zol').highcharts(Highcharts.merge(gaugeOptions, {
+            yAxis: {
+                min: 0,
+                max: 100,
+                title: {}
+            },
+
+            series: [{
+                data: [1],
+                dataLabels: {
+                    format: '<div style="text-align:center"><span style="font-size:20px;color:' +
+                    ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}<b style="font-size: 12px; color: #999; font-weight: normal">%</b></span><br/>'
+                },
+                tooltip: {
+                    valueSuffix: ' revolutions/min'
+                }
+            }]
+
+        }));
+
+        // Bring life to the dials
+        setInterval(function () {
+            // Speed
+            var chart = $('#container-speed').highcharts(),
+                    point,
+                    newVal,
+                    inc;
+
+            if (chart) {
+                point = chart.series[0].points[0];
+                inc = Math.round((Math.random() - 0.5) * 100);
+                newVal = point.y + inc;
+
+                if (newVal < 0 || newVal > 100) {
+                    newVal = point.y - inc;
+                }
+
+                point.update(newVal);
+            }
+            // Speed
+            chart = $('#container-rpm').highcharts(),
+                    point,
+                    newVal,
+                    inc;
+
+            if (chart) {
+                point = chart.series[0].points[0];
+                inc = Math.round((Math.random() - 0.5) * 100);
+                newVal = point.y + inc;
+
+                if (newVal < 0 || newVal > 100) {
+                    newVal = point.y - inc;
+                }
+
+                point.update(newVal);
+            }
+
+
+            // RPM
+            chart = $('#container-zol').highcharts(),
+                    point,
+                    newVal,
+                    inc;
+
+            if (chart) {
+                point = chart.series[0].points[0];
+                inc = Math.round((Math.random() - 0.5) * 100);
+                newVal = point.y + inc;
+
+                if (newVal < 0 || newVal > 100) {
+                    newVal = point.y - inc;
+                }
+
+                point.update(newVal);
+            }
+        }, 2000);
+
+
+    });
+
+
+</script>
+<script type="text/javascript">
+    var currentAmount = 32;
+</script>
+
+<script>
+    jQuery(function ($) {
+
+        $(' #id-input-file-2').ace_file_input({
+            no_file: '未选择文件 ...',
+            btn_choose: '浏览',
+            btn_change: 'Change',
+            droppable: false,
+            onchange: null,
+            thumbnail: false
+        });
+
+    });
+
+</script>
+<script>
+//审核数据
+        $("#net_agree").submit(function(e){
+            e.stopPropagation();
+            e.preventDefault();
+    
+            var data = $("input:checkbox[name='checkbox']:checked").map(function(){
+                return $(this).val();
+            }).get().join(',');
+            
+            $.ajax({
+                url:'__URL__/append',
+                data:{where : '`id` in (' + data + ')'},
+                type:'POST',
+                success:function(data){
+                    if (data.status === 'success') {
+                        $("#agreeNet").hide();
+                        $("#fade").hide();
+                        layer.alert("审核成功");
+                        window.location.reload();
+                        $(":checked").attr('checked',false);
+                    };
+                }
+            });
+        })
+
+        $("#net_agree_one ").submit(function(e){
+            e.stopPropagation();
+            e.preventDefault();
+            var id = $("#net_agree_one #id").val();
+            $.ajax({
+                url:'__URL__/append',
+                data:{where : 'id=' + id},
+                type:'POST',
+                success:function(data){
+                    if (data.status === 'success') {
+                        $("#agreeNet_one").hide();
+                        $("#fade").hide();
+                        layer.alert("审核成功");
+                        window.location.reload();
+                    };
+                }
+            });
+
+        })
+//删除数据
+        $("#net_delete").click(function(e) {
+            e.stopPropagation();
+            e.preventDefault();
+            var id = $("input:checkbox[name='checkbox']:checked").map(function() {
+                return $(this).val();
+            }).get().join(',');
+            $.ajax({
+                type: "POST",
+                url: "__URL__/delnet",
+                data: {'id':id},
+                dataType: "json",
+                success: function(data){
+                    if(data.status=='success'){
+                        $("#delNet").hide();
+                        $("#fade").hide();
+                        layer.alert("删除成功");
+                        window.location.reload();
+                        $(":checked").attr('checked',false);
+                    }else {
+                        layer.alert(data.info);
+                    }
+               }     
+            });
+        });
+
+$('#addNet_form').submit(function(e){
+    e.stopPropagation();
+    e.preventDefault();
+    var addNet_data = $('#addNet_form').serialize();
+    //console.log(addNet_data);
+    $.ajax({
+        url:'__URL__/netAdd',
+        type:'POST',
+        dataType:'json',
+        data:addNet_data,
+        success:function(data){
+            if(data.status=='success'){
+
+                 $("#addNet").hide();
+                $("#fade").hide();
+                layer.alert("添加成功");
+               window.location.reload();
+            } else if (data.status=='net') {
+                layer.alert(data.info);
+            }else if (data.status=='netname') {
+                layer.alert(data.info);
+            };
+        }
+    });
+});
+
+$('#netedite_form').submit(function(e){
+    e.stopPropagation();
+    e.preventDefault();
+    var id = $("input:checkbox[name='checkbox']:checked").map(function() {
+                return $(this).val();
+                }).get().join(',');
+    var editeNet_data = $('#netedite_form').serialize();
+    $.ajax({
+        url:'__URL__/netedite',
+        type:'POST',
+        dataType:'json',
+        data:editeNet_data,
+        success:function(data){
+            if(data.status=='success'){
+                layer.alert("编辑成功");
+                window.location.reload();
+            }
+        }
+    });
+});
+</script>
+
+<script type="text/javascript">
+    var currentAmount = 32;
+</script>
+
+

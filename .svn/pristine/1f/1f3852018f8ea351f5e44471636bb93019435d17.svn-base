@@ -1,0 +1,1023 @@
+<div class="main-content">
+
+    <div id="addUser" class="popLayer">
+        <div class="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>添加收件人</li>
+            </ul>
+            <!-- .breadcrumb -->
+            <span class="floatRig closePop">关闭</span>
+        </div>
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-xs-win">
+                    <!-- PAGE CONTENT BEGINS -->
+                    <form style="position:relative;margin-top:20px;" id="addUser_form" class="form-horizontal" role="form">
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right"> 姓名： </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="name" placeholder="收件人姓名"  pattern="^\S{1,18}$"  title="请输入1-18位字符" class="col-xs-10 col-sm-5" required/>
+                            </div>
+                        </div>
+
+                        <div class="space-4"></div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right"> 邮箱：</label>
+
+                            <div class="col-sm-9">
+                                <input type="email" name="email" class="col-xs-10 col-sm-5" pattern="^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+" required/>
+                            </div>
+                        </div>
+                        <div class="space-4"></div>
+
+                        <!-- <input type="hidden" name="id" value="{$template_data['id']}" /> -->
+                        <div class="clearfix form-actions">
+                            <div>
+                                <button class="btn btn-info" type="submit">
+                                    <i class="icon-ok bigger-110"></i>
+                                    提交
+                                </button>
+
+                                &nbsp; &nbsp; &nbsp;
+                                <button class="btn" type="reset">
+                                    <i class="icon-undo bigger-110"></i>
+                                    重置
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+    </div>
+    <div id="editeUser" class="popLayer">
+        <div class="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>编辑收件人</li>
+            </ul>
+            <!-- .breadcrumb -->
+            <span class="floatRig closePop">关闭</span>
+        </div>
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-xs-win">
+                    <!-- PAGE CONTENT BEGINS -->
+                    <form style="position:relative;margin-top:20px;" id="user_edite_form" class="form-horizontal" role="form">
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right"> 姓名： </label>
+
+                            <div class="col-sm-9">
+
+                                <input type="text" name="name" id="edite_user" placeholder="收件人姓名" pattern="^\S{1,18}$"  title="请输入小于1-18位字符" class="col-xs-10 col-sm-5"
+                                       required/>
+
+                            </div>
+                        </div>
+
+
+                        <div class="space-4"></div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right"> 邮箱： </label>
+
+                            <div class="col-sm-9">
+
+                                <input type="email" name="email" id="edite_email" class="col-xs-10 col-sm-5" pattern="^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+" required/>
+
+                            </div>
+                        </div>
+
+                        <div class="space-4"></div>
+                        <div class="clearfix form-actions">
+                            <div>
+                                <button class="btn btn-info user_edite" type="submit">
+                                    <i class="icon-ok bigger-110"></i>
+                                    提交
+                                </button>
+
+                                <button class="btn" type="reset">
+                                    <i class="icon-undo bigger-110"></i>
+                                    重置
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+    </div>
+    <div id="delUser" class="popLayer" style="top:100px;left:50%;width: 40%;margin-left:-20%;">
+        <div class="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>
+                    删除用户
+                </li>
+            </ul>
+            <!-- .breadcrumb -->
+            <span class="floatRig closePop">关闭</span>
+        </div>
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-xs-win">
+                    <!-- PAGE CONTENT BEGINS -->
+                    <form style="position:relative;top:20px;" id="user_delete_form" class="form-horizontal" role="form">
+
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label no-padding-right"> 确定要删除此用户？ </label>
+                        </div>
+
+                        <input type="hidden" id="id"  />
+                        <div class="clearfix form-actions">
+                            <div>
+                                <button class="allusers btn btn-danger" >
+                                    <i class="icon-remove  bigger-110 "></i>
+                                    删除
+                                </button>
+                                &nbsp; &nbsp; &nbsp;
+                                <button class="btn closePop" type="reset">
+                                    <i class="icon-undo bigger-110"></i>
+                                    取消
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+    </div>
+    <div id="fade" class="black_overlay"></div>
+
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try {
+                ace.settings.check('breadcrumbs', 'fixed')
+            } catch (e) {
+            }
+        </script>
+        <style>
+        #nameStyle{
+            border: 0px;
+            background: #ffffff
+        }
+            .dailyStyle{
+                color: #00B4C5;
+                font-size: 13px;
+            }
+        .col-sm-12 .row .col-xs-12 .aptTable .navBar{
+            height: 35px;
+            margin-left: -0.5px;
+            background: black;
+            padding-right: 20px;
+        }
+        .col-sm-12 .row .col-xs-12 .aptTable .navBar li{
+            font-size: 13px;
+            margin: 10px 0;
+            padding: 0 8px;
+            line-height: 15px;
+            height: 15px;
+            float: right;
+            list-style: none;
+            border-right: 1px solid #fff;
+            cursor:pointer;
+        }
+        .col-sm-12 .row .col-xs-12 .aptTable .navBar a{
+            text-decoration: none;
+            color: #EFF0EB;
+        }
+        .col-sm-12 .row .col-xs-12 .aptTable .navBar a:hover{
+            color: #fff;
+        }
+        .col-sm-12 .row .col-xs-12 .aptTable .navBar li:first-child{
+            border: none;
+        }
+        .col-sm-12 .row .col-xs-12 .aptTable .navBar li:after{
+            content: "";
+            clear: both;
+            display: block;
+        }
+        .col-sm-12 .row .col-xs-12 .aptTable .navBar li{
+            zoom: 1;
+        }
+        .col-sm-12 .row .col-xs-12 .aptTable .wrapper>div{
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .col-sm-12 .row .col-xs-12 .aptTable .process{
+            height: 82px;
+        }
+        .col-sm-12 .row .col-xs-12 .aptTable .process .box, .col-sm-12 .row .col-xs-12 .aptTable .score{
+            float: left;
+        }
+        .col-sm-12 .row .col-xs-12 .aptTable .process .box{
+            padding: 16px 20px 20px 0;
+            width: 26%;
+        }
+        .col-sm-12 .row .col-xs-12 .aptTable .process .box img{
+            width: 273px;
+            height: auto;
+        }
+        .col-sm-12 .row .col-xs-12 .aptTable .score{
+            width: 74%;
+        }
+        .col-sm-12 .row .col-xs-12 .aptTable .process .score .todayScore{
+            font-size: 13px;
+            color: #86827B;
+            padding-top: 16px;
+        }
+        .col-sm-12 .row .col-xs-12 .aptTable .process .score .number{
+            font-size: 25px;
+            color: #00C1FF;
+        }
+        .col-sm-12 .row .col-xs-12 .aptTable .block{
+            padding: 0 0 45px 20px;
+        }
+        .col-sm-12 .row .col-xs-12 .aptTable .block .express{
+            width: 41%;
+            height: 65px;
+            background: #454544;
+            color: #888783;
+            border-radius: 5px;
+            font-size: 13px;
+            padding: 10px;
+        }
+        .col-sm-12 .row .col-xs-12 .aptTable .count .todayCount{
+            font-size: 18px;
+            color: #807D72;
+        }
+        .col-sm-12 .row .col-xs-12 .aptTable .underline{
+            height: 1px;
+            border: 2px solid #007151;
+            width: 110px;
+        }
+        .col-sm-12 .row .col-xs-12 .aptTable .smallGreen{
+            width: 74px;
+        }
+        .col-sm-12 .row .col-xs-12 .aptTable .content {
+            width: 100%;
+            padding-bottom: 40px;
+        }
+        .col-sm-12 .row .col-xs-12 .aptTable .content .chose{
+            width: 100%;
+            height:30px;
+            margin-bottom: 20px;
+        }
+        .col-sm-12 .row .col-xs-12 .aptTable .content .chooseBtn{
+            width: 100px;
+            height:30px;
+            line-height: 30px;
+            font-size: 15px;
+            background: #007151;
+            text-align: center;
+            border-radius: 3px;
+            float: right;
+        }
+        .col-sm-12 .row .col-xs-12 .aptTable .content .chooseBtn:hover{
+            background: #479E38;
+        }
+        .col-sm-12 .row .col-xs-12 .aptTable .content .mainBlock{
+            display: inline-block;
+            width: 16.377%;
+        }
+        .col-sm-12 .row .col-xs-12 .aptTable .content .line, .col-sm-12 .row .col-xs-12 .aptTable .content .section{
+            width: 100%;
+        }
+        .col-sm-12 .row .col-xs-12 .aptTable .content .line span{
+            font-size: 13px;
+            padding: 10px 40px 10px 0;
+            display: inline-block;
+            color: #EFF0EB;
+        }
+        .col-sm-12 .row .col-xs-12 .aptTable .content .section .stock{
+            font-size: 13px;
+            display: inline-block;
+            height: 48px;
+            line-height: 48px;
+            width: 100%;
+            color: #EFF0EB;
+            background: #00B6C2;
+        }
+        .col-sm-12 .row .col-xs-12 .aptTable .content .section .stock .num{
+            font-size: 18px;
+            padding-right: 4px;
+            display: inline-block;
+        }
+        .col-sm-12 .row .col-xs-12 .aptTable .wrapper .event{
+            padding-top: 15px;
+            padding-bottom: 30px;
+        }
+        .col-sm-12 .row .col-xs-12 .aptTable .wrapper .event table{
+            width: 100%;
+        }
+        .col-sm-12 .row .col-xs-12 .aptTable .wrapper .event td{
+            font-size:15px;
+            border: 1px solid #00B6C2;
+            padding-left: 20px;
+            width: 50%;
+        }
+        .col-sm-12 .row .col-xs-12 .aptTable .wrapper .event .eventType{
+            color: #807D72;
+        }
+        .col-sm-12 .row .col-xs-12 .aptTable .wrapper .event .eventSeries{
+            color:#EEF0EB;
+        }
+        @media only screen and (min-device-width: 320px){
+            div, span, li{
+                font-size: 10px!important;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .navBar {
+                padding-right: 10px;
+                padding-left: 8px;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .navBar li {
+                padding: 0 0.5px;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .wrapper>div {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .content .chose {
+                margin-bottom: 0px;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .content .section .stock {
+                height: 35px;
+                line-height: 35px;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .process {
+                width: 95%;
+                height: 60px;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .process .box {
+                padding: 10px 32px 20px 0;
+                width: 43%;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .process .box img {
+                width: 140px;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .score {
+                width: 45%!important;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .process .score .todayScore {
+                padding-top: 10px;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .process .score .number {
+                font-size: 22px!important;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .wrapper>div{
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .block {
+                padding: 0 0 28px 20px;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .block .express {
+                width: 65%;
+                height: 56px;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .count .todayCount {
+                font-size: 14px;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .underline{
+                height: 0px;
+                width: 82px;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .content .mainBlock {
+                width: 14.89%;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .content{
+                width: 94%;
+                padding-bottom: 35px;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .content .line span{
+                padding: 15px 0 15px 0;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .smallGreen {
+                width: 50px;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .wrapper .event table {
+                border-collapse: collapse;
+                width:100%;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .wrapper .event td {
+                font-size: 10px;
+                padding-left: 0;
+                width: 0;
+            }
+        }
+
+        @media only screen and (min-device-width: 360px)and (-webkit-min-device-pixel-ratio: 2) {
+            div, span, li{
+                font-size: 13px!important;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .content .mainBlock {
+                width: 14.97%;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .content .section .stock .num {
+                font-size: 18px!important;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .process .box img {
+                width: 170px;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .process .score .number {
+                font-size: 25px!important;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .content .section .stock {
+                height: 40px;
+                line-height: 40px;
+            }
+        }
+        @media (min-device-width:411px) and (min-device-width:412px) {
+            div, span, li{
+                font-size: 15px!important;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .content .section .stock {
+                height: 40px;
+                line-height: 40px;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .process .score .number {
+                font-size: 25px!important;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .wrapper .event td {
+                width: 0;
+                padding: 3px;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .smallGreen {
+                width: 56px;
+            }
+        }
+        @media only screen and (min-device-width:414px) and (-webkit-min-device-pixel-ratio: 3) {
+            div, span, li{
+                font-size: 15px!important;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .navBar li {
+                padding: 0 2px!important;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .smallGreen {
+                width: 56px;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .block .express {
+                height: 68px;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .process .score .number {
+                font-size: 26px!important;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .wrapper .event td {
+                width: 0;
+                padding: 3px;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .content .line span{
+                padding: 15px 0 15px 0;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .content .section .stock {
+                height: 50px;
+                line-height: 50px;
+            }
+        }
+        @media (min-device-width:767px) and (max-device-width:1023px){
+            .col-sm-12 .row .col-xs-12 .aptTable .navBar {
+                padding-right: 20px;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .navBar li {
+                padding: 0 5px;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .process .box img {
+                width: 260px;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .process .box {
+                width: 35%;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .process {
+                height: 79px;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .content .mainBlock {
+                width: 15.78%;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .process .score .number {
+                font-size: 38px!important;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .block .express {
+                width: 38%;
+                height: 70px;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .block .express {
+                width: 61%;
+                height: 38px;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .process .box {
+                padding: 15px 32px 5px 0;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .wrapper>div {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .wrapper .event td {
+                width: 50%;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .content .section .stock .num {
+                font-size: 18px!important;
+            }
+        }
+        @media (min-device-width:1024px){
+            div, span, li{
+                font-size: 15px!important;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .process {
+                height: 80px;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .navBar li {
+                padding: 0 9px;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .process .score .number {
+                font-size: 38px!important;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .content {
+                width: 96%;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .process .box {
+                width: 30%;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .process .box img {
+                width: 290px;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .block .express {
+                width: 45%;
+                height: 40px;
+                padding: 20px;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .navBar {
+                padding-right: 20px!important;
+                padding-left: 20px!important;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .wrapper>div {
+                padding-left: 20px!important;
+                padding-right: 20px!important;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .content .mainBlock {
+                width: 16%;
+            }
+            .col-sm-12 .row .col-xs-12 .aptTable .wrapper .event td {
+                width: 50%;
+            }
+        }
+    </style>
+        <ul class="breadcrumb">
+            <li>
+                设置
+            </li>
+            <li class="active">安全报表推送</li>
+        </ul>
+        <!-- .breadcrumb -->
+        <!-- #nav-search -->
+    </div>
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="col-xs-12">
+
+                <!--主要内容-->
+                <!--<div class="table-responsive">-->
+                <div class="formArea marT10">
+                    <!--<laber></laber>-->
+                    <div class="topName marT10 col-xs-12">
+                        <label>日报名称：</label>
+                        <input type="text" class="name" id="nameStyle" value="我的安全感知系统日报" disabled/>
+                        <a href="#" class="alter dailyStyle">修改</a>
+                    </div>
+                    <div class="holder marT10 col-xs-12" style="padding-left: 15px">
+                        <label class="" style="float:left;">发送日报：</label>
+						<div class="center" style="float: left">
+							<input type="checkbox" id="checkbox-11-1" style="display: none;"/>
+							<label for="checkbox-11-1"></label>
+						</div>
+                        <div class="clearBoth"></div>
+					</div>
+                    <div class="clearBoth"></div>
+                    <!-- 收件人表格-->
+                   <div class="recipients marT10" style="padding-left: 15px">
+                       <label style="float: left">收件人：</label>
+                       <div >
+                           <a href="#" class="dailyStyle" id="userAdd"><i class="icon-plus-sign bigger-120"></i>添加收件人</a>
+                           <!--<label style="float: left"><i class="icon-plus-sign bigger-120 green"></i>添加收件人：</label>-->
+                           <div style="margin: 10px 60px" >
+                               <table id="table" class="table table-striped table-bordered table-hover">
+                                   <thead>
+                                   <tr>
+                                       <th>姓名</th>
+                                       <th>邮箱</th>
+                                       <th>操作</th>
+                                   </tr>
+                                   </thead>
+                                   <tbody>
+                                   <tr>
+                                       <td>admin</td>
+                                       <td>admin@163.com</td>
+                                       <td>
+                                           <a class="green editeUser" href="javascript:;" title="编辑">
+                                               <i class="icon-pencil bigger-130"></i>
+                                           </a>
+
+                                           <a class="red deleteuser"  href="javascript:;" title="删除">
+
+                                               <i class="icon-trash bigger-130"></i>
+                                           </a>
+                                       </td>
+                                   </tr>
+                                   </tbody>
+                                   </table>
+                           </div>
+                       </div>
+                    </div>
+                    <!--邮件模板-->
+                    <div class="recipients marT10" style="padding-left: 15px">
+                        <label style="float: left">邮件模板：</label>
+                        <div  style="margin: 0px 65px;">
+                            <div class="aptTable span10 marT10" style="background:#252723;padding:0px;">
+                                <ul class="navBar">
+                                    <li style="padding-right: 0px;"><a href="javascript:;">产品服务</a></li>
+                                    <li><a href="javascript:;">备案专区</a></li>
+                                    <li><a href="javascript:;">管理控制台</a></li>
+                                    <li><a href="javascript:;">用户中心</a></li>
+                                    <li><a href="javascript:;">管理中心</a></li>
+                                    <li><a href="javascript:;">首页</a></li>
+                                </ul>
+                                <div class="wrapper">
+                                    <div class="process">
+                                        <div class="box">
+                                            <img src="__PUBLIC__/css/assets/images/score/1.jpg">
+                                        </div>
+                                        <div class="score">
+                                            <div class="todayScore">
+                                                今日安全得分
+                                            </div>
+                                            <div class="number">
+                                                69分
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block">
+                                        <div class="express">
+                                            得分是通过今日一天安全数据，如：紧急事件，漏洞，弱点，攻击，信息泄露
+                                            威胁等因素综合计算得出，代表了今天的安全指数
+                                        </div>
+                                    </div>
+                                    <div class="count">
+                                        <div class="todayCount">
+                                            今日安全统计
+                                        </div>
+                                        <div class="underline"></div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="mainBlock">
+                                            <div class="line">
+                                                <span>
+                                                    网络异常连接
+                                                </span>
+                                            </div>
+                                            <div class="section">
+                                                <a href="javascript:;">
+                                                <span class="stock">
+                                                    <span class="num">0</span><span>次</span>
+                                                </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="mainBlock">
+                                            <div class="line">
+                                                <span>
+                                                    DDos攻击
+                                                </span>
+                                            </div>
+                                            <div class="section">
+                                                <a href="javascript:;">
+                                                <span class="stock">
+                                                    <span class="num">0</span><span>次</span>
+                                                </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="mainBlock">
+                                            <div class="line">
+                    				<span>
+                    					未授权下载
+                    				</span>
+                                            </div>
+                                            <div class="section">
+                                                <a href="javascript:;">
+	                    				<span class="stock">
+		                    				<span class="num">0</span><span>次</span>
+		                    			</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="mainBlock">
+                                            <div class="line">
+                    				<span>
+                    					非法登录
+                    				</span>
+                                            </div>
+                                            <div class="section">
+                                                <a href="javascript:;">
+	                    				<span class="stock">
+		                    				<span class="num">0</span><span>次</span>
+		                    			</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="mainBlock">
+                                            <div class="line">
+                    				<span>
+                    					页面被篡改
+                    				</span>
+                                            </div>
+                                            <div class="section">
+                                                <a href="javascript:;">
+	                    				<span class="stock">
+		                    				<span class="num">0</span><span>次</span>
+		                    			</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="mainBlock">
+                                            <div class="line">
+                    				<span>
+                    					攻击次数
+                    				</span>
+                                            </div>
+                                            <div class="section">
+                                                <a href="javascript:;">
+	                    				<span class="stock">
+		                    				<span class="num">75</span><span>次</span>
+		                    			</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="mainBlock">
+                                            <div class="line">
+                    				<span>
+                    					发现后门
+                    				</span>
+                                            </div>
+                                            <div class="section">
+                                                <a href="javascript:;">
+	                    				<span class="stock">
+		                    				<span class="num">0</span><span>次</span>
+		                    			</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="mainBlock">
+                                            <div class="line">
+                    				<span>
+                    					暴力破解成功
+                    				</span>
+                                            </div>
+                                            <div class="section">
+                                                <a href="javascript:;">
+	                    				<span class="stock">
+		                    				<span class="num">0</span><span>次</span>
+		                    			</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="mainBlock">
+                                            <div class="line">
+                    				<span>
+                    					肉鸡行动
+                    				</span>
+                                            </div>
+                                            <div class="section">
+                                                <a href="javascript:;">
+	                    				<span class="stock">
+		                    				<span class="num">1</span><span>次</span>
+		                    			</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="mainBlock">
+                                            <div class="line">
+                    				<span>
+                    					发现漏洞
+                    				</span>
+                                            </div>
+                                            <div class="section">
+                                                <a href="javascript:;">
+	                    				<span class="stock">
+		                    				<span class="num">5</span><span>次</span>
+		                    			</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="mainBlock">
+                                            <div class="line">
+                    				<span>
+                    					发现弱口令
+                    				</span>
+                                            </div>
+                                            <div class="section">
+                                                <a href="javascript:;">
+	                    				<span class="stock">
+		                    				<span class="num">0</span><span>次</span>
+		                    			</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="mainBlock">
+                                            <div class="line">
+                    				<span>
+                    					新发现资产
+                    				</span>
+                                            </div>
+                                            <div class="section">
+                                                <a href="javascript:;">
+	                    				<span class="stock">
+		                    				<span class="num">2</span><span>次</span>
+		                    			</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="count">
+                                        <div class="todayCount">
+                                            重点关注
+                                        </div>
+                                        <div class="underline smallGreen"></div>
+                                    </div>
+                                    <div class="event">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <span class="eventType">事件类型：</span><span class="eventSeries">肉鸡行动</span>
+                                                </td>
+                                                <td>
+                                                    <span class="eventType">受影响资产：</span><span class="eventSeries">(ECS)12345678</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="eventType">事件类型：</span><span class="eventSeries">肉鸡行动</span>
+                                                </td>
+                                                <td>
+                                                    <span class="eventType">受影响资产：</span><span class="eventSeries">(ECS)12345678</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="eventType">事件类型：</span><span class="eventSeries">肉鸡行动</span>
+                                                </td>
+                                                <td>
+                                                    <span class="eventType">受影响资产：</span><span class="eventSeries">(ECS)12345678</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="eventType">事件类型：</span><span class="eventSeries">肉鸡行动</span>
+                                                </td>
+                                                <td>
+                                                    <span class="eventType">受影响资产：</span><span class="eventSeries">(ECS)12345678</span>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+<script>
+    //    点击修改输入框显示
+    $('.alter').on('click',function(){
+        $('.name').removeAttr("disabled");
+        $('.name').attr('id',"")
+    })
+    //输入框失去焦点时触发
+    $('.name').on('focusout',function(){
+        $('.name').attr("disabled","disabled");
+        $('.name').attr('id',"nameStyle");
+    })
+//添加用户
+    $(document).on("click","#userAdd",function(){
+        $("#addUser").show();
+        $("#fade").show();
+        return false
+    });
+
+    $('#addUser_form').submit(function(e){
+        e.stopPropagation();
+        e.preventDefault();
+        var data = $('#addUser_form').serialize();
+        var checkVal= $('#ischeck input').serialize();
+        $("#addUser").hide();
+        $("#fade").hide();
+        $('#addUser_form')[0].reset();
+    })
+
+    $(".closePop").css("cursor", "pointer").click(function () {
+        $("#addUser").hide();
+        $("#delUser").hide();
+        $("#editeUser").hide();
+        $("#fade").hide();
+        $(":checked").attr('checked',false);
+    });
+//    编辑用户
+    $(document).on("click",".editeUser",function(){
+        var row = $(this).parents('tr');
+        var user_status = $(this).parents('td').prev('td').attr('data');
+        $("#edite_user").val(row.children('td:eq(0)').html());
+        $("#edite_email").val(row.children('td:eq(1)').html());
+        var id = $(this).next().next().val();
+        $("#editeUser").show();
+        $("#fade").show();
+        return false
+    });
+    $('#user_edite_form').submit(function(e){
+        e.stopPropagation();
+        e.preventDefault();
+        var editeUser_data = $('#user_edite_form').serialize();
+        $("#editeUser").hide();
+        $("#fade").hide();
+           /* $.ajax({
+                url:'__URL__/do_user_edite',
+                type:'POST',
+                dataType:'json',
+                data:editeUser_data,
+                success:function(data){
+                    if(data.status=='success'){
+                        $("#editeUser").hide();
+                        $("#fade").hide();
+                        $('#user_edite_form')[0].reset();
+                        layer.msg("编辑成功");
+                        window.location.reload();
+                    }else if(data.status=='1'){
+                        layer.msg(data.msg);
+                    }else{
+                        layer.msg(data.msg);
+                    }
+                }
+            });*/
+    });
+    $(document).on("click",".deleteuser",function(){
+        $("#delUser").show();
+        $("#fade").show();
+        return false;
+    });
+    $('#user_delete_form').submit(function(e){
+        e.stopPropagation();
+        e.preventDefault();
+       /* var id = $("input:checkbox[name='checkbox']:checked").map(function() {
+            return $(this).val();
+        }).get().join(',');*/
+        $("#delUser").hide();
+        $("#fade").hide();
+       /* $.ajax({
+            url:'__URL__/user_delete',
+            type:'POST',
+            dataType:'json',
+            data:{'id':id},
+            success:function(data){
+                if(data.status=='success'){
+                    $("#delUser").hide();
+                    $("#fade").hide();
+                    $('#user_delete_form')[0].reset();
+                    layer.msg(data.msg);
+                    window.location.reload();
+                    $(":checked").attr('checked',false);
+                }else{
+                    $("#delUser").hide();
+                    $("#fade").hide();
+                    $(":checked").attr('checked',false);
+                    layer.msg(data.msg);
+                }
+            }
+        });*/
+    });
+
+    
+//判断开关按钮情况
+	var i=0;
+	$("#checkbox-11-1").click(function () {
+		i++;	
+		if(i%2 == 1){
+//			console.log(i);
+			console.log("打开");
+		}else{
+//			console.log(i);
+			console.log("关闭");
+		}	
+	})
+
+
+</script>

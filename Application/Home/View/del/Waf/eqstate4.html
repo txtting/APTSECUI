@@ -1,0 +1,350 @@
+<div class="main-content">
+
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try {
+                ace.settings.check('breadcrumbs', 'fixed')
+            } catch (e) {
+            }
+        </script>
+
+        <ul class="breadcrumb">
+            <li>
+                报表管理
+            </li>
+            <li class="active">报表分析</li>
+        </ul>
+        <!-- .breadcrumb -->
+        <!-- #nav-search -->
+    </div>
+    <div class="tabbable marL10">
+        <ul class="nav nav-tabs" id="myTab">
+            <li>
+                <a data-toggle="" href="__URL__/eqstate">
+                    全部
+                </a>
+            </li>
+
+            <li>
+                <a data-toggle="" href="__URL__/eqstate2">
+                    WEB攻击
+                </a>
+            </li>
+
+            <li>
+                <a data-toggle="" href="__URL__/eqstate3">
+                    入侵事件
+                </a>
+            </li>
+            <li class="active">
+                <a data-toggle="tab" href="#home">
+                    病毒事件
+                </a>
+            </li>
+
+        </ul>
+
+        <div class="tab-content">
+            <div id="home" class="tab-pane in active">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-xs-12">
+
+                            <div class="formArea marT10">
+                                <!--                    <label class="w70" style="float:left; line-height:30px; padding-left:5px; width:80px;">截止时间：</label>
+                                                    <input class="form-control form_datetime" name="task_start" type="text"
+                                                           data-date-format="yyyy-mm-dd" value="" style="width:150px; float: left"/>-->
+                                <label style="float:left; line-height:30px; padding-left:5px; ">机房：</label>
+                                <select id="" style="float: left">
+                                    <option value="0">全部</option>
+                                    <?php foreach ($rooms as $key => $value) : ?>
+                                    <option value="<?= $key ?>"><?= $value ?></option>
+                                    <?php endforeach ?>
+                                </select>
+                                <label class="w70" style="line-height:30px; padding-left:5px; width:65px;">IP地址：</label>
+                                <input id="ipinfo" type="text" value=""/>
+                                <button id="search" class="btn btn-sm btn-primary marL10"><i class="fa fa-search"></i>查询
+                                </button>
+                                <!--
+                                <b style="display:inline-block; position:absolute; right:10px; font-weight:normal; line-height:30px;">说明：ip地址为空时，进行全量查询。</b>-->
+                            </div>
+
+
+                            <div id="container" style="float:left;width: 50%;height:250px"></div>
+                            <!--<div id="container1" style="float:left;width: 50%;height:250px"></div>-->
+                            <div class="HomeRig">
+
+                                <div style="height: 200px;overflow-y: hidden">
+                                    <table cellpadding="0" cellspacing="0" border="0">
+                                        <th colspan="4" style="position:relative;">病毒事件攻击类别排行</th>
+                                        <tr>
+                                            <td>事件类型</td>
+                                            <td>攻击次数</td>
+                                        </tr>
+                                        <tr>
+                                            <td>蠕虫</td>
+                                            <td>134</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div style="float: left;width: 100%">
+                                <div id="container_line"  style="width:100%;height:250px;margin-left:0px;"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="dataTables_paginate paging_bootstrap">
+                        <ul class="pagination">
+                            {$user_show}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    Date.prototype.Format = function (fmt) { //author: meizz
+        var o = {
+            "M+": this.getMonth() + 1, //月份
+            "d+": this.getDate(), //日
+            "h+": this.getHours(), //小时
+            "m+": this.getMinutes(), //分
+            "s+": this.getSeconds(), //秒
+            "q+": Math.floor((this.getMonth() + 3) / 3), //季度
+            "S": this.getMilliseconds() //毫秒
+        };
+        if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+        for (var k in o)
+            if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+        return fmt;
+    }
+
+    $(".form_datetime").val(new Date().Format("yyyy-MM-dd hh:mm"));
+    function getWhere() {
+        var where = {};
+        where.time = $('.date-range-picker').val();
+        where.type = $('#type').val();
+        where.ip = $('#ipinfo').val();
+
+        return where;
+    }
+    Highcharts.setOptions({
+        lang: {
+            resetZoom: '重置',
+        }
+    });
+
+    jQuery(function ($) {
+        $(".form_datetime").datetimepicker({
+            autoclose: true,
+            language: 'Zh-cn',
+            /* startDate: new Date(),*/
+            format: 'yyyy-mm-dd hh:ii'
+        });
+        $('input[name=date-range-picker]').daterangepicker({
+                    startDate: moment().subtract(1, 'days'),
+                    endDate: moment(),
+                    locale: {
+                        applyLabel: '提交',
+                        cancelLabel: '取消',
+                        fromLabel: '开始时间',
+                        toLabel: '结束时间',
+                        weekLabel: 'W',
+                        customRangeLabel: 'Custom Range',
+                        daysOfWeek: ['日', '一', '二', '三', '四', '五', '六'],
+                        monthNames: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+                        firstDay: moment.localeData()._week.dow
+                    },
+                    language: 'cn',
+                    format: 'YYYY/MM/DD'
+                }
+        ).prev().on(ace.click_event, function () {
+                    $(this).next().focus();
+                });
+
+
+        $('#search').click(function (e) {
+            e.stopPropagation();
+            e.preventDefault();
+        });
+        $('#search').click();
+        $(function () {
+            $('#container').highcharts({
+                chart:{
+                    backgroundColor: '#fefefe',
+                    type: 'pie',
+                    options3d: {
+                        enabled: true,
+                        alpha: 70,
+                        beta: 0
+                    },
+                },
+                title: {
+                    text: '病毒事件级别比例饼状图'
+                },
+                credits:{
+                    enabled:false // 禁用版权信息
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        depth: 25,
+                        dataLabels: {
+                            enabled: true,
+                            //format: '{point.name}'
+                            format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                            style: {
+                                color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                            }
+                        },
+                    }
+                },
+                series: [{
+                    type: 'pie',
+                    name: '攻击数',
+                    data: [
+                        ['高危',       268],
+                        ['中危',       468],
+                        ['低危',    8],
+
+                    ]
+                }]
+            });
+        });
+        $(function () {
+            $('#container1').highcharts({
+                chart: {
+                    backgroundColor: '#fefefe',
+                    type: 'pie',
+                    options3d: {
+                        enabled: true,
+                        alpha: 70,
+                        beta: 0
+                    },
+                },
+                title: {
+                    text: 'OWASP TOP 10比例饼状图'
+                },
+                credits:{
+                    enabled:false // 禁用版权信息
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        depth: 25,
+                        dataLabels: {
+                            enabled: true,
+                            //format: '{point.name}'
+                            format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                            style: {
+                                color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                            }
+                        },
+                    }
+                },
+                series: [{
+                    type: 'pie',
+                    name: '攻击数',
+                    data: [
+                        ['SQL注入',       368],
+                        ['失效身份认证和会话管理',       168],
+                        ['XSS',    8],
+                        ['不安全的直接对象引用',       368],
+                        ['安全配置错误',       168],
+                        ['敏感信息泄露',    8],
+                        ['功能访问控制缺失',       368],
+                        ['夸张伪造请求',       168],
+                        ['使用含有已知漏洞组件',    8],
+                        ['未验证重定向和转发',    8],
+
+                    ]
+                }]
+            });
+        });
+        $(function () {
+
+            Highcharts.setOptions({
+                global: {
+                    useUTC: false
+                }
+            });
+
+            // Create the chart
+            Highcharts.stockChart('container_line', {
+                chart: {
+                    events: {
+                        load: function () {
+
+                            // set up the updating of the chart each second
+                            var series = this.series[0];
+                            setInterval(function () {
+                                var x = (new Date()).getTime(), // current time
+                                        y = Math.round(Math.random() * 100);
+                                series.addPoint([x, y], true, true);
+                            }, 1000);
+                        }
+                    }
+                },
+                credits:{
+                    enabled:false // 禁用版权信息
+                },
+                rangeSelector: {
+                    buttons: [{
+                        count: 1,
+                        type: 'minute',
+                        text: '1M'
+                    }, {
+                        count: 5,
+                        type: 'minute',
+                        text: '5M'
+                    }, {
+                        type: 'all',
+                        text: 'All'
+                    }],
+                    inputEnabled: false,
+                    selected: 0
+                },
+
+                title: {
+                    text: '实时攻击趋势图'
+                },
+
+                exporting: {
+                    enabled: false
+                },
+
+                series: [{
+                    name: 'Random data',
+                    data: (function () {
+                        // generate an array of random data
+                        var data = [],
+                                time = (new Date()).getTime(),
+                                i;
+
+                        for (i = -999; i <= 0; i += 1) {
+                            data.push([
+                                time + i * 1000,
+                                Math.round(Math.random() * 100)
+                            ]);
+                        }
+                        return data;
+                    }())
+                }]
+            });
+
+        });
+    });
+
+</script>

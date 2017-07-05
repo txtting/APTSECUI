@@ -1,0 +1,545 @@
+<div class="main-content">
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try {
+                ace.settings.check('breadcrumbs', 'fixed')
+            } catch (e) {
+            }
+        </script>
+
+        <ul class="breadcrumb">
+            <li>
+                安全事件
+            </li>
+            <li class="active">恶意流量检测</li>
+        </ul>
+        <!-- .breadcrumb -->
+        <!-- #nav-search -->
+    </div>
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="formArea marT10" >
+                    <form method="get"  action="">
+                        <label class="floatLeft">时间：</label>
+                        <div class="input-group w300 floatLeft" style="width:281px; text-indent:0px;">
+			                    <span class="input-group-addon">
+                                    <i class="icon-calendar bigger-110"></i>
+			                     </span><input class="form-control date-range-picker" type="text" name="date1" data-date-format="YYYY-MM-DD"
+                                               id="id-date-range-picker-1"/>
+                        </div>
+
+                        <button class="aptSearchBtn "><i class="fa fa-search"></i>查询</button>
+                    </form>
+                </div>
+                
+                <div class="chartBox marT10" style="position: relative">
+                
+                
+                <div class="aptBox aptBoxW4 aptBoxH3" >
+                <div id="container" style=" width:98%;height:100%;"></div>
+                </div>
+                
+                <div class="aptBox aptBoxW6 aptBoxH3 marL10" >
+                <div id="container2" style=" width:98%;height:100%;"></div>
+
+                </div>
+                    <!--30天http流量攻击趋势图的翻页-->
+                    <div class=" aptBoxW6 " style="position: absolute;right: 1px;bottom: 40px">
+                        <a href="#" style="position: absolute;top: 2px;left: 60px" title="查看上一周期" >
+                            <i class="icon-caret-left icon-2x"></i>
+                        </a>
+                        <!--<h4 style="margin:3px 40%;">3-8——3-17</h4>-->
+                        <a href="#"  style="position: absolute;top: 2px;right:7px" title="查看下一周期">
+                            <i class="icon-caret-right icon-2x" ></i>
+                        </a>
+                    </div>
+                   <div class="clearBoth"></div>
+                </div>
+                
+                
+                <div class="formArea marT10" id="type" >
+                    <label class="floatLeft">时间：</label>
+                    <div class="input-group w300 floatLeft" style="width:281px; text-indent:0px;">
+			                    <span class="input-group-addon">
+                                    <i class="icon-calendar bigger-110"></i>
+			                     </span><input class="form-control date-range-picker" type="text" name="date2" data-date-format="YYYY-MM-DD"
+                                               id="id-date-range-picker-2"/>
+                    </div>
+                    <label class="floatLeft">关键字：</label>
+                    <input type="text" name="username" class="floatLeft" id="key">
+                    <a href="#" class="aptSearchBtn">查询</a>
+                    <p class="atpTypeList">
+                    类型：
+                    <a class="">全部(<span>0</span>)</a>
+                    <a class="noSpite">非恶意(<span>0</span>)</a>
+                    <a class="virus" >病毒(<span>0</span>)</a>
+                    <a class="cockhorse">木马(<span>0</span>)</a>
+                    <a class="helminth" >蠕虫(<span>0</span>)</a>
+                    <a class="zombieVirus">僵尸病毒(<span>0</span>)</a>
+                    <a class="postern">后门(<span>0</span>)</a>
+                    <a class="crump">炸弹(<span>0</span>)</a>
+                    <a class="loophole">漏洞(<span>0</span>)</a>
+                    <a class="adPlug">广告插件(<span>0</span>)</a>
+                    <a class="httpAttack">HTTP攻击(<span>0</span>)</a>
+                    <a class="rpcAttack">RPC攻击(<span>0</span>)</a>
+                    <a class="webAttack">WebCGI攻击(<span>0</span>)</a>
+                    <a class="ddosAttack">DDOS攻击(<span>0</span>)</a>
+                 </p>
+                    <div class="clearBoth"></div>
+                </div>
+                
+                <div class="aptTable span10 marT10 tableShow" style="display: none">
+                    <div class="aptListBtnGroup"><h4><b>30</b>天恶意流量检测分布详情</h4></div>
+                <!--<div class="aptListBtnGroup"><a href="#"><i class="icon-upload-alt"></i>导出</a></div>-->
+                    <table id="reportTable"></table>
+
+			</div>
+                
+                
+            </div>   
+                
+                
+                
+            </div>
+        </div>
+        
+    </div>
+</div>
+<script>
+
+    $(document).ready(function(){
+        function operateFormatter(value, row, index) {
+            return [
+                "<a href='#' class='editIcon marR5 editTable' title='编辑'><i class='icon-edit'></i></a><a href='javascript:;' class='delIcon delTable' title='删除' data-toggle='modal' data-target='#mySmModal''><i class='icon-trash'></i></a>"
+            ].join('');
+        }
+        $('#reportTable').bootstrapTable({
+            method: 'get',
+//            url: '__URL__/indexbiao',
+            cache: false,
+//            height: 400,
+            striped: true,
+//            sidePagination:"server",
+            pagination: true,
+            pageSize: 10,
+            pageNumber: 1,
+            pageList: [10],
+            sortName : 'Time',
+            sortOrder : 'desc',
+            showColumns: true,
+
+            queryParams: function (params) {
+                var pars = {
+                    pagenum:params.offset/params.limit+1,
+                    order:params.order,
+                    sort:params.sort
+                };
+                return pars;
+            },
+            columns: [{
+                checkbox: true,
+            },
+                {
+                    field: "agreeType",
+                    title: "协议类型",
+                    align: "center",
+                    valign: "middle",
+                    sortable: true,
+                    /* formatter:function(value,row,index){
+                     return formateDate2(value);
+                     }*/
+                },
+                {field: "sourceIp", title: "源IP", align: "center", valign: "middle", sortable: false},
+                {field: "sourcePorts", title: "源端口", align: "center", valign: "middle", sortable: false},
+                {
+                    field: "aimIp",
+                    title: "目的IP",
+                    align: "center",
+                    valign: "middle",
+                    sortable: false,
+                },
+                {field: "aimPorts", title: "目的端口", align: "center", valign: "middle", sortable: false},
+                {field: "price", title: "病毒名称", align: "center", valign: "middle", sortable: false},
+                {field: "virusName", title: "病毒/攻击类型", align: "center", valign: "middle", sortable: false},
+                {field: "attackType", title: "病毒/攻击危害类型", align: "center", valign: "middle", sortable: false},
+                {field: "harm", title: "危害程度", align: "center", valign: "middle", sortable: false},
+                {field: "strategyType", title: "策略类型", align: "center", valign: "middle", sortable: false},
+                {field: "click", title: "恶意软件所属平台/客户端平台", align: "center", valign: "middle", sortable: false},
+                {field: "attackip", title: "攻击者IP", align: "center", valign: "middle", sortable: false},
+                {field: "victim", title: "受害者IP", align: "center", valign: "middle", sortable: false},
+                {field: "way", title: "检测方式", align: "center", valign: "middle", sortable: false},
+                {field: "reqType", title: "请求方法", align: "center", valign: "middle", sortable: false},
+                {
+                    field: "place_set",
+                    title: "操作",
+                    align: "center",
+                    valign: "middle",
+                    sortable: "true",
+                    switchable: false,
+                    formatter: operateFormatter
+                }],
+            data: [{
+                "agreeType": "00-E0-4C-3B-7D-2F",
+                "sourceIp": "百卓",
+                "sourcePorts": "22",
+                "aimIp": "11111",
+                "aimPorts": "22",
+                "price": "木马",
+                "virusName": "120.0.0.1",
+                "attackType": "鸡肉",
+                "harm": "11111",
+                "strategyType": "-",
+                "click": "-",
+                "attackip": "-",
+                "victim": "11111",
+                "way": "-",
+                "reqType": "-",
+                "place_set": "-",
+            }],
+            onLoadSuccess:function(data){
+//                    console.log(data);
+            },
+            responseHandler:function(res) {
+                var tem = {"total":0,"rows":[]};
+                if(res.status){
+                    tem.total = res.totalNum;
+                    tem.rows = eval(res.data);
+                }else{
+                    $('#reportTable').bootstrapTable('removeAll');
+                }
+                return tem;
+            },
+            onLoadError:function(status,res){
+                $('#reportTable').bootstrapTable('removeAll');
+                console.log(status,res);
+            }
+        });
+        $(window).resize(function () {
+            $('#reportTable').bootstrapTable('resetView');
+        });
+
+        /*$('#kSearch').click(function(){
+         var uname = $('#uname').val();
+         $('#reportTable').bootstrapTable('refresh');
+         });*/
+
+    });
+
+    //    表格时间范围的限制name="date2"
+    $('input[name="date2"]').on('change',function(){
+//    上面日期的分割
+        var date1=$('input[name="date1"]').val().split('-');
+//    格式化全局日期的起止时间
+        var timeS1=date1[0].split('/');
+        timeS1.unshift(timeS1[2]);timeS1.pop();timeS1= timeS1.join('/');
+        var timeT1=date1[1].split('/');
+        timeT1.unshift(timeT1[2]);
+        timeT1.pop();
+        timeT1= timeT1.join('/');
+//格式化表格日期的起止时间
+        var date2=$('input[name="date2"]').val().split('-');
+        var timeS2=date2[0].split('/');
+        timeS2.unshift(timeS2[2]);
+        timeS2.pop();
+        timeS2= timeS2.join('/');
+        var timeT2=date2[1].split('/');
+        timeT2.unshift(timeT2[2]);
+        timeT2.pop();
+        timeT2= timeT2.join('/');
+        var dateS1 = new Date(timeS1);
+        var dateS2 = new Date(timeS2);
+        var dateT1 = new Date(timeT1);
+        var dateT2 = new Date(timeT2);
+        if(!(dateS1-dateS2<=0&&dateT1-dateT2>=0)){
+            layer.alert('请选择正确时间')
+            date2=$('input[name="date2"]').val("")
+        }
+    })
+    jQuery(function ($) {
+        $('.date-range-picker').daterangepicker({
+                    startDate: moment().subtract(30, 'days'),
+                    endDate: moment(),
+                    locale : {
+                        applyLabel: '提交',
+                        cancelLabel: '取消',
+                        fromLabel: '开始时间',
+                        toLabel: '结束时间',
+                        weekLabel: 'W',
+                        customRangeLabel: 'Custom Range',
+                        daysOfWeek: ['日', '一', '二', '三', '四', '五','六'],
+                        monthNames: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+                        firstDay: moment.localeData()._week.dow
+                    },
+                    dateLimit : {
+                        day : 30
+                    },
+                    timePickerIncrement : 1440, //时间的增量，单位为分钟
+                    language: 'cn',}
+        ).prev().on(ace.click_event, function () {
+                    $(this).next().focus();
+                });
+
+    })
+</script>
+<!--初始化全局日期-->
+<script>
+    //获取时间方法
+    Date.prototype.Format = function (fmt) {
+        var o = {
+            "M+": this.getMonth() + 1, //月份
+            "d+": this.getDate() //日
+        };
+        if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+        for (var k in o)
+            if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+        return fmt;
+    }
+    //获取当前日期
+    var endTime= new Date().Format("MM/dd/yyyy");//Format("输入你想要的时间格式:yyyy-MM-dd,yyyyMMdd")
+    //结束时间
+    var date = new Date();//获取当前时间
+    date.setDate(date.getDate()-30);//设置天数 30 天
+    var starTime = date.Format("MM/dd/yyyy"); //减完30天以后的时间
+    date1=$('input[name="date1"]').val(starTime+" - "+endTime)
+</script>
+<script>
+    var chart1=function(data){
+        $('#container').highcharts({
+            colors: ['#c63012', '#ea7f0c', '#cbf621', '#7798BF', '#aaeeee', '#ff0066', '#eeaaee',
+                '#55BF3B', '#DF5353', '#7798BF', '#aaeeee'
+            ],
+            chart:{
+                backgroundColor: '#fefefe',
+                type: 'pie',
+                options3d: {
+                    enabled: true,
+                    alpha: 70,
+                    beta: 0
+                },
+            },
+            title: {
+                text: '30天恶意流量监测分布'
+            },
+            credits:{
+                enabled:false // 禁用版权信息
+            },
+            tooltip: {
+                pointFormat: '攻击占比: <b>{point.percentage:.1f}%</b><br>'+'{series.name}: <b>{point.y}</b>'
+            },
+            exporting: {
+                enabled: false
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    depth: 25,
+                    dataLabels: {
+                        enabled: true,
+                        //format: '{point.name}'
+                        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                        style: {
+                            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                        }
+                    },
+                }
+            },
+            series: [{
+                type: 'pie',
+                name: '攻击数',
+                data: [['后门',30],['鸡肉行为',40],['蠕虫病毒',40],['木马回连',20],['DDoS',22],['非恶意',14],['其他',10]]
+
+            }]
+        });
+    }
+
+
+    var chart2=function(data){
+        $('#container2').highcharts({
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: '30天恶意流量监测分布趋势图'
+            },
+            credits:{
+                enabled:false // 禁用版权信息
+            },
+            xAxis: {
+                type: 'category',
+                labels: {
+                    style: {
+                        fontSize: '14px',
+                        fontFamily: 'Verdana, sans-serif'
+                    }
+                },
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: '数量(个)'
+                }
+            },
+            legend: {
+                enabled: false
+            },
+            tooltip: {
+                formatter: function () {
+                    return '<b>' + this.x + '</b><br/>' +
+                            '告警类别: ' + this.series.name + '<br/>' +
+                            '个数: ' + this.y;
+                }
+            },
+            plotOptions: {
+                column: {
+                    stacking: 'normal',
+                    // dataLabels: {
+                    //     enabled: true
+                    // }
+                }
+            },
+            series: [{
+                name: 'SQL注入',
+                data: [
+                    ['3-8',2],['3-9',3],['3-10',4],['3-11',1],['3-12',2],['3-13',2], ['3-14',5],['3-15',3],
+                    ['3-16',2],
+                    ['3-17',2]
+                ]
+            }, {
+                name: '非正常登陆',
+                data: [
+                    ['3-8',2],['3-9',3],['3-10',4],['3-11',1],['3-12',2],['3-13',2], ['3-14',5],['3-15',3],
+                    ['3-16',2],
+                    ['3-17',2]
+                ]
+            }, {
+                name: '鸡肉行为',
+                data: [
+                    ['3-8',2],['3-9',3],['3-10',4],['3-11',1],['3-12',2],['3-13',2], ['3-14',5],['3-15',3],
+                    ['3-16',2],
+                    ['3-17',2]
+                ]
+            }]
+        });
+
+
+    }
+    //当左侧菜单栏显示或隐藏时图表重绘
+    $('.icon-double-angle-left').click(function(){
+        if($('.col-xs-12').css("width")!=$('.main-content').css("min-width")){
+            if($('#sidebar-collapse i').attr('class')=='icon-double-angle-left'){
+
+                setTimeout(function(){
+                    $('#container2').highcharts().reflow();
+                },1)
+            }else{
+                setTimeout(function(){
+//                    $('#container2').css("width",$('#container2').css("width"))
+                    $('#container2').highcharts().reflow();
+                },1)
+            }
+
+            $('#container2').highcharts().reflow();
+
+        }
+    });
+    chart1();
+    chart2();
+       /* $(function () {
+            $('#container').highcharts({
+				colors: ['#c63012', '#ea7f0c', '#cbf621', '#7798BF', '#aaeeee', '#ff0066', '#eeaaee',
+                '#55BF3B', '#DF5353', '#7798BF', '#aaeeee'
+            ],
+                chart:{
+                    backgroundColor: '#fefefe',
+                    type: 'pie',
+                    options3d: {
+                        enabled: true,
+                        alpha: 70,
+                        beta: 0
+                    },
+                },
+                title: {
+                    text: '最近7日恶意流量监测分布'
+                },
+                credits:{
+                    enabled:false // 禁用版权信息
+                },
+                tooltip: {
+                    pointFormat: '攻击占比: <b>{point.percentage:.1f}%</b><br>'+'{series.name}: <b>{point.y}</b>'
+                },
+                exporting: {
+                    enabled: false
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        depth: 25,
+                        dataLabels: {
+                            enabled: true,
+                            //format: '{point.name}'
+                            format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                            style: {
+                                color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                            }
+                        },
+                    }
+                },
+                series: [{
+                    type: 'pie',
+                    name: '攻击数',
+                    data: [['网络入侵',30],['异常流量',40],['系统漏洞',40]]
+                }]
+            });
+        });
+		
+		
+		
+		$(function () {
+    $('#container2').highcharts({
+        title: {
+            text: '最近7日恶意流量监测监测分布趋势',
+            x: -20
+        },
+		credits:{
+                    enabled:false // 禁用版权信息
+                },
+        xAxis: {
+			type: 'datetime',
+                dateTimeLabelFormats: {
+                    millisecond: '%H:%M:%S.%L',
+                    second: '%H:%M:%S',
+                    minute: '%H:%M',
+                    hour: '%H:%M',
+                    day: '%m-%d',
+                    week: '%m-%d',
+                    month: '%Y-%m',
+                    year: '%Y'
+                }},
+        yAxis: {
+            title: {
+                text: '单位'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valueSuffix: '°C'
+        },
+        legend: {
+            borderWidth: 0
+        },
+        series: [{
+            name: '网络入侵',
+            data: [[1486656000000,7.0],[1486569600000,7.0]]
+        }]
+    });
+});*/
+
+		</script>
+

@@ -1,0 +1,75 @@
+<?php
+namespace Home\Controller;
+class SafeController extends CommonController {
+    public function index(){
+        layout('Layout/layout');
+        $this->display();
+    }
+    public function indextubiao(){
+        if(!empty($_GET)) {
+            $date1     = I('get.date1');
+            if($date1){
+                session('date1',$date1);
+                $ts1 = $this ->time_data($date1)['ts'];
+                $td1 = $this ->time_data($date1)['td'];
+            }
+        }else{
+            $td2 = $td1 = time();
+            $ts2 = $ts1 = $td1 - 30*24*3600;
+        }
+    }
+    public function indexbiao(){
+        if(I('get.date2')) {
+            $date2     = I('get.date2');
+            session('date2',$date2);
+            $ts2 = $this ->time_data($date2)['ts'];
+            $td2 = $this ->time_data($date2)['td'];
+        }
+    }
+    public function indexzhutu(){
+        $ts1 = session('ts1');
+        $td1 = session('td1');
+        if(I('get.sign')=='1') {
+            /*$td = $td1 - 10*24*3600;
+            $ts = $td  - 10*24*3600;
+            if($td>$ts1&&$ts>$ts1){
+                session('ts',$ts);
+                session('td',$td);
+            }elseif($td>$ts1&&$ts<=$ts1){
+                session('td',$td);
+                session('ts',$ts1);
+            }elseif($td<=$ts1){
+                session('td',$td1);
+                session('ts',$ts1);
+            }
+            $td = session('td1');
+            $ts = session('ts1');*/
+        }elseif(I('get.sign')=='2'){
+            /*$td = $td1 + 10*24*3600;
+            $ts = $td  + 10*24*3600;*/
+        }
+    }
+    public function time_data($date){
+        $time = explode('-', $date);
+        $ts   = strtotime($time[0]);
+        $td   = strtotime($time[1]."23:59:59");
+        $times = array('ts'=>$ts,'td'=>$td);
+        return $times;
+    }
+	public function file(){
+        layout('Layout/layout');
+        $this->display();
+    }
+	public function bruteforce(){
+        layout('Layout/layout');
+        $this->display();
+    }
+	public function malicioust(){
+        layout('Layout/layout');
+        $this->display();
+    }
+	public function scanevent(){
+        layout('Layout/layout');
+        $this->display();
+    }
+}

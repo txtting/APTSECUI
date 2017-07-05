@@ -1,0 +1,26 @@
+<?php
+namespace Home\Controller;
+
+class VirController extends CommonController {
+    public function getdatastr($data,$col1,$col2){
+        $str = "[";
+        for ($i=0; $i < count($data) ; $i++) { 
+            $str .="['".$data[$i][$col1]."',".$data[$i][$col2]."],";
+        }
+        $str .= "]";
+        return $str;
+    }
+    public function index(){
+        $url = 'http://10.80.6.2:8070/byzoro.apt.com/urgencies/list/day?lastCount=5';
+        //发送请求
+        $data1 = request($url,false);  
+        $data1 = json_decode($data1,true);
+        $this-> assign('data1',$data1['data']);
+        Layout('Layout/layout');
+        $this->display();
+    }
+	public function assets_detail(){  
+        Layout('Layout/layout');
+        $this->display();
+    }
+}

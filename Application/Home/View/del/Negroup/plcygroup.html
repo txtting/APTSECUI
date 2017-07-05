@@ -1,0 +1,348 @@
+
+<div class="main-content">
+    <div id="imgRequest" class="loadImg"></div>
+<style>
+    .text-decoration {
+        /*text-decoration: line-through;*/
+    }
+
+    .closePop {
+        cursor: pointer;
+    }
+</style>
+    <div id="zTreeOption" style="display:none;">
+        <h1>选择条件<!--<a href="#" style="margin-right: 30px">确定</a>--><a href="#" class="closePop">关闭</a></h1>
+
+        <div id="zTreeCon" style="width:160px; overflow:auto;">
+            <ul id="tree-for-group" class="ztree"></ul>
+            <ul id="tree-for-net" class="ztree" style="display: none"></ul>
+        </div>
+    </div>
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try {
+                ace.settings.check('breadcrumbs', 'fixed')
+            } catch (e) {
+            }
+        </script>
+
+        <ul class="breadcrumb">
+            <li>
+                网元管理
+            </li>
+            <li class="active">网元监控</li>
+        </ul>
+        <!-- .breadcrumb -->
+
+    </div>
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="tabbable marT10">
+                    <div id="home" class="tab-pane  in active">
+                        <div class="formArea">
+                            <p>
+                                <button class="btn btn-sm btn-primary marL10 marR10" id="ztreeBtn"><i
+                                        class="fa fa-search"></i>筛选条件
+                                </button>
+                                <input type="radio" value="1" checked name="netChose"> <label
+                                    class="marR10">按网元组</label><input type="radio" value="2" name="netChose"> <label
+                                    class="">按网元</label>
+                            </p>
+                        </div>
+                        <div id="checkTab">
+                            <label style="margin: 10px">
+                                <input type="checkbox" name="Group" value="1"
+                                       autocomplete="off" checked>
+                                内存使用率
+                            </label>
+                            <label style="margin: 10px">
+                                <input type="checkbox" name="Group" value="2"
+                                       autocomplete="off" hidefocus="true">存储资源使用率
+                            </label>
+                            <label style="margin: 10px">
+                                <input type="checkbox" name="Group" value="3"
+                                       autocomplete="off" hidefocus="true">CPU温度
+                            </label>
+                            <label style="margin: 10px">
+                                <input type="checkbox" name="Group" value="4"
+                                       autocomplete="off">会话使用
+                            </label>
+                            <label style="margin: 10px">
+                                <input type="checkbox" name="Group" value="5"
+                                       autocomplete="off">业务口流量
+                            </label>
+                        </div>
+                        <div id="charts-view">
+                            <script id="charts-tpl" type="text/html">
+                                <div id="chart_{{d.chartCount}}" class="is-chart">
+                                    <div class="chart-container"
+                                         style=" width:100%;height: 300px; display: block"></div>
+                                    {{# var tabledata = d.data.tabledata; }}
+                                    <table class="table table-hover">
+                                        <thead class="bordered-darkorange">
+                                        <tr>
+                                            <th width="13" style="padding-right: 0;"></th>
+                                            {{# $.each(tabledata.thead,function(i, v){ }}
+                                            <th>{{v}}</th>
+                                            {{# }) }}
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        {{# $.each(tabledata.tbody,function(index, value){ }}
+                                        <tr tbid="{{value.tbid}}">
+                                            <td width="13" style="padding-right: 0;">
+                                                <input type="checkbox" checked/>
+                                            </td>
+                                            {{# $.each(value,function(i, v){ }}
+                                            {{# if(i != "tbid"){ }}
+                                            <td>{{v}}</td>
+                                            {{# } }}
+                                            {{# }) }}
+                                        </tr>
+                                        {{# }) }}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </script>
+                        </div>
+                        <div style="clear:both;"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- /span -->
+        </div>
+        <!-- /row -->
+    </div>
+
+</div>
+
+
+<script type="text/javascript">
+    
+    $(document).ready(function ($) {
+        $("input[name='netChose']").first().prop("checked",true);
+        $("#home .chartContainer").width($(".chartContainer").width());
+        var chartTpl      = $("#charts-tpl").html();
+        var isnet         = 0;
+        $("#charts-tpl").remove();
+        var chartinit     = function ($c, $data, $reinit) {
+            Highcharts.setOptions({
+                lang:{
+                   contextButtonTitle:"图表导出菜单",
+                   decimalPoint:".",
+                   downloadJPEG:"下载JPEG图片",
+                   downloadPDF:"下载PDF文件",
+                   downloadPNG:"下载PNG文件",
+                   downloadSVG:"下载SVG文件",
+                   drillUpText:"返回 {series.name}",
+                   loading:"加载中",
+                   months:["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月"],
+                   noData:"没有数据",
+                   numericSymbols: null,//["K" , "M" , "G" , "T" , "P" , "E"],
+                   printChart:"打印图表",
+                   resetZoom:"恢复缩放",
+                   resetZoomTitle:"恢复缩放",
+                   shortMonths: ["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月"],
+                   thousandsSep:",",
+                   weekdays: ["星期一", "星期二", "星期三", "星期三", "星期四", "星期五", "星期六","星期天"]
+                  }
+                });
+            $c.highcharts({
+                chart      : {
+                    zoomType    : 'x',
+                    spacingRight: 20
+                },
+                title      : {
+                    text: $data.title.title
+                },
+                subtitle   : {},
+                xAxis      : {
+                    type                : 'datetime',
+                    maxZoom             : $data.maxZoom,
+                    title               : {
+                        text: null
+                    },
+                    dateTimeLabelFormats: {
+                        minute:"%H:%M",
+                        hour:" %H:%M",
+                        day:"%b %e",
+                    },
+
+                },
+                yAxis      : {
+                    title: {
+                        text: $data.title.yAxis
+                    }
+                },
+                tooltip: {
+                    enabled: true,
+                    pointFormat: '<span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y}{series.company}</b><br/>',
+                    //crosshairs: null,
+                    dateTimeLabelFormats: {
+                      /* millisecond: '%Y-%m-%d %H:%M:%S',*/
+                        second: '%Y-%m-%d %H:%M:%S',
+
+                    },
+
+                },
+
+                legend     : {
+                    enabled: false
+                },
+                plotOptions: {
+                    area: {
+                        fillColor: {
+                            linearGradient: {x1: 0, y1: 0, x2: 0, y2: 1},
+                            stops         : [
+                                [0, Highcharts.getOptions().colors[0]],
+                                [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+                            ]
+                        },
+                        lineWidth: 1,
+                        marker   : {
+                            enabled: false
+                        },
+                        shadow   : false,
+                        states   : {
+                            hover: {
+                                lineWidth: 1
+                            }
+                        },
+                        threshold: null
+                    }
+                },
+                series     : $reinit == undefined ? $data.series : $reinit
+            });
+        };
+        var contentInit   = function (data) {
+            var chartCount = 0;
+            $("#charts-view").html("");
+            $.each(data, function (index, value) {
+                laytpl(chartTpl).render({
+                    chartCount: chartCount,
+                    data      : value
+                }, function (html) {
+                    $("#charts-view").append(html);
+                    var chart     = $("#chart_" + chartCount);
+                    var container = chart.find(".chart-container");
+                    chartinit(container, value);
+                    chart.find(".table").find("tr").bind("click", function () {
+                        var _this    = $(this);
+                        if(!_this.hasClass("text-decoration")){
+                            _this.addClass("text-decoration");
+                            _this.find("input").prop({checked:false}); 
+                        }else{
+                            _this.removeClass("text-decoration");
+                            _this.find("input").prop({checked:true}); 
+                        }
+                        var tbid     = _this.attr("tbid");
+                        var chart_id = _this.parents(".is-chart").attr("id").replace("chart_", "");
+                        var _data    = [];
+                        var ids      = {};
+                        $.each(_this.parents(".is-chart").find("tr[tbid]"), function (index, value) {
+                            value = $(value);
+                            if (!value.hasClass("text-decoration")) {
+                                ids[value.attr("tbid")] = "";
+                            }
+                        });
+                        $.each(data[chart_id].series, function (index, value) {
+                            if (ids.hasOwnProperty(value.tbid)) {
+                                _data.push(value);
+                            }
+                        });
+                        chartinit(container, value, _data);
+                    });
+                });
+                chartCount++;
+            });
+        };
+        var fetchFormData = function (treeId) {
+            if (treeId == undefined) {
+                treeId = isnet ? "tree-for-net" : "tree-for-group";
+            }
+            var checkdeNodes = $.fn.zTree.getZTreeObj(treeId).getCheckedNodes();
+           // console.log(checkdeNodes);
+            var checks       = {};
+            $.each(checkdeNodes, function (index, value) {
+                if (!(value.id.indexOf("g") < 0) && !checks.hasOwnProperty(value.pId.replace("g", ""))) {
+                    checks[value.id.replace("g", "")] = [0];
+                }
+                if (!(value.id.indexOf("n") < 0)) {
+                    if (!checks.hasOwnProperty(value.pId.replace("g", ""))) {
+                        checks[value.pId.replace("g", "")] = [0];
+                    }
+                    checks[value.pId.replace("g", "")].push(value.id.replace("n", ""));
+                }
+            });
+
+            var charts       = [];
+            $.each($("input[name='Group']:checked"), function (index, value) {
+                charts.push($(value).val());
+            });
+            return {
+                tree  : checks,
+                isnet : isnet,
+                charts: charts
+            };
+        };
+        var fetchData     = function (data) {
+            $.post("{:U('plcygroup')}", data, function (data) {
+
+                if (!data.data) {
+                    return false;
+                }
+
+                contentInit(data.data);
+            });
+        };
+
+        
+
+        var treeSet = {
+            check   : {enable: true},
+            data    : {simpleData: {enable: true}},
+            callback: {
+                onCheck: function onCheck(e, treeId, treeNode) {
+                    fetchData(fetchFormData(treeId));
+                }
+            }
+        };
+
+        $("#zTreeCon").height($(window).height() - 70);
+        $.fn.zTree.init($("#tree-for-group"), treeSet, <?=json_encode($group_tree)?>);
+        $.fn.zTree.init($("#tree-for-net"), treeSet, <?=json_encode($net_tree)?>);
+
+
+        $("#ztreeBtn").click(function () {
+            $("#zTreeOption").show();
+            return false
+        });
+        $(".closePop").click(function () {
+            $("#zTreeOption").hide();
+        });
+
+        $(":checkbox").change(function () {
+            fetchData(fetchFormData());
+        });
+        $(":radio[name='netChose']").click(function () {
+            var index = $(":radio[name='netChose']").index($(this));
+            if (index == 0) {
+                isnet = 0;
+                $("#tree-for-group").show();
+                $("#tree-for-net").hide();
+            } else {
+                isnet = 1;
+                $("#tree-for-group").hide();
+                $("#tree-for-net").show();
+            }
+            fetchData(fetchFormData());
+        })
+    });
+    $("#imgRequest").ajaxStart(function(){
+        $("#imgRequest").show();
+    });
+    $("#imgRequest").ajaxStop(function(){
+        $("#imgRequest").hide();
+    });
+</script>

@@ -1,0 +1,221 @@
+<div class="main-content">
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try {
+                ace.settings.check('breadcrumbs', 'fixed')
+            } catch (e) {
+            }
+        </script>
+
+        <ul class="breadcrumb">
+            <li>
+                资产总揽
+            </li>
+            
+            <li class="active">资产探测</li>
+        </ul>
+        <!-- .breadcrumb -->
+        <!-- #nav-search -->
+    </div>
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="formArea marT10">
+                    <div class="formTextList">
+                        <label class="floatLeft">时间：</label>
+                        <div class="input-group w300 floatLeft" style="width:281px; text-indent:0px;">
+	                        <span class="input-group-addon">
+                                <i class="icon-calendar bigger-110"></i>
+	                        </span>
+                            <input class="form-control date-range-picker" type="text" name="da2" data-date-format="YYYY-MM-DD" id="id-date-range-picker-2" />
+                        </div>
+                    </div>
+                    <div class="formTextList">
+                        <label class="floatLeft">关键字：</label>
+                        <input type="text" name="keyword" id="keyword" class="floatLeft">
+                        <!--</div>-->
+
+                    </div>
+                    <a id="kSearch2" class="btn btn-primary">查询</a>
+                    <div class="clearBoth"></div>
+                </div>
+               <!--  <div class="formArea marT10" >
+                    类型： 
+                    <select>
+                    <option>全部</option>
+                    <option>SQL注入成功</option>
+                    <option>鸡肉行为</option>
+                    <option>蠕虫病毒</option>
+                    <option>木马回连</option>
+                    <option>DDoS</option>
+                    <option>非正常登录</option>
+                    <option>异常网络连接</option>
+                    <option>未授权下载</option>
+                    <option>webshell</option>
+                    </select>
+                    发现时间：<input type="text" placeholder="">
+                    被攻击资产：<input type="text" placeholder="" title="">
+                    攻击者IP：<input type="text" placeholder="" title="">
+                   <div style="display:none;"> 攻击使用协议：<input type="text" placeholder="" title="">
+                    发起爆破次数：<input type="text" placeholder="" title=""></div>
+                    <a href="#" class="aptSearchBtn">查询</a>
+
+                </div>-->
+
+                <div class="aptTable span10 marT10 tableShow" style="display: none">
+        		<table id="reportTable">
+			    </table>
+                <!--<div class="aptListBtnGroup"><a href="#"><i class="icon-upload-alt"></i>导出</a></div>-->
+				<!--<table data-toggle="table" data-striped="true" data-pagination="true" data-search="true"  data-show-columns="true">
+                    <thead>
+
+                            <tr>
+                                <th></th>
+                                <th data-field="type">类型</th>
+                                <th data-field="fristTime">首次发现时间</th>
+                                <th data-field="lastName">最后发现时间</th>
+                                <th data-field="attackPrice">被攻击资产</th>
+                                <th data-field="attackIP">攻击者IP</th>
+                                <th data-field="attackAgree">攻击使用协议</th>
+                                <th data-field="burstTime">发起爆破次数</th>
+                            </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td > <a href="javascript:;" class="box"  > <i class="glyphicon glyphicon-plus"></i></a> </td>
+                            <td>病毒</td>
+                            <td>2017-03-13 17:20:20</td>
+                            <td>2017-03-13 19:20:20</td>
+                            <td>服务器1</td>
+                            <td>1.1.1.1</td>
+                            <td>http</td>
+                            <td>2000</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>-->
+			</div>
+                
+                
+            </div>
+            </div>  
+        </div>
+        
+    </div>
+</div>
+<script>
+    // 第一次点击
+    $(document).on('click','.box',function(){
+        $(this).attr('class','box2')
+//        $(this).html("收起")
+        $(this).children().attr('class','glyphicon glyphicon-minus')
+        $(this).parent().parent().after('<tr class="hid"><td colspan="8" ><div>类型：病毒</div></td></tr>');
+    })
+    $(document).on('click','.box2',function(){
+        $(this).attr('class','box');
+        $(this).children().attr('class','glyphicon glyphicon-plus')
+//            alert(1)
+        $(this).parent().parent().next().empty();
+    })
+
+</script>
+<script type="text/javascript">
+	function detailFormatter(index, row) {
+	    var html = [];
+        $.each(row, function (key, value) {
+            html.push('<p><b>' + key + ':</b> ' + value + '</p>');
+    	});
+    	return html.join('');
+	}
+    $(function () {
+       /* function operateFormatter(value, row, index) {
+            return [
+                "<a href='#' class='editIcon marR5 editTable' title='编辑'><i class='icon-edit'></i></a><a href='javascript:;' class='delIcon delTable' title='删除' data-toggle='modal' data-target='#mySmModal''><i class='icon-trash'></i></a>"
+            ].join('');
+        }*/
+
+        $('#reportTable').bootstrapTable({
+            method: 'get',
+            url: '__URL__/indexbiao',
+            cache: false,
+            striped: true,
+//            sidePagination:"server",
+            pagination: true,
+            pageSize: 10,
+            pageNumber: 1,
+            pageList: [10],
+            sortName : 'Time',
+            sortOrder : 'desc',
+            showColumns: true,
+            detailView:true,
+            detailFormatter:"detailFormatter",
+            columns: [{
+                checkbox: true,
+            },
+                {field: "type", title: "类型", align: "center", valign: "middle", sortable: false},
+                {field: "fristTime", title: "首次发现时间", align: "center", valign: "middle", sortable: false},
+                {field: "lastTime", title: "最后发现时间", align: "center", valign: "middle", sortable: false},
+                {field: "attackPrice", title: "被攻击资产", align: "center", valign: "middle", sortable: false},
+                {
+                    field: "attackIP",
+                    title: "攻击者IP",
+                    align: "center",
+                    valign: "middle",
+                    sortable: false
+                },
+                {field: "attackAgree", title: "攻击使用协议", align: "center", valign: "middle", sortable:false},
+                {field: "burstTime", title: "发起爆破次数", align: "center", valign: "middle", sortable: false},
+                /*{
+                    field: "place_set",
+                    title: "操作",
+                    align: "center",
+                    valign: "middle",
+                    sortable: "true",
+                    switchable: false,
+                    formatter: operateFormatter
+                }*/],
+            data: [{
+                "type": "木马",
+                "fristTime": "2017-01-01 10:10:10",
+                "lastTime": "2017-01-01 12:10:10",
+                "attackPrice": "20",
+                "attackIP": "168.10.66.3",
+                "attackAgree": "http",
+                "burstTime": "2",
+            }]
+        });
+
+        $(window).resize(function () {
+            $('#reportTable').bootstrapTable('resetView');
+        });
+    });
+</script>
+<script>
+    jQuery(function ($) {
+        $('.date-range-picker').daterangepicker({
+                    startDate: moment().subtract(29, 'days'),
+                    endDate: moment(),
+                    maxDate : moment(),
+                    locale : {
+                        applyLabel: '提交',
+                        cancelLabel: '取消',
+                        fromLabel: '开始时间',
+                        toLabel: '结束时间',
+                        weekLabel: 'W',
+                        customRangeLabel: 'Custom Range',
+                        daysOfWeek: ['日', '一', '二', '三', '四', '五','六'],
+                        monthNames: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+                        firstDay: moment.localeData()._week.dow
+                    },
+//                    startDate: moment().startOf('day'),
+//                    minValidDate: '315507600000000000000000', //最小可用时间，控制日期选择器的可选力度
+                    dateLimit : {
+                        day : 29
+                    },
+                    timePickerIncrement : 1440, //时间的增量，单位为分钟
+                    language: 'cn',}
+        ).prev().on(ace.click_event, function () {
+                    $(this).next().focus();
+                });
+    })
+</script>

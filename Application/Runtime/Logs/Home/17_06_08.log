@@ -1,0 +1,494 @@
+[ 2017-06-08T14:18:32+08:00 ] 127.0.0.1 /APTSecUI/index.php/Safe/offLine
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496902712',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `offline_task` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `offline_task` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-08T14:18:36+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Safe/offLineOK?status=&types=&times=&pagenum=1&limit=10&order=desc&sort=times&_=1496902715935
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496902716',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `offline` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `offline` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `offline` ORDER BY times desc LIMIT 0,10   [ RunTime:0.0000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 589 行.
+
+[ 2017-06-08T14:19:18+08:00 ] 127.0.0.1 /APTSecUI/index.php/Safe/offLine
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0030s ]
+SQL: UPDATE `users` SET `last_login_time`='1496902758',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `offline_task` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `offline_task` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-08T14:19:21+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Safe/offLineOK?status=&types=&times=&pagenum=1&limit=10&order=desc&sort=times&_=1496902761668
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496902761',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `offline` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `offline` LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `offline` ORDER BY times desc LIMIT 0,10   [ RunTime:0.0010s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 589 行.
+
+[ 2017-06-08T14:19:51+08:00 ] 127.0.0.1 /APTSecUI/index.php/Safe/offLine
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496902791',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `offline_task` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `offline_task` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-06-08T14:19:55+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Safe/offLineOK?status=&types=&times=&pagenum=1&limit=10&order=desc&sort=times&_=1496902794777
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496902794',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.4650s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `offline` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `offline` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `offline` ORDER BY times desc LIMIT 0,10   [ RunTime:0.0000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 589 行.
+
+[ 2017-06-08T14:19:59+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Safe/offline_add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496902799',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `offline` [ RunTime:0.0040s ]
+SQL: INSERT INTO `offline` (`name`,`types`,`start`,`end`,`times`,`status`,`weight`) VALUES ('&quot;/&gt;&lt;script&gt;alert(5)&lt;/script&gt;&lt;!-','waf','2017/05/10 ',' 2017/06/08','1496902799','未开始','1') [ RunTime:0.0070s ]
+
+[ 2017-06-08T14:19:59+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Safe/offLineOK?status=&types=&times=&pagenum=1&limit=10&order=desc&sort=times&_=1496902799305
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496902799',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `offline` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `offline` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `offline` ORDER BY times desc LIMIT 0,10   [ RunTime:0.0000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 589 行.
+
+[ 2017-06-08T14:21:09+08:00 ] 127.0.0.1 /APTSecUI/index.php/Safe/offLine
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496902868',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0910s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `offline_task` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `offline_task` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-06-08T14:21:12+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Safe/offLineOK?status=&types=&times=&pagenum=1&limit=10&order=desc&sort=times&_=1496902872630
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496902872',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0060s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `offline` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `offline` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `offline` ORDER BY times desc LIMIT 0,10   [ RunTime:0.0010s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 589 行.
+
+[ 2017-06-08T14:21:19+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Safe/offline_add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496902879',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.1650s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `offline` [ RunTime:0.0050s ]
+SQL: INSERT INTO `offline` (`name`,`types`,`start`,`end`,`times`,`status`,`weight`) VALUES ('&quot;/&gt;&lt;script&gt;alert(5)&lt;/script&gt;&lt;!-','waf','2017/05/10 ',' 2017/06/08','1496902879','未开始','1') [ RunTime:0.0200s ]
+
+[ 2017-06-08T14:21:20+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Safe/offLineOK?status=&types=&times=&pagenum=1&limit=10&order=desc&sort=times&_=1496902879887
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0030s ]
+SQL: UPDATE `users` SET `last_login_time`='1496902880',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.2090s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `offline` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `offline` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `offline` ORDER BY times desc LIMIT 0,10   [ RunTime:0.0010s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 589 行.
+
+[ 2017-06-08T14:26:15+08:00 ] 127.0.0.1 /APTSecUI/index.php/Safe/offLine
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0060s ]
+SQL: UPDATE `users` SET `last_login_time`='1496903175',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.1370s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `offline_task` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `offline_task` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-08T14:26:19+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Safe/offLineOK?status=&types=&times=&pagenum=1&limit=10&order=desc&sort=times&_=1496903179349
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0060s ]
+SQL: UPDATE `users` SET `last_login_time`='1496903179',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0050s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `offline` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `offline` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `offline` ORDER BY times desc LIMIT 0,10   [ RunTime:0.0010s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 589 行.
+
+[ 2017-06-08T14:29:57+08:00 ] 127.0.0.1 /APTSecUI/index.php/Safe/offLine
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496903397',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `offline_task` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `offline_task` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006000s ]
+
+[ 2017-06-08T14:30:01+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Safe/offLineOK?status=&types=&times=&pagenum=1&limit=10&order=desc&sort=times&_=1496903401191
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496903401',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `offline` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `offline` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `offline` ORDER BY times desc LIMIT 0,10   [ RunTime:0.0010s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 589 行.
+
+[ 2017-06-08T14:31:39+08:00 ] 127.0.0.1 /APTSecUI/index.php/Safe/offLine
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496903499',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `offline_task` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `offline_task` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-06-08T14:31:42+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Safe/offLineOK?status=&types=&times=&pagenum=1&limit=10&order=desc&sort=times&_=1496903502156
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496903502',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0130s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `offline` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `offline` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `offline` ORDER BY times desc LIMIT 0,10   [ RunTime:0.0010s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 589 行.
+
+[ 2017-06-08T14:32:14+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Safe/offline_del
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496903534',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `offline` [ RunTime:0.0050s ]
+SQL: DELETE FROM `offline` WHERE `name` = '&quot;/&amp;gt;&amp;lt;script&amp;gt;alert(5)&amp;lt;/script&amp;gt;&amp;lt;!-' AND `times` = 1496902799 [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `offline_task` [ RunTime:0.0030s ]
+SQL: DELETE FROM `offline_task` WHERE `name` = '&quot;/&amp;gt;&amp;lt;script&amp;gt;alert(5)&amp;lt;/script&amp;gt;&amp;lt;!-' AND `times` = 1496902799 [ RunTime:0.0000s ]
+
+[ 2017-06-08T14:32:14+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Safe/offLineOK?status=&types=&times=&pagenum=1&limit=10&order=desc&sort=times&_=1496903534609
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0060s ]
+SQL: UPDATE `users` SET `last_login_time`='1496903534',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `offline` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `offline` LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `offline` ORDER BY times desc LIMIT 0,10   [ RunTime:0.0000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 589 行.
+
+[ 2017-06-08T14:32:45+08:00 ] 127.0.0.1 /APTSecUI/index.php/Safe/offLine
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496903564',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.5330s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `offline_task` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `offline_task` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-08T14:32:48+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Safe/offLineOK?status=&types=&times=&pagenum=1&limit=10&order=desc&sort=times&_=1496903568434
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0050s ]
+SQL: UPDATE `users` SET `last_login_time`='1496903568',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.2060s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `offline` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `offline` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `offline` ORDER BY times desc LIMIT 0,10   [ RunTime:0.0010s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 589 行.
+
+[ 2017-06-08T14:35:59+08:00 ] 127.0.0.1 /APTSecUI/index.php/Safe/offLine
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496903759',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `offline_task` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `offline_task` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-08T14:36:03+08:00 ] 127.0.0.1 /APTSecUI/index.php/Home/Safe/offLineOK?status=&types=&times=&pagenum=1&limit=10&order=desc&sort=times&_=1496903763084
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0040s ]
+SQL: UPDATE `users` SET `last_login_time`='1496903763',`last_login_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: think E:\www\APTSecUI\Application\Home\Controller\CommonController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `offline` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `offline` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `offline` ORDER BY times desc LIMIT 0,10   [ RunTime:0.0000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' E:\www\APTSecUI\Application\Home\Controller\SafeController.class.php 第 589 行.
+

@@ -1,0 +1,71 @@
+<div class="main-content">
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try {
+                ace.settings.check('breadcrumbs', 'fixed')
+            } catch (e) {
+            }
+        </script>
+        <style>
+        #nameStyle{
+            border: 0px;
+            background: #ffffff
+        }
+    </style>
+        <ul class="breadcrumb">
+            <li>
+                设置
+            </li>
+            <li class="active">安全报表推送</li>
+        </ul>
+        <!-- .breadcrumb -->
+        <!-- #nav-search -->
+    </div>
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="col-xs-12">
+
+                <!--主要内容-->
+                <!--<div class="table-responsive">-->
+                <div class="formArea marT10">
+                    <!--<laber></laber>-->
+                    <div class="topName">
+                        <label>日报名称：</label>
+                        <input type="text" class="name" id="nameStyle" value="我的安全感知系统日报" disabled/>
+                        <a href="#" class="alter">修改</a>
+                    </div>
+                    <div class="holder">
+						<div class="center" style="float: left;">
+							<input type="checkbox" id="checkbox-11-1" /><label for="checkbox-11-1"></label>
+						</div>
+					</div>
+                    
+                    <!-- 收件人表格-->
+                   <div class="recipients">
+                       <label style="float: left">收件人：</label>
+                       <div>
+                           <label style="float: left">添加收件人：</label>
+                           内容
+                       </div>
+                   </div>
+
+                内容
+
+                <!--</div>-->
+            </div>
+        </div>
+
+    </div>
+</div>
+<script>
+    //    点击修改输入框显示
+    $('.alter').on('click',function(){
+        $('.name').removeAttr("disabled");
+        $('.name').attr('id',"")
+    })
+    //输入框失去焦点时触发
+    $('.name').on('focusout',function(){
+        $('.name').attr("disabled","disabled");
+        $('.name').attr('id',"nameStyle")
+    })
+</script>

@@ -1,0 +1,505 @@
+<div class="main-content">
+    <div id="userAddgroup" class="popLayer">
+        <div class="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>添加用户组</li>
+            </ul>
+            <!-- .breadcrumb -->
+            <span class="floatRig closePop">关闭</span>
+        </div>
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-xs-win">
+                    <!-- PAGE CONTENT BEGINS -->
+                    <form style="position:relative;margin-top:20px;" id="usergroup_form" class="form-horizontal" role="form">
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right"> 用户组 </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="usergroup_name" placeholder="用户组"  pattern="^\S{1,18}$"  title="请输入小于1-18位字符" class="col-xs-10 col-sm-5" required />
+                            </div>
+                        </div>
+
+                        <div class="space-4"></div>
+
+                        <div class="form-group">
+
+                            <label class="col-sm-3 control-label no-padding-right"> 备注 </label>
+
+                            <div class="col-sm-9">
+                                <textarea type="text" name="note" class="col-xs-10 col-sm-5" ></textarea>
+                            </div>
+                        </div>
+
+
+                        <div class="space-4"></div>
+                        <div class="clearfix form-actions">
+                            <div>
+                                <button class="btn btn-info" type="submit">
+                                    <i class="icon-ok bigger-110"></i>
+                                    提交
+                                </button>
+
+                                &nbsp; &nbsp; &nbsp;
+                                <button class="btn" type="reset">
+                                    <i class="icon-undo bigger-110"></i>
+                                    取消
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+    </div>
+    <div id="ajaxAlert"  class="popLayer" style="top:100px;left:50%;width: 20%;margin-left:-10%;">
+        <div class="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>
+                    提示
+                </li>
+            </ul>
+            <!-- .breadcrumb -->
+            <span class="floatRig closePop"></span>
+        </div>
+            <div class="tipText">
+        
+            </div>
+    </div>
+    <div id="editeUsergroup" class="popLayer">
+        <div class="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>编辑用户组</li>
+            </ul>
+            <!-- .breadcrumb -->
+            <span class="floatRig closePop">关闭</span>
+        </div>
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-xs-win">
+                    <!-- PAGE CONTENT BEGINS -->
+                    <form style="position:relative;margin-top:20px;" id="editeusergroup_form" class="form-horizontal" role="form">
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right">用户组 </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="groupname" placeholder="用户组"  pattern="^\S{1,18}$"  title="请输入小于1-18位字符" class="col-xs-10 col-sm-5"
+                                        required/>
+                            </div>
+                        </div>
+
+                        <div class="space-4"></div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right">备注</label>
+
+                            <div class="col-sm-9">
+                                <textarea type="text" name="note" class="col-xs-10 col-sm-5" required></textarea>
+                            </div>
+                        </div>
+
+                        <input type="hidden" id='id' name='id' />
+
+                        <div class="clearfix form-actions">
+                            <div>
+                                <button class="btn btn-info" type="submit">
+                                    <i class="icon-ok bigger-110"></i>
+                                    提交
+                                </button>
+
+                                <!--
+                                <button class="btn" type="reset">
+                                    <i class="icon-undo bigger-110"></i>
+                                    取消
+                                </button>
+                                -->
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+    </div>
+    <div id="delUser" class="popLayer" style="top:100px;left:50%;width: 40%;margin-left:-20%;">
+        <div class="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>
+                    删除用户组
+                </li>
+            </ul>
+            <!-- .breadcrumb -->
+            <span class="floatRig closePop">关闭</span>
+        </div>
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-xs-win">
+                    <!-- PAGE CONTENT BEGINS -->
+                    <form style="position:relative;top:20px;" id="delgroup_form" class="form-horizontal" role="form">
+
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label no-padding-right"> 确定要删除用户组？ </label>
+                        </div>
+
+                        <input type="hidden" name="id"  id="ids" value="" /> 
+                        <div class="clearfix form-actions">
+                            <div>
+                                <button class=" btn btn-danger" type="">
+                                    <i class="icon-remove  bigger-110 "></i>
+                                    删除
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+    </div>
+        <div id="fade" class="black_overlay"></div>
+        <div class="breadcrumbs" id="breadcrumbs">
+            <script type="text/javascript">
+                try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+            </script>
+
+            <ul class="breadcrumb">
+                <li>
+                    权限管理
+                </li>
+                <li class="active">用户组管理</li>
+            </ul><!-- .breadcrumb -->
+
+<!-- #nav-search -->
+        </div>
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-xs-12">
+                        
+                    <div class="formArea marT10" >
+                            <div class="formTextList" >
+                                <label class="floatLeft">用户组：</label>
+                                <select name="usergroup" class="usergroup floatLeft">
+                                <option value="">请选择</option>
+                                <volist name="group_data" id="group_data_vo" >
+                                    <option value="{$group_data_vo['id']}">{$group_data_vo['title']}</option>
+                                </volist>
+                            </select>
+                            </div>
+                                           
+                        <a href="javascript:;" class="aptSearchBtn" id="kSearch">查询</a>
+                        <div class="clearBoth"></div>
+                        
+                    </div>
+                
+                
+                    <div class="aptTable span10 marT10 tableShow" style="display: none">
+                        <div class="aptListBtnGroup " >
+                           <input type="checkbox"  id="allCheck" style="position: absolute;top: 50px;left:52.5px;z-index: 99">
+                            <a href="javascript:;" id="usergroupAdd"><i class="icon-plus-sign bigger-120 green"></i>添加</a>
+                            <a href="javascript:;" id="groupDel"><i class="icon-remove  bigger-120 red "></i>批量删除</a>
+                        </div>
+                        <table id="reportTable">
+                        </table>
+        			</div>
+                </div>      
+            </div>
+        </div>      
+    </div>
+    <div style="clear: both"></div>
+</div>
+
+<script>
+    $('.usergroup').attr('value',getParam("usergroup"));
+    function URLdecode(sStr){
+       return sStr.replace(/\+/g,' ').replace(/\%2F/g,'\/').replace(/\%20/g,''); 
+    }
+
+    function getParam(paramName)
+    {
+        paramValue = "";
+        isFound = false;
+        if (this.location.search.indexOf("?") == 0 && this.location.search.indexOf("=")>1)
+        {
+            arrSource = this.location.search.substring(1,this.location.search.length).split("&");
+            i = 0;
+            while (i < arrSource.length && !isFound)
+            {
+                if (arrSource[i].indexOf("=") > 0)
+                {
+                    if (arrSource[i].split("=")[0].toLowerCase()==paramName.toLowerCase())
+                    {
+                        paramValue = arrSource[i].split("=")[1];
+                        isFound = true;
+                    }
+                }
+                i++;
+            }
+        }
+        return paramValue;
+    }
+    //点击其他，更新全选
+    $(document).on('click', '.checkBtn', function () {
+        if($('.checkBtn:not(:checked)').length === 0){
+            var is_checked = $(this).prop("checked");
+            $('#allCheck').prop("checked", is_checked);
+        }else{
+            $('#allCheck').prop('checked', false);
+        }
+    })
+    //设置全选，全不选
+    $(document).on('click', '#allCheck', function () {
+        $('.checkBtn').prop('checked', this.checked);
+    });
+    $(document).ready(function(){
+        function operateFormatter(value, row, index) {
+            if(value!=1){
+                return [
+                    '<a href="__URL__/authorize/id/'+value+'" style="margin-right:4px;"  title="权限设置"><i class="icon-key bigger-130 blue icon-flip-horizontal"></i></a>' +
+                    '<a class="green editeUsergroup" href="javascript:;" data="'+value+'" title="编辑"><i class="icon-pencil bigger-130"></i></a> ' +
+                    '<a class="red delUsergroup"  href="javascript:;" data="'+value+'" title="删除"><i class="icon-trash bigger-130"></i></a>'
+                    
+                ].join('');
+            }else{
+                //$('#reportTable tbody tr').children('td:eq(0)').children('input').attr('checked', false);
+                //$('#reportTable tbody tr').children('td:eq(0)').html('');
+                //var a= $('#reportTable tbody tr').children('td:eq(0)').children('input').attr('checked');
+                //var a= $('#reportTable tbody tr').children('td:eq(0)').text();
+                //console.log(a);
+                return '';
+            }
+        }
+        function disCheckFormatter(value, row, index) {
+            if(index!==0){
+                var str = "<input type='checkbox' name='items' class='checkBtn' data='"+row.id+"' name='btSelectAll' style='height: 13px; width:13px; padding: 0px;' data-index=";
+                str += index+"/><div class='fht-cell'></div>";
+            }else{
+                str = "<div class='fht-cell'></div>";
+            }
+            return str;
+        }
+        $('#reportTable').bootstrapTable({
+            method: 'get',
+            url: '__URL__/usergroupOk',
+            //search:true,
+            cache: false,
+            //height: 400,
+            striped: true,
+            sidePagination:"server",
+            pagination: true,
+            pageSize: 10,
+            pageNumber: 1,
+            pageList: [10],
+            //sortName : 'time',
+            //sortOrder : 'desc',
+            showColumns: true,
+            formatLoadingMessage: function () {
+                return "请稍等，正在加载中...";
+            },
+            formatNoMatches: function () {  //没有匹配的结果
+                return '无符合条件的记录';
+            },
+            queryParams: function (params) {
+                var pars = {
+                    usergroup:$('.usergroup').val(),
+                    pagenum:params.offset/params.limit+1,
+                };
+                return pars;
+            },
+            columns: [{
+                title:"<div class='fht-cell'></div>",
+                formatter:disCheckFormatter,
+                align: "center",
+                valign: "middle"
+            },{
+                field: "title",
+                title: "用户组",
+                align: "center",
+                valign: "middle",
+                sortable: false
+            },{
+                field: "note",
+                title: "备注",
+                align: "center",
+                valign: "middle",
+                sortable: false
+            },{
+                field: "id",
+                title: "操作",
+                align: "center",
+                valign: "middle",
+                sortable: false,
+                switchable: false,
+                formatter: operateFormatter
+            }],
+            data: [{
+                "title": "czu",
+                "note": "zu",
+
+            }],
+            onLoadSuccess:function(data){
+                console.log("ok");
+            },
+            responseHandler:function(res) {
+                var tem = {"total":0,"rows":[]};
+                if(res.status){
+                    tem.total = res.totalNum;
+                    tem.rows = eval(res.data);
+                }else{
+                    $('#reportTable').bootstrapTable('removeAll');
+                }
+                return tem;
+            },
+            onLoadError:function(status,res){
+                $('#reportTable').bootstrapTable('removeAll');
+                console.log(status,res);
+            }
+        });
+
+        $(window).resize(function () {
+            $('#reportTable').bootstrapTable('resetView');
+        });
+        $("#kSearch").click(function(){
+            var usergroup = $(".usergroup").val();
+            $('#reportTable').bootstrapTable('refresh');
+        });
+    });
+    /*$(document).ready(function(){
+        $('#reportTable tbody tr').each(
+            function(){
+                var aa = $('#reportTable tbody tr').children('td:eq(1)').html();
+                console.log(aa);alert(aa);
+                if (aa =='超级管理员') {
+                    //
+                    //$(this).children('td:eq(0)').children('input').remove();
+                    //$(this).children('td:eq(3)').children('a').remove();
+                };
+
+        });
+    })*/
+    /*$('#sample-table-1 tbody tr').each(
+        function(){
+        var aa = $(this).children('td:eq(1)').html();
+         if (aa =='超级管理员') {
+            $(this).children('td:eq(0)').children('input').remove();
+            $(this).children('td:eq(3)').children('a').remove();
+         };
+
+        });*/
+
+	$(document).on("click","#usergroupAdd",function(){			
+        $("#userAddgroup").show();
+        $("#fade").show();
+        return false
+    });
+    $(".closePop").css("cursor", "pointer").click(function () {
+        $("#userAddgroup").hide();
+        $("#delUser").hide();
+        $("#editeUsergroup").hide();
+        $("#fade").hide();
+        $(":checked").attr('checked',false);
+    });
+
+	$(document).on("click",".editeUsergroup",function(){	
+        var tr = $(this).parents('tr');
+        $("#editeusergroup_form input[name='id']").val($(this).attr('data'));
+        $("#editeusergroup_form input[name='groupname']").val(tr.children('td:eq(1)').html());
+        $("#editeusergroup_form textarea[name='note']").val(tr.children('td:eq(2)').html());
+        $("#editeUsergroup").show();
+        $("#fade").show();
+    })
+
+
+	$(document).on("click",".delUsergroup",function(){	
+        $('#ids').val($(this).attr('data'));
+        $("#delUser").show();
+        $("#fade").show();
+        return false
+    })
+    $(document).on("click","#groupDel",function(){ 
+        var val = $('#reportTable tbody input:checkbox[type="checkbox"]:checked').map(function(){
+            return $(this).val();
+        }).get();
+        var newArray=[];
+        $('.checkBtn').each(function (index, value) {
+            if($(this).is(':checked')){
+                newArray.push($(this).attr('data'));
+            }
+        }).get().join(',');
+        if(val.length<1){
+            layer.alert("请选择用户");
+            return;
+        }
+        console.log(newArray);
+        $('#ids').val(newArray);
+        $("#delUser").show();
+        $("#fade").show();
+        return false
+    })
+    $('#delgroup_form').submit(function(e){
+        e.preventDefault();
+        var id = $('#ids').val();
+        $.ajax({
+            url:'__URL__/usergroupdel',
+            type:'POST',
+            dataType:'json',
+            data:{'id':id},
+            success:function(data){
+                $("#delUser").hide();
+                $("#fade").hide();
+                $('#delgroup_form')[0].reset();
+                layer.msg(data.msg);
+                window.location.reload();
+            }
+       });
+    })
+
+    $('#editeusergroup_form').submit(function(e){
+        e.preventDefault();
+        var data = $('#editeusergroup_form').serialize();
+        $.ajax({
+            url:'__URL__/do_usergroup_edite',
+            type:'POST',
+            dataType:'json',
+            data:data,
+            success:function(data){
+                if(data.status=='success'){
+                   $("#editeUsergroup").hide();
+                   $("#fade").hide();
+                   $('#editeusergroup_form')[0].reset();
+                    layer.msg(data.msg);
+                    window.location.reload();
+                }else if(data.status=='error'){
+                    layer.msg(data.msg);
+                }
+            }
+       });
+    })
+
+    $('#usergroup_form').submit(function(e){
+        e.stopPropagation();
+        e.preventDefault();
+        var usergroup_data = $('#usergroup_form').serialize();
+        $.ajax({
+            url:'__URL__/usergroup_add',
+            type:'POST',
+            dataType:'json',
+            data:usergroup_data,
+            success:function(data){
+                if(data.status=='success'){
+                    $("#userAddgroup").hide();
+                    $("#fade").hide();
+                    layer.msg(data.msg);
+                    window.location.reload();
+                }else if(data.status=='error'){
+                    layer.msg(data.msg);
+                }
+            }
+        });
+    });  
+</script>

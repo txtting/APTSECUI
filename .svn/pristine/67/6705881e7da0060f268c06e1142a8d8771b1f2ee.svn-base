@@ -1,0 +1,8 @@
+<?php
+namespace Home\Controller;
+class UrgentController extends CommonController {
+    public function index(){
+        layout('Layout/layout');
+        $this->display();
+    }
+}

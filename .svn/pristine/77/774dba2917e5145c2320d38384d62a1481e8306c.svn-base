@@ -1,0 +1,90 @@
+<?php
+namespace Home\Controller;
+
+class SettingController extends CommonController {
+    public function index(){
+        layout('Layout/layout');
+        $this->display();
+    }
+    public function safereportset(){
+        layout('Layout/layout');
+        $this->display();
+    }
+    public function ugevent(){
+        $model = M('emergency_push_contact');
+        $count = $model->count();
+        $Page = new \Think\Page($count, 1000);
+        $Page ->setConfig('prev', "上一批");
+        $Page ->setConfig('next', "下一批");
+        $Page ->setConfig('theme', "%UP_PAGE% %DOWN_PAGE%");
+        $data = $model->limit($Page->firstRow.','.$Page->listRows)->order('time desc')->select();
+        self::log('Web','紧急事件推送联系人查询',5);
+        $show = $Page->show();// 分页显示输出
+        $this->assign('data',$data);
+        $this->assign('show',$show);
+        layout('Layout/layout');
+        $this->display();
+    }
+    public function ugevent_add(){
+        $data['name']   = I('post.name');
+        $data['time']   = time();
+        $where['email'] = $data['email'] = I('post.email');
+        $where['phone'] = $data['phone'] = I('post.phone');
+        $where['_logic'] = 'OR';
+        $res = M('emergency_push_contact')->where($where)->select();
+        if($res){
+            $this -> ajaxReturn(['status'=>'error','msg'=>'手机号码或email地址已存在']);
+        }
+        $res = M('emergency_push_contact')->add($data);
+        if($res>0){
+            self::log('Web','添加紧急事件推送联系人',5);
+            $this -> ajaxReturn(['status'=>'success','msg'=>'添加成功']);
+        }else{
+            $this -> ajaxReturn(['status'=>'error','msg'=>'添加失败']);
+        }
+    }
+    public function ugevent_edite(){
+        $id = I('post.id');
+        $data['name']   = I('post.name');
+        $data['time']   = time();
+        $data['email'] = I('post.email');
+        $data['phone'] = I('post.phone');
+        $res1 = self::check_other_user($id,'email',$data['email']);
+        $res2 = self::check_other_user($id,'phone',$data['phone']);
+        if($res1||$res2){
+            $this -> ajaxReturn(['status'=>'error','msg'=>'手机号码或email地址已存在']);
+        }
+        $res = M('emergency_push_contact')->where("id=$id")->save($data);
+        if($res>0){
+            self::log('Web','修改紧急事件推送联系人成功',5);
+            $this -> ajaxReturn(['status'=>'success','msg'=>'修改成功']);
+        }else{
+            self::log('Web','修改紧急事件推送联系人失败',5);
+            $this -> ajaxReturn(['status'=>'error','msg'=>'修改失败']);
+        }
+    }
+    public function ugevent_del(){
+        $id = I('post.id','','htmlspecialchars');
+        $id = explode(',', $id);
+        $model = M('emergency_push_contact');
+        $res = $model->where(array('id'=>array('in',$id)))->delete();
+        if ($res!==false) {
+            self::log('Web','删除紧急事件推送联系人成功',5);
+            $this->ajaxReturn(['status'=>'success','msg'=>'删除成功']);
+        }else {
+            self::log('Web','删除紧急事件推送联系人失败',5);
+            $this->ajaxReturn(['status'=>'error','msg'=>'删除失败']);
+        }
+    }
+    private function check_other_user($id,$key,$val){
+      $user = M('emergency_push_contact');
+      $map['id'] = array('neq',$id);
+      $map[$key] = $val;
+      $res = $user->where($map)->find();
+      if ($res) {
+         return true;
+      }else{
+         return false;
+      }
+  }
+}

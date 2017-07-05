@@ -1,0 +1,102 @@
+<?php
+//封装请求方法
+function request($url,$https=true,$method='get',$data=null){
+    //1.初始化url
+    $ch = curl_init($url);
+    //2.设置相关的参数
+    //字符串不直接输出,进行一个变量的存储
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    //判断是否为https请求
+    if($https === true){
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+        curl_setopt($ch,CURLOPT_SSLVERSION,1);
+    }
+        curl_setopt($ch,CURLOPT_URL,$url);
+        curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+    //判断是否为post请求
+    if($method == 'post'){
+        if (is_string($data)){
+            $str = $data;
+        } else {
+            $aPOST = array();
+            foreach($data as $key => $val){
+                $aPOST[] = $key."=" . urlencode($val);
+            }
+            $str = join("&",$aPOST);
+        }
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $str);
+
+    }
+    //3.发送请求
+    $str = curl_exec($ch);
+    $aStatus = curl_getinfo($ch);
+    //4.关闭连接
+    curl_close($ch);
+    //返回请求到的结果
+    if(intval($aStatus["http_code"])==200){
+        return $str;
+    }else{
+        return false;
+    }
+}
+//邮件发送测试方法
+function sendMail($title,$msg,$sendToAddr,$tu){
+    //引入发送类phpmailer.php
+    require './PHPMailer/class.phpmailer.php';
+    //实列化对象
+    $mail             = new PHPMailer();
+    /*服务器相关信息*/
+    $mail->IsSMTP();                        //设置使用SMTP服务器发送
+    $mail->SMTPAuth   = true;               //开启SMTP认证
+    $mail->Host       = 'smtp.163.com';         //设置 SMTP 服务器,自己注册邮箱服务器地址
+    $mail->Username   = '18710024462';      //发信人的邮箱用户名
+    $mail->Password   = 'txt0502txt';          //发信人的邮箱密码 登录第三方登录密码 不是邮箱密码
+    /*内容信息*/
+    $mail->IsHTML(true);               //指定邮件内容格式为：html
+    $mail->AddEmbeddedImage($tu, 'tuimg', 'logo.jpg'); // attach file logo.jpg, and later link to it using identfier logoimg 
+    $mail->CharSet    ="UTF-8";          //编码
+    $mail->From       = '18710024462@163.com';       //发件人完整的邮箱名称
+    $mail->FromName   ="txt";      //发信人署名
+    $mail->Subject    = $title;         //信的标题
+    $mail->Body = $msg; 
+    $mail->Altbody="text/html";
+    //$mail->MsgHTML($msg);           //发信主体内容
+    //$mail->AddAttachment($fj,$name);      //附件
+    $mail->AddReplyTo("18710024462@163.com", "田晓婷个人邮箱");     //设置回复的收件人的地址  
+    /*发送邮件*/
+    if(is_array($sendToAddr)){
+        foreach ($sendToAddr as $k => $v) {  
+            $mail->AddAddress($v);     //设置收件的地址  
+        } 
+    }else{
+        $mail->AddAddress($sendToAddr);   //收件人地址
+    }
+    //使用send函数进行发送
+    if($mail->Send()) {
+        //发送成功返回真
+        //return ture;
+        return "发送成功";
+    } else {
+        return $mail->ErrorInfo;//如果发送失败，则返回错误提示
+    }
+}
+function SafeFilter (&$arr){
+    $ra=array('/([\x00-\x08,\x0b-\x0c,\x0e-\x19])/','/script/','/javascript/','/vbscript/','/expression/','/applet/','/meta/','/xml/','/blink/','/link/','/style/','/embed/','/object/','/frame/','/layer/','/title/','/bgsound/','/base/','/onload/','/onunload/','/onchange/','/onsubmit/','/onreset/','/onselect/','/onblur/','/onfocus/','/onabort/','/onkeydown/','/onkeypress/','/onkeyup/','/onclick/','/ondblclick/','/onmousedown/','/onmousemove/','/onmouseout/','/onmouseover/','/onmouseup/','/onunload/');
+    if (is_array($arr)){
+        foreach ($arr as $key => $value){
+            if(!is_array($value)){
+                if (!get_magic_quotes_gpc()){ 
+                //不对magic_quotes_gpc转义过的字符使用addslashes(),避免双重转义。
+                    $value  = addslashes($value);           //给单引号（'）、双引号（"）、反斜线（\）与 NUL（NULL 字符）加上反斜线转义
+                }
+                $value       = preg_replace($ra,'',$value);     //删除非打印字符，粗暴式过滤xss可疑字符串
+                $arr[$key]     = htmlentities(strip_tags($value)); //去除 HTML 和 PHP 标记并转换为 HTML 实体
+            }else{
+                SafeFilter($arr[$key]);
+            }
+        }
+    }
+    return $arr;
+}

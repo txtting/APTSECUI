@@ -1,0 +1,102 @@
+<div class="main-content">
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try {
+                ace.settings.check('breadcrumbs', 'fixed')
+            } catch (e) {
+            }
+        </script>
+
+        <ul class="breadcrumb">
+            <li>
+                资产总揽
+            </li>
+            
+            <li class="active">资产探测</li>
+        </ul>
+        <!-- .breadcrumb -->
+        <!-- #nav-search -->
+    </div>
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="col-xs-12">
+
+               <!--  <div class="formArea marT10" >
+                    类型： 
+                    <select>
+                    <option>全部</option>
+                    <option>SQL注入成功</option>
+                    <option>鸡肉行为</option>
+                    <option>蠕虫病毒</option>
+                    <option>木马回连</option>
+                    <option>DDoS</option>
+                    <option>非正常登录</option>
+                    <option>异常网络连接</option>
+                    <option>未授权下载</option>
+                    <option>webshell</option>
+                    </select>
+                    发现时间：<input type="text" placeholder="">
+                    被攻击资产：<input type="text" placeholder="" title="">
+                    攻击者IP：<input type="text" placeholder="" title="">
+                   <div style="display:none;"> 攻击使用协议：<input type="text" placeholder="" title="">
+                    发起爆破次数：<input type="text" placeholder="" title=""></div>
+                    <a href="#" class="aptSearchBtn">查询</a>
+
+                </div>-->
+
+                <div class="aptTable span10 marT10 tableShow" style="display: none">
+                <!--<div class="aptListBtnGroup"><a href="#"><i class="icon-upload-alt"></i>导出</a></div>-->
+				<table data-toggle="table" data-striped="true" data-pagination="true" data-search="true"  data-show-columns="true">
+                    <thead>
+
+                            <tr>
+                                <th></th>
+                                <th data-field="type">类型</th>
+                                <th data-field="fristTime">首次发现时间</th>
+                                <th data-field="lastName">最后发现时间</th>
+                                <th data-field="attackPrice">被攻击资产</th>
+                                <th data-field="attackIP">攻击者IP</th>
+                                <th data-field="attackAgree">攻击使用协议</th>
+                                <th data-field="burstTime">发起爆破次数</th>
+                            </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td > <a href="javascript:;" class="box"  > <i class="glyphicon glyphicon-plus"></i></a> </td>
+                            <td>病毒</td>
+                            <td>2017-03-13 17:20:20</td>
+                            <td>2017-03-13 19:20:20</td>
+                            <td>服务器1</td>
+                            <td>1.1.1.1</td>
+                            <td>http</td>
+                            <td>2000</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+			</div>
+                
+                
+            </div>
+            </div>  
+        </div>
+        
+    </div>
+</div>
+<script>
+    // 第一次点击
+    $(document).on('click','.box',function(){
+        $(this).attr('class','box2')
+//        $(this).html("收起")
+        $(this).children().attr('class','glyphicon glyphicon-minus')
+        $(this).parent().parent().after('<tr class="hid"><td colspan="6" ><div>类型：病毒</div></td></tr>');
+    })
+    $(document).on('click','.box2',function(){
+        $(this).attr('class','box');
+        $(this).children().attr('class','glyphicon glyphicon-plus')
+//            alert(1)
+        $(this).parent().parent().next().empty();
+    })
+
+
+</script>

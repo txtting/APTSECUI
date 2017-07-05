@@ -1,0 +1,333 @@
+<div class="main-content">
+
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try {
+                ace.settings.check('breadcrumbs', 'fixed')
+            } catch (e) {
+            }
+        </script>
+
+        <ul class="breadcrumb">
+            <li>
+                安全事件
+            </li>
+            <li>
+                <a href="__URL__/offLine">离线调度检测</a>
+            </li>
+            <li class="active">离线详情</li>
+        </ul>
+        <!-- .breadcrumb -->
+
+
+    </div>
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="formArea marT10">
+                    <p class="atpTypeList dataType" style="margin-left: 0px"> 选择：
+                        <a href="javascript:;" class="types sel" data="">全部</a>
+                        <a href="javascript:;" class="types sel" data="">去重</a>
+                        <a href="javascript:;" class="types sel" data="">合并</a>
+                        <a href="javascript:;" class="types sel" data="">离线</a>
+                        <!--<a href="#maodian" class="types sel" data="">分析(4)</a>-->
+                    </p>
+
+                </div>
+
+                <div class="formArea marT10">
+                    <div class="chaTab" style="margin: 0 0 0 10px; width: 40%;display: inline-block;">
+                        <table id="detailTable" class="table table-striped table-bordered table-hover">
+                        </table>
+                    </div>
+                    <div style="margin: 0; width: 58%;display: inline-block;">
+                        <div id="container"></div>
+                        <div id="sliders" style="float: right; margin-right: 70px; background-color: #F9F9F9">
+                            <table >
+                                <tr>
+                                    <td>α 角（内旋转角）</td>
+                                    <td><input id="alpha" type="range" min="0" max="45" value="15"/> <span id="alpha-value" class="value"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>β 角（外旋转角）</td>
+                                    <td><input id="beta" type="range" min="-45" max="45" value="15"/> <span id="beta-value" class="value"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>深度</td>
+                                    <td><input id="depth" type="range" min="20" max="100" value="50"/> <span id="depth-value" class="value"></span></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- /span -->
+        </div>
+    </div>
+    <!-- /row -->
+</div><!-- /.main-content -->
+
+<script type="text/javascript">
+    //设置“选择”样式
+    //    console.log($('.sel').length);
+    $('.sel')[0].style.backgroundColor='#428bca';
+    $('.sel')[0].style.color='#ffffff';
+    $(document).on("click",".sel", function(){
+        $(this).css("backgroundColor", 'rgb(66, 139, 202)');
+        $(this).css("color", 'rgb(255, 255, 255)');
+        $(this).siblings().css("backgroundColor", 'rgb(255, 255, 255)');
+        $(this).siblings().css("color", 'rgb(66, 139, 202');
+    });
+    //当左侧菜单栏显示或隐藏时图表重绘
+    $('.icon-double-angle-left').click(function(){
+        if($('.col-xs-12').css("width")!=$('.main-content').css("min-width")){
+//            console.log("hello");
+            if($('#sidebar-collapse i').attr('class')=='icon-double-angle-left'){
+                setTimeout(function(){
+                    $('#container').highcharts().reflow();
+                },1)
+            }else{
+                setTimeout(function(){
+//                    $('#container').css("width",$('#container').css("width"));
+                    $('#container').highcharts().reflow();
+                },1)
+            }
+        }
+    });
+
+
+    $(function () {
+        // Set up the chart
+        var chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'container',
+                type: 'column',
+                options3d: {
+                    enabled: true,
+                    alpha: 15,
+                    beta: 15,
+                    depth: 50,
+                    viewDistance: 25
+                }
+            },
+            credits:{
+                enabled:false // 禁用版权信息
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: '数量(个)'
+                }
+            },
+            title: {
+                text: '在线/离线数据之差'
+            },
+            plotOptions: {
+                column: {
+                    depth: 25
+                }
+            },
+            series: [{
+                name:'差值',
+                data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+            }]
+        });
+        function showValues() {
+            $('#alpha-value').html(chart.options.chart.options3d.alpha);
+            $('#beta-value').html(chart.options.chart.options3d.beta);
+            $('#depth-value').html(chart.options.chart.options3d.depth);
+        }
+        // Activate the sliders
+        $('#sliders input').on('input change', function () {
+            chart.options.chart.options3d[this.id] = this.value;
+            showValues();
+            chart.redraw(false);
+        });
+        showValues();
+    });
+
+
+//
+//    $('#webip').attr('value',getParam("webip"));
+//    $('#username').attr('value',getParam("username"));
+//    $('.date-range-picker').attr('value',URLdecode(getParam("date-range-picker")));
+//
+//    function checkaction(v){
+//        if(v==1){
+//            document.searchform.method="post";
+//            document.searchform.action="__URL__/export_log";
+//        }
+//        searchform.submit();
+//    }
+//    /*function checkaction(v){
+//     var pp=$('#yema').val();
+//     var ye=$('#ye').val();
+//     alert(ye);
+//     if(v==1){
+//     document.searchform.method="post";
+//     document.searchform.action="__URL__/export_log";
+//     }else if(v==0){
+//     document.searchform.method="get";
+//     document.searchform.action="__URL__/index";
+//     }else if(v==2){
+//     if(pp>1){
+//     pp =  pp*1-1;
+//     }else{
+//     pp =  1;
+//     }
+//     $('#yema').val(pp);
+//     document.searchform.method="get";
+//     document.searchform.action="__URL__/index";
+//     }else if(v==3){
+//     if(pp<ye){
+//     pp = pp*1+1;
+//     }else{
+//     pp = ye;
+//     }
+//     $('#yema').val(pp);
+//     document.searchform.method="get";
+//     document.searchform.action="__URL__/index";
+//     }
+//     searchform.submit();
+//     } */
+//    function URLdecode(sStr){
+//        return sStr.replace(/\+/g,' ').replace(/\%2F/g,'\/').replace(/\%20/g,' ').replace(/\%3A/g,':');
+//    }
+//
+//    function getParam(paramName)
+//    {
+//        paramValue = "";
+//        isFound = false;
+//        if (this.location.search.indexOf("?") == 0 && this.location.search.indexOf("=")>1)
+//        {
+//            arrSource = this.location.search.substring(1,this.location.search.length).split("&");
+//            i = 0;
+//            while (i < arrSource.length && !isFound)
+//            {
+//                if (arrSource[i].indexOf("=") > 0)
+//                {
+//                    if (arrSource[i].split("=")[0].toLowerCase()==paramName.toLowerCase())
+//                    {
+//                        paramValue = arrSource[i].split("=")[1];
+//                        isFound = true;
+//                    }
+//                }
+//                i++;
+//            }
+//        }
+//        return paramValue;
+//    }
+
+
+
+</script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#detailTable').bootstrapTable({
+            method: 'get',
+//            url: '__URL__/indexOK',
+            cache: false,
+            //height: 510,
+            striped: true,
+//            sidePagination:"server",
+            pagination: true,
+            pageSize: 10,
+            pageNumber: 1,
+            pageList: [10],
+            sortName : 'time',
+            sortOrder : 'desc',
+            showColumns: true,
+            formatLoadingMessage: function () {
+                return "请稍等，正在加载中...";
+            },
+            formatNoMatches: function () {  //没有匹配的结果
+                return '无符合条件的记录';
+            },
+            queryParams: function (params) {
+                var pars = {
+                    webip:$('#webip').val(),
+                    username:$('#username').val(),
+                    time:$('.date-range-picker').val(),
+                    pagenum:params.offset/params.limit+1,
+                    order:params.order,
+                    sort:params.sort
+                };
+                return pars;
+            },
+            columns: [{
+                field: "name",
+                title: "名称",
+                align: "center",
+                valign: "middle",
+                sortable: false,
+            },
+                {
+                    field: "type",
+                    title: "类型",
+                    align: "center",
+                    valign: "middle",
+                    sortable: false
+                },{
+                    field: "status",
+                    title: "状态",
+                    align: "center",
+                    valign: "middle",
+                    sortable: false
+                },{
+                    field: "percent",
+                    title: "进度百分比",
+                    align: "center",
+                    valign: "middle",
+                    sortable: false
+                }
+                ,{
+                    field: "operateTime",
+                    title: "操作时间",
+                    align: "center",
+                    valign: "middle",
+                    sortable:true,
+                }],
+            data: [{
+                "name": "vds",
+                "type": "vds",
+                "status": "进行中",
+                "percent": "90%",
+                "operateTime": "2017-5-18   12:00：01 "
+            },{
+                "name": "vaf",
+                "type": "vaf",
+                "status": "已结束",
+                "percent": "100%",
+                "operateTime": "2017-5-12   1:300：01 "
+            }],
+            onLoadSuccess:function(data){
+                //console.log(data);
+            },
+            responseHandler:function(res) {
+                var tem = {"total":0,"rows":[]};
+                if(res.status){
+                    tem.total = res.totalNum;
+                    tem.rows = eval(res.data);
+                }else{
+                    //$('#reportTable').bootstrapTable('removeAll');
+                }
+                return tem;
+            },
+            onLoadError:function(status,res){
+                $('#reportTable').bootstrapTable('removeAll');
+                console.log(status,res);
+            },
+        });
+        $(window).resize(function () {
+            $('#reportTable').bootstrapTable('resetView');
+        });
+        $("#kSearch").click(function(){
+            var webip = $('#webip').val();
+            var username = $('#username').val();
+            var time = $('.date-range-picker').val();
+            $('#reportTable').bootstrapTable('refresh');
+        });
+
+    });
+</script>
+

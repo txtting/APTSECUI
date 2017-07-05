@@ -1,0 +1,163 @@
+.col-sm-12 .row .col-xs-12 .aptTable .navBar{
+	height: 35px;
+	margin-left: -0.5px;
+	background: black;
+	padding-right: 20px;
+}
+.col-sm-12 .row .col-xs-12 .aptTable .navBar li{
+	font-size: 13px;
+	margin: 10px 0;
+	padding: 0 8px;
+	line-height: 15px;
+	height: 15px;
+	float: right;
+	list-style: none;
+	border-right: 1px solid #fff;
+	cursor:pointer;
+}
+.col-sm-12 .row .col-xs-12 .aptTable .navBar a{
+	text-decoration: none;
+	color: #EFF0EB;
+}
+.col-sm-12 .row .col-xs-12 .aptTable .navBar a:hover{
+	color: #fff;
+}
+.col-sm-12 .row .col-xs-12 .aptTable .navBar li:first-child{
+	border: none;
+}
+.col-sm-12 .row .col-xs-12 .aptTable .navBar li:after{
+	content: "";
+	clear: both;
+	display: block;	
+}
+.col-sm-12 .row .col-xs-12 .aptTable .navBar li{
+	zoom: 1;
+}
+.col-sm-12 .row .col-xs-12 .aptTable .wrapper>div{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.col-sm-12 .row .col-xs-12 .aptTable .process{
+	height: 82px;
+}
+.col-sm-12 .row .col-xs-12 .aptTable .process .box, .col-sm-12 .row .col-xs-12 .aptTable .score{
+	float: left;
+}
+.col-sm-12 .row .col-xs-12 .aptTable .process .box{
+	padding: 16px 20px 20px 0;
+	width: 26%;
+}
+.col-sm-12 .row .col-xs-12 .aptTable .process .box img{
+	width: 273px;
+	height: auto;
+}
+.col-sm-12 .row .col-xs-12 .aptTable .score{
+	width: 74%;
+}
+.col-sm-12 .row .col-xs-12 .aptTable .process .score .todayScore{
+	font-size: 13px;
+	color: #86827B;
+	padding-top: 16px;
+}
+.col-sm-12 .row .col-xs-12 .aptTable .process .score .number{
+	font-size: 25px;
+	color: #00C1FF;
+}
+.col-sm-12 .row .col-xs-12 .aptTable .block{
+	padding: 0 0 45px 20px;
+}
+.col-sm-12 .row .col-xs-12 .aptTable .block .express{
+	width: 41%;
+	height: 65px;
+	background: #454544;
+	color: #888783;
+	border-radius: 5px;
+	font-size: 13px;
+	padding: 10px;
+}
+.col-sm-12 .row .col-xs-12 .aptTable .count .todayCount{
+	font-size: 18px;
+	color: #807D72;
+}
+.col-sm-12 .row .col-xs-12 .aptTable .underline{
+	height: 1px;
+	border: 2px solid #007151;
+	width: 110px;
+}
+.col-sm-12 .row .col-xs-12 .aptTable .smallGreen{
+	width: 74px;
+}
+.col-sm-12 .row .col-xs-12 .aptTable .content {
+	width: 100%;
+	padding-bottom: 40px;
+}
+.col-sm-12 .row .col-xs-12 .aptTable .content .chose{
+	width: 100%;
+	height:30px;
+	margin-bottom: 20px;
+}
+.col-sm-12 .row .col-xs-12 .aptTable .content .chooseBtn,.resetBtn{
+	width: 100px;
+	height:30px;
+	line-height: 30px;
+	font-size: 15px;
+	background: #00AEBA;
+	text-align: center;
+	border-radius: 3px;
+	float: right;
+	margin-left: 3px;
+}
+
+.col-sm-12 .row .col-xs-12 .aptTable .content .chooseBtn:hover,.resetBtn:hover{
+	background: #17DBE8;
+}
+.col-sm-12 .row .col-xs-12 .aptTable .content .mainBlock{
+    display: inline-block;
+    width: 16.3%;
+}
+.col-sm-12 .row .col-xs-12 .aptTable .content .line, .col-sm-12 .row .col-xs-12 .aptTable .content .section{
+	 width: 100%;
+}
+.col-sm-12 .row .col-xs-12 .aptTable .content .line span{
+	font-size: 13px;
+    padding: 10px 40px 10px 0;
+    display: inline-block;
+    color: #EFF0EB;
+}
+.col-sm-12 .row .col-xs-12 .aptTable .content .section .stock{
+	font-size: 13px;
+    display: inline-block;
+    height: 48px;
+    line-height: 48px;
+    width: 100%;
+    color: #EFF0EB;
+    background:#00AEBA;
+}
+.col-sm-12 .row .col-xs-12 .aptTable .content .section .stock:hover{
+	background: #18A15F;
+}
+.col-sm-12 .row .col-xs-12 .aptTable .content .section .stock .num{
+	font-size: 18px;
+    padding-right: 4px;
+    display: inline-block;
+	text-indent:6px;
+}
+.col-sm-12 .row .col-xs-12 .aptTable .wrapper .event{
+	padding-top: 15px;
+    padding-bottom: 30px;	
+}
+.col-sm-12 .row .col-xs-12 .aptTable .wrapper .event table{
+	width: 100%;
+}
+.col-sm-12 .row .col-xs-12 .aptTable .wrapper .event td{
+	font-size:15px;
+	border: 1px solid #00B6C2;
+	padding-left: 20px;
+	width: 50%;
+}
+.col-sm-12 .row .col-xs-12 .aptTable .wrapper .event .eventType{
+	color: #807D72;	
+}
+.col-sm-12 .row .col-xs-12 .aptTable .wrapper .event .eventSeries{
+	color:#EEF0EB;	
+}

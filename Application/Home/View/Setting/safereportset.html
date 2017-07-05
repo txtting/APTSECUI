@@ -1,0 +1,187 @@
+<div class="main-content">
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try {
+                ace.settings.check('breadcrumbs', 'fixed')
+            } catch (e) {
+            }
+        </script>
+
+        <ul class="breadcrumb">
+            <li>
+                设置
+            </li>
+            <li class="active">安全报表模板设置</li>
+        </ul>
+    </div>
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="aptTable span10 marT10" style="background:#252723;padding:0px;">
+                    <ul class="navBar">
+                    	<li style="padding-right: 0px;"><a href="__APP__/Safe/scanevent">扫描事件</a></li>
+						<li><a href="__APP__/Safe/malicioust">暴力破解</a></li>
+                    	<li><a href="__APP__/Safe/bruteforce">恶意流量</a></li>
+                    	<li><a href="__APP__/Safe/file">文件威胁</a></li>
+                    	<li><a href="__APP__/Safe/index">HTTP流量</a></li>
+                    	<li><a href="__APP__/Urgent/index">紧急事件</a></li>
+                        <li><a href="__APP__/Vir/index">首页</a></li>
+                    </ul>
+                    <div class="wrapper">
+                    	<div class="process">
+	                    	<div class="box">	
+	                    		<img src="__PUBLIC__/css/assets/images/score/6.jpg">
+	                    	</div>
+	                    	<div class="score">
+	                    		<div class="todayScore">
+	                    			今日安全得分
+	                    		</div>
+	                    		<div class="number">
+	                    			69分
+	                    		</div>
+	                    	</div>
+                    	</div>
+                    	<div class="block">
+                    		<div class="express">
+                    			得分是通过今日一天安全数据，如：紧急事件，漏洞，弱点，攻击，信息泄露
+                    			威胁等因素综合计算得出，代表了今天的安全指数
+                    		</div>
+                    	</div>
+                    	<div class="count">
+                    		<div class="todayCount">
+                    			今日安全统计
+                    		</div>
+                    		<div class="underline"></div>
+                    	</div>
+                    	<div class="content">
+                    		<div class="chose">
+								<div class="resetBtn"><a href="javascript:;" style="color:#EFF0EB; text-decoration: none;">撤销</a></div>
+                    			<div class="chooseBtn"><a href="javascript:;" style="color:#EFF0EB; text-decoration: none;">去除</a></div>
+                    		</div>
+
+                            <volist name="attack" id="attack_vo">
+                            <!--  -->
+                            <div class="mainBlock" id="{$attack_vo.id}">
+                                <div class="line">
+                                    <span>
+                                        {$attack_vo.name}
+                                    </span>
+                                </div>
+                                <div class="section">
+                                    <a href="javascript:;">
+                                        <span class="stock">
+                                            <span class="num">{$attack_vo.attack}</span><span>次</span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            </volist>
+                    	</div>
+                    	<div class="count">
+                    		<div class="todayCount">
+                    			重点关注
+                    		</div>
+                    		<div class="underline smallGreen"></div>
+                    	</div>
+                    	<div class="event">
+                    		<table>
+			                    <tr>
+			                    	<td>
+			                    		<span class="eventType">事件类型：</span><span class="eventSeries">肉鸡行动</span>
+			                    	</td>
+			                    	<td>
+			                    		<span class="eventType">受影响资产：</span><span class="eventSeries">(ECS)12345678</span>
+			                    	</td>
+			                    </tr>
+			                    <tr>
+			                    	<td>
+			                    		<span class="eventType">事件类型：</span><span class="eventSeries">肉鸡行动</span>
+			                    	</td>
+			                    	<td>
+			                    		<span class="eventType">受影响资产：</span><span class="eventSeries">(ECS)12345678</span>
+			                    	</td>
+			                    </tr>
+			                    <tr>
+			                    	<td>
+			                    		<span class="eventType">事件类型：</span><span class="eventSeries">肉鸡行动</span>
+			                    	</td>
+			                    	<td>
+			                    		<span class="eventType">受影响资产：</span><span class="eventSeries">(ECS)12345678</span>
+			                    	</td>
+			                    </tr>
+			                    <tr>
+			                    	<td>
+			                    		<span class="eventType">事件类型：</span><span class="eventSeries">肉鸡行动</span>
+			                    	</td>
+			                    	<td>
+			                    		<span class="eventType">受影响资产：</span><span class="eventSeries">(ECS)12345678</span>
+			                    	</td>
+			                    </tr>
+                			</table>
+                    	</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var $stocks = $(".section .stock");
+		$stocks.on('click',function(){
+			if(!$(this).parent().parent().parent().hasClass(".hideBox")){
+				$(this).css("background-color","#007151");
+				$(this).parent().parent().parent().addClass(".hideBox");
+			}else{
+				$(this).css("background-color","#00AEBA");
+				$(this).parent().parent().parent().removeClass(".hideBox");
+			}
+
+		})
+		$(".chooseBtn").click(function () {
+			var arr=[];
+			for(var i=0; i<$stocks.length; i++){
+				var $mainBlock = $('.mainBlock');
+				if($mainBlock[i].className == "mainBlock .hideBox"){
+					$mainBlock[i].style.display="none";
+                    arr.push($mainBlock[i].getAttribute('id'));
+				}
+			}
+            var ids = arr.join(',');
+            $.ajax({
+                type:"POST",
+                url: "__URL__/attack_change_nosel",
+                data:{'ids':ids},
+                dataType:"json",
+                success:function(data){
+                    if(data.status=='success'){
+                        layer.msg(data.msg);
+                    }else{
+                        layer.msg(data.msg);
+                    }
+                }
+            }); 
+		})
+		$(".resetBtn").click(function () {
+			$('.stock').css("background-color","#00AEBA")
+			var $mainBlock = $('.mainBlock');
+			for(var i=0; i<$mainBlock.length; i++){
+				$mainBlock[i].setAttribute('class','mainBlock');
+				$mainBlock[i].style.display="inline-block";
+			}
+            $.ajax({
+                type:"POST",
+                url: "__URL__/attack_change_sel",
+                dataType:"json",
+                success:function(data){
+                    if(data.status=='success'){
+                        layer.msg(data.msg);
+                    }else{
+                        layer.msg(data.msg);
+                    }
+                    window.location.reload();
+                }
+            }); 
+		})
+	});
+</script>

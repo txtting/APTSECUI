@@ -1,0 +1,80 @@
+   
+<div class="main-content">
+    <div class="breadcrumbs" id="breadcrumbs">
+                <script type="text/javascript">
+                    try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+                </script>
+
+                <ul class="breadcrumb">
+                    <li>
+                        基础信息
+                    </li>
+                    <li class="active">策略组修改</li>
+                </ul><!-- .breadcrumb -->
+    </div>
+           <div class="col-sm-12">
+                            <div class="row">
+                                            <div class="col-xs-12">
+                                                <!-- PAGE CONTENT BEGINS -->
+
+                                                <form id="plcygroup_edite_form" style="position:relative;top:20px;" class="form-horizontal" role="form">
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 名称 </label>
+
+                                                        <div class="col-sm-9">
+                                                            <input type="text" name="plcygroupname" id="form-field-1" placeholder="名称" class="col-xs-10 col-sm-5" value="{$plcygroup_data['plcygroup_name']}" required />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="space-4"></div>
+
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 只读 </label>
+
+                                                        <div class="col-sm-9">
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input name="read_only" type="radio" class="ace" <if condition="$plcygroup_data['is_only_read'] eq 1" > checked="checked" </if>   value="1" required />
+                                                                    <span class="lbl"> 是 </span>
+                                                                </label>
+                                                            </div>
+
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input name="read_only" type="radio" class="ace" value="0" required <if condition="$plcygroup_data['is_only_read'] eq 0" > checked="checked" </if> />
+                                                                    <span class="lbl"> 否 </span>
+                                                                </label>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="space-4"></div>
+
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label no-padding-right" for="form-field-tags"> 备注 </label>
+
+                                                        <div class="col-sm-9">
+                                                            <input type="text" name="comment" class="col-xs-10 col-sm-5" value="{$plcygroup_data[note]}" placeholder="备注" />
+                                                        </div>
+                                                    </div>
+                                                    <input type="hidden" name='id' value="{$plcygroup_data[id]}" />
+                                                    <div class="clearfix form-actions">
+                                                        <div class="col-md-offset-3 col-md-9">
+                                                            <button id="plcygroup_button" class="btn btn-info" type="submit">
+                                                                <i class="icon-ok bigger-110"></i>
+                                                                提交
+                                                            </button>
+                                                            &nbsp; &nbsp; &nbsp;
+                                                            <button class="btn" type="reset">
+                                                                <i class="icon-undo bigger-110"></i>
+                                                                取消
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div><!-- /.col -->
+                                        </div><!-- /.row -->      
+                        </div>
+                    </div>
+                </div>

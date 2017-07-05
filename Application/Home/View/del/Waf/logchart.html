@@ -1,0 +1,274 @@
+<div class="main-content">
+
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try {
+                ace.settings.check('breadcrumbs', 'fixed')
+            } catch (e) {
+            }
+        </script>
+
+        <ul class="breadcrumb">
+            <li>
+                Waf管理
+            </li>
+            <li class="active">攻击日志</li>
+        </ul>
+        <!-- .breadcrumb -->
+
+    </div>
+   
+   
+    <div class="tabbable marL10">
+        <ul class="nav nav-tabs" id="myTab">
+            <li class="active">
+                <a data-toggle="tab" href="__URL__/logchart">
+                    攻击统计及趋势
+                </a>
+            </li>
+
+            <li>
+                <a data-toggle="" href="__URL__/log">
+                    攻击日志查询
+                </a>
+            </li>
+
+        </ul>
+
+        <div class="tab-content">
+            <div id="home" class="tab-pane in active">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-xs-12">
+
+                            <div class="formArea marT10">
+                                <form method="get" action="__URL__/suser">
+                                    
+                                    <div class=" floatLeft marL10">
+                                        <label class="">时间：</label>
+                                        <input type="text" name="nature" class="w100 nature">
+                                        -
+                                        <input type="text" name="nature" class="w100 nature">
+                                        
+                                       
+                                      
+
+                                    </div>
+
+
+                                    <button class="btn btn-sm btn-primary marL10"><i class="fa fa-search"></i>查询</button>
+
+                                </form>
+                            </div>
+
+
+                            <!--<div class="buttonGroup">
+                                <a href="javascript:export_data()" class="btn btn-link" id=""><i class="icon-cloud-upload  bigger-120 blue "></i>导出报表</a>
+                                
+                            </div>
+                            -->
+
+                            <div class="table-responsive" style="overflow: auto;height: 330px;MARGIN-TOP:8PX;">
+                            <div id="container" style="width:48%;height:320px; float:left;"></div>
+                            <div id="container2" style="width:48%;height:320px; float:left;"></div>
+                               
+                            </div>
+                        </div>
+                    </div>
+   
+   
+   
+   
+   </div>
+   
+   
+   
+   
+        <!-- /row -->
+        <div class="dataTables_paginate paging_bootstrap">
+            <ul class="pagination">
+                {$show}
+            </ul>
+        </div>
+    </div>
+</div><!-- /.main-content -->
+<script type="text/javascript">
+$(function () {
+    $('#container').highcharts({
+		colors: ['#2b908f', '#90ee7e', '#f45b5b', '#7798BF', '#aaeeee', '#ff0066', '#eeaaee',
+                '#55BF3B', '#DF5353', '#7798BF', '#aaeeee'
+            ],
+        title: {
+            text: '攻击基本统计',
+            x: -20 //center
+        },
+        subtitle: {
+            text: '',
+            x: -20
+        },
+        xAxis: {
+            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                         'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        },
+        yAxis: {
+            title: {
+                text: '次数'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valueSuffix: '次'
+        },
+        legend: {
+            borderWidth: 0
+        },
+        series: [{
+            name: '1月',
+            data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+        },
+		{
+            name: '2月',
+            data: [5.0, 4.9, 5.5, 4.5, 8.2, 9.5, 5.2, 6.5, 9.3, 8.3, 9.9, 12.6]
+        },
+		{
+            name: '3月',
+            data: [6.0, 6.9, 6.5, 8.5, 5.2, 8.5, 9.2, 7.5, 12.3, 5.3, 19.9, 10.6]
+        },]
+    });
+});
+
+
+$(function () {
+    $('#container2').highcharts({
+		colors: ['#2b908f', '#90ee7e', '#f45b5b', '#7798BF', '#aaeeee', '#ff0066', '#eeaaee',
+                '#55BF3B', '#DF5353', '#7798BF', '#aaeeee'
+            ],
+        chart: {
+                    backgroundColor: '',
+                    type: 'pie',
+                    options3d: {
+                        enabled: true,
+                        alpha: 70,
+                        beta: 0
+                    }},
+        title: {
+            text: 'OWASP TOP10'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        depth: 25,
+                        dataLabels: {
+                            enabled: false,
+                            format: '{point.name}'
+                        },
+                        showInLegend: true
+                    }},
+        series: [{
+            type: 'pie',
+            name: 'Browser share',
+            data: [
+                ['GET',   45.0],
+                ['POST',       26.8],
+                {
+                    name: 'Chrome',
+                    y: 12.8,
+                    sliced: true,
+                    selected: true
+                },
+                ['Safari',    8.5],
+                ['Opera',     6.2],
+                ['Others',   0.7]
+            ]
+        }]
+    });
+});
+
+</script>
+
+<script type="text/javascript">
+    $('.negroup').attr('value',getParam("negroup"));
+    $('.ip').attr('value',getParam("ip"));
+    $('.source').attr('value',getParam("source"));
+    $('.date-range-picker').attr('value',URLdecode(getParam("date-range-picker")));
+
+    function URLdecode(sStr){
+       return sStr.replace(/\+/g,' ').replace(/\%2F/g,'\/').replace(/\%20/g,''); 
+    }
+
+    function getParam(paramName)
+    {
+        paramValue = "";
+        isFound = false;
+        if (this.location.search.indexOf("?") == 0 && this.location.search.indexOf("=")>1)
+        {
+            arrSource = this.location.search.substring(1,this.location.search.length).split("&");
+            i = 0;
+            while (i < arrSource.length && !isFound)
+            {
+                if (arrSource[i].indexOf("=") > 0)
+                {
+                    if (arrSource[i].split("=")[0].toLowerCase()==paramName.toLowerCase())
+                    {
+                        paramValue = arrSource[i].split("=")[1];
+                        isFound = true;
+                    }
+                }
+                i++;
+            }
+        }
+        return paramValue;
+    }
+
+    $(".more").click(function () {
+        var div = $(".moreSelect");
+        if (div.css("display") === "none") {
+            div.show();
+            $('.more').html('收起')
+        } else {
+            div.hide();
+            $('.more').html('更多条件')
+        }
+        return false;
+    })
+
+</script>
+<script type="text/javascript">
+    $(".Ignore").click(function () {
+        $("#Ignore").show();
+        $("#fade").show();
+        return false
+    });
+    $(".closePop").css("cursor", "pointer").click(function () {
+        $("#Ignore").hide();
+        $("#fade").hide();
+    });
+
+    jQuery(function ($) {
+        $('input[name=date-range-picker]').daterangepicker({
+                    locale : {
+                        applyLabel: '提交',
+                        cancelLabel: '取消',
+                        fromLabel: '开始时间',
+                        toLabel: '结束时间',
+                        weekLabel: 'W',
+                        customRangeLabel: 'Custom Range',
+                        daysOfWeek: ['日', '一', '二', '三', '四', '五','六'],
+                        monthNames: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+                        firstDay: moment.localeData()._week.dow
+                    },
+                    language: 'cn',}
+        ).prev().on(ace.click_event, function () {
+                    $(this).next().focus();
+                });
+
+    })
+</script>

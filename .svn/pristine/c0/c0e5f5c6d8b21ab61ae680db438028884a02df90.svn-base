@@ -1,0 +1,17 @@
+<?php
+namespace Home\Controller;
+class SettingController extends CommonController {
+   public function index(){
+     layout('Layout/layout');
+     $this->display();
+  }
+  public function safereportset(){
+     layout('Layout/layout');
+     $this->display();
+  }
+  public function ugevent(){
+     layout('Layout/layout');
+     $this->display();
+  }
+
+}

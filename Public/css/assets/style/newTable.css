@@ -1,0 +1,86 @@
+.pull-right .dropdown-menu {
+    left: auto;
+    right: 0;
+}
+.fixed-table-toolbar .dropdown-menu {
+    max-height: 300px;
+    overflow: auto;
+    text-align: left;
+}
+.dropdown-menu {
+    background-clip: padding-box;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+    display: none;
+    float: left;
+    font-size: 14px;
+    left: 0;
+    list-style: outside none none;
+    margin: 2px 0 0;
+    min-width: 160px;
+    padding: 5px 0;
+    position: absolute;
+    top: 100%;
+    z-index: 1000;
+}
+.btn-default {
+    background-color: #ffffff!important;
+    border-color: #cccccc!important;
+    color: #333333!important;
+}
+.btn-group > .btn, .btn-group-vertical > .btn {
+    float: left;
+    position: relative;
+}
+
+.btn {
+    -moz-user-select: none;
+    background-image: none;
+    border: 1px solid #A5A5A5;
+    border-width: 1px!important;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857;
+    margin-bottom: 0;
+    padding: 5px 12px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+	background:#F2F2F2;	
+}
+.aptTable .bootstrap-table .fixed-table-toolbar .columns .keep-open >button{
+    background-color: #F0F0F0!important;
+}
+.btn-primary:hover, .open .btn-primary.dropdown-toggle {
+    background-color: #185D95!important;
+}
+.caret{
+	border-bottom:0 dotted!important;
+}
+.fixed-table-container .fixed-table-body #reportTable tbody tr .form-group{
+	display: none!important;
+}
+.btn-group>.btn>.caret{
+	border-top-color:#000!important;
+	margin-top:0px!important;
+}
+.fixed-table-container tbody tr:first-child td {
+     border-top: 1px solid #ddd!important;
+}
+.bootstrap-table .table > thead > tr > th {
+    border-bottom: 0px !important;
+}
+.col-xs-12 .formArea  form  .usergroup{
+	height: 34px!important;
+}
+.green {
+    margin: 5px;
+}
+
+.fieldBtn{ background:#ffffff; color:#333333; height:34px; padding-left:8px; padding-right:8px; padding-top:0px; line-height:34px;font-family:'microsoft Yahei'; border:1px solid #dddddd;}
+

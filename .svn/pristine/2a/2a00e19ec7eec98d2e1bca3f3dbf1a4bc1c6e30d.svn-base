@@ -1,0 +1,1338 @@
+<?php if (!defined('THINK_PATH')) exit();?>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>安全威胁感知系统</title>
+
+		<meta name="description" content="overview &amp; stats" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta http-equiv="cache-control" content="max-age=0" />
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="expires" content="0" />
+		<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+		<meta http-equiv="pragma" content="no-cache" />
+
+		 <!-- basic styles -->
+
+         <link rel="stylesheet" href="/SecApt/Public/css/assets/css/bootstrap.min.css"  />
+         <link rel="stylesheet" href="/SecApt/Public/css/assets/css/font-awesome.min.css" />
+        <!--[if IE 7]>
+          <link rel="stylesheet" href="/SecApt/Public/css/assets/css/font-awesome-ie7.min.css" />
+        <![endif]-->
+
+        <!-- page specific plugin styles -->
+        <link rel="stylesheet" href="/SecApt/Public/css/assets/css/jquery-ui-1.10.3.custom.min.css" />
+        <link rel="stylesheet" href="/SecApt/Public/css/assets/css/chosen.css" />
+        <link rel="stylesheet" href="/SecApt/Public/css/assets/css/datepicker.css" />
+        <link rel="stylesheet" href="/SecApt/Public/css/assets/css/bootstrap-timepicker.css" />
+        <link rel="stylesheet" href="/SecApt/Public/css/bootstrap-duallistbox.css" />
+        <link rel="stylesheet" href="/SecApt/Public/css/prettify.css" />
+
+       <!-- <link rel="stylesheet" href="/SecApt/Public/css/assets/css/daterangepicker.css" /> -->
+        <link rel="stylesheet" href="/SecApt/Public/css/assets/css/colorpicker.css" />
+
+        <!-- fonts -->
+
+        <link rel="stylesheet" href="/SecApt/Public/css/assets/css/ace-fonts.css" />
+
+        <!-- ace styles -->
+
+        <link rel="stylesheet" href="/SecApt/Public/css/assets/css/ace.min.css" />
+        <link rel="stylesheet" href="/SecApt/Public/css/assets/css/ace-rtl.min.css" />
+        <link rel="stylesheet" href="/SecApt/Public/css/assets/css/ace-skins.min.css" />
+        <link rel="stylesheet" href="/SecApt/Public/css/assets/css/jquery.ipaddress.css" />
+        <link rel="stylesheet" href="/SecApt/Public/css/daterangepicker-bs3.css" />
+		<link rel="stylesheet" href="/SecApt/Public/css/assets/css/datetimepicker/datetimepicker.min.css" />
+        
+        
+        <!--[if lte IE 8]>
+          <link rel="stylesheet" href="/SecApt/Public/css/assets/css/ace-ie.min.css" />
+        <![endif]-->
+
+        <!-- inline styles related to this page -->
+        
+        <link href="/SecApt/Public/css/assets/style/main.css" rel="stylesheet">
+		<link href="/SecApt/Public/css/assets/style/common.css" rel="stylesheet">
+        <link href="/SecApt/Public/css/assets/style/file.css" rel="stylesheet">
+        
+
+       <!-- <link type="text/css" rel="stylesheet" href="/SecApt/Public/css/assets/css/tree/font-awesome.min.css">-->
+        <link type="text/css" rel="stylesheet" href="/SecApt/Public/css/assets/css/goal-thermometer/goal-thermometer.css"> 
+        <link rel="stylesheet" href="/SecApt/Public/css/assets/css/ztreecss/zTreeStyle/zTreeStyle.css" type="text/css">
+          <link rel="stylesheet" href="/SecApt/Public/css/uploadfile.css" >
+
+		<script>
+		var GV = {
+		DIMAUB: "/SecApt/Public/",
+		JS_ROOT: "css/assets/",
+		TOKEN: ""
+		};
+		</script>
+
+		<script src="/SecApt/Public/css/assets/js/tree/jquery.js"></script>
+        <script src="/SecApt/Public/css/assets/js/tree/wind.js"></script>
+        <script src="/SecApt/Public/css/assets/js/ace-extra.min.js"></script>
+
+        <!--<script src="/SecApt/Public/css/assets/js/highcharts/highcharts.js"></script>-->
+    <script src="/SecApt/Public/css/assets/js/highcharts/highstock.js"></script>
+    <script src="/SecApt/Public/css/assets/js/highcharts/highcharts-more.js"></script>
+    <script src="/SecApt/Public/css/assets/js/highcharts/solid-gauge.js"></script>
+    <script src="/SecApt/Public/css/assets/js/highcharts/highcharts-3d.js"></script>
+    <script src="/SecApt/Public/css/assets/js/highcharts/no-data-to-display.js"></script>
+    <!-- <script src="/SecApt/Public/Highcharts-5.0.6/code/modules/exporting.js"></script>  -->
+    <script src="/SecApt/Public/js/jquery.uploadfile.min.js"></script>
+
+
+
+
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+        <!--[if lt IE 9]>
+        <script src="/SecApt/Public/css/assets/js/html5shiv.js"></script>
+        <script src="/SecApt/Public/css/assets/js/respond.min.js"></script>
+        <![endif]-->
+
+	</head>
+
+	<body class="skin-1" style="min-width:1010px;">
+		<div class="navbar "  id="navbar">
+			<script type="text/javascript">
+				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="navbar-container" id="navbar-container"  style="min-width:1010px;">
+
+               <span style="float:left; display:inline-block; font-size:18px; color:#009cff; font-weight:bold; line-height:56px; text-indent:10px;"> 安全威胁感知系统</span>
+                <!--<img src="/SecApt/Public/css/assets/images/logo.png" class="floatLeft">-->
+			<div  class="Toptitle">
+            	<h3 class="floatLeft"></h3>
+                <span class="floatRig">
+                    <b>欢迎您，<?php echo (session('username')); ?></b>
+                	<a href="/SecApt/index.php/Main/main"><img src="/SecApt/Public/css/assets/images/iconTop01.png" title="首页"></a>
+                    <a href="/SecApt/index.php/User/user_password_edite"><img src="/SecApt/Public/css/assets/images/iconTop03.png" title="修改密码"></a>
+                    <?php echo authcheck('Home/Setting/setting','
+                    <a href="/SecApt/index.php/Setting/setting"><img src="/SecApt/Public/css/assets/images/iconTop05.png" title="配置"></a>
+                    ','');?>
+                    <a href="<?php echo U('Login/logout');?>" class="noborder"><img src="/SecApt/Public/css/assets/images/iconTop04.png" title="退出"> </a>
+
+                </span>
+           </div>
+                
+
+			</div><!-- /.container -->
+		</div>
+
+		<div class="main-container" id="main-container" style="min-width:1010px;">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="main-container-inner" style="min-width:1010px;">
+				<a class="menu-toggler" id="menu-toggler" href="#">
+					<span class="menu-text"></span>
+				</a>
+
+				<div class="sidebar menu-min" id="sidebar">
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+					</script>
+					<ul class="nav nav-list">
+						<!--  <li <?php if($controller == 'Negroup'): ?>class="active open"<?php endif; ?>>
+						 	<?php if(authcheck('Home/Negroup/index,Home/Negroup/negroup,Home/Negroup/plcygroup','1','')): ?><a href="#" class="dropdown-toggle">
+								<i class="icon-net"></i>
+								<span class="menu-text">网元管理</span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li <?php if(($action) == "index"): ?>class="active"<?php endif; ?>>
+									 <?php echo authcheck('Home/Negroup/index','
+									 <a href="/SecApt/index.php/Negroup/index">
+										<i class="icon-double-angle-right"></i>
+										网元管理
+									</a>
+									 ','');?>
+								</li>
+
+								<li <?php if(($action) == "negroup"): ?>class="active"<?php endif; ?>>
+									<a href="/SecApt/index.php/Negroup/negroup">
+										<i class="icon-double-angle-right"></i>
+										网元组管理 
+									</a>
+								</li>
+
+								<li  <?php if(($action) == "plcygroup"): ?>class="active"<?php endif; ?>>
+									<?php echo authcheck('Home/Negroup/plcygroup','
+									<a href="/SecApt/index.php/Negroup/plcygroup">
+										<i class="icon-double-angle-right"></i>
+										网元监控
+									</a>
+									','');?>
+								</li>
+								<li  <?php if(($action) == "flow"): ?>class="active"<?php endif; ?>>
+									<a href="/SecApt/index.php/Negroup/flow">
+										<i class="icon-double-angle-right"></i>
+										分流器监控
+									</a>
+								</li>
+							
+							</ul><?php endif; ?>
+						</li> -->
+                        
+                         <li <?php if($controller == 'Vir'): ?>class="active open"<?php endif; ?>>
+                        	<?php if(authcheck('Home/User/user,Home/User/usergroup','1','')): ?><a href="#" class="dropdown-toggle">
+								<i class=" icon-bolt "></i>
+								<span class="menu-text"> 攻击事件 </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li <?php if(($action) == "index"): ?>class="active"<?php endif; ?>>
+									<a href="/SecApt/index.php/Vir/index">
+										<i class="icon-double-angle-right"></i>
+                                        攻击事件
+									</a>
+								</li>
+								<li <?php if(($action) == "index_web"): ?>class="active"<?php endif; ?>>
+								<a href="/SecApt/index.php/Vir/index_web">
+									<i class="icon-double-angle-right"></i>
+									WEB攻击
+								</a>
+								</li>
+								<li <?php if(($action) == "index_inv"): ?>class="active"<?php endif; ?>>
+								<a href="/SecApt/index.php/Vir/index_inv">
+									<i class="icon-double-angle-right"></i>
+									入侵事件
+								</a>
+								</li>
+								<li <?php if(($action) == "index_vir"): ?>class="active"<?php endif; ?>>
+								<a href="/SecApt/index.php/Vir/index_vir">
+									<i class="icon-double-angle-right"></i>
+									病毒事件
+								</a>
+								</li>
+								<li <?php if(($action) == "search"): ?>class="active"<?php endif; ?>>
+								<a href="/SecApt/index.php/Vir/search">
+									<i class="icon-double-angle-right"></i>
+									统计查询
+								</a>
+								</li>
+								<!--<li <?php if(($action) == "ip"): ?>class="active"<?php endif; ?>>-->
+									<!--<a href="/SecApt/index.php/Vir/ip">-->
+										<!--<i class="icon-double-angle-right"></i>-->
+										<!--IP管理-->
+									<!--</a>-->
+								<!--</li>-->
+                               
+                                <!--
+                                <li <?php if(($action) == "virlog"): ?>class="active"<?php endif; ?>>
+									<a href="/SecApt/index.php/Vir/virlog">
+										<i class="icon-double-angle-right"></i>
+                    实时事件监测
+									</a>
+								</li>
+                                -->
+							</ul><?php endif; ?>
+						</li>
+                        
+               
+                        <li <?php if($controller == 'Waf'): ?>class="active open"<?php endif; ?>>
+                        	<?php if(authcheck('Home/Waf/eqstate,Home/Waf/webstate,Home/Waf/log,Home/Waf/reportform,Home/Waf/set,Home/Waf/maintain','1','')): ?><a href="#" class="dropdown-toggle">
+								<i class="icon-bar-chart" style="font-size:14px;"></i>
+								<span class="menu-text"> 报表管理 </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+                           
+
+							<ul class="submenu">
+								<li  <?php if(($action) == "eqstate"): ?>class="active"<?php endif; ?>>
+									<?php echo authcheck('Home/Waf/eqstate','
+									<a href="/SecApt/index.php/Waf/eqstate">
+										<i class="icon-double-angle-right"></i>
+									    报表分析
+									</a>
+									','');?>
+								</li>
+								
+                          
+                                
+                                <!--
+                                <li  <?php if(($action) == "set"): ?>class="active"<?php endif; ?>>
+                                	<?php echo authcheck('Home/Waf/set','
+									<a href="/SecApt/index.php/Waf/set">
+										<i class="icon-double-angle-right"></i>
+										设置配置
+									</a>
+									','');?>
+								</li>
+                                <li  <?php if(($action) == "maintain"): ?>class="active"<?php endif; ?>>
+                                	<?php echo authcheck('Home/Waf/maintain','
+									<a href="/SecApt/index.php/Waf/maintain">
+										<i class="icon-double-angle-right"></i>
+										维护
+									</a>
+									','');?>
+								</li>
+                                -->                                
+
+                                
+                                
+								
+							</ul><?php endif; ?>
+                            
+                          
+						</li>
+                        
+                  
+                        
+                        
+                         <li <?php if($controller == 'Setting'): ?>class="active open"<?php endif; ?>> 
+                        <?php if(authcheck('Home/index/base,Home/index/negroup','1','')): ?><a href="#" class="dropdown-toggle">  
+                                <i class="icon-cog" style=""></i> 
+                                <span class="menu-text">配置管理 </span>  
+                                   
+                                <b class="arrow icon-angle-down"></b>  
+                                </a>  
+                                   
+                                <ul class="submenu">  
+                                
+                                <!--<li  <?php if(($action) == "setting"): ?>class="active"<?php endif; ?>>
+                                <?php echo authcheck('Home/setting/setting','  
+                                <a href="/SecApt/index.php/setting/setting">  
+                                <i class="icon-double-angle-right"></i>  
+                                引擎配置  
+                                </a>
+                                ','');?>  
+                                </li>
+                                -->
+                                <li  <?php if(($action) == "update"): ?>class="active"<?php endif; ?>>
+                                <?php echo authcheck('Home/setting/update','  
+                                <a href="/SecApt/index.php/setting/update">  
+                                <i class="icon-double-angle-right"></i>  
+                                规则更新  
+                                </a>
+                                ','');?>  
+                                </li>
+                                
+                                </ul><?php endif; ?>
+                        
+                        </li> 
+                        
+                         <li <?php if($controller == 'Negroup'): ?>class="active open"<?php endif; ?>>
+                        	<?php if(authcheck('Index/negroup/index,','1','')): ?><a href="#" class="dropdown-toggle">
+								<i class="icon-desktop" style="font-size:14px;"></i>
+								<span class="menu-text"> 设备管理 </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li <?php if(($action) == "index"): ?>class="active"<?php endif; ?>>
+									<?php echo authcheck('Home/Negroup/index','
+									<a href="/SecApt/index.php/Negroup/index">
+										<i class="icon-double-angle-right"></i>
+										设备列表
+									</a>
+									','');?>
+								</li>
+                               <!-- <li <?php if(($action) == "negroup"): ?>class="active"<?php endif; ?>>
+									<?php echo authcheck('Home/Negroup/negroup','
+									<a href="/SecApt/index.php/Negroup/index">
+										<i class="icon-double-angle-right"></i>
+										设备组
+									</a>
+									','');?>
+								</li>-->
+								
+								
+							</ul><?php endif; ?>
+						</li>
+                        
+                        <li <?php if($controller == 'User'): ?>class="active open"<?php endif; ?>>
+                        	<?php if(authcheck('Home/User/user,Home/User/usergroup','1','')): ?><a href="#" class="dropdown-toggle">
+								<i class="icon-user" style="font-size:16px;"></i>
+								<span class="menu-text"> 用户管理 </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li <?php if(($action) == "user"): ?>class="active"<?php endif; ?>>
+									<?php echo authcheck('Home/User/user','
+									<a href="/SecApt/index.php/User/user">
+										<i class="icon-double-angle-right"></i>
+										用户管理
+									</a>
+									','');?>
+								</li>
+								
+                                <li <?php if(($action) == "usergroup"): ?>class="active"<?php endif; ?>>
+									<?php echo authcheck('Home/User/usergroup','
+									<a href="/SecApt/index.php/User/usergroup">
+										<i class="icon-double-angle-right"></i>
+										用户组管理
+									</a>
+									','');?>
+								</li>
+								
+								
+							</ul><?php endif; ?>
+						</li>
+
+                        
+						
+                        
+                        <!-- <li <?php if($controller == 'Task'): ?>class="active open"<?php endif; ?>>
+                        	<?php if(authcheck('Home/Task/tasklist,Home/Task/upgrade,Home/Task/packetCapture','1','')): ?><a href="#" class="dropdown-toggle">
+								<i class="icon-task"></i>
+								<span class="menu-text"> 任务管理 </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li  <?php if(($action) == "tasklist"): ?>class="active"<?php endif; ?>>
+									<?php echo authcheck('Home/Task/tasklist','
+									<a href="/SecApt/index.php/Task/tasklist">
+										<i class="icon-double-angle-right"></i>
+									任务管理
+									</a>
+									','');?>
+								</li>
+
+                                <li  <?php if(($action) == "upgrade"): ?>class="active"<?php endif; ?>>
+                                	<?php echo authcheck('Home/Task/upgrade','
+									<a href="/SecApt/index.php/Task/upgrade">
+										<i class="icon-double-angle-right"></i>
+									版本库管理
+									</a>
+									','');?>
+								</li>
+
+								
+							</ul><?php endif; ?>
+                            
+
+						</li> -->
+                      
+                        
+                        
+                        
+                        
+                        
+                       
+                        
+                        
+                        
+                        
+
+						<!-- <li <?php if($controller == 'Plcy'): ?>class="active open"<?php endif; ?>>
+							<?php if(authcheck('Home/Plcy/report_plcy,Home/Plcy/control_plcy,','1','')): ?><a href="#" class="dropdown-toggle">
+								<i class="icon-policy"></i>
+								<span class="menu-text"> 策略管理 </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li  <?php if(($action) == "report_plcy"): ?>class="active"<?php endif; ?>>
+									<?php echo authcheck('Home/Plcy/report_plcy',' 
+									<a href="/SecApt/index.php/Plcy/report_plcy">
+										<i class="icon-double-angle-right"></i>
+										上报策略
+									</a>
+									','');?>
+								</li>
+
+								<li  <?php if(($action) == "control_plcy"): ?>class="active"<?php endif; ?>>
+									<?php echo authcheck('Home/Plcy/control_plcy',' 
+									<a href="/SecApt/index.php/Plcy/control_plcy">
+										<i class="icon-double-angle-right"></i>
+										管控策略
+									</a>
+									','');?>
+								</li>
+							</ul><?php endif; ?>
+						</li> -->
+						<li <?php if($controller == ''): ?>class="active open"<?php endif; ?>>
+							<?php if(authcheck('Home/Log/index,','1','')): ?><a href="#" class="dropdown-toggle">
+								<i class=" icon-calendar " style="font-size:14px;"></i>
+								<span class="menu-text"> 日志管理 </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li  <?php if(($action) == "index"): ?>class="active"<?php endif; ?>>
+									<a href="<?php echo U('Log/index');?>">
+										<i class="icon-double-angle-right"></i>
+										日志管理
+									</a>
+								</li>
+							</ul><?php endif; ?> 
+						</li>
+					</ul><!-- 
+
+					<div class="sidebar-collapse" id="sidebar-collapse">
+						<i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
+					</div>/.nav-list -->
+
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+						var locaHref=window.location.href;  
+							var reg=/Main\/main/  
+							if(reg.test(locaHref)==true){  
+							$("#sidebar").addClass('menu-min')  
+							$("#sidebar-collapse").remove()  
+							}else{  
+							$("#sidebar").removeClass('menu-min')  
+							}  
+							  
+
+					</script>
+
+					
+				</div>
+
+
+<div class="main-content">
+
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try {
+                ace.settings.check('breadcrumbs', 'fixed')
+            } catch (e) {
+            }
+        </script>
+
+        <ul class="breadcrumb">
+            <li>
+                攻击事件
+            </li>
+            <li class="active">WEB攻击</li>
+        </ul>
+        <!-- .breadcrumb -->
+        <!-- #nav-search -->
+    </div>
+    <div class="tabbable">
+       <!-- <ul class="nav nav-tabs" id="myTab">
+            <li>
+                <a data-toggle="" href="/SecApt/index.php/Home/Vir/index">
+                    全部
+                </a>
+            </li>
+
+            <li class="active">
+                <a data-toggle="tab" href="#home">
+                    WEB攻击
+                </a>
+            </li>
+
+            <li>
+                <a data-toggle="" href="/SecApt/index.php/Home/Vir/index_inv">
+                    入侵事件
+                </a>
+            </li>
+            <li>
+                <a data-toggle="" href="/SecApt/index.php/Home/Vir/index_vir">
+                    病毒事件
+                </a>
+            </li>
+
+        </ul>-->
+
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-xs-12">
+
+                            <div class="formArea">
+                                <!--                    <label class="w70" style="float:left; line-height:30px; padding-left:5px; width:80px;">截止时间：</label>
+                                                    <input class="form-control form_datetime" name="task_start" type="text"
+                                                           data-date-format="yyyy-mm-dd" value="" style="width:150px; float: left"/>-->
+<!--                                <label style="float:left; line-height:30px; padding-left:5px; ">设备组：</label>
+                                <select id="" style="float: left">
+                                    <option value="0">全部</option>
+                                    <?php foreach ($rooms as $key => $value) : ?>
+                                    <option value="<?= $key ?>"><?= $value ?></option>
+                                    <?php endforeach ?>
+                                </select>-->
+                                <label class="w70" style="line-height:30px; padding-left:5px; width:65px;">IP地址：</label>
+                                <input id="ipinfo" name="ip" type="text" value=""/>
+                                <button id="search" class="btn btn-sm btn-primary marL10"><i class="fa fa-search"></i>查询
+                                </button>
+                                <!--
+                                <b style="display:inline-block; position:absolute; right:10px; font-weight:normal; line-height:30px;">说明：ip地址为空时，进行全量查询。</b>-->
+                            </div>
+
+
+                            <div id="container1" style="float:left;width: 50%;height:300px"></div>
+                            <div class="HomeRig" style="width: 48%;float: left">
+                            <table>
+                             <tr><th colspan="3">URL攻击排行</th></tr>
+                            </table>
+                                <div style="height: 200px;overflow-y:auto; overflow-x:hidden;">
+                               
+                                
+                                    <table cellpadding="0" cellspacing="0" border="0">
+                                       
+                                        <tr>
+                                            <td>URL</td>
+                                            <td style="width:80px;">事件类型</td>
+                                            <td style="width:80px;">攻击次数</td>
+                                        </tr>
+                                        <?php if(is_array($attack_url_type_count)): $i = 0; $__LIST__ = $attack_url_type_count;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+                                                <td><span style="display:inline-block; line-height:26px; float:left; height:26px; margin:0px; padding:0px;width:340px;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"><?php echo ($vo["url"]); ?></span></td>
+                                                <td><?php echo ($vo["attack_type_comment"]); ?></td>
+                                                <td><?php echo ($vo["attack_type_count"]); ?></td>
+                                            </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                                    </table>
+                                  
+                                </div>
+                            </div>
+                            <div style="float: left;width: 100%">
+                                <div style="float: right;" id="his_change"><a href="/SecApt/index.php/Home/Vir/his_chart?type=<?php echo (session('type')); ?>" class="marL10 btn btn-sm btn-primary">查看历史</a></div>
+                                <div id="container_line" style="width:100%;height:300px;margin-left:0px;"></div>
+                            </div>
+
+                            <div class="HomeRig" style="width: 100%; margin-top: 20px">
+
+                                <div >
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th>源IP</th>
+                                            <th>目的IP</th>
+                                            <th>攻击名称</th>
+                                            <th>攻击域名</th>
+                                            <th>攻击区域</th>
+                                            <th>URL</th>
+                                            <th>平台信息</th>
+<!--                                             <th>事件类型</th>
+                                            <th>样本名</th>  -->
+                                            <th>危害程度</th>
+                                            <th>协议类型</th>
+                                            <th>时间</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <?php if(is_array($virdata)): $i = 0; $__LIST__ = $virdata;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$virdata_vo): $mod = ($i % 2 );++$i;?><tr class="danger">
+                                                <td><?php echo ($virdata_vo["src_ip"]); ?></td>
+                                                <td><?php echo ($virdata_vo["dst_ip"]); ?></td>
+                                                <td><?php echo ($virdata_vo["attack_name"]); ?></td>
+                                                <td><?php echo ($virdata_vo["host"]); ?></td>
+                                                <td><?php echo ($virdata_vo["attack_attribution"]); ?></td>
+                                                <td><?php echo ($virdata_vo["url"]); ?></td>
+                                                <td><?php if($virdata_vo['platform'] == 1): ?>windows<?php elseif($virdata_vo['platform'] == 2): ?>Linux/Uinux<?php elseif($virdata_vo['platform'] == 3): ?>Android<?php elseif($virdata_vo['platform'] == 4): ?>IOS<?php endif; ?></td>
+                                                <td><?php echo ($virdata_vo["hazard_extent_comment"]); ?></td>
+                                                <td><?php echo ($virdata_vo["protocol_name"]); ?></td>
+                                                <td><?php echo (date("Y-m-d H:i:s",$virdata_vo["time_stamp"])); ?></td>
+                                            </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="dataTables_paginate paging_bootstrap">
+                        <ul class="pagination">
+                            <?php echo ($show); ?>
+                        </ul>
+                    </div>
+                </div>
+    </div>
+</div>
+
+<script>
+    $('#ipinfo').attr('value',getParam("ip"));
+    $('#search').click(function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        var ip = $('#ipinfo').attr('value');
+        window.location.href="/SecApt/index.php/Home/Vir/index_web?ip="+ip;
+    });
+    function getParam(paramName)
+    {
+        paramValue = "";
+        isFound = false;
+        if (this.location.search.indexOf("?") == 0 && this.location.search.indexOf("=")>1)
+        {
+            arrSource = this.location.search.substring(1,this.location.search.length).split("&");
+            i = 0;
+            while (i < arrSource.length && !isFound)
+            {
+                if (arrSource[i].indexOf("=") > 0)
+                {
+                    if (arrSource[i].split("=")[0].toLowerCase()==paramName.toLowerCase())
+                    {
+                        paramValue = arrSource[i].split("=")[1];
+                        isFound = true;
+                    }
+                }
+                i++;
+            }
+        }
+        return paramValue;
+    }
+    Date.prototype.Format = function (fmt) { //author: meizz
+        var o = {
+            "M+": this.getMonth() + 1, //月份
+            "d+": this.getDate(), //日
+            "h+": this.getHours(), //小时
+            "m+": this.getMinutes(), //分
+            "s+": this.getSeconds(), //秒
+            "q+": Math.floor((this.getMonth() + 3) / 3), //季度
+            "S": this.getMilliseconds() //毫秒
+        };
+        if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+        for (var k in o)
+            if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+        return fmt;
+    }
+
+    $(".form_datetime").val(new Date().Format("yyyy-MM-dd hh:mm"));
+    function getWhere() {
+        var where = {};
+        where.time = $('.date-range-picker').val();
+        where.type = $('#type').val();
+        where.ip = $('#ipinfo').val();
+        return where;
+    }
+    Highcharts.setOptions({
+        lang: {
+            resetZoom: '重置',
+        }
+    });
+
+    jQuery(function ($) {
+        $(".form_datetime").datetimepicker({
+            autoclose: true,
+            language: 'Zh-cn',
+            /* startDate: new Date(),*/
+            format: 'yyyy-mm-dd hh:ii'
+        });
+        $('input[name=date-range-picker]').daterangepicker({
+                    startDate: moment().subtract(1, 'days'),
+                    endDate: moment(),
+                    locale: {
+                        applyLabel: '提交',
+                        cancelLabel: '取消',
+                        fromLabel: '开始时间',
+                        toLabel: '结束时间',
+                        weekLabel: 'W',
+                        customRangeLabel: 'Custom Range',
+                        daysOfWeek: ['日', '一', '二', '三', '四', '五', '六'],
+                        monthNames: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+                        firstDay: moment.localeData()._week.dow
+                    },
+                    language: 'cn',
+                    format: 'YYYY/MM/DD'
+                }
+        ).prev().on(ace.click_event, function () {
+                    $(this).next().focus();
+                });
+        
+        /*$(function () {
+            $('#container').highcharts({
+				colors: ['#c63012', '#ea7f0c', '#cbf621', '#7798BF', '#aaeeee', '#ff0066', '#eeaaee',
+                '#55BF3B', '#DF5353', '#7798BF', '#aaeeee'
+            ],
+                chart:{
+                    backgroundColor: '#fefefe',
+                    type: 'pie',
+                    options3d: {
+                        enabled: true,
+                        alpha: 70,
+                        beta: 0
+                    },
+                },
+                title: {
+                    text: 'WEB攻击级别比例饼状图'
+                },
+                credits:{
+                    enabled:false // 禁用版权信息
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        depth: 25,
+                        dataLabels: {
+                            enabled: true,
+                            //format: '{point.name}'
+                            format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                            style: {
+                                color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                            }
+                        },
+                    }
+                },
+                series: [{
+                    type: 'pie',
+                    name: '攻击数',
+                    data: [
+                        ['高危',       268],
+                        ['中危',       468],
+                        ['低危',    8],
+
+                    ]
+                }]
+            });
+        });*/
+        $(function () {
+            $('#container1').highcharts({
+                chart: {
+                    backgroundColor: '#fefefe',
+                    type: 'column',
+                },
+                title: {
+                    text: 'OWASP TOP 10攻击数'
+                },
+                credits:{
+                    enabled:false // 禁用版权信息
+                },
+                xAxis: {
+                    type: 'category',
+                    labels: {
+                        rotation: -45,
+                        style: {
+                            fontSize: '10px',
+                            fontFamily: 'Verdana, sans-serif'
+                        }
+                    }
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.y}</b>'
+                },
+                plotOptions: {
+
+                },
+                series: [{
+                    name: '攻击数',
+                    data: <?php echo ($attack_type_count); ?>
+                }]
+            });
+        });
+        $(function () {
+            var ip = $('#ipinfo').attr('value'),
+                timecount = <?php echo ($time_count); ?>,
+                time = timecount.time,
+                count = timecount.time_count;
+            Highcharts.setOptions({
+                global: {
+                    useUTC: false
+                }
+            });
+
+            // Create the chart
+            Highcharts.stockChart('container_line', {
+                chart: {
+                    events: {
+                        load: function () {
+                            // set up the updating of the chart each second
+                            var series = this.series[0];
+                            /*setInterval(function () {
+                                var x = (new Date()).getTime(), // current time
+                                        y = Math.round(Math.random() * 100);
+                                series.addPoint([x, y], true, true);
+                            }, 1000);*/
+                            setInterval(function () {
+                                var x =(new Date()).getTime(),
+                                ts = (new Date()).getTime()-5000;
+                                $.ajax({
+                                    type:'get',
+                                    url:'/SecApt/index.php/Home/Vir/getlinechar',
+                                    async: false,
+                                    data:{'ip':ip,'ts':ts,'te':x,'type':1},
+                                    dataType:'json',
+                                    success:function(data){
+                                        var  y = parseInt(data);
+                                        series.addPoint([x, y], true, true);
+                                        //console.log(x);console.log(y);
+                                    }
+                                })
+                            }, 5000);
+                        }
+                    }
+                },
+                credits:{
+                    enabled:false // 禁用版权信息
+                },
+                yAxis:{
+                    opposite:false
+                },
+                rangeSelector: {
+                    buttons: [{
+                        count: 1,
+                        type: 'minute',
+                        text: '分'
+                    }, {
+                        count: 60,
+                        type: 'minute',
+                        text: '时'
+                    }, {
+                        type: 'all',
+                        text: '天'
+                    }],
+                    inputEnabled: false,
+                    selected: 0
+                },
+                navigator: {
+                    enabled: false},
+                scrollbar: {
+                    enabled: true,
+                    showFull:true
+                },
+                title: {
+                    text: '实时攻击趋势图'
+                },
+
+                exporting: {
+                    enabled: false
+                },
+
+                series: [{
+                    name: 'Random data',
+                    /*data: (function () {
+                        // generate an array of random data
+                        var data = [],
+                                time = (new Date()).getTime(),
+                                i;
+
+                        for (i = -86400; i <= 0; i += 1) {
+                            data.push([
+                                time + i * 1000,
+                                Math.round(Math.random() * 100)
+                            ]);
+                        }
+                        return data;
+                    }())*/
+                    data: (function(time,count){
+                        var data = [];
+                        for (var i = 0; i <= time.length - 1; i++) {
+                            data.push([
+                                time[i]*1000,
+                                count[i]
+                            ]);
+                        };
+                         return data;
+                    }(time,count))
+                }]
+            });
+
+        });
+    });
+
+</script>
+<div class="ace-settings-container" id="ace-settings-container" style="display:none">
+  <div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
+    <i class="icon-cog bigger-150"></i>
+  </div>
+
+  <div class="ace-settings-box" id="ace-settings-box">
+    <div>
+      <div class="pull-left">
+        <select id="skin-colorpicker" class="hide">
+          <option data-skin="default" value="#438EB9">#438EB9</option>
+          <option data-skin="skin-1" value="#222A2D">#222A2D</option>
+          <option data-skin="skin-2" value="#C6487E">#C6487E</option>
+          <option data-skin="skin-3" value="#D0D0D0">#D0D0D0</option>
+        </select>
+      </div>
+      <span>&nbsp; 换肤</span>
+    </div>
+
+    <div>
+      <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-navbar"/>
+      <label class="lbl" for="ace-settings-navbar"> 固定导航</label>
+    </div>
+
+    <div>
+      <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-sidebar"/>
+      <label class="lbl" for="ace-settings-sidebar"> 固定边栏</label>
+    </div>
+
+    <div>
+      <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-breadcrumbs"/>
+      <label class="lbl" for="ace-settings-breadcrumbs"> 固定位置信息</label>
+    </div>
+
+    <div>
+      <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-rtl"/>
+      <label class="lbl" for="ace-settings-rtl"> 左右切换</label>
+    </div>
+
+    <div>
+      <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-add-container"/>
+      <label class="lbl" for="ace-settings-add-container">
+        缩进
+        <!-- <b>.container</b> -->
+      </label>
+    </div>
+  </div>
+</div><!-- /#ace-settings-container -->
+</div><!-- /.main-container-inner -->
+<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse" style="display:none;">
+  <i class="icon-double-angle-up icon-only bigger-110"></i>
+</a>
+</div><!-- /.main-container -->
+
+<div id="fade" class="black_overlay"></div>
+
+<div id="ajaxAlert" class="popLayerTip">
+  <div class="breadcrumbs">
+    <ul class="breadcrumb">
+      <li>
+        提示
+      </li>
+    </ul>
+    <!-- .breadcrumb -->
+    <span class="floatRig closePop"></span>
+  </div>
+  <div class="tipText">
+
+  </div>
+</div>
+
+
+<!-- basic scripts -->
+
+<!--[if !IE]> -->
+
+<script type="text/javascript">
+  window.jQuery || document.write("<script src='/SecApt/Public/css/assets/js/jquery-2.0.3.min.js'>" + "<" + "/script>");
+</script>
+
+<!-- <![endif]-->
+
+<!--[if IE]>
+<script type="text/javascript">
+  window.jQuery || document.write("<script src='/SecApt/Public/css/assets/js/jquery-1.10.2.min.js'>" + "<" + "/script>");
+</script>
+<![endif]-->
+
+<script type="text/javascript">
+  if ("ontouchend" in document) document.write("<script src='/SecApt/Public/css/assets/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
+</script>
+
+<script src="/SecApt/Public/css/assets/js/bootstrap.min.js"></script>
+<script src="/SecApt/Public/css/assets/js/typeahead-bs2.min.js"></script>
+<script src="/SecApt/Public/css/assets/js/jquery.nestable.min.js"></script>
+<!-- page specific plugin scripts -->
+
+<!--[if lte IE 8]>
+<script src="/SecApt/Public/css/assets/js/excanvas.min.js"></script>
+<![endif]-->
+
+<script src="/SecApt/Public/css/assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="/SecApt/Public/css/assets/js/jquery.ui.touch-punch.min.js"></script>
+<script src="/SecApt/Public/css/assets/js/chosen.jquery.min.js"></script>
+<script src="/SecApt/Public/css/assets/js/fuelux/fuelux.spinner.min.js"></script>
+<!--<script src="/SecApt/Public/css/assets/js/date-time/bootstrap-datepicker.min.js"></script>-->
+<script src="/SecApt/Public/css/assets/js/date-time/bootstrap-datepicker.min.js"></script>
+<script src="/SecApt/Public/css/assets/js/date-time/bootstrap-timepicker.min.js"></script>
+<script src="/SecApt/Public/css/assets/js/date-time/moment.min.js"></script>
+<script src="/SecApt/Public/css/assets/js/date-time/daterangepicker.min.js"></script>
+<script src="/SecApt/Public/css/assets/js/datetimepicker/datetimepicker.min.js"></script>
+<script src="/SecApt/Public/css/assets/js/bootstrap-colorpicker.min.js"></script>
+<script src="/SecApt/Public/css/assets/js/jquery.knob.min.js"></script>
+<script src="/SecApt/Public/css/assets/js/jquery.autosize.min.js"></script>
+<script src="/SecApt/Public/css/assets/js/jquery.inputlimiter.1.3.1.min.js"></script>
+<script src="/SecApt/Public/css/assets/js/jquery.maskedinput.min.js"></script>
+<script src="/SecApt/Public/css/assets/js/bootstrap-tag.min.js"></script>
+
+<!-- ace scripts -->
+
+<script src="/SecApt/Public/css/assets/js/ace-elements.min.js"></script>
+<script src="/SecApt/Public/css/assets/js/ace.min.js"></script>
+<script src="/SecApt/Public/css/assets/js/jquery.ipaddress.js"></script>
+<script src="/SecApt/Public/js/data.js"></script>
+<script src="/SecApt/Public/js/moment.min.js"></script>
+<script src="/SecApt/Public/js/daterangepicker.js"></script>
+<!--<script src="/SecApt/Public/js/jquery.bootstrap-duallistbox.js"></script>-->
+
+
+<script type="text/javascript" src="/SecApt/Public/css/assets/js/ztreejs/jquery.ztree.core-3.5.js"></script>
+<script type="text/javascript" src="/SecApt/Public/css/assets/js/ztreejs/jquery.ztree.excheck-3.5.js"></script>
+
+<script type="text/javascript" src="/SecApt/Public/js/jquery.form.js"></script>
+<script type="text/javascript" src="/SecApt/Public/js/main.js"></script>
+<script type="text/javascript" src="/SecApt/Public/js/city.js"></script>
+<script type="text/javascript" src="/SecApt/Public/js/layer/layer.js"></script>
+<script type="text/javascript" src="/SecApt/Public/js/laytpl/laytpl.js"></script>
+<script src="/SecApt/Public/js/person.js"></script>
+<script src="/SecApt/Public/js/tinyselect.js"></script>
+
+<!-- inline scripts related to this page -->
+
+<script type="text/javascript">
+
+
+  $(".closePop").css("cursor", "pointer").click(function () {
+    $("#fade").hide();
+    $("#table :checked").attr('checked', false);
+  });
+  (function (Highcharts) {
+    var each = Highcharts.each;
+
+    Highcharts.wrap(Highcharts.Legend.prototype, 'renderItem', function (proceed, item) {
+
+      proceed.call(this, item);
+
+
+      var series  = this.chart.series,
+          element = item.legendGroup.element;
+
+      element.onmouseover = function () {
+        each(series, function (seriesItem) {
+          if (seriesItem !== item) {
+            each(['group', 'markerGroup'], function (group) {
+              seriesItem[group].attr('opacity', 0.05);
+            });
+          }
+        });
+      }
+      element.onmouseout  = function () {
+        each(series, function (seriesItem) {
+          if (seriesItem !== item) {
+            each(['group', 'markerGroup'], function (group) {
+              seriesItem[group].attr('opacity', 1);
+            });
+          }
+        });
+      }
+
+    });
+  }(Highcharts));
+
+///////////////////////------//////////////////////
+  jQuery(function ($) {
+    $('.dd').nestable('width:100%');
+    $('.dd-handle a').on('mousedown', function (e) {
+      e.stopPropagation();
+    });
+    $(".chosen-select").chosen({width: "inherit"});
+    $('#ip').ipaddress();
+    $('table th input:checkbox').on('click', function () {
+      var that = this;
+      $(this).closest('table').find('tr > td:first-child input:checkbox')
+        .each(function () {
+          this.checked = that.checked;
+          $(this).closest('tr').toggleClass('selected');
+        });
+
+    });
+
+
+    // $('#web_button').click(function(){
+    //    var webdata = $('#web_form').serialize();
+    //    send('/SecApt/index.php/Home/Vir/add_web',webdata);
+    // });
+
+    //$('#base_info_button').on('click',function(){
+
+    $('.date-picker').datepicker({autoclose: true, language: 'zh-CN'}).next().on(ace.click_event, function () {
+      $(this).prev().focus();
+    });
+
+
+    $(document).on('change', '.condition', function () {
+      var $this = $(this);
+      var th = $(this).val();
+      $this.next("select.san").remove();
+      if (th == 'user') {
+        if ($(this).next().attr('name') == 'sub_type[]') {
+          $(this).next().remove();
+        }
+        $(this).after('<select name="sub_type[]">' +
+          '<option value="static">静态用户</option>' +
+          '<option value="dial">账号用户</option>' +
+          '<option value="link">链路ID</option>' +
+          '</select>');
+        $(this).next("[name='sub_type[]']").bind("change", function () {
+          var $this = $(this);
+          $this.next("input").remove();
+          $this.next("select").remove();
+          if ($this.val() == "link"){
+            syncPost("<?= U("Home/Vlan/link_list")?>",{},function (data) {
+              var select = $("<select class='san' name='value[]'>")
+              $.each(data, function (k, v) {
+                select.append($("<option>").attr("value", v.id).text(v.link_name))
+              });
+              $this.after(select);
+            });
+          }else {
+            $this.after('<input type="text" name="value[]" required="">');
+          }
+        });
+      } else if (th == 'keyword') {
+        if ($(this).next().attr('name') == 'sub_type[]') {
+          $(this).next().remove();
+        }
+
+        $(this).after('<select name="sub_type[]"><option value="http_content">正文内容</option>' +
+          '<option value="attach_title">附件标题</option><option value="attach_content">附件内容</option></select>');
+      } else if (th == 'src_area') {
+        if ($(this).next().attr('name') == 'sub_type[]') {
+          $(this).next().remove();
+        }
+
+        $(this).after('<select name="sub_type[]"><option value="area_name">区域名称</option>' +
+          '<option value="as_num">AS号</option></select>');
+      } else if (th == 'src_area') {
+        if ($(this).next().attr('name') == 'sub_type[]') {
+          $(this).next().remove();
+        }
+
+
+        $(this).after('<select name="sub_type[]"><option value="area_name">区域名称</option>' +
+          '<option value="as_num">AS号</option></select>');
+      } else {
+        if ($(this).next().attr('name') == 'sub_type[]') {
+          $(this).next().remove();
+        }
+      }
+
+    });
+
+
+    $('.icon-plus').click(function () {
+      $('.icon-plus').parent().parent().after("<div class='form-group'>" +
+        "<label class='col-sm-3 control-label no-padding-right'></label>" +
+        "<div class='col-sm-9'><span class='input-icon input-icon-right'>" +
+        "<select  class='condition' name='condition[]' required='required'></select> " +
+        "<input type='text' name='value[]' required='required' />" +
+        "<i class='icon-filter blue'></i></span> " +
+        "<i style='cursor:pointer' class='icon-minus red'></i></div></div>");
+      var content = $('.icon-plus').parent().children().children().eq(0).html();
+      $('.icon-plus').parent().parent().next().find('select').append(content);
+    });
+
+    $(document).on('click', '.icon-minus', function () {
+      $(this).parent().parent().remove();
+    });
+
+
+  });
+
+
+
+  $('.pre').click(function () {
+    var id = $('.pre').next().val();
+    //alert('xmlx');
+    window.location.href = '<?php echo U('
+    User / authorize
+    ');?>' + '?id=' + id;
+  });
+
+  $("#logout").click(function () {
+    window.location.href = "/SecApt/index.php/Login/logout";
+  });
+
+  $(document).ready(function () {
+    Wind.css('treeTable');
+    Wind.use('treeTable', function () {
+      $("#menus-table").treeTable({
+        indent: 20
+      });
+    });
+
+    $('#datepicker1').timepicker({
+      minuteStep  : 1,
+      showSeconds : false,
+      showMeridian: false
+    }).next().on(ace.click_event, function () {
+      $(this).prev().focus();
+    });
+
+    $('#datepicker2').timepicker({
+      minuteStep  : 1,
+      showSeconds : false,
+      showMeridian: false
+    }).next().on(ace.click_event, function () {
+      $(this).prev().focus();
+    });
+  });
+
+  function checknode(obj) {
+    var chk       = $("input[type='checkbox']");
+    var count     = chk.length;
+    var num       = chk.index(obj);
+    var level_top = level_bottom = chk.eq(num).attr('level');
+    for (var i = num; i >= 0; i--) {
+      var le = chk.eq(i).attr('level');
+      if (eval(le) < eval(level_top)) {
+        chk.eq(i).attr("checked", true);
+        var level_top = level_top - 1;
+      }
+    }
+    for (var j = num + 1; j < count; j++) {
+      var le = chk.eq(j).attr('level');
+      if (chk.eq(num).attr("checked") == "checked") {
+        if (eval(le) > eval(level_bottom)) {
+          chk.eq(j).attr("checked", true);
+        }
+        else if (eval(le) == eval(level_bottom)) {
+          break;
+        }
+      } else {
+        if (eval(le) > eval(level_bottom)) {
+          chk.eq(j).attr("checked", false);
+        } else if (eval(le) == eval(level_bottom)) {
+          break;
+        }
+      }
+    }
+  }
+
+  function delSelect() {
+    var checkboxs = document.getElementsByName("checkbox");
+    var tr        = table.getElementsByTagName("tr");
+    for (var i = 0; i < checkboxs.length; i++) {
+      if (tr.length == 2) {
+        checkboxs[i].checked = false;
+        return;
+      }
+      if (checkboxs[i].checked == true) {
+        removeTr(checkboxs[i]);
+        i = -1;
+      }
+    }
+  }
+
+
+</script>
+
+<!--[if lte IE 8]>
+<div id="ie678-warning" style="z-index: 10000;">您的浏览器版本过低，无法体验所有功能，建议升级或者更换浏览器。 <a href="http://browsehappy.com/">了解更多...</a>
+</div>
+<script type="text/javascript">
+  var b_name = navigator.appName;
+  var b_version = navigator.appVersion;
+  var version = b_version.split(";");
+  var trim_version = version[1].replace(/[ ]/g, "");
+  var el = document.getElementById("ie678-warning");
+  if (b_name == "Microsoft Internet Explorer") {
+    /*如果是IE6或者IE7*/
+    if (trim_version == "MSIE7.0" || trim_version == "MSIE6.0" || trim_version == "MSIE8.0") {
+
+      window.onscroll = function () {
+        el.style.top  = (document.documentElement.scrollTop) + "px";
+        el.style.left = (document.documentElement.scrollLeft) + "px";
+      }
+    }
+  }
+
+
+</script>
+<![endif]-->
+
+</body>
+</html>

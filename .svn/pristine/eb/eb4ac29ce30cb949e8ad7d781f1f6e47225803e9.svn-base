@@ -1,0 +1,42 @@
+<?php
+namespace Home\Controller;
+class SafeController extends CommonController {
+    public function index(){
+        layout('Layout/layout');
+        $this->display();
+    }
+	public function file(){
+        layout('Layout/layout');
+        $this->display();
+    }
+	public function bruteforce(){
+        layout('Layout/layout');
+        $this->display();
+    }
+	public function malicioust(){
+        layout('Layout/layout');
+        $this->display();
+    }
+	public function scanevent(){
+        layout('Layout/layout');
+        $this->display();
+    }
+    public function scanevent2(){
+          $arr =   array(
+               "total"=> 2,
+               "rows"=> array(
+                   array(
+                       "id"=> 0,
+                       "name"=> "Item 0",
+                       "price"=> "$0"
+                   ),
+                    array(
+                       "id"=> 1,
+                       "name"=> "Item 1",
+                       "price"=> "$1"
+                   ),
+              )
+           );
+           return join_encode($arr);
+        }
+}

@@ -1,0 +1,542 @@
+<div class="main-content">
+    <div id="addUser" class="popLayer">
+        <div class="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>添加任务</li>
+            </ul>
+            <!-- .breadcrumb -->
+            <span class="floatRig closePop">关闭</span>
+        </div>
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-xs-win">
+                    <!-- PAGE CONTENT BEGINS -->
+                    <form style="position:relative;margin-top:20px;" id="addUser_form" class="form-horizontal" role="form">
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right"> 类型： </label>
+                            <div class="col-sm-9">
+                                <select name="types" class="typeOption" required>
+                                    <option value="waf" >waf</option>
+                                    <option value="vds" >vds</option>
+                                    <option value="分析" >分析</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="space-4"></div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right"> 名称：</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="name" required style="width: 300px" required/>
+                            </div>
+                        </div>
+                        <div class="space-4"></div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right">时间：</label>
+                            <div class="input-group w300 floatLeft" style="width:300px; text-indent:0px;margin-left: 12px" id="ischeck">
+                                <span class="input-group-addon">
+                                    <i class="icon-calendar bigger-110"></i>
+                                </span>
+                                <input class="form-control date-range-picker" type="text" name="date" data-date-format="YYYY-MM-DD" id="id-date-range-picker-2" required />
+                                <!--<input class="form-control date-range-picker" type="text" name="da2" data-date-format="YYYY-MM-DD hh" id="id-date-range-picker-2" />-->
+                            </div>
+                        </div>
+                        <div class="space-4"></div>
+
+                        <!-- <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right"> 权重：</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="weight"  required style="width: 300px" required/>
+                            </div>
+                        </div> -->
+
+                        <div class="space-4"></div>
+                        <div class="clearfix form-actions">
+                            <div>
+                                <button class="btn btn-info" type="submit">
+                                    <i class="icon-ok bigger-110"></i>
+                                    确认
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+    </div>
+    <div id="fade" class="black_overlay"></div>
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try {
+                ace.settings.check('breadcrumbs', 'fixed')
+            } catch (e) {
+            }
+        </script>
+
+        <ul class="breadcrumb">
+            <li>
+                安全事件
+            </li>
+            <li class="active">离线调度检测</li>
+        </ul>
+        <!-- .breadcrumb -->
+        <!-- #nav-search -->
+    </div>
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="formArea marT10">
+                    <div class="formTextList" style="min-width: 358px">
+                        <label class="floatLeft">创建时间：</label>
+                        <div class="input-group w300 floatLeft" style="width:281px; text-indent:0px;">
+                            <span class="input-group-addon">
+                                <i class="icon-calendar bigger-110"></i>
+                            </span>
+                            <input class="form-control date-range-picker" type="text" name="times" data-date-format="YYYY-MM-DD" id="id-date-range-picker-2" />
+                        </div>
+                    </div>
+                    <div class="formTextList" >
+                        <label class="floatLeft">类型：</label>
+                        <select name="types" class="floatLeft types">
+                            <option value="">全部</option>
+                            <option value="vds">vds</option>
+                            <option value="waf">waf</option>
+                            <option value="分析">分析</option>
+                        </select>
+                    </div>
+                    <div class="formTextList" >
+                        <label class="floatLeft">状态：</label>
+                        <select name="status" class="floatLeft status">
+                            <option value="">全部</option>
+                            <option value="未开始">未开始</option>
+                            <option value="进行中">进行中</option>
+                            <option value="已终止">已终止</option>
+                            <option value="已完成">已完成</option>
+                        </select>
+                    </div>
+                    <a  href="javascript:;" id="kSearch" class="btn btn-primary">查询</a>
+                    <div class="clearBoth"></div>
+                </div>
+                <div class="aptTable formArea marT10" style="min-height: 50px">
+                    <div style="margin: 10px; width: 98%;">
+                        <div class="aptListBtnGroup" style="left: 5px;">
+                            <a href="#" class="" id="userAdd"><i class="icon-plus-sign bigger-120 green"></i>添加</a>
+                            <a href="#" class="" id="Scanning"><i class="icon-align-justify bigger-120 green"></i>扫描进度</a>
+
+                            <div id="jindu"  class="blockDiv hide" style="z-index:9999">
+                                <ul class="jinduList bg" style="width: 100%;margin: 0;">
+                                    <li style="width: 82px">
+                                        <div class="row" style="width: 82px;margin:6px 0;text-align: center">
+                                            任务名称
+                                        </div></li>
+                                    <li>
+                                        <div class="row" style="width: 168px;margin: 6px 0;text-align: center">
+                                            picker扫描进度
+                                        </div>
+                                    </li>
+                                    <li >
+                                        <div class="row" style="width: 168px;margin: 6px 0;text-align: center">
+                                            agent扫描进度
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="show_rate">
+                                    
+                                </div>
+                                <div class="clearBoth"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <table id="reportTable" >
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script type="text/javascript">
+$("input[name='times']").attr('value',URLdecode(getParam("times")));
+$(".types").attr('value',decodeURI(getParam('types')));
+$(".status").attr('value',decodeURI(getParam('status')));
+function URLdecode(sStr){
+   return sStr.replace(/\+/g,' ').replace(/\%2F/g,'\/').replace(/\%20/g,''); 
+}
+function getParam(paramName)
+{
+    paramValue = "";
+    isFound = false;
+    if (this.location.search.indexOf("?") == 0 && this.location.search.indexOf("=")>1)
+    {
+        arrSource = this.location.search.substring(1,this.location.search.length).split("&");
+        i = 0;
+        while (i < arrSource.length && !isFound)
+        {
+            if (arrSource[i].indexOf("=") > 0)
+            {
+                if (arrSource[i].split("=")[0].toLowerCase()==paramName.toLowerCase())
+                {
+                    paramValue = arrSource[i].split("=")[1];
+                    isFound = true;
+                }
+            }
+            i++;
+        }
+    }
+    return paramValue;
+}
+$(document).on("click","#userAdd",function(){
+    $("#addUser").show();
+    $("#fade").show();
+    return false
+});
+$('#addUser_form').submit(function(e){
+    e.stopPropagation();
+    e.preventDefault();
+    var data = $('#addUser_form').serialize();
+    $.ajax({
+        type:"POST",
+        url: "__URL__/offline_add",
+        data: data,
+        dataType: "json",
+        success:function(data){
+            if(data.status=='success'){
+                $("#addUser").hide();
+                $("#fade").hide();
+                $('#addUser_form')[0].reset();
+                layer.msg(data.msg);
+                $('#reportTable').bootstrapTable('refresh');
+            }else{
+                layer.msg(data.msg); 
+            }
+        }
+    });
+})
+$(".closePop").css("cursor", "pointer").click(function () {
+    $("#addUser").hide();
+    $("#editeUser").hide();
+    $("#fade").hide();
+    $(":checked").attr('checked',false);
+});
+jQuery(function ($) {
+    $('.date-range-picker').daterangepicker({
+        startDate: moment().subtract(29, 'days'),
+        endDate: moment(),
+        maxDate : moment(),
+        format : 'YYYY/MM/DD', //控件中from和to 显示的日期格式
+        locale : {
+            applyLabel: '提交',
+            cancelLabel: '取消',
+            fromLabel: '开始时间',
+            toLabel: '结束时间',
+            weekLabel: 'W',
+            customRangeLabel: 'Custom Range',
+            daysOfWeek: ['日', '一', '二', '三', '四', '五','六'],
+            monthNames: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+            firstDay: moment.localeData()._week.dow
+        },
+//      startDate: moment().startOf('day'),
+//      minValidDate: '315507600000000000000000', //最小可用时间，控制日期选择器的可选力度
+        dateLimit : {
+            day : 29
+        },
+        timePickerIncrement : 1440, //时间的增量，单位为分钟
+        language: 'cn'}
+    ).prev().on(ace.click_event, function () {
+        $(this).next().focus();
+    });
+});
+
+$('#Scanning').hover(function(){
+    $('#jindu').removeClass('hide');
+},function(){
+    $('#jindu').addClass('hide');
+});
+$('#jindu').hover(function(){
+    $('#jindu').removeClass('hide');
+},function(){
+    $('#jindu').addClass('hide');
+});
+$(document).ready(function(){
+    var num = {$task};
+    if(num!==0){
+        get_offline_html(num);
+        get_offline_rate();
+        setInterval(function () {
+            get_offline_rate();
+        }, 10000);
+    }else{
+        var value = '<ul class="jinduList"><li style="width: 100%;line-height: 35px;text-align: center">暂无加载数据</li></ul>';
+        $('.show_rate').html(value);
+    }
+})
+function get_offline_rate(){
+    $.ajax({
+        type:'post',
+        url:'__URL__/get_offline_rate',
+        async: false,
+        dataType:'json',
+        success:function(data){
+            get_offline(data);
+        }
+    })
+}
+function get_offline(data){
+    if(data){
+        $.each(data, function(index, value){
+            var index_id = index+1; 
+            var name = 'num'+index_id;
+            var p_rate_w = 'p_rate_w'+index_id;
+            var p_rate = 'p_rate'+index_id;
+            var a_rate_w = 'a_rate_w'+index_id;
+            var a_rate = 'a_rate'+index_id;
+            $('#'+name).html(value.name);
+            $('#'+p_rate_w).css('width',value.p_rate+'%');
+            $('#'+p_rate).html(value.p_rate+'%');
+            $('#'+a_rate_w).css('width',value.a_rate+'%');
+            $('#'+a_rate).html(value.a_rate+'%');
+        });
+    }
+}
+function get_offline_html(num){
+    var str = '';
+    for(i=1;i<=num;i++){
+        str += '<ul class="jinduList" id="jinduList'+i+'"><li style="width: 82px;line-height: 35px" id="num'+i+'"></li><li><li><div class="row" style="width: 168px;margin: 10px 0 0 6px"><div class="beHalf" style="margin-left: 4px"><div class="progress" style="margin-bottom: 12px" ><div class="progress-bar progress-bar-info progress-bar-striped active" style="width: %" id="p_rate_w'+i+'"><span class="showing" style="color:#57BB5B" id="p_rate'+i+'"></span></div></div></div></div></li><li><div class="row" style="width: 168px;margin: 10px 0 0 6px"><div class="beHalf" style="margin-left: 4px"><div class="progress" style="margin-bottom: 12px"><div class="progress-bar progress-bar-info progress-bar-striped active" style="width: %" id="a_rate_w'+i+'"><span class="showing" style="color:#57BB5B" id="a_rate'+i+'"></span></div></div></div></div></li></ul>';
+    }
+    $('.show_rate').html(str);
+}
+
+$(".closePop").css("cursor", "pointer").click(function () {
+    $("#addUser").hide();
+    $("#editeUser").hide();
+    $("#fade").hide();
+    $(":checked").attr('checked',false);
+});
+jQuery(function ($) {
+    $('.date-range-picker').daterangepicker({
+        startDate: moment().subtract(29, 'days'),
+        endDate: moment(),
+        maxDate : moment(),
+        format : 'YYYY/MM/DD', //控件中from和to 显示的日期格式
+        locale : {
+            applyLabel: '提交',
+            cancelLabel: '取消',
+            fromLabel: '开始时间',
+            toLabel: '结束时间',
+            weekLabel: 'W',
+            customRangeLabel: 'Custom Range',
+            daysOfWeek: ['日', '一', '二', '三', '四', '五','六'],
+            monthNames: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+            firstDay: moment.localeData()._week.dow
+        },
+//                    startDate: moment().startOf('day'),
+//                    minValidDate: '315507600000000000000000', //最小可用时间，控制日期选择器的可选力度
+        dateLimit : {
+            day : 29
+        },
+        timePickerIncrement : 1440, //时间的增量，单位为分钟
+        language: 'cn',}
+    ).prev().on(ace.click_event, function () {
+        $(this).next().focus();
+    });
+})
+$(document).ready(function(){
+    function detailFormatter(index, row) {
+        var html = [];
+        //url、file、子文件、病毒信息、解释说明
+        var rows = {'任务名称 ':' '+row.byzoroType,'类型 ':' '+row.details,'状态 ':' '+row.attackType,'创建时间 ':' '+row.severity}
+        $.each(rows, function (key, value) {
+            html.push('<p style="display:inline-block;width: 50%;height: 30px;">' + key + ':' + value + '</p>');
+        });
+        return html.join('');
+    }
+    function operateFormatter(value, row, index){
+       /* console.log(value);//未开始
+        console.log(row);//arr
+        console.log(index);//0*/
+        var str = '';
+        if(value=='未开始'){
+            str += '<a class="operateStart" href="javascript:;" title="开始"><i class="icon-step-forward  bigger-130 green" style="margin: 0"></i></a> <a href="javascript:;" title="终止"><i class="icon-stop  bigger-130 gray" ></i></a> <a class="operateDelete"  href="javascript:;"  title="删除"><i class="icon-trash bigger-140 red"></i></a> <a  href="javascript:;" title="查看"><i class="icon-adjust bigger-140 gray"></i></a>';
+        }
+        if(value=='进行中'){
+            str += '<a  href="javascript:;" title="开始"><i class="icon-step-forward  bigger-130 gray" ></i></a> <a class="operateStop" href="javascript:;" title="终止"><i class="icon-stop  bigger-130 red" ></i></a> <a  href="javascript:;"  title="删除"><i class="icon-trash bigger-140 gray"></i></a> <a class="operateWatch"  href="__URL__/offLine_details?name='+row.name+'&types='+row.types+'&start='+row.start+'&end='+row.end+'&times='+row.times+'"  title="查看"><i class="icon-adjust bigger-140"></i></a>';
+        }
+        if(value=='已终止'){
+            str += '<a  href="javascript:;" title="开始"><i class="icon-step-forward  bigger-130 gray" ></i></a> <a  href="javascript:;" title="终止"><i class="icon-stop  bigger-130 gray" ></i></a> <a class="operateDelete"  href="javascript:;"  title="删除"><i class="icon-trash bigger-140 red"></i></a> <a class="operateWatch"  href="__URL__/offLine_details?name='+row.name+'&types='+row.types+'&start='+row.start+'&end='+row.end+'&times='+row.times+'"  title="查看"><i class="icon-adjust bigger-140"></i></a>';
+        }
+        if(value=='已完成'){
+            str += '<a  href="javascript:;" title="开始"><i class="icon-step-forward  bigger-130 gray" ></i></a> <a  href="javascript:;" title="终止"><i class="icon-stop  bigger-130 gray" ></i></a> <a  href="javascript:;"  title="删除"><i class="icon-trash bigger-140 gray"></i></a> <a class="operateWatch"  href="__URL__/offLine_details?name='+row.name+'&types='+row.types+'&start='+row.start+'&end='+row.end+'&times='+row.times+'"  title="查看"><i class="icon-adjust bigger-140"></i></a>';
+        }
+        return [str].join('');
+    }
+    $('#reportTable').bootstrapTable({
+        method: 'get',
+        url: '__URL__/offLineOK',
+        cache: false,
+        //height: 510,
+        striped: true,
+        sidePagination:"server",
+        pagination: true,
+        pageSize: 10,
+        pageNumber: 1,
+        pageList: [10],
+        sortName : 'times',
+        sortOrder : 'desc',
+        showColumns: true,
+        detailView:true,
+        detailFormatter:"detailFormatter",
+        formatLoadingMessage: function () {
+            return "请稍等，正在加载中...";
+        },
+        formatNoMatches: function () {  //没有匹配的结果
+            return '无符合条件的记录';
+        },
+        queryParams: function (params) {
+            var pars = {
+                status:$(".status").val(),
+                types:$(".types").val(),
+                times:$("input[name='times']").val(),
+                pagenum:params.offset/params.limit+1,
+                limit:params.limit,
+                order:params.order,
+                sort:params.sort
+            };
+            return pars;
+        },
+        columns: [{
+                field: "name",
+                title: "任务名称",
+                align: "center",
+                valign: "middle",
+                sortable: false
+            },{
+                field: "types",
+                title: "类型",
+                align: "center",
+                valign: "middle",
+                sortable: false
+            },{
+                field: "status",
+                title: "状态",
+                align: "center",
+                valign: "middle",
+                sortable: false
+            },{
+                field: "times",
+                title: "创建时间",
+                align: "center",
+                valign: "middle",
+                sortable: true
+            },{
+                field: "setimes",
+                title: "离线数据起始时间",
+                align: "center",
+                valign: "middle",
+                sortable: false
+            },{
+                field: "status",
+                title: "编辑",
+                align: "center",
+                valign: "middle",
+                sortable: false,
+                formatter: operateFormatter
+            }],
+        data: [],
+        onLoadSuccess:function(data){
+            //console.log(data);
+        },
+        responseHandler:function(res) {
+            var tem = {"total":0,"rows":[]};
+            if(res.status){
+                tem.total = res.totalNum;
+                tem.rows = eval(res.data);
+            }else{
+                $('#reportTable').bootstrapTable('removeAll');
+            }
+            return tem;
+        },
+        onLoadError:function(status,res){
+            $('#reportTable').bootstrapTable('removeAll');
+        },
+    });
+    $(window).resize(function () {
+        $('#reportTable').bootstrapTable('resetView');
+    });
+    $("#kSearch").click(function(){
+        var status = $(".status").val();
+        var types  = $(".types").val();
+        var times  = $("input[name='times']").val();
+        $('#reportTable').bootstrapTable('refreshOptions',{pageNumber:1});
+        $('#reportTable').bootstrapTable('refresh');
+    });
+    //点击开始，进行滚动条：operateStart
+    $(document).on('click',".operateStart",function(){
+        var row   = $(this).parents('tr');
+        var name  = row.children('td:eq(0)').html();
+        var times = row.children('td:eq(3)').html();
+        $.ajax({
+            type:"POST",
+            url: "__URL__/offline_start",
+            data:{'name':name,'times':times} ,
+            async: false,
+            dataType:"json",
+            success:function(data){
+                if(data.status=='success'){
+                    layer.msg(data.msg);
+                    $('#reportTable').bootstrapTable('refresh');
+                }else{
+                    layer.msg(data.msg);
+                }
+            }
+        });  
+    });
+    //设置终止点击
+    $(document).on('click',".operateStop",function(){
+        var row   = $(this).parents('tr');
+        var name  = row.children('td:eq(0)').html();
+        var times = row.children('td:eq(3)').html();
+        $.ajax({
+            type:"POST",
+            url: "__URL__/offline_stop",
+            data:{'name':name,'times':times} ,
+            async: false,
+            dataType:"json",
+            success:function(data){
+                if(data.status=='success'){
+                    layer.msg(data.msg);
+                    $('#reportTable').bootstrapTable('refresh');
+                }else{
+                    layer.msg(data.msg);
+                }
+            }
+        });     
+    });
+    //设置删除点击
+    $(document).on('click',".operateDelete",function(){
+        var row   = $(this).parents('tr');
+        var name  = row.children('td:eq(0)').html();
+        var times = row.children('td:eq(3)').html();
+        $.ajax({
+            type:"POST",
+            url: "__URL__/offline_del",
+            data:{'name':name,'times':times} ,
+            async: false,
+            dataType:"json",
+            success:function(data){
+                if(data.status=='success'){
+                    layer.msg(data.msg);
+                    $('#reportTable').bootstrapTable('refresh');
+                }else{
+                    layer.msg(data.msg);
+                }
+
+            }
+        });     
+    });
+});
+</script>
+

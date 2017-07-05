@@ -1,0 +1,172 @@
+<div class="main-content">
+
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try {
+                ace.settings.check('breadcrumbs', 'fixed')
+            } catch (e) {
+            }
+        </script>
+
+        <ul class="breadcrumb">
+            <li>
+                安全事件
+            </li>
+            <li>
+                <a href="__URL__/offLine">离线调度检测</a>
+            </li>
+            <li class="active">离线详情</li>
+        </ul>
+        <!-- .breadcrumb -->
+
+
+    </div>
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="formArea marT10">
+                    <p class="atpTypeList" style="margin-left: 0px"> 选择：
+                        <!--<a href="javascript:;" class="types sel" data="">全部</a>-->
+                        <a href="javascript:;" class="types sel">离线</a>
+                        <a href="javascript:;" class="types">去重</a>
+                        <a href="javascript:;" class="types">合并</a>
+                        
+                        <!--<a href="#maodian" class="types sel" data="">分析(4)</a>-->
+                    </p>
+
+                </div>
+
+                <div class="aptTable span10 marT10 tableShow">
+                    <table id="detailTable" class="table table-striped table-bordered table-hover">
+                    </table>
+                </div>
+            </div>
+        <!-- /span -->
+        </div>
+    </div>
+    <!-- /row -->
+</div><!-- /.main-content -->
+
+<script type="text/javascript">
+    //    类型选择时样式的改变
+    $(document).on('click',".atpTypeList a",function(){
+        $(this).addClass('sel');
+        $(this).siblings('a').removeClass('sel');
+    });
+    //当左侧菜单栏显示或隐藏时图表重绘
+    $('.icon-double-angle-left').click(function(){
+        if($('.col-xs-12').css("width")!=$('.main-content').css("min-width")){
+//            console.log("hello");
+            if($('#sidebar-collapse i').attr('class')=='icon-double-angle-left'){
+                setTimeout(function(){
+                    $('#container').highcharts().reflow();
+                },1)
+            }else{
+                setTimeout(function(){
+//                    $('#container').css("width",$('#container').css("width"));
+                    $('#container').highcharts().reflow();
+                },1)
+            }
+        }
+    });
+</script>
+<script type="text/javascript">
+//    var data=[]
+
+/*var arr=[{field:'name',title:'名称'},{field:'type',title:'类型'},{field:'statue',title:'状态'},
+    {field:'percent',title:'进度百分比'},{field:'operateTime',title:'操作时间'}]
+console.log(arr.length)*/
+
+    $(document).ready(function(){
+        function detailFormatter(){
+            var data=[]
+            var arr=[{field:'name',title:'名称'},{field:'type',title:'类型'},{field:'statue',title:'状态'},
+                {field:'percent',title:'进度百分比'},{field:'operateTime',title:'操作时间'}]
+            for(i=0;i<arr.length;i++){
+                data.push({
+                    field:arr[i].field,
+                    title: arr[i].title,
+                    align: "center",
+                    valign: "middle",
+                    sortable: false,
+                })
+            }
+//            console.log(arr)
+            return data;
+        }
+        $('#detailTable').bootstrapTable({
+            method: 'get',
+//            url: '__URL__/indexOK',
+            cache: false,
+            //height: 510,
+            striped: true,
+//            sidePagination:"server",
+            pagination: true,
+            pageSize: 10,
+            pageNumber: 1,
+            pageList: [10],
+            sortName : 'time',
+            sortOrder : 'desc',
+            showColumns: true,
+            formatLoadingMessage: function () {
+                return "请稍等，正在加载中...";
+            },
+            formatNoMatches: function () {  //没有匹配的结果
+                return '无符合条件的记录';
+            },
+            queryParams: function (params) {
+                var pars = {
+                    webip:$('#webip').val(),
+                    username:$('#username').val(),
+                    time:$('.date-range-picker').val(),
+                    pagenum:params.offset/params.limit+1,
+                    order:params.order,
+                    sort:params.sort
+                };
+                return pars;
+            },
+            columns:detailFormatter(),
+            data: [{
+                "name": "vds",
+                "type": "vds",
+                "status": "进行中",
+                "percent": "90%",
+                "operateTime": "2017-5-18 12:00:01 "
+            },{
+                "name": "vaf",
+                "type": "vaf",
+                "status": "已结束",
+                "percent": "100%",
+                "operateTime": "2017-5-12 13:00:01 "
+            }],
+            onLoadSuccess:function(data){
+                //console.log(data);
+            },
+            responseHandler:function(res) {
+                var tem = {"total":0,"rows":[]};
+                if(res.status){
+                    tem.total = res.totalNum;
+                    tem.rows = eval(res.data);
+                }else{
+                    //$('#reportTable').bootstrapTable('removeAll');
+                }
+                return tem;
+            },
+            onLoadError:function(status,res){
+                $('#reportTable').bootstrapTable('removeAll');
+                console.log(status,res);
+            },
+        });
+        $(window).resize(function () {
+            $('#reportTable').bootstrapTable('resetView');
+        });
+        $("#kSearch").click(function(){
+            var webip = $('#webip').val();
+            var username = $('#username').val();
+            var time = $('.date-range-picker').val();
+            $('#reportTable').bootstrapTable('refresh');
+        });
+
+    });
+</script>
+

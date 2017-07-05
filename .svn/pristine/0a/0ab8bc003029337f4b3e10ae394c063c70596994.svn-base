@@ -1,0 +1,143 @@
+<?php
+namespace Home\Controller;
+class UrgentController extends CommonController {
+    public function index(){
+        layout('Layout/layout');
+        $this->display();
+    }
+    public function indextu(){
+        if(I('get.da1')) {
+            $start = A('Safe')->time_data(I('get.da1'))['ts'];
+            $end   = A('Safe')->time_data(I('get.da1'))['td'];
+            //$this ->savetime($start,$end);
+            //$this ->savetimen($start,$end);
+            $this ->save_time($start,$end,'ts','td');
+            $this ->save_time($start,$end,'zts','ztd');
+        }
+        $data=[];
+        //$data['data1'] = $this -> indexdata1($start,$end);
+        //$data['data2'] = $this -> indexdata2($start,$end);
+    }
+    public function indexbiao(){
+        if(I('get.da2')){
+            $start = A('Safe')->time_data(I('get.da2'))['ts'];
+            $end   = A('Safe')->time_data(I('get.da2'))['td'];
+        }else{
+            $start = A('Safe')->time_data(I('get.da1'))['ts'];
+            $end   = A('Safe')->time_data(I('get.da1'))['td'];
+        }
+        $sort = I('get.sort');
+        $order = I('get.order');
+        $type = is_null(I('get.urgent_type'))? '':I('get.urgent_type');
+        $page = is_null(I('get.pagenum'))? 1:I('get.pagenum');
+        $res = $this -> indexdata3($start,$end,$type,$page,$sort,$order);
+        echo json_encode($res);
+    }
+    /*public function savetime($start,$end,$ts,$td){
+        session('ts',$start);
+        session('td',$end);
+        session('d',null);
+        session('zts',$start);
+        session('ztd',$end);
+    }*/
+    public function save_time($start,$end,$ts,$td){
+        session($ts,$start);
+        session($td,$end);
+        session('d',null);
+    }
+    /*public function savetimen($start,$end){
+        session('tsn',$start);
+        session('tdn',$end);
+    }*/
+    public function indexzhutu(){
+        if(I('get.sign')=='1') {
+            $ts = session('ts');
+            $td = session('td');
+            $d  = floor(($td-$ts)/(10*24*3600));
+            $d = (int)$d;
+            switch($d){
+                case 2:
+                    $end   = $td - 10*24*3600;
+                    $start = $td - 19*24*3600;
+                    break;
+                case 1:
+                    $end   = $td - 10*24*3600;
+                    $start = $ts;
+                    break;
+                case 0:
+                    $end   = $td;
+                    $start = $ts;
+                    break;
+            }
+            if($d<=1){
+                $d = 1;
+            }
+            //dump($d);
+            session('d',$d);
+            session('td',$end);
+            echo "开始：";
+            dump(date('Y-m-d',$start));
+            echo "结束：";
+            dump(date('Y-m-d',$end));
+        }elseif(I('get.sign')=='2'){
+            $d = session('d');
+            if(isset($d)){
+                if($d<2){
+                    $a = $d+1;
+                }else{
+                    $d = 2;
+                    $a = 3;
+                }
+                //dump($d);
+                $start = session('td')+24*3600+($d-1)*10*24*3600;
+                $end   = session('td')+10*24*3600+($d-1)*10*24*3600;
+                $zts   = session('zts');
+                $ztd   = session('ztd');
+                $z  = ($ztd-$zts)/(24*3600); 
+                if($end>$ztd){
+                    $d = 1;
+                    $start = session('td')+24*3600+($d-1)*10*24*3600;
+                    $end   = session('td')+10*24*3600+($d-1)*10*24*3600;
+                }
+                if($z<=10){
+                    echo "z<=10";
+                    if($z==10){
+                        $end   = session('ztd');
+                        $start = session('zts')+24*3600;
+                    }elseif($z<10){
+                        $end   = session('ztd');
+                        $start = session('zts');
+                    }
+                }
+            }else{
+                $end = session('td');
+                $start = $end-9*24*3600;
+            }
+            echo "开始：";
+            dump(date('Y-m-d',$start));
+            echo "结束：";
+            dump(date('Y-m-d',$end));
+            session('d',$a);
+        }
+    }
+    public function indexdata3($start,$end,$type='',$page=1,$sort='Time',$order='ASC'){
+        $url = 'http://10.80.6.2:8070/byzoro.apt.com/urgencies/list/day?start='.$start.'&end='.$end.'&page='.$page.'&sort='.$sort.'&order='.$order.'&count=10&type='.$type;
+        $data = request($url,false);
+        $data = json_decode($data,true);
+        foreach ($data['data']['Elements'] as $key => &$value) {
+            if($value['Time']){
+               $value['Time'] =date("Y-m-d H:i:s",$value['Time']);
+            }
+        }
+        $arr=[];
+        if($data['data']['Elements']){
+            $arr['status']=ture;
+        }else{
+            $arr['status']=false;
+        }
+        $arr['totalNum']=$data['data']['Totality'];
+        //$arr['status']=$data['code'];
+        $arr['data']=$data['data']['Elements'];
+        return $arr;
+    }
+}

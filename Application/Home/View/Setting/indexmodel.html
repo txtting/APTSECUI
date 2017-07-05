@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	</head>
+	<body>			
+        <div class="recipients marT10" style="padding-left: 15px">
+                    <!--<label style="float: left">邮件模板：</label>-->
+        <style type="text/css">
+            .aptTable .navBar{
+                height: 1.75rem;
+                margin-left: -0.025rem;
+                padding-right:1rem;
+                padding-left: 0rem;
+                background: pink!important;
+            }
+            .aptTable .navBar li{
+                font-size: 0.65rem;
+                margin:0.5rem 0;
+                padding:0 0.2rem;
+                line-height:0.75rem;
+                height:0.75rem;
+                float: right;
+                list-style: none;
+                border-right: 1px solid #fff;
+                cursor:pointer;
+            }  
+            .aptTable .navBar a{
+                text-decoration: none;
+                color: #EFF0EB;
+            }
+            .aptTable .navBar a:hover{
+                color: #fff;
+            }
+            .aptTable .navBar li:first-child{
+                border: none;
+            }
+            .aptTable .navBar li:after{
+                content: "";
+                clear: both;
+                display: block;
+            }
+            .aptTable .navBar li{
+                zoom: 1;
+            }
+            .aptTable .wrapper>div{
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            .aptTable .process{
+                height: 3.6rem;
+            }
+            .aptTable .process .box, .aptTable .score{
+                float: left;
+            }
+            .aptTable .process .box{
+                padding:0.2rem 1rem 0rem 0rem;
+                width: 30%;
+            }
+            .aptTable .process .box img{
+               width: 100%;
+            }
+            .aptTable .score{
+               width: 30%;
+            }
+            .aptTable .process .score .todayScore{
+                font-size:0.65rem;
+                color: #86827B;
+                padding-right: 0.8rem;
+            }
+            .aptTable .process .score .number{
+                font-size:1.5rem;
+                color: #00C1FF;
+            }
+            .aptTable .block{
+                padding:0rem 0rem 2.25rem 1.0rem;
+            }
+            .aptTable .block .express{
+                width: 18rem;
+                background: #454544;
+                color: #888783;
+                border-radius:0.25rem;
+                font-size:0.65rem;
+                padding:0.5rem;
+            }
+            .aptTable .count .todayCount{
+                font-size:0.9rem;
+                color: #807D72;
+            }
+            .aptTable .underline{
+                border: 1px solid #007151;
+                width:5.5rem;
+            }
+            .aptTable .smallGreen{
+                width:4rem;
+            }
+            .aptTable .content {
+                width: 100%;
+                padding-bottom:2.0rem; 
+            }
+            .aptTable .content .chose{
+                width: 100%;
+                height: 1.5rem;
+                margin-bottom:1.0rem;
+            }
+            .aptTable .content .chooseBtn{
+                width:  5rem;
+                height:1.5rem;
+                line-height: 1.5rem;
+                font-size: 0.75rem;
+                background: #007151;
+                text-align: center;
+                border-radius: 0.15rem;
+                float: right;
+            }
+            .aptTable .content .chooseBtn:hover{
+                background: #479E38;
+            }
+            .aptTable .content .mainBlock{
+                display: inline-block;
+                width: 15.51%;
+            }
+            .aptTable .content .line,.aptTable .content .section{
+                width: 100%;
+            }
+            .aptTable .content .line span{
+                font-size:0.65rem;
+                padding: 0.5rem 2.0rem 0.5rem 0;
+                display: inline-block;
+                color: #EFF0EB;
+            }
+            .aptTable .content .section .stock{
+                font-size: 0.65rem;
+                display: inline-block;
+                height: 2.4rem;
+                line-height:2.4rem;
+                width: 100%;
+                color: #EFF0EB;
+                background: #00B6C2;
+                text-indent: 0.2rem;
+            }
+            .aptTable .content .section .stock .num{
+                font-size:0.9rem;
+                padding-right:0.2rem;
+                display: inline-block;
+            }
+            .aptTable .wrapper .event{
+                padding-top:0.75rem;
+                padding-bottom:1.5rem; 
+                width: 98%;
+            }
+            .aptTable .wrapper .event table{
+                width: 100%;
+            }
+            .aptTable .wrapper .event td{
+                font-size:0.75rem;
+                border: 1px solid #00B6C2;
+                padding-left:1.0rem;
+                width: 50%;
+            }
+            .aptTable .wrapper .event .eventType{
+                color: #807D72;
+            }
+            .aptTable .event .eventSeries{
+                color:#EEF0EB!important;
+            }
+            .event table{
+                border-collapse: collapse;
+            }
+
+            @media screen and (min-width: 320px){
+                div, span, li{
+                     font-size: 10px!important;
+                 }
+                .aptTable .process .score .todayScore {
+                    color: #86827B!important;
+                }
+                .aptTable .navBar {
+                    padding-right: 10px;
+                    padding-left: 8px;
+                    background: red!important;
+                }
+                .aptTable .navBar li {
+                    padding: 0px!important;
+                }
+                .aptTable .wrapper>div {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+                .aptTable .content .chose {
+                    margin-bottom: 0px;
+                }
+                .aptTable .content .section .stock {
+                    height: 35px;
+                    line-height: 35px;
+                }
+                .aptTable .process {
+                    width: 95%;
+                    height: 60px;
+                }
+                .aptTable .process .box {
+                    padding: 10px 32px 20px 0;
+                   height: 2rem;
+                    width: 43%;
+                }
+                .aptTable .process .box img {
+                    width: 100px;
+                }
+                .aptTable .score {
+                    width: 45%!important;
+                }
+                .aptTable .process .score .todayScore {
+                    padding-top: 10px;
+                }
+                .aptTable .process .score .number {
+                    font-size: 22px!important;
+                }
+                .aptTable .wrapper>div{
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+                .aptTable .block {
+                    padding: 0 0 28px 20px;
+                }
+                .aptTable .block .express {
+                    width: 40%!important;
+                }
+                .aptTable .count .todayCount {
+                    font-size: 14px;
+                }
+                .aptTable .underline{
+                    height: 0px;
+                    width: 82px;
+                }
+                .aptTable .content .mainBlock {
+                    width: 14.89%;
+                }
+                .aptTable .content{
+                    width: 94%;
+                    padding-bottom: 35px;
+                }
+                .aptTable .content .line span{
+                    padding: 15px 0 15px 0;
+                }
+                .aptTable .smallGreen {
+                    width: 50px;
+                }
+                .aptTable .wrapper .event table {
+                    border-collapse: collapse;
+                    width:100%;
+                }
+                .aptTable .wrapper .event td {
+                    font-size: 10px;
+                    padding-left: 0;
+                    width: 0;
+                }
+            }
+
+            @media screen and (min-width: 360px){
+                .aptTable{
+                    width: 360px!important;
+                    margin: 0 auto!important;
+                }
+                div, span, li{
+                    font-size: 8px!important;
+                }
+                .navBar li a{
+                    font-size: 10px!important;
+                }
+                .aptTable .navBar{
+                    height: 22px;
+                    background: orange!important;
+                }
+                .aptTable .navBar li{
+                    margin: 6px 0;
+                    padding: 0 4px;
+                    line-height: 10px;
+                    height: 10px;
+                }
+                .aptTable .underline {
+                    height: 0px;
+                    width: 50px!important;
+                }
+                .aptTable .count .todayCount {
+				    color: #807D72!important;
+				}
+                .aptTable .smallGreen {
+                    width: 30px!important;
+                }
+                .aptTable .process .score .todayScore {
+                    color: #86827B!important;
+                }
+                .aptTable .content .line span {
+                    padding: 8px 0;
+                }
+                .aptTable .content .mainBlock {
+                    width: 15.7%;
+                }
+                .aptTable .content .section .stock .num {
+                    font-size: 14px!important;
+                }
+                .aptTable .process .box{
+                    padding: 10px 32px 0 0;
+                    width: 26%;
+                }
+                .aptTable .process .box img {
+                    width: 100px;
+                }
+                .aptTable .process .score .number {
+                    font-size: 18px!important;
+                }
+                .aptTable .content .section .stock {
+                    height: 20px!important;
+                    line-height: 20px;
+                }
+                .aptTable .wrapper .event table {
+                    width: 94%!important;
+                }
+            } 
+             /*@media screen and (min-width: 412px)and (max-width: 768px){
+                .aptTable{
+                	min-width: 360px!important;
+                	margin: 0 auto!important;
+                }
+            } */
+			@media screen and (min-width:1024px){
+                .aptTable{min-width: 840px}
+                div, span, li{
+                    font-size: 15px!important;
+                }
+                .aptTable .process .score .todayScore {
+                    color: #86827B!important;
+                }
+                .aptTable .process {
+                    height: 80px;
+                }
+                .aptTable .navBar{
+                	background: lightcoral!important;
+                }
+                .aptTable .navBar li {
+                    padding: 0 9px!important;
+                }
+                .aptTable .process .score .number {
+                    font-size: 30px!important;
+                }
+                .aptTable .content {
+                    width: 95%!important;
+                }
+                .aptTable .process .box {
+                    width: 290px;
+                    height: 70px!important;
+                }
+                .aptTable .process .box img {
+                    width: 260px;
+                    height: 44px;
+            	}
+            	.aptTable .block .express {
+                    width: 48%!important;
+                    padding: 20px;
+                }
+                .aptTable .navBar {
+                    padding-right: 20px!important;
+                    padding-left: 20px!important;
+                }
+                .aptTable .wrapper>div {
+                    padding-left: 20px!important;
+                    padding-right: 20px!important;
+                }
+                .aptTable .content .mainBlock {
+                    width: 15.885%!important;
+                }
+                .aptTable .wrapper .event td {
+                    width: 50%;
+                }
+                .aptTable .underline {
+                    width: 102px;
+                }
+                .aptTable .smallGreen {
+                    width: 72px;
+                }
+                .event table{
+                    border-collapse: collapse;
+                }
+                .aptTable .wrapper .event{
+                    padding-top: 15px;
+                    padding-bottom: 30px;
+                    border-collapse: collapse;
+                }
+                .aptTable .wrapper .event{
+                    width: 95%!important;
+                }
+                .aptTable .wrapper .event table{
+                    width: 100%!important;
+                }
+            }
+        </style>
+        <div class="main-content">
+            <!--<div class="breadcrumbs" id="breadcrumbs">
+                <script type="text/javascript">
+                    try {
+                        ace.settings.check('breadcrumbs', 'fixed')
+                    } catch (e) {
+                    }
+                </script>
+
+                <ul class="breadcrumb">
+                    <li>
+                        设置
+                    </li>
+                    <li class="active">安全报表模板设置</li>
+                </ul>
+            </div>-->
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="aptTable span10 marT10" style="background:#252723;padding:0px;">
+                            <ul class="navBar">
+                                <li style="padding-right: 0px;"><a href="javascript:;">产品服务</a></li>
+                                <li><a href="javascript:;">备案专区</a></li>
+                                <li><a href="javascript:;">管理控制台</a></li>
+                                <li><a href="javascript:;">用户中心</a></li>
+                                <li><a href="javascript:;">管理中心</a></li>
+                                <li><a href="javascript:;">首页</a></li>
+                            </ul>
+                            <div class="wrapper">
+                                <div class="process">
+                                    <div class="box">
+                                        <!--<img src="1.jpg">-->
+                                        <img src="cid:tuimg" alt="图片" class="photo"/>
+
+                                    </div>
+                                    <div class="score">
+                                        <div class="todayScore">
+                                            今日安全得分
+                                        </div>
+                                        <div class="number">
+                                            69分
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="block">
+                                    <div class="express">
+                                        得分是通过今日一天安全数据，如：紧急事件，漏洞，弱点，攻击，信息泄露
+                                        威胁等因素综合计算得出，代表了今天的安全指数
+                                    </div>
+                                </div>
+                                <div class="count">
+                                    <div class="todayCount">
+                                        今日安全统计
+                                    </div>
+                                    <div class="underline"></div>
+                                </div>
+                                <div class="content">
+                                    <!--<div class="chose">
+                                        <div class="chooseBtn"><a href="javascript:;" style="color:#EFF0EB; text-decoration: none;">选择</a></div>
+                                    </div>-->
+                                    <div class="mainBlock">
+                                        <div class="line">
+                				<span>
+                					网络异常连接
+                				</span>
+                                        </div>
+                                        <div class="section">
+                                            <a href="javascript:;">
+                    				<span class="stock">
+	                    				<span class="num">0</span><span>次</span>
+	                    			</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="mainBlock">
+                                        <div class="line">
+                				<span>
+                					DDos攻击
+                				</span>
+                                        </div>
+                                        <div class="section">
+                                            <a href="javascript:;">
+                    				<span class="stock">
+	                    				<span class="num">0</span><span>次</span>
+	                    			</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="mainBlock">
+                                        <div class="line">
+                				<span>
+                					未授权下载
+                				</span>
+                                        </div>
+                                        <div class="section">
+                                            <a href="javascript:;">
+                    				<span class="stock">
+	                    				<span class="num">0</span><span>次</span>
+	                    			</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="mainBlock">
+                                        <div class="line">
+                				<span>
+                					非法登录
+                				</span>
+                                        </div>
+                                        <div class="section">
+                                            <a href="javascript:;">
+                    				<span class="stock">
+	                    				<span class="num">0</span><span>次</span>
+	                    			</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="mainBlock">
+                                        <div class="line">
+                				<span>
+                					页面被篡改
+                				</span>
+                                        </div>
+                                        <div class="section">
+                                            <a href="javascript:;">
+                    				<span class="stock">
+	                    				<span class="num">0</span><span>次</span>
+	                    			</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="mainBlock">
+                                        <div class="line">
+                				<span>
+                					攻击次数
+                				</span>
+                                        </div>
+                                        <div class="section">
+                                            <a href="javascript:;">
+                    				<span class="stock">
+	                    				<span class="num">75</span><span>次</span>
+	                    			</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="mainBlock">
+                                        <div class="line">
+                				<span>
+                					发现后门
+                				</span>
+                                        </div>
+                                        <div class="section">
+                                            <a href="javascript:;">
+                    				<span class="stock">
+	                    				<span class="num">0</span><span>次</span>
+	                    			</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="mainBlock">
+                                        <div class="line">
+                				<span>
+                					暴力破解成功
+                				</span>
+                                        </div>
+                                        <div class="section">
+                                            <a href="javascript:;">
+                    				<span class="stock">
+	                    				<span class="num">0</span><span>次</span>
+	                    			</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="mainBlock">
+                                        <div class="line">
+                				<span>
+                					肉鸡行动
+                				</span>
+                                        </div>
+                                        <div class="section">
+                                            <a href="javascript:;">
+                    				<span class="stock">
+	                    				<span class="num">1</span><span>次</span>
+	                    			</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="mainBlock">
+                                        <div class="line">
+                				<span>
+                					发现漏洞
+                				</span>
+                                        </div>
+                                        <div class="section">
+                                            <a href="javascript:;">
+                    				<span class="stock">
+	                    				<span class="num">5</span><span>次</span>
+	                    			</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="mainBlock">
+                                        <div class="line">
+                				<span>
+                					发现弱口令
+                				</span>
+                                        </div>
+                                        <div class="section">
+                                            <a href="javascript:;">
+                    				<span class="stock">
+	                    				<span class="num">0</span><span>次</span>
+	                    			</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="mainBlock">
+                                        <div class="line">
+                				<span>
+                					新发现资产
+                				</span>
+                                        </div>
+                                        <div class="section">
+                                            <a href="javascript:;">
+                    				<span class="stock">
+	                    				<span class="num">2</span><span>次</span>
+	                    			</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="count">
+                                    <div class="todayCount">
+                                        重点关注
+                                    </div>
+                                    <div class="underline smallGreen"></div>
+                                </div>
+                                <div class="event">
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <span class="eventType">事件类型：</span><span class="eventSeries">肉鸡行动</span>
+                                            </td>
+                                            <td>
+                                                <span class="eventType">受影响资产：</span><span class="eventSeries">(ECS)12345678</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="eventType">事件类型：</span><span class="eventSeries">肉鸡行动</span>
+                                            </td>
+                                            <td>
+                                                <span class="eventType">受影响资产：</span><span class="eventSeries">(ECS)12345678</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="eventType">事件类型：</span><span class="eventSeries">肉鸡行动</span>
+                                            </td>
+                                            <td>
+                                                <span class="eventType">受影响资产：</span><span class="eventSeries">(ECS)12345678</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="eventType">事件类型：</span><span class="eventSeries">肉鸡行动</span>
+                                            </td>
+                                            <td>
+                                                <span class="eventType">受影响资产：</span><span class="eventSeries">(ECS)12345678</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>	
+	</body>
+</html>

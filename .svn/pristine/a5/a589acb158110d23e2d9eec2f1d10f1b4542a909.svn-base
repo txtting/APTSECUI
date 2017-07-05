@@ -1,0 +1,321 @@
+<div class="main-content">
+    <div class="breadcrumbs" id="breadcrumbs">
+        <script type="text/javascript">
+            try {
+                ace.settings.check('breadcrumbs', 'fixed')
+            } catch (e) {
+            }
+        </script>
+
+        <ul class="breadcrumb">
+            <li>
+                网元管理
+            </li>
+            <li class="active">分流器监控</li>
+        </ul>
+        <!-- .breadcrumb -->
+
+    </div>
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="formArea marT10">
+                    <!--<a href="#" class="more">更多条件</a>-->
+                    <form method="post" id="" action="__URL__/index">
+                        <p>
+                            <label class="w100">请选择分流器：</label>
+                        <select name='flow_Select' id="flow_Select">
+                            <volist name='ip' id='ip_vo'>
+                            <option value="{$ip_vo['ip']}">{$ip_vo['ip']}</option>
+                            </volist>
+                        </select>
+                        <!-- <select name=''>
+                            <volist name='groups' id='groups_vo'>
+                                <option value="{$groups_vo['id']}">{$groups_vo['name']}</option>
+                            </volist>
+                        </select> -->
+
+                            <!-- <button class="btn btn-sm btn-primary marL10"><i class="fa fa-search"></i>查询</button> -->
+                        </p>
+
+
+                    </form>
+                </div>
+                <div style="position: relative">
+                    <div class="chartContainer" id="containerA" style=" width:100%;height: 300px; display: block"></div>
+                </div>
+                <div style="position: relative">
+                    <div class="chartContainer" id="containerB" style=" width:100%;height: 300px; display: block"></div>
+                </div>
+
+                <div style="clear:both;"></div>
+                </div>
+                <!-- /.table-responsive -->
+            </div>
+            <!-- /span -->
+        </div>
+        <!-- /row -->
+    </div>
+
+
+</div>
+
+<script type="text/javascript">
+var serial_number = $('#serial_number').html();
+
+    $(function () {
+        $(document).ready(function() {
+            Highcharts.setOptions({
+                global: {
+                    useUTC: false
+                }
+            });
+            var chartInit = function(names,ip){
+                $('#containerA').highcharts({
+                    chart: {
+                        type: 'spline',
+                        backgroundColor: 'rgba(0,0,0,0)',
+                        animation: Highcharts.svg, // don't animate in old IE
+                        marginRight: 10,
+                        events: {
+                            load: function() {
+                                var _thisChart = this,timeg = 1000;
+                                var y = 0;
+                                var g = function() {
+                                    if(_thisChart.series == undefined){
+                                        return;
+                                    }
+                                    $.ajax({
+                                        type:'post',
+                                        url:'__URL__/flowinfo',
+                                        data:{
+                                            'ip' : ip
+                                        },
+                                        dataType : 'json',
+                                        success : function(data){
+                                            
+                                            var x = (new Date()).getTime();    
+                                            var y = data.dataa.flow;
+                                            //console.log(y);
+                                            data = [];
+                                            for (var i = 0; i <= names.length - 1; i++) {
+                                                //console.log(y[i]);
+                                                data.push({
+                                                    x: x,
+                                                    y: parseInt(y[i])
+                                                });
+                                            };
+                                            
+                                            //console.log(data);//TODO test
+
+                                            for (var i = 0; i <= _thisChart.series.length - 1; i++) {
+                                                if (data[i].y != null){
+                                                    _thisChart.series[i].addPoint([data[i].x, data[i].y], true, true);
+                                                }
+                                                
+                                            };
+
+                                            setTimeout(g, timeg);
+                                        }
+                                    })
+                                }
+                                setTimeout(g, timeg);
+                            }
+                        }
+                    },
+                    title: {
+                        text: '分流器上/下行流量(bps)'
+                    },
+                    xAxis: {
+                        type: 'datetime',
+                        tickPixelInterval: 100,
+                    },
+                    yAxis: {
+                        title: {
+                            text: '分流器上/下行流量'
+                        },
+                        plotLines: [{
+                            value: 0,
+                            width: 1,
+                            color: '#808080'
+                        }]
+                    },
+                    tooltip: {
+                        formatter: function() {
+                            return '<b>'+ this.series.name +'</b><br/>'+
+                                    Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) +'<br/>  '+
+                                    Highcharts.numberFormat(this.y, 0);
+                        }
+                    },
+                    exporting: {
+                        enabled: false
+                    },
+                    series: function(names){                                                        
+                        var series = [];
+                        for (var i = 0; i <= names.length - 1; i++) {
+                            series.push({                                                              
+                                name: names[i],                                                
+                                data: (function() {                      
+                                    var data = [],                                                  
+                                        time = (new Date()).getTime(),                              
+                                        i;                                                          
+                                                                                                    
+                                    for (i = -20; i <= 0; i++) {                                    
+                                        data.push({                                                 
+                                            x: time + i * 1000,                                     
+                                            y: null                                        
+                                        });                                                         
+                                    }                                                               
+                                    return data;                                                    
+                                })()                                                                
+                            });
+                        };
+                        return series;
+                    }(names)
+                });
+            };
+
+
+            var chartInit2 = function(names,ip){
+                $('#containerB').highcharts({
+                    chart: {
+                        type: 'spline',
+                        backgroundColor: 'rgba(0,0,0,0)',
+                        animation: Highcharts.svg, // don't animate in old IE
+                        marginRight: 10,
+                        events: {
+                            load: function() {
+                                var _thisChart = this,timeg = 1000;
+                                var y = 0;
+                                var g = function() {
+                                    if(_thisChart.series == undefined){
+                                        return;
+                                    }
+                                    $.ajax({
+                                        type:'post',
+                                        url:'__URL__/flowinfo',
+                                        data:{
+                                            'ip' : ip
+                                        },
+                                        dataType : 'json',
+                                        success : function(data){
+                                            
+                                            var x = (new Date()).getTime();    
+                                            var y = data.dataa.packet;
+                                            //console.log(y);
+                                            data = [];
+                                            for (var i = 0; i <= names.length - 1; i++) {
+                                                //console.log(y[i]);
+                                                data.push({
+                                                    x: x,
+                                                    y: parseInt(y[i])
+                                                });
+                                            };
+                                            
+                                            //console.log(data);//TODO test
+
+                                            for (var i = 0; i <= _thisChart.series.length - 1; i++) {
+                                                if (data[i].y != null){
+                                                    _thisChart.series[i].addPoint([data[i].x, data[i].y], true, true);
+                                                }
+                                                
+                                            };
+
+                                            setTimeout(g, timeg);
+                                        }
+                                    })
+                                }
+                                setTimeout(g, timeg);
+                            }
+                        }
+                    },
+                    title: {
+                        text: '分流器上/下行报文数'
+                    },
+                    xAxis: {
+                        type: 'datetime',
+                        tickPixelInterval: 100,
+                    },
+                    yAxis: {
+                        title: {
+                            text: '分流器上/下行报文数'
+                        },
+                        plotLines: [{
+                            value: 0,
+                            width: 1,
+                            color: '#808080'
+                        }]
+                    },
+                    tooltip: {
+                        formatter: function() {
+                            return '<b>'+ this.series.name +'</b><br/>'+
+                                    Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) +'<br/>  '+
+                                    Highcharts.numberFormat(this.y, 0);
+                        }
+                    },
+                    exporting: {
+                        enabled: false
+                    },
+                    series: function(names){                                                        
+                        var series = [];
+                        for (var i = 0; i <= names.length - 1; i++) {
+                            series.push({                                                              
+                                name: names[i],                                                
+                                data: (function() {                      
+                                    var data = [],                                                  
+                                        time = (new Date()).getTime(),                              
+                                        i;                                                          
+                                                                                                    
+                                    for (i = -20; i <= 0; i++) {                                    
+                                        data.push({                                                 
+                                            x: time + i * 1000,                                     
+                                            y: null                                        
+                                        });                                                         
+                                    }                                                               
+                                    return data;                                                    
+                                })()                                                                
+                            });
+                        };
+                        return series;
+                    }(names)
+                });
+            };
+
+
+
+            // $.post("/cmp/index.php/Home/Negroup/getinfo",{id:1},function(data){
+            //     data = ["管理1","管理2","管理3","管理4","管理5","管理6"];//TODO test
+            //     chartInit(data);
+            // });   
+            getinfo();
+            $('#flow_Select').change(function(){
+                 getinfo();
+
+             })   
+            function getinfo(){
+                var ip=$('#flow_Select').children('option:selected').val();
+               // $.post("__URL__/flowinfo",{ip:ip},function(data){
+               //  console.log(data);
+               //  var dataa = data.name;
+               //   //data = ["管理1","管理2","管理3","管理4","管理5","管理6"];//TODO test
+               //   chartInit(dataa);
+               // });
+                 $.ajax({
+                    type:'post',
+                    url:'__URL__/flowinfo',
+                    data:{
+                        'ip' : ip
+                    },
+                    dataType : 'json',
+                    success : function(data){
+                        //console.log(data);
+                      chartInit(data.name.flow,ip);
+                      chartInit2(data.name.packet,ip);
+
+                    }
+                })    
+            }           
+        });
+
+    });
+</script>
